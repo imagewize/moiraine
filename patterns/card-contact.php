@@ -1,9 +1,9 @@
 <?php
 /**
  * Title: Contact Card
- * Slug: ollie/card-contact
+ * Slug: moiraine/card-contact
  * Description: 
- * Categories: ollie/card
+ * Categories: moiraine/card
  * Keywords: card, contact, social, links, email, company
  * Viewport Width: 600
  * Block Types: 

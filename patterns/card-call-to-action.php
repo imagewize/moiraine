@@ -1,9 +1,9 @@
 <?php
 /**
  * Title: Call To Action Card
- * Slug: ollie/card-call-to-action
+ * Slug: moiraine/card-call-to-action
  * Description: 
- * Categories: ollie/card, ollie/call-to-action
+ * Categories: moiraine/card, moiraine/call-to-action
  * Keywords: card, download, box, link, button, cta, call to action
  * Viewport Width: 600
  * Block Types: 
@@ -14,7 +14,7 @@
 <!-- wp:group {"metadata":{"name":"Call To Action Box"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|large","right":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|large"}},"border":{"radius":"5px"}},"backgroundColor":"primary","layout":{"type":"constrained"}} -->
 <div class="wp-block-group has-primary-background-color has-background" style="border-radius:5px;padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large)"><!-- wp:group {"metadata":{"name":"Title Row"},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"600"}},"textColor":"base","fontSize":"medium"} -->
-<p class="has-base-color has-text-color has-medium-font-size" style="font-style:normal;font-weight:600">Download Ollie</p>
+<p class="has-base-color has-text-color has-medium-font-size" style="font-style:normal;font-weight:600">Download Moiraine</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"textColor":"primary-accent"} -->
@@ -28,7 +28,7 @@
 <!-- /wp:separator -->
 
 <!-- wp:paragraph {"textColor":"base"} -->
-<p class="has-base-color has-text-color">Easily create beautiful, fully-customizable websites with the new WordPress Site Editor and the Ollie block theme. No coding skills required. Anyone can do it!</p>
+<p class="has-base-color has-text-color">Easily create beautiful, fully-customizable websites with the new WordPress Site Editor and the Moiraine block theme. No coding skills required. Anyone can do it!</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons -->

@@ -1,9 +1,9 @@
 <?php
 /**
  * Title: Text and Details Card
- * Slug: ollie/text-and-details-card
+ * Slug: moiraine/text-and-details-card
  * Description: 
- * Categories: ollie/call-to-action, ollie/hero, ollie/features, ollie/card
+ * Categories: moiraine/call-to-action, moiraine/hero, moiraine/features, moiraine/card
  * Keywords: table, stats, details, list, card
  * Viewport Width: 1500
  * Block Types: 
@@ -21,18 +21,18 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"textColor":"base"} -->
-<h2 class="wp-block-heading has-base-color has-text-color">Download Ollie for free today and start building</h2>
+<h2 class="wp-block-heading has-base-color has-text-color">Download Moiraine for free today and start building</h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"textColor":"main-accent"} -->
-<p class="has-main-accent-color has-text-color">Ollie ships with a growing collection of design patterns that cohesively click together. Drag, drop, mix, and match patterns to create stunning designs in just a few minutes. </p>
+<p class="has-main-accent-color has-text-color">Moiraine ships with a growing collection of design patterns that cohesively click together. Drag, drop, mix, and match patterns to create stunning designs in just a few minutes. </p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"metadata":{"name":"CTA Row"},"layout":{"type":"flex","flexWrap":"wrap"}} -->
 <div class="wp-block-group"><!-- wp:buttons {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}}} -->
 <div class="wp-block-buttons"><!-- wp:button {"className":"is-style-button-light"} -->
-<div class="wp-block-button is-style-button-light"><a class="wp-block-button__link wp-element-button">Download Ollie</a></div>
+<div class="wp-block-button is-style-button-light"><a class="wp-block-button__link wp-element-button">Download Moiraine</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons -->
 

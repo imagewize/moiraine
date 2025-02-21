@@ -1,9 +1,9 @@
 <?php
 /**
  * Title: Feature Boxes Dark
- * Slug: ollie/feature-boxes-with-icon-dark
+ * Slug: moiraine/feature-boxes-with-icon-dark
  * Description: 
- * Categories: ollie/features
+ * Categories: moiraine/features
  * Keywords: text, features, columns, icon, cta, button, call to action, box
  * Viewport Width: 1500
  * Block Types: 
@@ -60,7 +60,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"fontSize":"small"} -->
-<p class="has-small-font-size">Your website deserves to look pixel-perfect on every device. Ollie ensures your entire design scales down gracefully automagically.</p>
+<p class="has-small-font-size">Your website deserves to look pixel-perfect on every device. Moiraine ensures your entire design scales down gracefully automagically.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -82,7 +82,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"fontSize":"small"} -->
-<p class="has-small-font-size">We obsess over performance so you don't have to. Ollie is super lightweight and scores top marks on Google PageSpeed Insights.</p>
+<p class="has-small-font-size">We obsess over performance so you don't have to. Moiraine is super lightweight and scores top marks on Google PageSpeed Insights.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -104,7 +104,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"fontSize":"small"} -->
-<p class="has-small-font-size">Creating unique designs has never been easier. Ollie's growing pattern library puts expertly designed patterns at your fingertips.</p>
+<p class="has-small-font-size">Creating unique designs has never been easier. Moiraine's growing pattern library puts expertly designed patterns at your fingertips.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -148,7 +148,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"fontSize":"small"} -->
-<p class="has-small-font-size">Ollie launches with built-in pattern designs, page templates, style variations and more so you can get your site launched quickly.</p>
+<p class="has-small-font-size">Moiraine launches with built-in pattern designs, page templates, style variations and more so you can get your site launched quickly.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 

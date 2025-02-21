@@ -1,9 +1,9 @@
 <?php
 /**
  * Title: Blog Post Card
- * Slug: ollie/blog-post-card
+ * Slug: moiraine/blog-post-card
  * Description: 
- * Categories: ollie/card, ollie/posts
+ * Categories: moiraine/card, moiraine/posts
  * Keywords: card, image, text, box, content, link, button
  * Viewport Width: 600
  * Block Types: 

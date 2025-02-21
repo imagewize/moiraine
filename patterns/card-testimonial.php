@@ -1,9 +1,9 @@
 <?php
 /**
  * Title: Testimonial Card
- * Slug: ollie/card-testimonial
+ * Slug: moiraine/card-testimonial
  * Description: 
- * Categories: ollie/card, ollie/testimonial
+ * Categories: moiraine/card, moiraine/testimonial
  * Keywords: testimonial, card, avatar, text, quote, review, rating
  * Viewport Width: 600
  * Block Types: 

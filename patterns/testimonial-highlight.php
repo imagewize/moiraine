@@ -1,9 +1,9 @@
 <?php
 /**
  * Title: Testimonial Highlight
- * Slug: ollie/testimonial-highlight
+ * Slug: moiraine/testimonial-highlight
  * Description: 
- * Categories: ollie/testimonial
+ * Categories: moiraine/testimonial
  * Keywords: testimonial, review, rating, case study, text, heading
  * Viewport Width: 1500
  * Block Types: 

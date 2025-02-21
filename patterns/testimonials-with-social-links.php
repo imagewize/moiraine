@@ -1,9 +1,9 @@
 <?php
 /**
  * Title: Testimonials With Social Links
- * Slug: ollie/testimonials-with-social-links
+ * Slug: moiraine/testimonials-with-social-links
  * Description: 
- * Categories: ollie/call-to-action, ollie/testimonial
+ * Categories: moiraine/call-to-action, moiraine/testimonial
  * Keywords: testimonial, social, review, rating, quote, columns, links
  * Viewport Width: 1500
  * Block Types: 
@@ -43,7 +43,7 @@
 <!-- /wp:separator -->
 
 <!-- wp:paragraph {"fontSize":"medium"} -->
-<p class="has-medium-font-size">I love using WordPress but traditionally it has been hard to design in. Not any more! I can quickly build out page sections or full page designs with Ollie patterns. Saves me so much time!</p>
+<p class="has-medium-font-size">I love using WordPress but traditionally it has been hard to design in. Not any more! I can quickly build out page sections or full page designs with Moiraine patterns. Saves me so much time!</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small","margin":{"top":"var:preset|spacing|large"}}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
@@ -79,7 +79,7 @@
 <!-- /wp:separator -->
 
 <!-- wp:paragraph {"fontSize":"medium"} -->
-<p class="has-medium-font-size">I create a lot of landing pages, and the Site Editor and Ollie have been huge for this. I can choose from a pre-designed landing page, customize my brand colors, and I’m ready to launch.</p>
+<p class="has-medium-font-size">I create a lot of landing pages, and the Site Editor and Moiraine have been huge for this. I can choose from a pre-designed landing page, customize my brand colors, and I’m ready to launch.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small","margin":{"top":"var:preset|spacing|large"}}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->

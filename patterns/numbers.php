@@ -1,9 +1,9 @@
 <?php
 /**
  * Title: Numbers
- * Slug: ollie/numbers
+ * Slug: moiraine/numbers
  * Description: 
- * Categories: ollie/features
+ * Categories: moiraine/features
  * Keywords: cta, call, to, action, button
  * Viewport Width: 1500
  * Block Types: 

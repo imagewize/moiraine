@@ -1,9 +1,9 @@
 <?php
 /**
  * Title: Blog Post Columns Single
- * Slug: ollie/blog-post-columns-single
+ * Slug: moiraine/blog-post-columns-single
  * Description: 
- * Categories: ollie/posts
+ * Categories: moiraine/posts
  * Keywords: blog, posts, query, pages
  * Viewport Width: 1500
  * Block Types: 

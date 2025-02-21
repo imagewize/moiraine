@@ -1,9 +1,9 @@
 <?php
 /**
  * Title: Post Loop Grid
- * Slug: ollie/post-loop-grid
+ * Slug: moiraine/post-loop-grid
  * Description: This post loop grid is best used on custom pages where there is not a default post loop.
- * Categories: ollie/posts
+ * Categories: moiraine/posts
  * Keywords: blog, posts, query, loop
  * Viewport Width: 1280
  * Block Types: core/query

@@ -1,9 +1,9 @@
 <?php
 /**
  * Title: Post List Card
- * Slug: ollie/post-list-card
+ * Slug: moiraine/post-list-card
  * Description: 
- * Categories: ollie/card, ollie/posts
+ * Categories: moiraine/card, moiraine/posts
  * Keywords: card, posts, list, links, query, page
  * Viewport Width: 600
  * Block Types: 

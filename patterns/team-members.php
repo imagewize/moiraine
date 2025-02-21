@@ -1,9 +1,9 @@
 <?php
 /**
  * Title: Team Members
- * Slug: ollie/team-members
+ * Slug: moiraine/team-members
  * Description: 
- * Categories: ollie/testimonial, ollie/features
+ * Categories: moiraine/testimonial, moiraine/features
  * Keywords: cta, call, to, action, button
  * Viewport Width: 1500
  * Block Types: 

@@ -1,19 +1,19 @@
 /*
-Theme Name: Ollie
-Theme URI: olliewp.com
+Theme Name: Moiraine
+Theme URI: imagewize.com/moiraine
 Author: Mike McAlister
 Author URI: mikemcalister.com
-Description: Launch a blazing-fast, pixel-perfect website with the Ollie WordPress block theme! Ollie features over 50 beautiful pattern designs, 7 full-page pattern layouts, and a fully-customizable design system with Global Styles. Ollie integrates seamlessly with all of the powerful new WordPress editor features, giving you the most lightweight and powerful website builder on the planet — no expensive page builder plugin required! ✶ Full demo: https://demo.olliewp.com ✶
+Description: Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block theme! Moiraine features over 50 beautiful pattern designs, 7 full-page pattern layouts, and a fully-customizable design system with Global Styles. Moiraine integrates seamlessly with all of the powerful new WordPress editor features, giving you the most lightweight and powerful website builder on the planet — no expensive page builder plugin required! ✶ Full demo: https://demo.olliewp.com ✶
 Tags: blog, portfolio, entertainment, grid-layout, one-column, two-columns, three-columns, four-columns, block-patterns, block-styles, custom-logo, custom-menu, editor-style, featured-images, full-site-editing, full-width-template, rtl-language-support, style-variations, template-editing, theme-options, translation-ready, wide-blocks
 Tested up to: 6.7.1
 Requires PHP: 7.3
 Version: 1.3.3
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: ollie
+Text Domain: moiraine
 
-Ollie WordPress Theme, (C) 2025 Mike McAlister.
-Ollie is distributed under the terms of the GNU GPL.
+Moiraine WordPress Theme, (C) 2025 Mike McAlister.
+Moiraine is distributed under the terms of the GNU GPL.
 */
 
 /* CSS Reset
@@ -162,11 +162,11 @@ a.more-link {
 }
 
 @media (max-width: 781px) {
-	.ollie-hide-on-mobile {
+	.moiraine-hide-on-mobile {
 		display: none;
 	}
 
-	.ollie-unstick-mobile {
+	.moiraine-unstick-mobile {
 		position: static;
 	}
 }

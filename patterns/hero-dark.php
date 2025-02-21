@@ -1,9 +1,9 @@
 <?php
 /**
  * Title: Hero Dark
- * Slug: ollie/hero-dark
+ * Slug: moiraine/hero-dark
  * Description: 
- * Categories: ollie/call-to-action, ollie/hero
+ * Categories: moiraine/call-to-action, moiraine/hero
  * Keywords: cta, header, buttons, heading, hero, feature, homepage
  * Viewport Width: 1500
  * Block Types: 
@@ -25,16 +25,16 @@
 <!-- /wp:group -->
 
 <!-- wp:paragraph {"align":"center","textColor":"main-accent"} -->
-<p class="has-text-align-center has-main-accent-color has-text-color">Easily create beautiful, fully-customizable websites with the new WordPress Site Editor and the Ollie block theme. No coding skills required.</p>
+<p class="has-text-align-center has-main-accent-color has-text-color">Easily create beautiful, fully-customizable websites with the new WordPress Site Editor and the Moiraine block theme. No coding skills required.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons"><!-- wp:button {"className":"is-style-button-brand"} -->
-<div class="wp-block-button is-style-button-brand"><a class="wp-block-button__link wp-element-button">Download Ollie</a></div>
+<div class="wp-block-button is-style-button-brand"><a class="wp-block-button__link wp-element-button">Download Moiraine</a></div>
 <!-- /wp:button -->
 
 <!-- wp:button {"className":"is-style-button-light"} -->
-<div class="wp-block-button is-style-button-light"><a class="wp-block-button__link wp-element-button">Ollie Features</a></div>
+<div class="wp-block-button is-style-button-light"><a class="wp-block-button__link wp-element-button">Moiraine Features</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group -->

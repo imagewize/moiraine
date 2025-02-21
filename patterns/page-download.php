@@ -1,9 +1,9 @@
 <?php
 /**
  * Title: Download Page
- * Slug: ollie/page-download
+ * Slug: moiraine/page-download
  * Description: A full page design for a Download page
- * Categories: ollie/pages
+ * Categories: moiraine/pages
  * Keywords: page, layout, design, template, download
  * Viewport Width: 1500
  * Block Types: 
@@ -11,12 +11,12 @@
  * Inserter: true
  */
 ?>
-<!-- wp:pattern {"slug":"ollie/text-and-details-card"} /-->
+<!-- wp:pattern {"slug":"moiraine/text-and-details-card"} /-->
 
-<!-- wp:pattern {"slug":"ollie/faq"} /-->
+<!-- wp:pattern {"slug":"moiraine/faq"} /-->
 
-<!-- wp:pattern {"slug":"ollie/testimonials-with-social-links"} /-->
+<!-- wp:pattern {"slug":"moiraine/testimonials-with-social-links"} /-->
 
-<!-- wp:pattern {"slug":"ollie/image-and-numbered-features"} /-->
+<!-- wp:pattern {"slug":"moiraine/image-and-numbered-features"} /-->
 
-<!-- wp:pattern {"slug":"ollie/text-call-to-action-buttons"} /-->
+<!-- wp:pattern {"slug":"moiraine/text-call-to-action-buttons"} /-->
