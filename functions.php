@@ -178,6 +178,9 @@ add_action( 'wp_head', __NAMESPACE__ . '\is_paginated' );
 
 /**
  * Add a Sidebar template part area
+ *
+ * @param array $areas Array of template part areas.
+ * @return array
  */
 function template_part_areas( array $areas ) {
 	$areas[] = array(
