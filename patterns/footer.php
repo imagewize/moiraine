@@ -2,9 +2,9 @@
 /**
  * Title: Footer
  * Slug: moiraine/footer
- * Description: 
+ * Description:
  * Categories: footer
- * Keywords: 
+ * Keywords:
  * Viewport Width: 1500
  * Block Types: core/template-part/footer
  * Post Types: wp_template

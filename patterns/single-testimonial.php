@@ -2,12 +2,12 @@
 /**
  * Title: Single Testimonial
  * Slug: moiraine/single-testimonial
- * Description: 
+ * Description:
  * Categories: moiraine/testimonial, moiraine/features, moiraine/card
  * Keywords: testimonial, text, review, rating, avatar, card
  * Viewport Width: 600
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: true
  */
 ?>

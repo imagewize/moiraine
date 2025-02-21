@@ -2,12 +2,12 @@
 /**
  * Title: Hero Text, Image, and Logos
  * Slug: moiraine/hero-text-image-and-logos
- * Description: 
+ * Description:
  * Categories: moiraine/call-to-action, moiraine/hero
  * Keywords: cta, header, buttons, heading, hero, feature, homepage
  * Viewport Width: 1500
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: true
  */
 ?>

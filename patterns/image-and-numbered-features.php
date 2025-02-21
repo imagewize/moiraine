@@ -2,12 +2,12 @@
 /**
  * Title: Image and Numbered Features
  * Slug: moiraine/image-and-numbered-features
- * Description: 
+ * Description:
  * Categories: moiraine/features
  * Keywords: number, list, features, bullet
  * Viewport Width: 1500
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: true
  */
 ?>

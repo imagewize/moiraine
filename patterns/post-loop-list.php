@@ -2,12 +2,12 @@
 /**
  * Title: Post Loop List
  * Slug: moiraine/post-loop-list
- * Description: 
+ * Description:
  * Categories: moiraine/posts
  * Keywords: blog, posts, query, loop
  * Viewport Width: 1280
  * Block Types: core/query
- * Post Types: 
+ * Post Types:
  * Inserter: true
  */
 ?>

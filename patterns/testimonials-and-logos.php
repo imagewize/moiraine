@@ -2,12 +2,12 @@
 /**
  * Title: Testimonials and Logos
  * Slug: moiraine/testimonials-and-logos
- * Description: 
+ * Description:
  * Categories: moiraine/testimonial
  * Keywords: cta, call, to, action, button
  * Viewport Width: 1500
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: true
  */
 ?>

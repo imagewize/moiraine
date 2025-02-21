@@ -2,12 +2,12 @@
 /**
  * Title: Text and Details Card
  * Slug: moiraine/text-and-details-card
- * Description: 
+ * Description:
  * Categories: moiraine/call-to-action, moiraine/hero, moiraine/features, moiraine/card
  * Keywords: table, stats, details, list, card
  * Viewport Width: 1500
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: true
  */
 ?>

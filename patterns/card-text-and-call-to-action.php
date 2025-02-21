@@ -2,12 +2,12 @@
 /**
  * Title: Text and Call To Action Card
  * Slug: moiraine/card-text-and-call-to-action
- * Description: 
+ * Description:
  * Categories: moiraine/testimonial, moiraine/hero, moiraine/card, moiraine/call-to-action
  * Keywords: download, box, cta, rating, review, testimonial
  * Viewport Width: 1500
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: true
  */
 ?>

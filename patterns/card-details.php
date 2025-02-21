@@ -2,12 +2,12 @@
 /**
  * Title: Details Card
  * Slug: moiraine/details-card
- * Description: 
+ * Description:
  * Categories: moiraine/card
  * Keywords: card, table, list, info, details
  * Viewport Width: 600
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: true
  */
 ?>

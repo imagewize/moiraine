@@ -2,12 +2,12 @@
 /**
  * Title: Pricing Table Card
  * Slug: moiraine/pricing-table-card
- * Description: 
+ * Description:
  * Categories: moiraine/card, moiraine/pricing
  * Keywords: card, price, pricing, button, list, purchase, download
  * Viewport Width: 600
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: true
  */
 ?>

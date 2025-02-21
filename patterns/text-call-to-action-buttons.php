@@ -6,8 +6,8 @@
  * Categories: moiraine/call-to-action, moiraine/hero
  * Keywords: cta, call to action, buttons, heading
  * Viewport Width: 1500
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: true
  */
 ?>

@@ -2,12 +2,12 @@
 /**
  * Title: Call To Action Card
  * Slug: moiraine/card-call-to-action
- * Description: 
+ * Description:
  * Categories: moiraine/card, moiraine/call-to-action
  * Keywords: card, download, box, link, button, cta, call to action
  * Viewport Width: 600
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: true
  */
 ?>

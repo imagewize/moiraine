@@ -2,12 +2,12 @@
 /**
  * Title: Blog Post Card
  * Slug: moiraine/blog-post-card
- * Description: 
+ * Description:
  * Categories: moiraine/card, moiraine/posts
  * Keywords: card, image, text, box, content, link, button
  * Viewport Width: 600
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: true
  */
 ?>

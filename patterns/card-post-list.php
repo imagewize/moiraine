@@ -2,12 +2,12 @@
 /**
  * Title: Post List Card
  * Slug: moiraine/post-list-card
- * Description: 
+ * Description:
  * Categories: moiraine/card, moiraine/posts
  * Keywords: card, posts, list, links, query, page
  * Viewport Width: 600
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: true
  */
 ?>

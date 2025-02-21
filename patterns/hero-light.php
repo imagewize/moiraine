@@ -2,12 +2,12 @@
 /**
  * Title: Hero Light
  * Slug: moiraine/hero-light
- * Description: 
+ * Description:
  * Categories: moiraine/call-to-action, moiraine/hero
  * Keywords: cta, call to action, buttons, homepage, header, hero, heading, screenshot
  * Viewport Width: 1500
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: true
  */
 ?>

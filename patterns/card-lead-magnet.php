@@ -6,8 +6,8 @@
  * Categories: moiraine/call-to-action, moiraine/card
  * Keywords: download, button, cta, email, card
  * Viewport Width: 800
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: true
  */
 ?>

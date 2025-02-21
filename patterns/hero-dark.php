@@ -2,12 +2,12 @@
 /**
  * Title: Hero Dark
  * Slug: moiraine/hero-dark
- * Description: 
+ * Description:
  * Categories: moiraine/call-to-action, moiraine/hero
  * Keywords: cta, header, buttons, heading, hero, feature, homepage
  * Viewport Width: 1500
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: true
  */
 ?>

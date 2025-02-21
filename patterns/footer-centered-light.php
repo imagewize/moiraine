@@ -2,9 +2,9 @@
 /**
  * Title: Footer Centered Light
  * Slug: moiraine/footer-centered-light
- * Description: 
+ * Description:
  * Categories: footer
- * Keywords: 
+ * Keywords:
  * Viewport Width: 1500
  * Block Types: core/template-part/footer
  * Post Types: wp_template

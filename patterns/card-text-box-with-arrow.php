@@ -2,12 +2,12 @@
 /**
  * Title: Text Box Card
  * Slug: moiraine/text-box-with-arrow-card
- * Description: 
+ * Description:
  * Categories: moiraine/card, moiraine/call-to-action
  * Keywords: box, text, link, arrow, icon, card
  * Viewport Width: 600
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: true
  */
 ?>

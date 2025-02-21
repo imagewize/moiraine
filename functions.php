@@ -39,46 +39,46 @@ add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_style_sheet' );
 function register_block_styles() {
 
 	$block_styles = array(
-		'core/list'                      => array(
+		'core/list'         => array(
 			'list-check'        => __( 'Check', 'moiraine' ),
 			'list-check-circle' => __( 'Check Circle', 'moiraine' ),
 			'list-boxed'        => __( 'Boxed', 'moiraine' ),
 		),
-		'core/code'                      => array(
+		'core/code'         => array(
 			'dark-code' => __( 'Dark', 'moiraine' ),
 		),
-		'core/cover'                     => array(
+		'core/cover'        => array(
 			'blur-image-less' => __( 'Blur Image Less', 'moiraine' ),
 			'blur-image-more' => __( 'Blur Image More', 'moiraine' ),
 			'rounded-cover'   => __( 'Rounded', 'moiraine' ),
 		),
-		'core/column'                    => array(
+		'core/column'       => array(
 			'column-box-shadow' => __( 'Box Shadow', 'moiraine' ),
 		),
-		'core/post-excerpt'              => array(
+		'core/post-excerpt' => array(
 			'excerpt-truncate-2' => __( 'Truncate 2 Lines', 'moiraine' ),
 			'excerpt-truncate-3' => __( 'Truncate 3 Lines', 'moiraine' ),
 			'excerpt-truncate-4' => __( 'Truncate 4 Lines', 'moiraine' ),
 		),
-		'core/group'                     => array(
+		'core/group'        => array(
 			'column-box-shadow' => __( 'Box Shadow', 'moiraine' ),
-			'background-blur' => __( 'Background Blur', 'moiraine' ),
+			'background-blur'   => __( 'Background Blur', 'moiraine' ),
 		),
-		'core/separator'                 => array(
+		'core/separator'    => array(
 			'separator-dotted' => __( 'Dotted', 'moiraine' ),
 			'separator-thin'   => __( 'Thin', 'moiraine' ),
 		),
-		'core/image'                     => array(
+		'core/image'        => array(
 			'rounded-full' => __( 'Rounded Full', 'moiraine' ),
 			'media-boxed'  => __( 'Boxed', 'moiraine' ),
 		),
-		'core/preformatted'              => array(
+		'core/preformatted' => array(
 			'preformatted-dark' => __( 'Dark Style', 'moiraine' ),
 		),
-		'core/post-terms'                => array(
+		'core/post-terms'   => array(
 			'term-button' => __( 'Button Style', 'moiraine' ),
 		),
-		'core/video'                     => array(
+		'core/video'        => array(
 			'media-boxed' => __( 'Boxed', 'moiraine' ),
 		),
 	);

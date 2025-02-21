@@ -2,12 +2,12 @@
 /**
  * Title: Team Members
  * Slug: moiraine/team-members
- * Description: 
+ * Description:
  * Categories: moiraine/testimonial, moiraine/features
  * Keywords: cta, call, to, action, button
  * Viewport Width: 1500
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: true
  */
 ?>

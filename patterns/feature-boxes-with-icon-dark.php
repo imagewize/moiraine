@@ -2,12 +2,12 @@
 /**
  * Title: Feature Boxes Dark
  * Slug: moiraine/feature-boxes-with-icon-dark
- * Description: 
+ * Description:
  * Categories: moiraine/features
  * Keywords: text, features, columns, icon, cta, button, call to action, box
  * Viewport Width: 1500
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: true
  */
 ?>

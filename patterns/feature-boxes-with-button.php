@@ -2,12 +2,12 @@
 /**
  * Title: Feature Boxes With Button
  * Slug: moiraine/feature-boxes-with-button
- * Description: 
+ * Description:
  * Categories: moiraine/features
  * Keywords: cta, button, call to action, features, icon, box
  * Viewport Width: 1500
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: true
  */
 ?>

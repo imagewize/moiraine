@@ -6,8 +6,8 @@
  * Categories: moiraine/posts
  * Keywords: blog, posts, query
  * Viewport Width: 1500
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: false
  */
 ?>
