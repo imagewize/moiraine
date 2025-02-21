@@ -1,13 +1,13 @@
 <?php
 /**
  * Title: Text Box Card
- * Slug: ollie/text-box-with-arrow-card
- * Description: 
- * Categories: ollie/card, ollie/call-to-action
+ * Slug: moiraine/text-box-with-arrow-card
+ * Description:
+ * Categories: moiraine/card, moiraine/call-to-action
  * Keywords: box, text, link, arrow, icon, card
  * Viewport Width: 600
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: true
  */
 ?>

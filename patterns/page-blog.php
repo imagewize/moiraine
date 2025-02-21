@@ -1,14 +1,14 @@
 <?php
 /**
  * Title: Blog Page
- * Slug: ollie/blog-page
+ * Slug: moiraine/blog-page
  * Description: A full page design for a blog page
- * Categories: ollie/pages
+ * Categories: moiraine/pages
  * Keywords: page, layout, design, template, blog, posts, query
  * Viewport Width: 1500
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: true
  */
 ?>
-<!-- wp:pattern {"slug":"ollie/post-loop-grid"} /-->
+<!-- wp:pattern {"slug":"moiraine/post-loop-grid"} /-->

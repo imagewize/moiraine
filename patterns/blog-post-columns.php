@@ -1,13 +1,13 @@
 <?php
 /**
  * Title: Blog Post Columns
- * Slug: ollie/blog-post-columns
- * Description: 
- * Categories: ollie/posts
+ * Slug: moiraine/blog-post-columns
+ * Description:
+ * Categories: moiraine/posts
  * Keywords: blog, posts, query, pages
  * Viewport Width: 1500
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: true
  */
 ?>

@@ -1,13 +1,13 @@
 <?php
 /**
  * Title: Pricing Table - 3 Column
- * Slug: ollie/pricing-table-3-column
- * Description: 
- * Categories: ollie/pricing
+ * Slug: moiraine/pricing-table-3-column
+ * Description:
+ * Categories: moiraine/pricing
  * Keywords: cta, call, to, action, button
  * Viewport Width: 1500
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: true
  */
 ?>
@@ -22,7 +22,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center">Easily create beautiful and responsive pricing tables with Ollie patterns. Connect your eCommerce solution and start making bank.</p>
+<p class="has-text-align-center">Easily create beautiful and responsive pricing tables with Moiraine patterns. Connect your eCommerce solution and start making bank.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 

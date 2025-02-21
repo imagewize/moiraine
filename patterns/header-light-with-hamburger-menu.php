@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Header Light w/ Hamburger Menu
- * Slug: ollie/header-light-with-hamburger-menu
+ * Slug: moiraine/header-light-with-hamburger-menu
  * Description: Header with nav and social icons
  * Categories: header
  * Keywords: header, nav, links, button

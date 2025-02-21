@@ -1,13 +1,13 @@
 <?php
 /**
  * Title: Contact Details
- * Slug: ollie/contact-details
+ * Slug: moiraine/contact-details
  * Description: Contact details with call to action buttons and a testimonial
- * Categories: ollie/testimonial, ollie/call-to-action, ollie/hero
+ * Categories: moiraine/testimonial, moiraine/call-to-action, moiraine/hero
  * Keywords: contact, testimonial, about, columns, ratings, email, phone
  * Viewport Width: 1500
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: true
  */
 ?>
@@ -48,7 +48,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"600"}}} -->
-<p style="font-style:normal;font-weight:600">“Working with Ollie has been a delight from start to finish.”</p>
+<p style="font-style:normal;font-weight:600">“Working with Moiraine has been a delight from start to finish.”</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"500"}},"textColor":"secondary","fontSize":"x-small"} -->

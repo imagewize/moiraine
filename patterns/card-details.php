@@ -1,13 +1,13 @@
 <?php
 /**
  * Title: Details Card
- * Slug: ollie/details-card
- * Description: 
- * Categories: ollie/card
+ * Slug: moiraine/details-card
+ * Description:
+ * Categories: moiraine/card
  * Keywords: card, table, list, info, details
  * Viewport Width: 600
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: true
  */
 ?>

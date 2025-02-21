@@ -1,13 +1,13 @@
 <?php
 /**
  * Title: Profile Box
- * Slug: ollie/profile-box
+ * Slug: moiraine/profile-box
  * Description: A profile box with an avatar, links to social media, and buttons
- * Categories: ollie/call-to-action, ollie/pages
+ * Categories: moiraine/call-to-action, moiraine/pages
  * Keywords: links, linktree, buttons, profile, bio
  * Viewport Width: 1500
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: true
  */
 ?>

@@ -1,13 +1,13 @@
 <?php
 /**
  * Title: Pricing Table Card Dark
- * Slug: ollie/card-pricing-table-dark
- * Description: 
- * Categories: ollie/card, ollie/pricing
+ * Slug: moiraine/card-pricing-table-dark
+ * Description:
+ * Categories: moiraine/card, moiraine/pricing
  * Keywords: card, price, pricing, button, list, purchase, download
  * Viewport Width: 600
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: true
  */
 ?>

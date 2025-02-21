@@ -1,13 +1,13 @@
 <?php
 /**
  * Title: Social Profile Card
- * Slug: ollie/social-profile-card
- * Description: 
- * Categories: ollie/card
+ * Slug: moiraine/social-profile-card
+ * Description:
+ * Categories: moiraine/card
  * Keywords: profile, links, social, twitter, facebook, instagram, linktree, avatar, bio
  * Viewport Width: 600
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: true
  */
 ?>

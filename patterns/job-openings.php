@@ -1,13 +1,13 @@
 <?php
 /**
  * Title: Job Openings
- * Slug: ollie/job-openings
+ * Slug: moiraine/job-openings
  * Description: Show job openings and a call to action button
- * Categories: ollie/features, ollie/call-to-action
+ * Categories: moiraine/features, moiraine/call-to-action
  * Keywords: employment, hiring, job, apply
  * Viewport Width: 1500
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: true
  */
 ?>

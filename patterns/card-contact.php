@@ -1,13 +1,13 @@
 <?php
 /**
  * Title: Contact Card
- * Slug: ollie/card-contact
- * Description: 
- * Categories: ollie/card
+ * Slug: moiraine/card-contact
+ * Description:
+ * Categories: moiraine/card
  * Keywords: card, contact, social, links, email, company
  * Viewport Width: 600
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: true
  */
 ?>

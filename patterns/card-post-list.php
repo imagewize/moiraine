@@ -1,13 +1,13 @@
 <?php
 /**
  * Title: Post List Card
- * Slug: ollie/post-list-card
- * Description: 
- * Categories: ollie/card, ollie/posts
+ * Slug: moiraine/post-list-card
+ * Description:
+ * Categories: moiraine/card, moiraine/posts
  * Keywords: card, posts, list, links, query, page
  * Viewport Width: 600
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: true
  */
 ?>

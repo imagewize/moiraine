@@ -1,13 +1,13 @@
 <?php
 /**
  * Title: Testimonial Card
- * Slug: ollie/card-testimonial
- * Description: 
- * Categories: ollie/card, ollie/testimonial
+ * Slug: moiraine/card-testimonial
+ * Description:
+ * Categories: moiraine/card, moiraine/testimonial
  * Keywords: testimonial, card, avatar, text, quote, review, rating
  * Viewport Width: 600
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: true
  */
 ?>

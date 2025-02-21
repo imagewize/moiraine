@@ -1,13 +1,13 @@
 <?php
 /**
  * Title: Team Members
- * Slug: ollie/team-members
- * Description: 
- * Categories: ollie/testimonial, ollie/features
+ * Slug: moiraine/team-members
+ * Description:
+ * Categories: moiraine/testimonial, moiraine/features
  * Keywords: cta, call, to, action, button
  * Viewport Width: 1500
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: true
  */
 ?>

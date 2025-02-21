@@ -1,13 +1,13 @@
 <?php
 /**
  * Title: Testimonials With Big Text
- * Slug: ollie/testimonials-with-big-text
- * Description: 
- * Categories: ollie/testimonial
+ * Slug: moiraine/testimonials-with-big-text
+ * Description:
+ * Categories: moiraine/testimonial
  * Keywords: testimonial, review, rating, quote, heading, columns, avatar
  * Viewport Width: 1500
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: true
  */
 ?>
@@ -32,7 +32,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"600"}}} -->
-<p style="font-style:normal;font-weight:600">“Working with Ollie has been a delight from start to finish.”</p>
+<p style="font-style:normal;font-weight:600">“Working with Moiraine has been a delight from start to finish.”</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"500"}},"textColor":"secondary","fontSize":"x-small"} -->
@@ -62,7 +62,7 @@
 
 <!-- wp:group {"metadata":{"name":"Testimonial"},"className":"is-style-default","style":{"spacing":{"blockGap":"var:preset|spacing|medium","padding":{"top":"var:preset|spacing|large","right":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|large"}},"border":{"radius":"5px","width":"1px"}},"backgroundColor":"base","borderColor":"border-light","layout":{"type":"constrained"}} -->
 <div class="wp-block-group is-style-default has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;border-radius:5px;padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large)"><!-- wp:paragraph -->
-<p>I create a lot of landing pages, and the Site Editor and Ollie have been a game changer for this. Choose a layout, add my content, hit publish.</p>
+<p>I create a lot of landing pages, and the Site Editor and Moiraine have been a game changer for this. Choose a layout, add my content, hit publish.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:group {"metadata":{"name":"Cite"},"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->

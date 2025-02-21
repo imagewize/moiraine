@@ -1,4 +1,4 @@
-name: Deploy theme to Ollie demo
+name: Deploy theme to Moiraine demo
 
 on:
   push:

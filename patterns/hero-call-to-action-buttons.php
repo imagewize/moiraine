@@ -1,13 +1,13 @@
 <?php
 /**
  * Title: Hero Call To Action Buttons
- * Slug: ollie/hero-call-to-action-buttons
- * Description: 
- * Categories: ollie/call-to-action, ollie/hero
+ * Slug: moiraine/hero-call-to-action-buttons
+ * Description:
+ * Categories: moiraine/call-to-action, moiraine/hero
  * Keywords: cta, header, buttons, heading, hero, feature, homepage
  * Viewport Width: 1500
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: true
  */
 ?>
@@ -20,21 +20,21 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"textAlign":"center","className":"has-secondary-font-family","fontSize":"x-large"} -->
-<h2 class="wp-block-heading has-text-align-center has-secondary-font-family has-x-large-font-size">Design faster and publish sooner with Ollie</h2>
+<h2 class="wp-block-heading has-text-align-center has-secondary-font-family has-x-large-font-size">Design faster and publish sooner with Moiraine</h2>
 <!-- /wp:heading --></div>
 <!-- /wp:group -->
 
 <!-- wp:paragraph {"align":"center","textColor":"main-accent"} -->
-<p class="has-text-align-center has-main-accent-color has-text-color">Easily create beautiful, fully-customizable websites with the new WordPress Site Editor and the Ollie block theme. No coding skills required.</p>
+<p class="has-text-align-center has-main-accent-color has-text-color">Easily create beautiful, fully-customizable websites with the new WordPress Site Editor and the Moiraine block theme. No coding skills required.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons"><!-- wp:button {"className":"is-style-button-brand"} -->
-<div class="wp-block-button is-style-button-brand"><a class="wp-block-button__link wp-element-button">Download Ollie</a></div>
+<div class="wp-block-button is-style-button-brand"><a class="wp-block-button__link wp-element-button">Download Moiraine</a></div>
 <!-- /wp:button -->
 
 <!-- wp:button {"className":"is-style-button-light"} -->
-<div class="wp-block-button is-style-button-light"><a class="wp-block-button__link wp-element-button">Ollie Features</a></div>
+<div class="wp-block-button is-style-button-light"><a class="wp-block-button__link wp-element-button">Moiraine Features</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div>

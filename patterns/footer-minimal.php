@@ -1,10 +1,10 @@
 <?php
 /**
  * Title: Footer Minimal
- * Slug: ollie/footer-minimal
- * Description: 
+ * Slug: moiraine/footer-minimal
+ * Description:
  * Categories: footer
- * Keywords: 
+ * Keywords:
  * Viewport Width: 1500
  * Block Types: core/template-part/footer
  * Post Types: wp_template
@@ -16,7 +16,7 @@
 <div class="wp-block-group alignwide has-main-accent-color has-text-color has-link-color"><!-- wp:site-title {"level":0,"isLink":false,"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"textColor":"base"} /-->
 
 <!-- wp:paragraph {"fontSize":"small"} -->
-<p class="has-small-font-size">© 2025 · Powered by WordPress and <a href="https://olliewp.com">Ollie</a></p>
+<p class="has-small-font-size">© 2025 · Powered by WordPress and <a href="https://olliewp.com">Moiraine</a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></footer>
 <!-- /wp:group -->

@@ -1,18 +1,18 @@
 <?php
 /**
  * Title: Pricing Page
- * Slug: ollie/page-pricing
+ * Slug: moiraine/page-pricing
  * Description: A full page design for a Pricing page
- * Categories: ollie/pages, ollie/pricing
+ * Categories: moiraine/pages, moiraine/pricing
  * Keywords: page, layout, design, template, pricing
  * Viewport Width: 1500
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: true
  */
 ?>
-<!-- wp:pattern {"slug":"ollie/pricing-table-with-testimonials"} /-->
+<!-- wp:pattern {"slug":"moiraine/pricing-table-with-testimonials"} /-->
 
-<!-- wp:pattern {"slug":"ollie/faq"} /-->
+<!-- wp:pattern {"slug":"moiraine/faq"} /-->
 
-<!-- wp:pattern {"slug":"ollie/numbers"} /-->
+<!-- wp:pattern {"slug":"moiraine/numbers"} /-->

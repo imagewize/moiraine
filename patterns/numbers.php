@@ -1,13 +1,13 @@
 <?php
 /**
  * Title: Numbers
- * Slug: ollie/numbers
- * Description: 
- * Categories: ollie/features
+ * Slug: moiraine/numbers
+ * Description:
+ * Categories: moiraine/features
  * Keywords: cta, call, to, action, button
  * Viewport Width: 1500
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: true
  */
 ?>

@@ -1,13 +1,13 @@
 <?php
 /**
  * Title: Image and Text Card
- * Slug: ollie/image-and-text-card
- * Description: 
- * Categories: ollie/card
+ * Slug: moiraine/image-and-text-card
+ * Description:
+ * Categories: moiraine/card
  * Keywords: card, image, text, box, content, link, button
  * Viewport Width: 600
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: true
  */
 ?>

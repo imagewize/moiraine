@@ -1,13 +1,13 @@
 <?php
 /**
  * Title: Text Call To Action Buttons
- * Slug: ollie/text-call-to-action-buttons
+ * Slug: moiraine/text-call-to-action-buttons
  * Description: A call to action with text and a button.
- * Categories: ollie/call-to-action, ollie/hero
+ * Categories: moiraine/call-to-action, moiraine/hero
  * Keywords: cta, call to action, buttons, heading
  * Viewport Width: 1500
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: true
  */
 ?>
