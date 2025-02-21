@@ -18,10 +18,10 @@
 
 <!-- wp:site-title {"level":0} /-->
 
-<!-- wp:social-links {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|small","left":"var:preset|spacing|small"}}}} -->
-<ul class="wp-block-social-links"><!-- wp:social-link {"url":"#","service":"facebook"} /-->
+<!-- wp:social-links {"iconColor":"main","iconColorValue":"#000000","showLabels":false,"className":"is-style-logos-only","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|small","left":"var:preset|spacing|small"}}}} -->
+<ul class="wp-block-social-links has-icon-color is-style-logos-only"><!-- wp:social-link {"url":"#","service":"facebook"} /-->
 <!-- wp:social-link {"url":"#","service":"instagram"} /-->
-<!-- wp:social-link {"url":"#","service":"twitter"} /--></ul>
+<!-- wp:social-link {"url":"#","service":"bluesky"} /--></ul>
 <!-- /wp:social-links --></div>
 <!-- /wp:group --></header>
 <!-- /wp:group -->
