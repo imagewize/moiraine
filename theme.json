@@ -17,6 +17,14 @@
 					]
 				},
 				{
+					"name": "Royal Blue",
+					"slug": "royal-blue",
+					"colors": [
+						"#1E3A8A",
+						"#4F68C6"
+					]
+				},
+				{
 					"name": "Pink",
 					"slug": "Pink",
 					"colors": [
@@ -115,6 +123,11 @@
 					"name": "Blue",
 					"slug": "blue",
 					"gradient": "linear-gradient(135deg, #0057FF, #31B5FF)"
+				},
+				{
+					"name": "Royal Blue",
+					"slug": "royal-blue",
+					"gradient": "linear-gradient(135deg, #1E3A8A, #4F68C6)"
 				},
 				{
 					"name": "Pink",
