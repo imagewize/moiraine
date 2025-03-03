@@ -1,0 +1,96 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Consulting",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"name": "Brand",
+					"slug": "primary",
+					"color": "#1E3A8A"
+				},
+				{
+					"name": "Brand Accent",
+					"slug": "primary-accent",
+					"color": "#4F68C6"
+				},
+				{
+					"name": "Brand Alt",
+					"slug": "primary-alt",
+					"color": "#B1C2FF"
+				},
+				{
+					"name": "Brand Alt Accent",
+					"slug": "primary-alt-accent",
+					"color": "#263042"
+				},
+				{
+					"name": "Contrast",
+					"slug": "main",
+					"color": "#171A1F"
+				},
+				{
+					"name": "Contrast Accent",
+					"slug": "main-accent",
+					"color": "#B6C7D9"
+				},
+				{
+					"name": "Base",
+					"slug": "base",
+					"color": "#FFFFFF"
+				},
+				{
+					"name": "Base Accent",
+					"slug": "secondary",
+					"color": "#3b5570"
+				},
+				{
+					"name": "Tint",
+					"slug": "tertiary",
+					"color": "#F8F7F9"
+				},
+				{
+					"name": "Border Base",
+					"slug": "border-light",
+					"color": "#DADEE3"
+				},
+				{
+					"name": "Border Contrast",
+					"slug": "border-dark",
+					"color": "#444B57"
+				}
+			]
+		}
+	},
+	"styles": {
+			"elements": {
+				"button": {
+					"spacing": {
+						"padding": {
+							"top": "1em",
+							"right": "1.8em",
+							"bottom": "1em",
+							"left": "1.8em"
+						}
+					},
+					"border": {
+						"radius": "4px"
+					}
+				},
+				"heading": {
+					"typography": {
+						"fontFamily": "var(--wp--preset--font-family--serif)",
+						"fontWeight": "600",
+						"lineHeight": "1.3"
+					}
+				},
+				"h1": {
+					"typography": {
+						"fontWeight": "700",
+						"lineHeight": "1.2"
+					}
+				}
+			}
+		}
+}
