@@ -1,12 +1,12 @@
 {
 	"name": "imagewize/moiraine",
-	"description": "A WordPress block theme by Mike McAlister",
+	"description": "A WordPress block theme by Jasper Frumau",
 	"type": "wordpress-theme",
 	"license": "GPL-2.0-or-later",
 	"authors": [
 		{
-			"name": "Mike McAlister",
-			"email": "m@mikemcalister.com"
+			"name": "Jasper Frumau",
+			"email": "jasper@imagewize.com"
 		}
 	],
 	"require": {
