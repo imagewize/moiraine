@@ -29,8 +29,7 @@ add_action( 'after_setup_theme', __NAMESPACE__ . '\setup' );
  */
 function enqueue_style_sheet() {
 	wp_enqueue_style( sanitize_title( __NAMESPACE__ ), get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get( 'Version' ) );
-	
-	// We're removing the mega menu script loading from here as it will be handled by block.json
+	// We're removing the mega menu script loading from here as it will be handled by block.json.
 }
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_style_sheet' );
 
