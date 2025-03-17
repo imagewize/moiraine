@@ -9,5 +9,6 @@
     "supports": {
         "inserter": true
     },
-    "editorScript": "file:../../../js/mega-menu.js"
+    "editorScript": "file:../../../js/mega-menu-editor.js",
+    "script": "file:../../../js/mega-menu-frontend.js"
 }
