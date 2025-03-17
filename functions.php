@@ -29,9 +29,9 @@ add_action( 'after_setup_theme', __NAMESPACE__ . '\setup' );
  */
 function enqueue_style_sheet() {
 	wp_enqueue_style( sanitize_title( __NAMESPACE__ ), get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get( 'Version' ) );
-	
+
 	// Enqueue mega menu script if needed.
-	if ( has_block( 'core/template-part' ) && 
+	if ( has_block( 'core/template-part' ) &&
 		strpos( get_the_content(), 'header-light-with-mega-menu' ) !== false ) {
 		wp_enqueue_script( 'moiraine-mega-menu', get_template_directory_uri() . '/assets/js/mega-menu.js', array(), wp_get_theme()->get( 'Version' ), true );
 	}
@@ -216,7 +216,7 @@ function moiraine_register_custom_attributes() {
 			),
 		)
 	);
-	
+
 	register_block_type(
 		'core/group',
 		array(
