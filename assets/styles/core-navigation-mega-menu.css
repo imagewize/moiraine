@@ -1,0 +1,21 @@
+/**
+ * Mega menu styles for navigation block
+ */
+
+.has-mega-menu {
+    position: relative;
+}
+
+.mega-menu-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.mega-menu-content {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-top: 1px solid var(--wp--preset--color--border-light);
+    display: none;
+}

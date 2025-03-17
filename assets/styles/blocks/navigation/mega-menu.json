@@ -1,0 +1,13 @@
+{
+    "name": "mega-menu",
+    "title": "Mega Menu",
+    "category": "design",
+    "description": "Navigation with mega menu capabilities",
+    "attributes": {
+        "className": "has-mega-menu"
+    },
+    "supports": {
+        "inserter": true
+    },
+    "editorScript": "file:../../../js/mega-menu.js"
+}

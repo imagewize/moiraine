@@ -29,6 +29,12 @@ add_action( 'after_setup_theme', __NAMESPACE__ . '\setup' );
  */
 function enqueue_style_sheet() {
 	wp_enqueue_style( sanitize_title( __NAMESPACE__ ), get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get( 'Version' ) );
+    
+    // Enqueue mega menu script if needed
+    if (has_block('core/template-part') && 
+        strpos(get_the_content(), 'header-light-with-mega-menu') !== false) {
+        wp_enqueue_script('moiraine-mega-menu', get_template_directory_uri() . '/assets/js/mega-menu.js', array(), wp_get_theme()->get('Version'), true);
+    }
 }
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_style_sheet' );
 
@@ -194,3 +200,32 @@ function template_part_areas( array $areas ) {
 	return $areas;
 }
 add_filter( 'default_wp_template_part_areas', __NAMESPACE__ . '\template_part_areas' );
+
+
+/**
+ * Register custom block attributes for navigation-link block
+ */
+function moiraine_register_custom_attributes() {
+    register_block_type(
+        'core/navigation-link',
+        array(
+            'attributes' => array(
+                'megaMenuId' => array(
+                    'type' => 'string',
+                ),
+            ),
+        )
+    );
+    
+    register_block_type(
+        'core/group',
+        array(
+            'attributes' => array(
+                'megaMenuId' => array(
+                    'type' => 'string',
+                ),
+            ),
+        )
+    );
+}
+add_action('init', 'moiraine_register_custom_attributes');
