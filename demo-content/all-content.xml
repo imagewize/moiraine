@@ -17,13 +17,13 @@
  7. WordPress will then import each of the posts, pages, comments, categories, etc.
     contained in this file into your site.
 -->
-<!-- generator="WordPress/6.7.2" created="2025-03-18 03:56" -->
+<!-- generator="WordPress/6.7.2" created="2025-03-18 05:14" -->
 <rss version="2.0" xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:wp="http://wordpress.org/export/1.2/">
   <channel>
 <title>Moiraine Demo</title>
 <link>https://moiraine-demo.test</link>
 <description/>
-<pubDate>Tue, 18 Mar 2025 03:56:41 +0000</pubDate>
+<pubDate>Tue, 18 Mar 2025 05:14:36 +0000</pubDate>
 <language>en-US</language>
 <wp:wxr_version>1.2</wp:wxr_version>
 <wp:base_site_url>https://moiraine-demo.test</wp:base_site_url>
@@ -59,7 +59,7 @@
 <generator>https://wordpress.org/?v=6.7.2</generator>
 <item>
   <title><![CDATA[Hello world!]]></title>
-  <link>https://moiraine-demo.test/?p=1</link>
+  <link>https://moiraine-demo.test/hello-world/</link>
   <pubDate>Tue, 18 Mar 2025 03:12:01 +0000</pubDate>
   <dc:creator>admin</dc:creator>
   <guid isPermaLink="false">https://moiraine-demo.test/?p=1</guid>
@@ -130,12 +130,12 @@ Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.]]></wp
   <wp:post_id>2</wp:post_id>
   <wp:post_date>2025-03-18 03:12:01</wp:post_date>
   <wp:post_date_gmt>2025-03-18 03:12:01</wp:post_date_gmt>
-  <wp:post_modified>2025-03-18 03:12:01</wp:post_modified>
-  <wp:post_modified_gmt>2025-03-18 03:12:01</wp:post_modified_gmt>
+  <wp:post_modified>2025-03-18 04:08:08</wp:post_modified>
+  <wp:post_modified_gmt>2025-03-18 04:08:08</wp:post_modified_gmt>
   <wp:comment_status>closed</wp:comment_status>
   <wp:ping_status>open</wp:ping_status>
-  <wp:post_name>sample-page</wp:post_name>
-  <wp:status>publish</wp:status>
+  <wp:post_name>sample-page__trashed</wp:post_name>
+  <wp:status>trash</wp:status>
   <wp:post_parent>0</wp:post_parent>
   <wp:menu_order>0</wp:menu_order>
   <wp:post_type>page</wp:post_type>
@@ -144,6 +144,18 @@ Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.]]></wp
   <wp:postmeta>
     <wp:meta_key>_wp_page_template</wp:meta_key>
     <wp:meta_value><![CDATA[default]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>_wp_trash_meta_status</wp:meta_key>
+    <wp:meta_value><![CDATA[publish]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>_wp_trash_meta_time</wp:meta_key>
+    <wp:meta_value><![CDATA[1742270888]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>_wp_desired_post_slug</wp:meta_key>
+    <wp:meta_value><![CDATA[sample-page]]></wp:meta_value>
   </wp:postmeta>
 </item>
 <item>
@@ -248,18 +260,24 @@ Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.]]></wp
 </item>
 <item>
   <title><![CDATA[Navigation]]></title>
-  <link>https://moiraine-demo.test/?p=5</link>
+  <link>https://moiraine-demo.test/navigation/</link>
   <pubDate>Tue, 18 Mar 2025 03:12:14 +0000</pubDate>
   <dc:creator/>
   <guid isPermaLink="false">https://moiraine-demo.test/?p=5</guid>
   <description/>
-  <content:encoded><![CDATA[<!-- wp:page-list /-->]]></content:encoded>
+  <content:encoded><![CDATA[<!-- wp:navigation-link {"label":"Home","type":"page","id":6,"url":"https://moiraine-demo.test/","kind":"post-type"} /-->
+
+<!-- wp:navigation-link {"label":"About","type":"page","id":10,"url":"https://moiraine-demo.test/?page_id=10","kind":"post-type"} /-->
+
+<!-- wp:navigation-link {"label":"Blog","type":"page","id":18,"url":"https://moiraine-demo.test/?page_id=18","kind":"post-type"} /-->
+
+<!-- wp:navigation-link {"label":"Contact Us","type":"page","id":13,"url":"https://moiraine-demo.test/?page_id=13","kind":"post-type"} /-->]]></content:encoded>
   <excerpt:encoded><![CDATA[]]></excerpt:encoded>
   <wp:post_id>5</wp:post_id>
   <wp:post_date>2025-03-18 03:12:14</wp:post_date>
   <wp:post_date_gmt>2025-03-18 03:12:14</wp:post_date_gmt>
-  <wp:post_modified>2025-03-18 03:12:14</wp:post_modified>
-  <wp:post_modified_gmt>2025-03-18 03:12:14</wp:post_modified_gmt>
+  <wp:post_modified>2025-03-18 04:08:24</wp:post_modified>
+  <wp:post_modified_gmt>2025-03-18 04:08:24</wp:post_modified_gmt>
   <wp:comment_status>closed</wp:comment_status>
   <wp:ping_status>closed</wp:ping_status>
   <wp:post_name>navigation</wp:post_name>
@@ -1698,7 +1716,7 @@ Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.]]></wp
 </item>
 <item>
   <title><![CDATA[Custom Styles]]></title>
-  <link>https://moiraine-demo.test/?p=7</link>
+  <link>https://moiraine-demo.test/wp-global-styles-moiraine/</link>
   <pubDate>Tue, 18 Mar 2025 03:13:03 +0000</pubDate>
   <dc:creator>admin</dc:creator>
   <guid isPermaLink="false">https://moiraine-demo.test/?p=7</guid>
@@ -1723,122 +1741,12 @@ Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.]]></wp
 </item>
 <item>
   <title><![CDATA[About]]></title>
-  <link>https://moiraine-demo.test/?page_id=10</link>
+  <link>https://moiraine-demo.test/about/</link>
   <pubDate>Tue, 18 Mar 2025 03:29:20 +0000</pubDate>
   <dc:creator>admin</dc:creator>
   <guid isPermaLink="false">https://moiraine-demo.test/?page_id=10</guid>
   <description/>
-  <content:encoded><![CDATA[<!-- wp:group {"metadata":{"name":"Contact Details"},"align":"full","style":{"spacing":{"margin":{"top":"0px","bottom":"0px"},"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","right":"var:preset|spacing|medium","left":"var:preset|spacing|medium"}}},"layout":{"inherit":true,"type":"constrained"}} -->
-<div class="wp-block-group alignfull" style="margin-top:0px;margin-bottom:0px;padding-top:var(--wp--preset--spacing--xxx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xxx-large);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:columns {"verticalAlignment":"center","align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|x-large","left":"var:preset|spacing|x-large"},"margin":{"top":"0px","bottom":"0px"}}}} -->
-<div class="wp-block-columns alignwide are-vertically-aligned-center" style="margin-top:0px;margin-bottom:0px"><!-- wp:column {"verticalAlignment":"center"} -->
-<div class="wp-block-column is-vertically-aligned-center"><!-- wp:group {"metadata":{"name":"Text"},"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"500"}},"textColor":"primary","fontSize":"small"} -->
-<p class="has-primary-color has-text-color has-small-font-size" style="font-style:normal;font-weight:500">Contact Us</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:heading -->
-<h2 class="wp-block-heading">Give us a ring, we'd love to chat with you.</h2>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph -->
-<p>Whether you're looking for a brand refresh, a new web presence, or are curious about consultation, please drop us a line and let's start a blossoming relationship!</p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:group -->
-
-<!-- wp:buttons {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}}} -->
-<div class="wp-block-buttons"><!-- wp:button {"className":"is-style-fill"} -->
-<div class="wp-block-button is-style-fill"><a class="wp-block-button__link wp-element-button">Contact Us</a></div>
-<!-- /wp:button -->
-
-<!-- wp:button {"className":"is-style-secondary-button"} -->
-<div class="wp-block-button is-style-secondary-button"><a class="wp-block-button__link wp-element-button">Join Our Team</a></div>
-<!-- /wp:button --></div>
-<!-- /wp:buttons -->
-
-<!-- wp:separator {"className":"is-style-separator-dotted","style":{"spacing":{"margin":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large"}}},"backgroundColor":"main-accent"} -->
-<hr class="wp-block-separator has-text-color has-main-accent-color has-alpha-channel-opacity has-main-accent-background-color has-background is-style-separator-dotted" style="margin-top:var(--wp--preset--spacing--large);margin-bottom:var(--wp--preset--spacing--large)"/>
-<!-- /wp:separator -->
-
-<!-- wp:group {"metadata":{"name":"Testimonial"},"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group"><!-- wp:paragraph {"textColor":"primary"} -->
-<p class="has-primary-color has-text-color">★★★★★</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"600"}}} -->
-<p style="font-style:normal;font-weight:600">“Working with Moiraine has been a delight from start to finish.”</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"500"}},"textColor":"secondary","fontSize":"x-small"} -->
-<p class="has-secondary-color has-text-color has-x-small-font-size" style="font-style:normal;font-weight:500">Rated 5/5 stars by 1,620 happy reviewers</p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:group --></div>
-<!-- /wp:column -->
-
-<!-- wp:column {"verticalAlignment":"center","style":{"spacing":{"blockGap":"var:preset|spacing|medium","padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large","left":"var:preset|spacing|x-large","right":"var:preset|spacing|x-large"}},"border":{"radius":"5px"}},"backgroundColor":"main"} -->
-<div class="wp-block-column is-vertically-aligned-center has-main-background-color has-background" style="border-radius:5px;padding-top:var(--wp--preset--spacing--x-large);padding-right:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large);padding-left:var(--wp--preset--spacing--x-large)"><!-- wp:group {"metadata":{"name":"Title Row"},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
-<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"600"}},"textColor":"base","fontSize":"medium"} -->
-<p class="has-base-color has-text-color has-medium-font-size" style="font-style:normal;font-weight:600">Contact Us</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:social-links {"iconColor":"base","iconColorValue":"#fff","className":"is-style-logos-only","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|small","left":"var:preset|spacing|small"}}},"layout":{"type":"flex"}} -->
-<ul class="wp-block-social-links has-icon-color is-style-logos-only"><!-- wp:social-link {"url":"https://twitter.com","service":"twitter"} /-->
-
-<!-- wp:social-link {"url":"https://facebook.com","service":"facebook"} /-->
-
-<!-- wp:social-link {"url":"https://linkedin.com","service":"linkedin"} /-->
-
-<!-- wp:social-link {"url":"https://youtube.com","service":"youtube"} /--></ul>
-<!-- /wp:social-links --></div>
-<!-- /wp:group -->
-
-<!-- wp:group {"metadata":{"name":"Text"},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group"><!-- wp:separator {"className":"is-style-separator-dotted","backgroundColor":"secondary"} -->
-<hr class="wp-block-separator has-text-color has-secondary-color has-alpha-channel-opacity has-secondary-background-color has-background is-style-separator-dotted"/>
-<!-- /wp:separator -->
-
-<!-- wp:group {"metadata":{"name":"Entry"},"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group"><!-- wp:paragraph {"textColor":"main-accent"} -->
-<p class="has-main-accent-color has-text-color">Email</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph {"textColor":"base"} -->
-<p class="has-base-color has-text-color">mail@example.com</p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:group -->
-
-<!-- wp:separator {"className":"is-style-separator-dotted","backgroundColor":"secondary"} -->
-<hr class="wp-block-separator has-text-color has-secondary-color has-alpha-channel-opacity has-secondary-background-color has-background is-style-separator-dotted"/>
-<!-- /wp:separator -->
-
-<!-- wp:group {"metadata":{"name":"Entry"},"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group"><!-- wp:paragraph {"textColor":"main-accent"} -->
-<p class="has-main-accent-color has-text-color">Phone</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph {"textColor":"base"} -->
-<p class="has-base-color has-text-color">815-420-2024</p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:group -->
-
-<!-- wp:separator {"className":"is-style-separator-dotted","backgroundColor":"secondary"} -->
-<hr class="wp-block-separator has-text-color has-secondary-color has-alpha-channel-opacity has-secondary-background-color has-background is-style-separator-dotted"/>
-<!-- /wp:separator -->
-
-<!-- wp:group {"metadata":{"name":"Entry"},"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group"><!-- wp:paragraph {"textColor":"main-accent"} -->
-<p class="has-main-accent-color has-text-color">Address</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph {"textColor":"base"} -->
-<p class="has-base-color has-text-color">1234 Theme Street<br>San Francisco, CA 94070</p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:group --></div>
-<!-- /wp:group --></div>
-<!-- /wp:column --></div>
-<!-- /wp:columns --></div>
-<!-- /wp:group -->
-
-<!-- wp:group {"metadata":{"name":"Team Members"},"align":"full","style":{"spacing":{"margin":{"top":"0px","bottom":"0px"},"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","right":"var:preset|spacing|medium","left":"var:preset|spacing|medium"},"blockGap":"var:preset|spacing|x-large"}},"backgroundColor":"tertiary","layout":{"inherit":true,"type":"constrained"}} -->
+  <content:encoded><![CDATA[<!-- wp:group {"metadata":{"name":"Team Members"},"align":"full","style":{"spacing":{"margin":{"top":"0px","bottom":"0px"},"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","right":"var:preset|spacing|medium","left":"var:preset|spacing|medium"},"blockGap":"var:preset|spacing|x-large"}},"backgroundColor":"tertiary","layout":{"inherit":true,"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-tertiary-background-color has-background" style="margin-top:0px;margin-bottom:0px;padding-top:var(--wp--preset--spacing--xxx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xxx-large);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:group {"metadata":{"name":"Titles"},"style":{"spacing":{"blockGap":"var:preset|spacing|small"}}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"align":"center","style":{"typography":{"fontStyle":"normal","fontWeight":"500"}},"textColor":"primary","fontSize":"small"} -->
 <p class="has-text-align-center has-primary-color has-text-color has-small-font-size" style="font-style:normal;font-weight:500">Meet Our People</p>
@@ -2081,8 +1989,8 @@ Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.]]></wp
   <wp:post_id>10</wp:post_id>
   <wp:post_date>2025-03-18 03:29:20</wp:post_date>
   <wp:post_date_gmt>2025-03-18 03:29:20</wp:post_date_gmt>
-  <wp:post_modified>2025-03-18 03:29:20</wp:post_modified>
-  <wp:post_modified_gmt>2025-03-18 03:29:20</wp:post_modified_gmt>
+  <wp:post_modified>2025-03-18 05:14:06</wp:post_modified>
+  <wp:post_modified_gmt>2025-03-18 05:14:06</wp:post_modified_gmt>
   <wp:comment_status>closed</wp:comment_status>
   <wp:ping_status>closed</wp:ping_status>
   <wp:post_name>about</wp:post_name>
@@ -2098,28 +2006,272 @@ Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.]]></wp
   </wp:postmeta>
 </item>
 <item>
-  <title><![CDATA[Contact Us]]></title>
-  <link>https://moiraine-demo.test/?page_id=13</link>
-  <pubDate/>
+  <title><![CDATA[Contact]]></title>
+  <link>https://moiraine-demo.test/contact-us/</link>
+  <pubDate>Tue, 18 Mar 2025 04:05:44 +0000</pubDate>
   <dc:creator>admin</dc:creator>
   <guid isPermaLink="false">https://moiraine-demo.test/?page_id=13</guid>
   <description/>
-  <content:encoded><![CDATA[]]></content:encoded>
+  <content:encoded><![CDATA[<!-- wp:group {"metadata":{"name":"Contact Details"},"align":"full","style":{"spacing":{"margin":{"top":"0px","bottom":"0px"},"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","right":"var:preset|spacing|medium","left":"var:preset|spacing|medium"}}},"layout":{"inherit":true,"type":"constrained"}} -->
+<div class="wp-block-group alignfull" style="margin-top:0px;margin-bottom:0px;padding-top:var(--wp--preset--spacing--xxx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xxx-large);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:columns {"verticalAlignment":"center","align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|x-large","left":"var:preset|spacing|x-large"},"margin":{"top":"0px","bottom":"0px"}}}} -->
+<div class="wp-block-columns alignwide are-vertically-aligned-center" style="margin-top:0px;margin-bottom:0px"><!-- wp:column {"verticalAlignment":"center"} -->
+<div class="wp-block-column is-vertically-aligned-center"><!-- wp:group {"metadata":{"name":"Text"},"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"500"}},"textColor":"primary","fontSize":"small"} -->
+<p class="has-primary-color has-text-color has-small-font-size" style="font-style:normal;font-weight:500">Contact Us</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Give us a ring, we'd love to chat with you.</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Whether you're looking for a brand refresh, a new web presence, or are curious about consultation, please drop us a line and let's start a blossoming relationship!</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:buttons {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}}} -->
+<div class="wp-block-buttons"><!-- wp:button {"className":"is-style-fill"} -->
+<div class="wp-block-button is-style-fill"><a class="wp-block-button__link wp-element-button">Contact Us</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button {"className":"is-style-secondary-button"} -->
+<div class="wp-block-button is-style-secondary-button"><a class="wp-block-button__link wp-element-button">Join Our Team</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:separator {"className":"is-style-separator-dotted","style":{"spacing":{"margin":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large"}}},"backgroundColor":"main-accent"} -->
+<hr class="wp-block-separator has-text-color has-main-accent-color has-alpha-channel-opacity has-main-accent-background-color has-background is-style-separator-dotted" style="margin-top:var(--wp--preset--spacing--large);margin-bottom:var(--wp--preset--spacing--large)"/>
+<!-- /wp:separator -->
+
+<!-- wp:group {"metadata":{"name":"Testimonial"},"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:paragraph {"textColor":"primary"} -->
+<p class="has-primary-color has-text-color">★★★★★</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"600"}}} -->
+<p style="font-style:normal;font-weight:600">“Working with Moiraine has been a delight from start to finish.”</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"500"}},"textColor":"secondary","fontSize":"x-small"} -->
+<p class="has-secondary-color has-text-color has-x-small-font-size" style="font-style:normal;font-weight:500">Rated 5/5 stars by 1,620 happy reviewers</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"verticalAlignment":"center","style":{"spacing":{"blockGap":"var:preset|spacing|medium","padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large","left":"var:preset|spacing|x-large","right":"var:preset|spacing|x-large"}},"border":{"radius":"5px"}},"backgroundColor":"main"} -->
+<div class="wp-block-column is-vertically-aligned-center has-main-background-color has-background" style="border-radius:5px;padding-top:var(--wp--preset--spacing--x-large);padding-right:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large);padding-left:var(--wp--preset--spacing--x-large)"><!-- wp:group {"metadata":{"name":"Title Row"},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
+<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"600"}},"textColor":"base","fontSize":"medium"} -->
+<p class="has-base-color has-text-color has-medium-font-size" style="font-style:normal;font-weight:600">Contact Us</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:social-links {"iconColor":"base","iconColorValue":"#fff","className":"is-style-logos-only","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|small","left":"var:preset|spacing|small"}}},"layout":{"type":"flex"}} -->
+<ul class="wp-block-social-links has-icon-color is-style-logos-only"><!-- wp:social-link {"url":"https://twitter.com","service":"twitter"} /-->
+
+<!-- wp:social-link {"url":"https://facebook.com","service":"facebook"} /-->
+
+<!-- wp:social-link {"url":"https://linkedin.com","service":"linkedin"} /-->
+
+<!-- wp:social-link {"url":"https://youtube.com","service":"youtube"} /--></ul>
+<!-- /wp:social-links --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"metadata":{"name":"Text"},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:separator {"className":"is-style-separator-dotted","backgroundColor":"secondary"} -->
+<hr class="wp-block-separator has-text-color has-secondary-color has-alpha-channel-opacity has-secondary-background-color has-background is-style-separator-dotted"/>
+<!-- /wp:separator -->
+
+<!-- wp:group {"metadata":{"name":"Entry"},"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:paragraph {"textColor":"main-accent"} -->
+<p class="has-main-accent-color has-text-color">Email</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"textColor":"base"} -->
+<p class="has-base-color has-text-color">mail@example.com</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:separator {"className":"is-style-separator-dotted","backgroundColor":"secondary"} -->
+<hr class="wp-block-separator has-text-color has-secondary-color has-alpha-channel-opacity has-secondary-background-color has-background is-style-separator-dotted"/>
+<!-- /wp:separator -->
+
+<!-- wp:group {"metadata":{"name":"Entry"},"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:paragraph {"textColor":"main-accent"} -->
+<p class="has-main-accent-color has-text-color">Phone</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"textColor":"base"} -->
+<p class="has-base-color has-text-color">815-420-2024</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:separator {"className":"is-style-separator-dotted","backgroundColor":"secondary"} -->
+<hr class="wp-block-separator has-text-color has-secondary-color has-alpha-channel-opacity has-secondary-background-color has-background is-style-separator-dotted"/>
+<!-- /wp:separator -->
+
+<!-- wp:group {"metadata":{"name":"Entry"},"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:paragraph {"textColor":"main-accent"} -->
+<p class="has-main-accent-color has-text-color">Address</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"textColor":"base"} -->
+<p class="has-base-color has-text-color">1234 Theme Street<br>San Francisco, CA 94070</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"metadata":{"name":"Team Members"},"align":"full","style":{"spacing":{"margin":{"top":"0px","bottom":"0px"},"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","right":"var:preset|spacing|medium","left":"var:preset|spacing|medium"},"blockGap":"var:preset|spacing|x-large"}},"backgroundColor":"tertiary","layout":{"inherit":true,"type":"constrained"}} -->
+<div class="wp-block-group alignfull has-tertiary-background-color has-background" style="margin-top:0px;margin-bottom:0px;padding-top:var(--wp--preset--spacing--xxx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xxx-large);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:group {"metadata":{"name":"Titles"},"style":{"spacing":{"blockGap":"var:preset|spacing|small"}}} -->
+<div class="wp-block-group"><!-- wp:paragraph {"align":"center","style":{"typography":{"fontStyle":"normal","fontWeight":"500"}},"textColor":"primary","fontSize":"small"} -->
+<p class="has-text-align-center has-primary-color has-text-color has-small-font-size" style="font-style:normal;font-weight:500">Meet Our People</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"textAlign":"center"} -->
+<h2 class="wp-block-heading has-text-align-center">A small but mighty team</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">We're a small team of diverse creators with the aim of creating the best possible WordPress products for you. Join our team today!</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"metadata":{"name":"Team Members"},"align":"wide","layout":{"type":"grid","minimumColumnWidth":"20rem"}} -->
+<div class="wp-block-group alignwide"><!-- wp:cover {"url":"https://moiraine-demo.test/wp-content/themes/moiraine/patterns/images/avatar-2.webp","id":57,"dimRatio":50,"overlayColor":"main","isUserOverlayColor":true,"minHeight":500,"contentPosition":"bottom center","isDark":false,"metadata":{"name":"Team Member"},"className":"is-style-rounded-cover","style":{"spacing":{"padding":{"bottom":"var:preset|spacing|medium"}},"border":{"radius":"5px"},"dimensions":{"aspectRatio":"3/4"}}} -->
+<div class="wp-block-cover is-light has-custom-content-position is-position-bottom-center is-style-rounded-cover" style="border-radius:5px;padding-bottom:var(--wp--preset--spacing--medium);min-height:500px"><span aria-hidden="true" class="wp-block-cover__background has-main-background-color has-background-dim"></span><img class="wp-block-cover__image-background wp-image-57" alt="" src="https://moiraine-demo.test/wp-content/themes/moiraine/patterns/images/avatar-2.webp" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"blockGap":"5px"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
+<div class="wp-block-group"><!-- wp:heading {"textAlign":"center","level":4,"textColor":"base"} -->
+<h4 class="wp-block-heading has-text-align-center has-base-color has-text-color">Tracy Capitan</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center","textColor":"tertiary","fontSize":"small"} -->
+<p class="has-text-align-center has-tertiary-color has-text-color has-small-font-size">Product Designer</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:social-links {"iconColor":"base","iconColorValue":"#fff","align":"center","className":"is-style-logos-only","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|small","left":"var:preset|spacing|small"}}},"layout":{"type":"flex","justifyContent":"center"}} -->
+<ul class="wp-block-social-links aligncenter has-icon-color is-style-logos-only"><!-- wp:social-link {"url":"https://twitter.com","service":"twitter"} /-->
+
+<!-- wp:social-link {"url":"https://facebook.com","service":"facebook"} /-->
+
+<!-- wp:social-link {"url":"https://instagram.com","service":"instagram"} /--></ul>
+<!-- /wp:social-links --></div>
+<!-- /wp:group --></div></div>
+<!-- /wp:cover -->
+
+<!-- wp:cover {"url":"https://moiraine-demo.test/wp-content/themes/moiraine/patterns/images/avatar-1.webp","id":56,"dimRatio":50,"overlayColor":"main","isUserOverlayColor":true,"minHeight":500,"contentPosition":"bottom center","isDark":false,"metadata":{"name":"Team Member"},"className":"is-style-rounded-cover","style":{"spacing":{"padding":{"bottom":"var:preset|spacing|medium"}},"border":{"radius":"5px"},"dimensions":{"aspectRatio":"3/4"}}} -->
+<div class="wp-block-cover is-light has-custom-content-position is-position-bottom-center is-style-rounded-cover" style="border-radius:5px;padding-bottom:var(--wp--preset--spacing--medium);min-height:500px"><span aria-hidden="true" class="wp-block-cover__background has-main-background-color has-background-dim"></span><img class="wp-block-cover__image-background wp-image-56" alt="" src="https://moiraine-demo.test/wp-content/themes/moiraine/patterns/images/avatar-1.webp" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"blockGap":"5px"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
+<div class="wp-block-group"><!-- wp:heading {"textAlign":"center","level":4,"textColor":"base"} -->
+<h4 class="wp-block-heading has-text-align-center has-base-color has-text-color">Michael Glacier</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center","textColor":"tertiary","fontSize":"small"} -->
+<p class="has-text-align-center has-tertiary-color has-text-color has-small-font-size">Product Designer</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:social-links {"iconColor":"base","iconColorValue":"#fff","align":"center","className":"is-style-logos-only","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|small","left":"var:preset|spacing|small"}}},"layout":{"type":"flex","justifyContent":"center"}} -->
+<ul class="wp-block-social-links aligncenter has-icon-color is-style-logos-only"><!-- wp:social-link {"url":"https://twitter.com","service":"twitter"} /-->
+
+<!-- wp:social-link {"url":"https://facebook.com","service":"facebook"} /-->
+
+<!-- wp:social-link {"url":"https://instagram.com","service":"instagram"} /--></ul>
+<!-- /wp:social-links --></div>
+<!-- /wp:group --></div></div>
+<!-- /wp:cover -->
+
+<!-- wp:cover {"url":"https://moiraine-demo.test/wp-content/themes/moiraine/patterns/images/avatar-3.webp","id":33154,"dimRatio":50,"overlayColor":"main","isUserOverlayColor":true,"minHeight":500,"contentPosition":"bottom center","isDark":false,"metadata":{"name":"Team Member"},"className":"is-style-rounded-cover","style":{"spacing":{"padding":{"bottom":"var:preset|spacing|medium"}},"border":{"radius":"5px"},"dimensions":{"aspectRatio":"3/4"}}} -->
+<div class="wp-block-cover is-light has-custom-content-position is-position-bottom-center is-style-rounded-cover" style="border-radius:5px;padding-bottom:var(--wp--preset--spacing--medium);min-height:500px"><span aria-hidden="true" class="wp-block-cover__background has-main-background-color has-background-dim"></span><img class="wp-block-cover__image-background wp-image-33154" alt="" src="https://moiraine-demo.test/wp-content/themes/moiraine/patterns/images/avatar-3.webp" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"blockGap":"5px"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
+<div class="wp-block-group"><!-- wp:heading {"textAlign":"center","level":4,"textColor":"base"} -->
+<h4 class="wp-block-heading has-text-align-center has-base-color has-text-color">Maryann Alpine</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center","textColor":"tertiary","fontSize":"small"} -->
+<p class="has-text-align-center has-tertiary-color has-text-color has-small-font-size">Product Designer</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:social-links {"iconColor":"base","iconColorValue":"#fff","align":"center","className":"is-style-logos-only","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|small","left":"var:preset|spacing|small"}}},"layout":{"type":"flex","justifyContent":"center"}} -->
+<ul class="wp-block-social-links aligncenter has-icon-color is-style-logos-only"><!-- wp:social-link {"url":"https://twitter.com","service":"twitter"} /-->
+
+<!-- wp:social-link {"url":"https://facebook.com","service":"facebook"} /-->
+
+<!-- wp:social-link {"url":"https://instagram.com","service":"instagram"} /--></ul>
+<!-- /wp:social-links --></div>
+<!-- /wp:group --></div></div>
+<!-- /wp:cover --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"metadata":{"name":"Big Text Features"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","right":"var:preset|spacing|medium","left":"var:preset|spacing|medium"},"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|large"}},"backgroundColor":"primary","textColor":"base","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull has-base-color has-primary-background-color has-text-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--xxx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xxx-large);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:group {"metadata":{"name":"Feature Grid"},"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|large"}},"layout":{"type":"grid","minimumColumnWidth":"24rem"}} -->
+<div class="wp-block-group alignwide"><!-- wp:group {"metadata":{"name":"Feature"},"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:heading {"level":3,"fontSize":"large"} -->
+<h3 class="wp-block-heading has-large-font-size">50+ Patterns</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"textColor":"primary-accent"} -->
+<p class="has-primary-accent-color has-text-color">Moiraine ships with over 50 pixel-perfect pattern designs you can use to build a stunning website with a few clicks.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"metadata":{"name":"Feature"},"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:heading {"level":3,"fontSize":"large"} -->
+<h3 class="wp-block-heading has-large-font-size">5+ Layouts</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"textColor":"primary-accent"} -->
+<p class="has-primary-accent-color has-text-color">Moiraine ships with several full page designs such as Homepage, About, Features, Download, and more.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"metadata":{"name":"Feature"},"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:heading {"level":3,"fontSize":"large"} -->
+<h3 class="wp-block-heading has-large-font-size">1000+ Hours</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"textColor":"primary-accent"} -->
+<p class="has-primary-accent-color has-text-color">We've spent thousands of hours crafting WordPress themes and applied everything we know to Moiraine.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"metadata":{"name":"Feature"},"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:heading {"level":3,"fontSize":"large"} -->
+<h3 class="wp-block-heading has-large-font-size">200+ Ratings</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"textColor":"primary-accent"} -->
+<p class="has-primary-accent-color has-text-color">Moiraine boasts over two hundred 5 star reviews and an average rating of 9 on Rotten Tomatoes.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->]]></content:encoded>
   <excerpt:encoded><![CDATA[]]></excerpt:encoded>
   <wp:post_id>13</wp:post_id>
-  <wp:post_date>2025-03-18 03:50:43</wp:post_date>
-  <wp:post_date_gmt>0000-00-00 00:00:00</wp:post_date_gmt>
-  <wp:post_modified>2025-03-18 03:50:43</wp:post_modified>
-  <wp:post_modified_gmt>2025-03-18 03:50:43</wp:post_modified_gmt>
+  <wp:post_date>2025-03-18 04:05:44</wp:post_date>
+  <wp:post_date_gmt>2025-03-18 04:05:44</wp:post_date_gmt>
+  <wp:post_modified>2025-03-18 05:13:54</wp:post_modified>
+  <wp:post_modified_gmt>2025-03-18 05:13:54</wp:post_modified_gmt>
   <wp:comment_status>closed</wp:comment_status>
   <wp:ping_status>closed</wp:ping_status>
-  <wp:post_name/>
-  <wp:status>draft</wp:status>
+  <wp:post_name>contact-us</wp:post_name>
+  <wp:status>publish</wp:status>
   <wp:post_parent>0</wp:post_parent>
   <wp:menu_order>0</wp:menu_order>
   <wp:post_type>page</wp:post_type>
   <wp:post_password/>
   <wp:is_sticky>0</wp:is_sticky>
+  <wp:postmeta>
+    <wp:meta_key>_wp_page_template</wp:meta_key>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>_edit_last</wp:meta_key>
+    <wp:meta_value><![CDATA[1]]></wp:meta_value>
+  </wp:postmeta>
 </item>
 <item>
   <title><![CDATA[Services]]></title>
@@ -2147,7 +2299,7 @@ Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.]]></wp
 </item>
 <item>
   <title><![CDATA[Blog]]></title>
-  <link>https://moiraine-demo.test/?page_id=18</link>
+  <link>https://moiraine-demo.test/blog/</link>
   <pubDate>Tue, 18 Mar 2025 03:53:02 +0000</pubDate>
   <dc:creator>admin</dc:creator>
   <guid isPermaLink="false">https://moiraine-demo.test/?page_id=18</guid>
@@ -2168,6 +2320,133 @@ Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.]]></wp
   <wp:post_type>page</wp:post_type>
   <wp:post_password/>
   <wp:is_sticky>0</wp:is_sticky>
+</item>
+<item>
+  <title><![CDATA[Contact form 1]]></title>
+  <link>https://moiraine-demo.test/?post_type=wpcf7_contact_form&amp;p=20</link>
+  <pubDate>Tue, 18 Mar 2025 04:05:00 +0000</pubDate>
+  <dc:creator>admin</dc:creator>
+  <guid isPermaLink="false">https://moiraine-demo.test/?post_type=wpcf7_contact_form&amp;p=20</guid>
+  <description/>
+  <content:encoded><![CDATA[<label> Your name
+    [text* your-name autocomplete:name] </label>
+
+<label> Your email
+    [email* your-email autocomplete:email] </label>
+
+<label> Subject
+    [text* your-subject] </label>
+
+<label> Your message (optional)
+    [textarea your-message] </label>
+
+[submit "Submit"]
+[_site_title] "[your-subject]"
+[_site_title] <wordpress@moiraine-demo.test>
+From: [your-name] [your-email]
+Subject: [your-subject]
+
+Message Body:
+[your-message]
+
+-- 
+This is a notification that a contact form was submitted on your website ([_site_title] [_site_url]).
+[_site_admin_email]
+Reply-To: [your-email]
+
+0
+0
+
+[_site_title] "[your-subject]"
+[_site_title] <wordpress@moiraine-demo.test>
+Message Body:
+[your-message]
+
+-- 
+This email is a receipt for your contact form submission on our website ([_site_title] [_site_url]) in which your email address was used. If that was not you, please ignore this message.
+[your-email]
+Reply-To: [_site_admin_email]
+
+0
+0
+Thank you for your message. It has been sent.
+There was an error trying to send your message. Please try again later.
+One or more fields have an error. Please check and try again.
+There was an error trying to send your message. Please try again later.
+You must accept the terms and conditions before sending your message.
+Please fill out this field.
+This field has a too long input.
+This field has a too short input.
+There was an unknown error uploading the file.
+You are not allowed to upload files of this type.
+The uploaded file is too large.
+There was an error uploading the file.]]></content:encoded>
+  <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+  <wp:post_id>20</wp:post_id>
+  <wp:post_date>2025-03-18 04:05:00</wp:post_date>
+  <wp:post_date_gmt>2025-03-18 04:05:00</wp:post_date_gmt>
+  <wp:post_modified>2025-03-18 04:05:00</wp:post_modified>
+  <wp:post_modified_gmt>2025-03-18 04:05:00</wp:post_modified_gmt>
+  <wp:comment_status>closed</wp:comment_status>
+  <wp:ping_status>closed</wp:ping_status>
+  <wp:post_name>contact-form-1</wp:post_name>
+  <wp:status>publish</wp:status>
+  <wp:post_parent>0</wp:post_parent>
+  <wp:menu_order>0</wp:menu_order>
+  <wp:post_type>wpcf7_contact_form</wp:post_type>
+  <wp:post_password/>
+  <wp:is_sticky>0</wp:is_sticky>
+  <wp:postmeta>
+    <wp:meta_key>_form</wp:meta_key>
+    <wp:meta_value><![CDATA[<label> Your name
+    [text* your-name autocomplete:name] </label>
+
+<label> Your email
+    [email* your-email autocomplete:email] </label>
+
+<label> Subject
+    [text* your-subject] </label>
+
+<label> Your message (optional)
+    [textarea your-message] </label>
+
+[submit "Submit"]]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>_mail</wp:meta_key>
+    <wp:meta_value><![CDATA[a:8:{s:7:"subject";s:30:"[_site_title] "[your-subject]"";s:6:"sender";s:44:"[_site_title] <wordpress@moiraine-demo.test>";s:4:"body";s:191:"From: [your-name] [your-email]
+Subject: [your-subject]
+
+Message Body:
+[your-message]
+
+-- 
+This is a notification that a contact form was submitted on your website ([_site_title] [_site_url]).";s:9:"recipient";s:19:"[_site_admin_email]";s:18:"additional_headers";s:22:"Reply-To: [your-email]";s:11:"attachments";s:0:"";s:8:"use_html";i:0;s:13:"exclude_blank";i:0;}]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>_mail_2</wp:meta_key>
+    <wp:meta_value><![CDATA[a:9:{s:6:"active";b:0;s:7:"subject";s:30:"[_site_title] "[your-subject]"";s:6:"sender";s:44:"[_site_title] <wordpress@moiraine-demo.test>";s:4:"body";s:220:"Message Body:
+[your-message]
+
+-- 
+This email is a receipt for your contact form submission on our website ([_site_title] [_site_url]) in which your email address was used. If that was not you, please ignore this message.";s:9:"recipient";s:12:"[your-email]";s:18:"additional_headers";s:29:"Reply-To: [_site_admin_email]";s:11:"attachments";s:0:"";s:8:"use_html";i:0;s:13:"exclude_blank";i:0;}]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>_messages</wp:meta_key>
+    <wp:meta_value><![CDATA[a:12:{s:12:"mail_sent_ok";s:45:"Thank you for your message. It has been sent.";s:12:"mail_sent_ng";s:71:"There was an error trying to send your message. Please try again later.";s:16:"validation_error";s:61:"One or more fields have an error. Please check and try again.";s:4:"spam";s:71:"There was an error trying to send your message. Please try again later.";s:12:"accept_terms";s:69:"You must accept the terms and conditions before sending your message.";s:16:"invalid_required";s:27:"Please fill out this field.";s:16:"invalid_too_long";s:32:"This field has a too long input.";s:17:"invalid_too_short";s:33:"This field has a too short input.";s:13:"upload_failed";s:46:"There was an unknown error uploading the file.";s:24:"upload_file_type_invalid";s:49:"You are not allowed to upload files of this type.";s:21:"upload_file_too_large";s:31:"The uploaded file is too large.";s:23:"upload_failed_php_error";s:38:"There was an error uploading the file.";}]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>_additional_settings</wp:meta_key>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>_locale</wp:meta_key>
+    <wp:meta_value><![CDATA[en_US]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>_hash</wp:meta_key>
+    <wp:meta_value><![CDATA[ef4018d889c5037c8ddec09f063a6f365812b9cf]]></wp:meta_value>
+  </wp:postmeta>
 </item>
   </channel>
 </rss>
