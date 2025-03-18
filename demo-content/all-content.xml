@@ -17,13 +17,13 @@
  7. WordPress will then import each of the posts, pages, comments, categories, etc.
     contained in this file into your site.
 -->
-<!-- generator="WordPress/6.7.2" created="2025-03-18 05:28" -->
+<!-- generator="WordPress/6.7.2" created="2025-03-18 06:21" -->
 <rss version="2.0" xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:wp="http://wordpress.org/export/1.2/">
   <channel>
-<title>Moiraine Demo</title>
+<title>Moiraine</title>
 <link>https://moiraine-demo.test</link>
 <description/>
-<pubDate>Tue, 18 Mar 2025 05:28:20 +0000</pubDate>
+<pubDate>Tue, 18 Mar 2025 06:21:36 +0000</pubDate>
 <language>en-US</language>
 <wp:wxr_version>1.2</wp:wxr_version>
 <wp:base_site_url>https://moiraine-demo.test</wp:base_site_url>
@@ -99,64 +99,6 @@ Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.]]></wp
     <wp:comment_parent>0</wp:comment_parent>
     <wp:comment_user_id>0</wp:comment_user_id>
   </wp:comment>
-</item>
-<item>
-  <title><![CDATA[Sample Page]]></title>
-  <link>https://moiraine-demo.test/?page_id=2</link>
-  <pubDate>Tue, 18 Mar 2025 03:12:01 +0000</pubDate>
-  <dc:creator>admin</dc:creator>
-  <guid isPermaLink="false">https://moiraine-demo.test/?page_id=2</guid>
-  <description/>
-  <content:encoded><![CDATA[<!-- wp:paragraph -->
-<p>This is an example page. It's different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:quote -->
-<blockquote class="wp-block-quote"><p>Hi there! I'm a bike messenger by day, aspiring actor by night, and this is my website. I live in Los Angeles, have a great dog named Jack, and I like pi&#241;a coladas. (And gettin' caught in the rain.)</p></blockquote>
-<!-- /wp:quote -->
-
-<!-- wp:paragraph -->
-<p>...or something like this:</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:quote -->
-<blockquote class="wp-block-quote"><p>The XYZ Doohickey Company was founded in 1971, and has been providing quality doohickeys to the public ever since. Located in Gotham City, XYZ employs over 2,000 people and does all kinds of awesome things for the Gotham community.</p></blockquote>
-<!-- /wp:quote -->
-
-<!-- wp:paragraph -->
-<p>As a new WordPress user, you should go to <a href="https://moiraine-demo.test/wp-admin/">your dashboard</a> to delete this page and create new pages for your content. Have fun!</p>
-<!-- /wp:paragraph -->]]></content:encoded>
-  <excerpt:encoded><![CDATA[]]></excerpt:encoded>
-  <wp:post_id>2</wp:post_id>
-  <wp:post_date>2025-03-18 03:12:01</wp:post_date>
-  <wp:post_date_gmt>2025-03-18 03:12:01</wp:post_date_gmt>
-  <wp:post_modified>2025-03-18 04:08:08</wp:post_modified>
-  <wp:post_modified_gmt>2025-03-18 04:08:08</wp:post_modified_gmt>
-  <wp:comment_status>closed</wp:comment_status>
-  <wp:ping_status>open</wp:ping_status>
-  <wp:post_name>sample-page__trashed</wp:post_name>
-  <wp:status>trash</wp:status>
-  <wp:post_parent>0</wp:post_parent>
-  <wp:menu_order>0</wp:menu_order>
-  <wp:post_type>page</wp:post_type>
-  <wp:post_password/>
-  <wp:is_sticky>0</wp:is_sticky>
-  <wp:postmeta>
-    <wp:meta_key>_wp_page_template</wp:meta_key>
-    <wp:meta_value><![CDATA[default]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>_wp_trash_meta_status</wp:meta_key>
-    <wp:meta_value><![CDATA[publish]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>_wp_trash_meta_time</wp:meta_key>
-    <wp:meta_value><![CDATA[1742270888]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>_wp_desired_post_slug</wp:meta_key>
-    <wp:meta_value><![CDATA[sample-page]]></wp:meta_value>
-  </wp:postmeta>
 </item>
 <item>
   <title><![CDATA[Privacy Policy]]></title>
@@ -2210,13 +2152,113 @@ Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.]]></wp
 <!-- /wp:group --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"metadata":{"name":"Frequently Asked","categories":["moiraine/features"],"patternName":"moiraine/faq"},"align":"full","className":"feature-boxes","style":{"spacing":{"margin":{"top":"0px"},"padding":{"top":"var:preset|spacing|xx-large","bottom":"var:preset|spacing|xx-large","right":"var:preset|spacing|medium","left":"var:preset|spacing|medium"},"blockGap":"var:preset|spacing|x-large"}},"layout":{"inherit":true,"type":"constrained"}} -->
+<div class="wp-block-group alignfull feature-boxes" style="margin-top:0px;padding-top:var(--wp--preset--spacing--xx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xx-large);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:group {"metadata":{"name":"Titles"},"style":{"spacing":{"blockGap":"var:preset|spacing|small"}}} -->
+<div class="wp-block-group"><!-- wp:paragraph {"align":"center","style":{"typography":{"fontStyle":"normal","fontWeight":"500"}},"textColor":"primary","fontSize":"small"} -->
+<p class="has-text-align-center has-primary-color has-text-color has-small-font-size" style="font-style:normal;font-weight:500">Frequently Asked</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"textAlign":"center"} -->
+<h2 class="wp-block-heading has-text-align-center">Learn about our product</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">Got a question? We've got you covered! Check out the resources below and be sure to let us know if we can answer anything else.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"metadata":{"name":"FAQ"},"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|large"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+<div class="wp-block-group alignwide"><!-- wp:columns {"align":"wide","style":{"spacing":{"margin":{"top":"0px","bottom":"0px"},"blockGap":{"top":"var:preset|spacing|large","left":"var:preset|spacing|large"}}}} -->
+<div class="wp-block-columns alignwide" style="margin-top:0px;margin-bottom:0px"><!-- wp:column {"className":"is-style-default","style":{"spacing":{"blockGap":"var:preset|spacing|medium"}}} -->
+<div class="wp-block-column is-style-default"><!-- wp:group {"metadata":{"name":"Entry"},"style":{"spacing":{"blockGap":"var:preset|spacing|medium"},"border":{"radius":"5px"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group" style="border-radius:5px"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:heading {"level":3,"fontSize":"medium"} -->
+<h3 class="wp-block-heading has-medium-font-size">What exactly is Moiraine? </h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Moiraine is a WordPress block theme that is designed to work with the new WordPress Site Editor. That means your site can be built with blocks, patterns, and other design elements that can be easily edited without any coding skills. </p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"metadata":{"name":"Entry"},"style":{"spacing":{"blockGap":"var:preset|spacing|medium"},"border":{"radius":"5px"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group" style="border-radius:5px"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:heading {"level":3,"fontSize":"medium"} -->
+<h3 class="wp-block-heading has-medium-font-size">Do I need any other plugins?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Nope! Moiraine is designed to work with the native WordPress editor, meaning you don't need a page builder plugin to build a beautiful website on WordPress anymore. Of course, you can continue using your favorite plugins alongside Moiraine!</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"className":"is-style-default","style":{"spacing":{"blockGap":"var:preset|spacing|medium"}}} -->
+<div class="wp-block-column is-style-default"><!-- wp:group {"metadata":{"name":"Entry"},"style":{"spacing":{"blockGap":"var:preset|spacing|medium"},"border":{"radius":"5px"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group" style="border-radius:5px"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:heading {"level":3,"fontSize":"medium"} -->
+<h3 class="wp-block-heading has-medium-font-size">What if I've never used the Site Editor?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Don't worry, we'll show you around! The Site Editor is fairly new, and lots of folks are still trying it out for the first time. There's a lot to learn, but the site building power you'll unlock with all of the new design tools will be well worth it!</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"metadata":{"name":"Entry"},"style":{"spacing":{"blockGap":"var:preset|spacing|medium"},"border":{"radius":"5px"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group" style="border-radius:5px"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:heading {"level":3,"fontSize":"medium"} -->
+<h3 class="wp-block-heading has-medium-font-size">What are patterns? </h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Patterns are pre-designed page elements that you can drag and drop to create unique designs. Moiraine comes with an extensive collection of expertly-designed patterns, but you can also design your own patterns.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"metadata":{"name":"CTA Bar"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","right":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|medium"}},"border":{"radius":"5px"}},"backgroundColor":"tertiary","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignwide has-tertiary-background-color has-background" style="border-radius:5px;padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:group {"align":"wide","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
+<div class="wp-block-group alignwide"><!-- wp:group {"metadata":{"name":"Text"},"layout":{"type":"constrained","wideSize":"700px"}} -->
+<div class="wp-block-group"><!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap"}} -->
+<div class="wp-block-group"><!-- wp:image {"id":58,"width":"76px","sizeSlug":"full","linkDestination":"none","className":"is-style-rounded-full"} -->
+<figure class="wp-block-image size-full is-resized is-style-rounded-full"><img src="https://moiraine-demo.test/wp-content/themes/moiraine/patterns/images/avatar-3.webp" alt="" class="wp-image-58" style="width:76px"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:group {"style":{"spacing":{"blockGap":"5px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+<div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"600"}},"fontSize":"medium"} -->
+<p class="has-medium-font-size" style="font-style:normal;font-weight:600">Still have questions?</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Can't find what you're looking for? Let's have a chat!</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button">Contact Us →</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
 <!-- /wp:group -->]]></content:encoded>
   <excerpt:encoded><![CDATA[]]></excerpt:encoded>
   <wp:post_id>13</wp:post_id>
   <wp:post_date>2025-03-18 04:05:44</wp:post_date>
   <wp:post_date_gmt>2025-03-18 04:05:44</wp:post_date_gmt>
-  <wp:post_modified>2025-03-18 05:27:19</wp:post_modified>
-  <wp:post_modified_gmt>2025-03-18 05:27:19</wp:post_modified_gmt>
+  <wp:post_modified>2025-03-18 06:21:17</wp:post_modified>
+  <wp:post_modified_gmt>2025-03-18 06:21:17</wp:post_modified_gmt>
   <wp:comment_status>closed</wp:comment_status>
   <wp:ping_status>closed</wp:ping_status>
   <wp:post_name>contact-us</wp:post_name>
@@ -2228,7 +2270,7 @@ Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.]]></wp
   <wp:is_sticky>0</wp:is_sticky>
   <wp:postmeta>
     <wp:meta_key>_wp_page_template</wp:meta_key>
-    <wp:meta_value><![CDATA[]]></wp:meta_value>
+    <wp:meta_value><![CDATA[page-no-title]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_edit_last</wp:meta_key>
