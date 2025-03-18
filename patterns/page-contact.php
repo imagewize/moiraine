@@ -12,7 +12,3 @@
  */
 ?>
 <!-- wp:pattern {"slug":"moiraine/contact-details"} /-->
-
-<!-- wp:pattern {"slug":"moiraine/team-members"} /-->
-
-<!-- wp:pattern {"slug":"moiraine/numbers-stacked"} /-->
