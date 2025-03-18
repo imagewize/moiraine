@@ -17,13 +17,13 @@
  7. WordPress will then import each of the posts, pages, comments, categories, etc.
     contained in this file into your site.
 -->
-<!-- generator="WordPress/6.7.2" created="2025-03-18 03:33" -->
+<!-- generator="WordPress/6.7.2" created="2025-03-18 03:56" -->
 <rss version="2.0" xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:wp="http://wordpress.org/export/1.2/">
   <channel>
 <title>Moiraine Demo</title>
 <link>https://moiraine-demo.test</link>
 <description/>
-<pubDate>Tue, 18 Mar 2025 03:33:36 +0000</pubDate>
+<pubDate>Tue, 18 Mar 2025 03:56:41 +0000</pubDate>
 <language>en-US</language>
 <wp:wxr_version>1.2</wp:wxr_version>
 <wp:base_site_url>https://moiraine-demo.test</wp:base_site_url>
@@ -2096,6 +2096,78 @@ Commenter avatars come from <a href="https://gravatar.com/">Gravatar</a>.]]></wp
     <wp:meta_key>_wp_page_template</wp:meta_key>
     <wp:meta_value><![CDATA[page-no-title]]></wp:meta_value>
   </wp:postmeta>
+</item>
+<item>
+  <title><![CDATA[Contact Us]]></title>
+  <link>https://moiraine-demo.test/?page_id=13</link>
+  <pubDate/>
+  <dc:creator>admin</dc:creator>
+  <guid isPermaLink="false">https://moiraine-demo.test/?page_id=13</guid>
+  <description/>
+  <content:encoded><![CDATA[]]></content:encoded>
+  <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+  <wp:post_id>13</wp:post_id>
+  <wp:post_date>2025-03-18 03:50:43</wp:post_date>
+  <wp:post_date_gmt>0000-00-00 00:00:00</wp:post_date_gmt>
+  <wp:post_modified>2025-03-18 03:50:43</wp:post_modified>
+  <wp:post_modified_gmt>2025-03-18 03:50:43</wp:post_modified_gmt>
+  <wp:comment_status>closed</wp:comment_status>
+  <wp:ping_status>closed</wp:ping_status>
+  <wp:post_name/>
+  <wp:status>draft</wp:status>
+  <wp:post_parent>0</wp:post_parent>
+  <wp:menu_order>0</wp:menu_order>
+  <wp:post_type>page</wp:post_type>
+  <wp:post_password/>
+  <wp:is_sticky>0</wp:is_sticky>
+</item>
+<item>
+  <title><![CDATA[Services]]></title>
+  <link>https://moiraine-demo.test/?page_id=15</link>
+  <pubDate/>
+  <dc:creator>admin</dc:creator>
+  <guid isPermaLink="false">https://moiraine-demo.test/?page_id=15</guid>
+  <description/>
+  <content:encoded><![CDATA[]]></content:encoded>
+  <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+  <wp:post_id>15</wp:post_id>
+  <wp:post_date>2025-03-18 03:51:28</wp:post_date>
+  <wp:post_date_gmt>0000-00-00 00:00:00</wp:post_date_gmt>
+  <wp:post_modified>2025-03-18 03:51:28</wp:post_modified>
+  <wp:post_modified_gmt>2025-03-18 03:51:28</wp:post_modified_gmt>
+  <wp:comment_status>closed</wp:comment_status>
+  <wp:ping_status>closed</wp:ping_status>
+  <wp:post_name/>
+  <wp:status>draft</wp:status>
+  <wp:post_parent>0</wp:post_parent>
+  <wp:menu_order>0</wp:menu_order>
+  <wp:post_type>page</wp:post_type>
+  <wp:post_password/>
+  <wp:is_sticky>0</wp:is_sticky>
+</item>
+<item>
+  <title><![CDATA[Blog]]></title>
+  <link>https://moiraine-demo.test/?page_id=18</link>
+  <pubDate>Tue, 18 Mar 2025 03:53:02 +0000</pubDate>
+  <dc:creator>admin</dc:creator>
+  <guid isPermaLink="false">https://moiraine-demo.test/?page_id=18</guid>
+  <description/>
+  <content:encoded><![CDATA[]]></content:encoded>
+  <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+  <wp:post_id>18</wp:post_id>
+  <wp:post_date>2025-03-18 03:53:02</wp:post_date>
+  <wp:post_date_gmt>2025-03-18 03:53:02</wp:post_date_gmt>
+  <wp:post_modified>2025-03-18 03:53:02</wp:post_modified>
+  <wp:post_modified_gmt>2025-03-18 03:53:02</wp:post_modified_gmt>
+  <wp:comment_status>closed</wp:comment_status>
+  <wp:ping_status>closed</wp:ping_status>
+  <wp:post_name>blog</wp:post_name>
+  <wp:status>publish</wp:status>
+  <wp:post_parent>0</wp:post_parent>
+  <wp:menu_order>0</wp:menu_order>
+  <wp:post_type>page</wp:post_type>
+  <wp:post_password/>
+  <wp:is_sticky>0</wp:is_sticky>
 </item>
   </channel>
 </rss>
