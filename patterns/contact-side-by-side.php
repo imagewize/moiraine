@@ -5,14 +5,14 @@
  * Description: Contact information displayed in a side-by-side layout with grid blocks
  * Categories: moiraine/card
  * Keywords: card, contact, social, links, email, company, side-by-side
- * Viewport Width: 1200
+ * Viewport Width: 1920
  * Block Types:
  * Post Types:
  * Inserter: true
  */
 ?>
-<!-- wp:group {"metadata":{"name":"Contact Card Side by Side"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|large","right":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|large"},"blockGap":"var:preset|spacing|medium"},"border":{"radius":"5px"}},"backgroundColor":"base","layout":{"type":"constrained"}} -->
-<div class="wp-block-group has-base-background-color has-background" style="border-radius:5px;padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large)">
+<!-- wp:group {"metadata":{"name":"Contact Card Side by Side"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|large","right":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|large"},"blockGap":"var:preset|spacing|medium"},"border":{"radius":"5px"}},"backgroundColor":"base","layout":{"type":"default"}} -->
+<div class="wp-block-group alignfull has-base-background-color has-background" style="border-radius:5px;padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large)">
 
 <!-- wp:columns {"style":{"spacing":{"blockGap":"var:preset|spacing|large"}}} -->
 <div class="wp-block-columns">
@@ -34,7 +34,7 @@
 <!-- wp:column {"width":"60%"} -->
 <div class="wp-block-column" style="flex-basis:60%">
 
-<!-- wp:group {"style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}},"layout":{"type":"constrained"}} -->
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}},"layout":{"type":"default"}} -->
 <div class="wp-block-group" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
 
 <!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|medium","left":"var:preset|spacing|medium"}}}} -->
