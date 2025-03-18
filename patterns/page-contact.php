@@ -12,3 +12,5 @@
  */
 ?>
 <!-- wp:pattern {"slug":"moiraine/contact-details"} /-->
+
+<!-- wp:pattern {"slug":"moiraine/testimonials-with-social-links"} /-->
