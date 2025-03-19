@@ -194,3 +194,9 @@ function template_part_areas( array $areas ) {
 	return $areas;
 }
 add_filter( 'default_wp_template_part_areas', __NAMESPACE__ . '\template_part_areas' );
+
+/**
+ * Include plugin manager functionality.
+ */
+require_once get_template_directory() . '/inc/plugin-manager.php';
+\Moiraine\PluginManager\init();

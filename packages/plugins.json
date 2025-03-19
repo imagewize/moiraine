@@ -1,0 +1,35 @@
+{
+  "moiraine-mega-menu": {
+    "name": "Moiraine Mega Menu",
+    "description": "Advanced mega menu block with customizable layouts and styling options.",
+    "version": "1.0.0",
+    "author": "Jasper Frumau",
+    "thumbnail": "https://via.placeholder.com/300x200?text=Mega+Menu+Plugin",
+    "download_url": "https://example.com/plugins/moiraine-mega-menu.zip",
+    "file": "moiraine-mega-menu/moiraine-mega-menu.php",
+    "requires": "6.0",
+    "tested": "6.7.1"
+  },
+  "moiraine-advanced-slider": {
+    "name": "Moiraine Advanced Slider",
+    "description": "Feature-rich slider block with animation effects and responsive controls.",
+    "version": "1.0.0",
+    "author": "Jasper Frumau",
+    "thumbnail": "https://via.placeholder.com/300x200?text=Advanced+Slider+Plugin",
+    "download_url": "https://example.com/plugins/moiraine-advanced-slider.zip",
+    "file": "moiraine-advanced-slider/moiraine-advanced-slider.php",
+    "requires": "6.0",
+    "tested": "6.7.1"
+  },
+  "moiraine-form-builder": {
+    "name": "Moiraine Form Builder",
+    "description": "Create custom forms with advanced validation and submission handling.",
+    "version": "1.0.0",
+    "author": "Jasper Frumau",
+    "thumbnail": "https://via.placeholder.com/300x200?text=Form+Builder+Plugin",
+    "download_url": "https://example.com/plugins/moiraine-form-builder.zip",
+    "file": "moiraine-form-builder/moiraine-form-builder.php",
+    "requires": "6.0",
+    "tested": "6.7.1"
+  }
+}
