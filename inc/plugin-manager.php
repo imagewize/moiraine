@@ -125,12 +125,12 @@ function render_admin_page() {
  */
 function is_plugin_installed( $plugin_slug ) {
 	$installed_plugins = get_plugins();
-	$plugin_info = get_available_plugins()[ $plugin_slug ] ?? false;
-	
+	$plugin_info       = get_available_plugins()[ $plugin_slug ] ?? false;
+
 	if ( ! $plugin_info ) {
 		return false;
 	}
-	
+
 	return isset( $installed_plugins[ $plugin_info['file'] ] );
 }
 
@@ -144,7 +144,7 @@ function is_plugin_active( $plugin_file ) {
 	if ( ! function_exists( 'is_plugin_active' ) ) {
 		include_once ABSPATH . 'wp-admin/includes/plugin.php';
 	}
-	
+
 	return \is_plugin_active( $plugin_file );
 }
 
@@ -158,32 +158,32 @@ function ajax_install_plugin() {
 	}
 
 	$plugin_slug = isset( $_POST['plugin'] ) ? sanitize_text_field( wp_unslash( $_POST['plugin'] ) ) : '';
-	$action = isset( $_POST['pluginAction'] ) ? sanitize_text_field( wp_unslash( $_POST['pluginAction'] ) ) : '';
-	
+	$action      = isset( $_POST['pluginAction'] ) ? sanitize_text_field( wp_unslash( $_POST['pluginAction'] ) ) : '';
+
 	if ( empty( $plugin_slug ) ) {
 		wp_send_json_error( array( 'message' => __( 'No plugin specified.', 'moiraine' ) ) );
 	}
-	
+
 	$available_plugins = get_available_plugins();
-	
+
 	if ( ! isset( $available_plugins[ $plugin_slug ] ) ) {
 		wp_send_json_error( array( 'message' => __( 'Plugin not found.', 'moiraine' ) ) );
 	}
-	
+
 	$plugin_data = $available_plugins[ $plugin_slug ];
-	
+
 	if ( 'install' === $action ) {
 		// Include required files for plugin installation
 		require_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
 		require_once ABSPATH . 'wp-admin/includes/plugin-install.php';
 		require_once ABSPATH . 'wp-admin/includes/file.php';
-		
-		$skin = new \WP_Ajax_Upgrader_Skin();
+
+		$skin     = new \WP_Ajax_Upgrader_Skin();
 		$upgrader = new \Plugin_Upgrader( $skin );
-		
+
 		// Install the plugin
 		$result = $upgrader->install( $plugin_data['download_url'] );
-		
+
 		if ( is_wp_error( $result ) ) {
 			wp_send_json_error( array( 'message' => $result->get_error_message() ) );
 		} elseif ( is_wp_error( $skin->result ) ) {
@@ -193,23 +193,23 @@ function ajax_install_plugin() {
 		} elseif ( false === $result ) {
 			wp_send_json_error( array( 'message' => __( 'Plugin installation failed.', 'moiraine' ) ) );
 		}
-		
+
 		// Activate the plugin
 		$activate = activate_plugin( $plugin_data['file'] );
-		
+
 		if ( is_wp_error( $activate ) ) {
 			wp_send_json_error( array( 'message' => $activate->get_error_message() ) );
 		}
-		
+
 		wp_send_json_success( array( 'message' => __( 'Plugin installed and activated.', 'moiraine' ) ) );
 	} elseif ( 'activate' === $action ) {
 		// Activate the plugin
 		$activate = activate_plugin( $plugin_data['file'] );
-		
+
 		if ( is_wp_error( $activate ) ) {
 			wp_send_json_error( array( 'message' => $activate->get_error_message() ) );
 		}
-		
+
 		wp_send_json_success( array( 'message' => __( 'Plugin activated.', 'moiraine' ) ) );
 	} else {
 		wp_send_json_error( array( 'message' => __( 'Invalid action.', 'moiraine' ) ) );
@@ -223,16 +223,29 @@ function ajax_install_plugin() {
  */
 function get_available_plugins() {
 	$json_file = get_template_directory() . '/packages/plugins.json';
-	
+
 	if ( ! file_exists( $json_file ) ) {
 		return array();
 	}
-	
-	$plugins_data = json_decode( file_get_contents( $json_file ), true );
-	
+
+	// Initialize the WordPress filesystem.
+	global $wp_filesystem;
+	if ( empty( $wp_filesystem ) ) {
+		require_once ABSPATH . '/wp-admin/includes/file.php';
+		WP_Filesystem();
+	}
+
+	// Read the JSON file using WordPress filesystem.
+	$json_contents = $wp_filesystem->get_contents( $json_file );
+	if ( ! $json_contents ) {
+		return array();
+	}
+
+	$plugins_data = json_decode( $json_contents, true );
+
 	if ( ! $plugins_data || ! is_array( $plugins_data ) ) {
 		return array();
 	}
-	
+
 	return $plugins_data;
 }
