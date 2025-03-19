@@ -152,7 +152,7 @@ function is_plugin_active( $plugin_file ) {
  * Handle Ajax plugin installation.
  */
 function ajax_install_plugin() {
-	// Check permissions and nonce
+	// Check permissions and nonce.
 	if ( ! current_user_can( 'install_plugins' ) || ! check_ajax_referer( 'moiraine-plugin-manager', 'nonce', false ) ) {
 		wp_send_json_error( array( 'message' => __( 'You do not have permission to install plugins.', 'moiraine' ) ) );
 	}
@@ -173,7 +173,7 @@ function ajax_install_plugin() {
 	$plugin_data = $available_plugins[ $plugin_slug ];
 
 	if ( 'install' === $action ) {
-		// Include required files for plugin installation
+		// Include required files for plugin installation.
 		require_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
 		require_once ABSPATH . 'wp-admin/includes/plugin-install.php';
 		require_once ABSPATH . 'wp-admin/includes/file.php';
@@ -181,7 +181,7 @@ function ajax_install_plugin() {
 		$skin     = new \WP_Ajax_Upgrader_Skin();
 		$upgrader = new \Plugin_Upgrader( $skin );
 
-		// Install the plugin
+		// Install the plugin.
 		$result = $upgrader->install( $plugin_data['download_url'] );
 
 		if ( is_wp_error( $result ) ) {
@@ -194,7 +194,7 @@ function ajax_install_plugin() {
 			wp_send_json_error( array( 'message' => __( 'Plugin installation failed.', 'moiraine' ) ) );
 		}
 
-		// Activate the plugin
+		// Activate the plugin.
 		$activate = activate_plugin( $plugin_data['file'] );
 
 		if ( is_wp_error( $activate ) ) {
@@ -203,7 +203,7 @@ function ajax_install_plugin() {
 
 		wp_send_json_success( array( 'message' => __( 'Plugin installed and activated.', 'moiraine' ) ) );
 	} elseif ( 'activate' === $action ) {
-		// Activate the plugin
+		// Activate the plugin.
 		$activate = activate_plugin( $plugin_data['file'] );
 
 		if ( is_wp_error( $activate ) ) {
