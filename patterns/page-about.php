@@ -11,7 +11,6 @@
  * Inserter: true
  */
 ?>
-<!-- wp:pattern {"slug":"moiraine/contact-details"} /-->
 
 <!-- wp:pattern {"slug":"moiraine/team-members"} /-->
 
