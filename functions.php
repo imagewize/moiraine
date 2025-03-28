@@ -3,7 +3,7 @@
  * This file adds functions to the Moiraine WordPress theme.
  *
  * @package moiraine
- * @author  Mike McAlister
+ * @author  Jasper Frumau
  * @license GNU General Public License v2 or later
  * @link    https://olliewp.com
  */
