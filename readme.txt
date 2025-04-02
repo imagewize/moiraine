@@ -1,18 +1,46 @@
-=== Ollie WordPress Block Theme ===
-Contributors: mmcalister, patrickposner
+=== Moiraine WordPress Block Theme ===
+Contributors: mmcalister, patrickposner, rhand
 Tags: blog, portfolio, entertainment, grid-layout, one-column, two-columns, three-columns, four-columns, block-patterns, block-styles, custom-logo, custom-menu, editor-style, featured-images, full-site-editing, full-width-template, rtl-language-support, style-variations, template-editing, theme-options, translation-ready, wide-blocks
 Requires at least: 5.8
 Tested up to: 6.7.1
 Requires PHP: 7.2
-Stable tag: 1.3.3
+Stable tag: 2.2.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-Launch a blazing-fast, pixel-perfect website with the Ollie WordPress block theme! Ollie features over 50 beautiful pattern designs, 7 full-page pattern layouts, and a fully-customizable design system with global styles. Ollie integrates seamlessly with all of the powerful new WordPress editor features, giving you the most lightweight and powerful website builder on the planet — no expensive page builder plugin required! ✶ Full demo: https://demo.olliewp.com ✶
+Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block theme! Ollie features over 50 beautiful pattern designs, 7 full-page pattern layouts, and a fully-customizable design system with global styles. Ollie integrates seamlessly with all of the powerful new WordPress editor features, giving you the most lightweight and powerful website builder on the planet — no expensive page builder plugin required! ✶ Full demo: https://demo.olliewp.com ✶
 
 == Changelog ==
+
+= 2.2.0-beta - 5/15/24 =
+* PHP CS XML Config File
+
+= 2.1.0-beta - 5/15/24 =
+* GNU GPL License MD File
+* Author Jasper Frumau
+* WordPress Standards
+* OllieWP to Imagewize/Moiraine
+* Mike to Jasper
+
+= 2.0.0-beta - 5/8/24 =
+* Demo Content including Contact Page
+
+= 1.0.2-beta - 4/15/24 =
+* Composer Meta Update
+
+= 1.0.1-beta - 4/10/24 =
+* Old Branding Removal README
+
+= 1.0.0-beta - 4/1/24 =
+* Royal Blue Palette & Consulting Variation
+* Branding Alignment
+
+= 1.0.0-alpha - 2/21/24 =
+* Open Sans Font Family
+* Header Light w/ Hamburger Menu
+* Theme Rebranding
 
 = 1.3.3 - 1/31/24 =
 * Improve standalone color palettes to match style variations
