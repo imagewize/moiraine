@@ -33,7 +33,7 @@
 
 <!-- wp:buttons -->
 <div class="wp-block-buttons"><!-- wp:button {"width":100,"className":"is-style-button-light"} -->
-<div class="wp-block-button has-custom-width wp-block-button__width-100 is-style-button-light"><a class="wp-block-button__link wp-element-button" href="https://olliewp.com">Download Now</a></div>
+<div class="wp-block-button has-custom-width wp-block-button__width-100 is-style-button-light"><a class="wp-block-button__link wp-element-button" href="https://imagewize.com/moiraine">Download Now</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons -->
 

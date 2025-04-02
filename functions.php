@@ -5,7 +5,7 @@
  * @package moiraine
  * @author  Jasper Frumau
  * @license GNU General Public License v2 or later
- * @link    https://olliewp.com
+ * @link    https://imagewize.com/moiraine
  */
 
 namespace Moiraine;

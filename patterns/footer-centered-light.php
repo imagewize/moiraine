@@ -34,7 +34,7 @@
 <!-- /wp:group -->
 
 <!-- wp:paragraph {"align":"center","style":{"elements":{"link":{"color":{"text":"var:preset|color|secondary"}}}},"textColor":"secondary","fontSize":"small"} -->
-<p class="has-text-align-center has-secondary-color has-text-color has-link-color has-small-font-size">© 2024 · Powered by WordPress and <a href="https://olliewp.com">Moiraine</a></p>
+<p class="has-text-align-center has-secondary-color has-text-color has-link-color has-small-font-size">© 2024 · Powered by WordPress and <a href="https://imagewize.com/moiraine">Moiraine</a></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:social-links {"iconColor":"base","iconColorValue":"#fff","iconBackgroundColor":"main","iconBackgroundColorValue":"#14111f","className":"is-style-default","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|small","left":"var:preset|spacing|small"}}},"layout":{"type":"flex","justifyContent":"center"}} -->

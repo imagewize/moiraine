@@ -36,7 +36,7 @@
 
 <!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|medium"}}}} -->
 <div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--medium)"><!-- wp:button {"width":100,"className":"lemonsqueezy-button"} -->
-<div class="wp-block-button has-custom-width wp-block-button__width-100 lemonsqueezy-button"><a class="wp-block-button__link wp-element-button" href="https://olliewp.com">Download Moiraine for free!</a></div>
+<div class="wp-block-button has-custom-width wp-block-button__width-100 lemonsqueezy-button"><a class="wp-block-button__link wp-element-button" href="https://imagewize.com/moiraine">Download Moiraine for free!</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:column --></div>
