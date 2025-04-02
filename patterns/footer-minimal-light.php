@@ -16,7 +16,7 @@
 <div class="wp-block-group alignwide"><!-- wp:site-title {"level":0,"isLink":false,"style":{"elements":{"link":{"color":{"text":"var:preset|color|main"}}}},"textColor":"main"} /-->
 
 <!-- wp:paragraph {"fontSize":"small"} -->
-<p class="has-small-font-size">© 2025 · Powered by WordPress and <a href="https://olliewp.com">Moiraine</a></p>
+<p class="has-small-font-size">© 2025 · Powered by WordPress and <a href="https://imagewize.com/moiraine">Moiraine</a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></footer>
 <!-- /wp:group -->
