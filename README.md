@@ -73,6 +73,10 @@ The Moiraine theme works out of the box, so no build steps are required. However
 - `composer run wpcs:scan`
 - `composer run wpcs:fix`
 
+## Credits
+
+- Favicon: We used the [ladybug icon](https://blade-ui-kit.com/blade-icons/mdi-ladybug) from Blade UI Kit for our favicon.
+
 ## License
 
 Moiraine is licensed under the [GPL-3.0 license](https://www.gnu.org/licenses/gpl-3.0.html).
