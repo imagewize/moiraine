@@ -606,7 +606,7 @@
 					"link": {
 						":hover": {
 							"typography": {
-								"textDecoration": "underline"
+								"textDecoration": "none"
 							}
 						}
 					}
