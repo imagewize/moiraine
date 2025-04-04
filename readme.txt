@@ -3,8 +3,8 @@ Contributors: mmcalister, patrickposner, rhand
 Tags: blog, portfolio, entertainment, grid-layout, one-column, two-columns, three-columns, four-columns, block-patterns, block-styles, custom-logo, custom-menu, editor-style, featured-images, full-site-editing, full-width-template, rtl-language-support, style-variations, template-editing, theme-options, translation-ready, wide-blocks
 Requires at least: 5.8
 Tested up to: 6.7.1
-Requires PHP: 7.2
-Stable tag: 2.2.0
+Requires PHP: 7.3
+Stable tag: 1.0.1
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -14,33 +14,28 @@ Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block t
 
 == Changelog ==
 
-= 2.2.0-beta - 5/15/24 =
-* PHP CS XML Config File
+= 1.0.1 - 04/04/24 =
+* Composer PHP version update
+* README Composer installation note addition
 
-= 2.1.0-beta - 5/15/24 =
-* GNU GPL License MD File
-* Author Jasper Frumau
-* WordPress Standards
-* OllieWP to Imagewize/Moiraine
-* Mike to Jasper
-
-= 2.0.0-beta - 5/8/24 =
-* Demo Content including Contact Page
-
-= 1.0.2-beta - 4/15/24 =
-* Composer Meta Update
-
-= 1.0.1-beta - 4/10/24 =
-* Old Branding Removal README
-
-= 1.0.0-beta - 4/1/24 =
-* Royal Blue Palette & Consulting Variation
-* Branding Alignment
-
-= 1.0.0-alpha - 2/21/24 =
-* Open Sans Font Family
-* Header Light w/ Hamburger Menu
-* Theme Rebranding
+= 1.0.0 - 04/03/24 =
+* Add Open Sans Font Family
+* Add Header Light w/ Hamburger Menu
+* Complete Theme Rebranding
+* Add Royal Blue Palette & Consulting Variation
+* Fix Branding Alignment
+* Remove Old Branding from README
+* Update Composer Meta
+* Add Demo Content including Contact Page
+* Add GNU GPL License MD File
+* Update Author Name
+* Improve WordPress Standards compliance
+* Rename OllieWP to Imagewize/Moiraine
+* Update contributor names
+* Add PHP CS XML Config File
+* Update WP README
+* Update Content
+* Improve Styling & Content
 
 = 1.3.3 - 1/31/24 =
 * Improve standalone color palettes to match style variations
