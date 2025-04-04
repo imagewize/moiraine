@@ -69,6 +69,16 @@ Once you've finished building and customizing your site with the site editor, yo
 
 The Moiraine theme works out of the box, so no build steps are required. However, we have included a Composer file that is used for linting to PHP and WordPress core standards. 
 
+### Installation with Composer
+
+Moiraine can be installed using Composer:
+
+```bash
+composer require imagewize/moiraine
+```
+
+### Linting
+
 - `composer run lint`
 - `composer run wpcs:scan`
 - `composer run wpcs:fix`
