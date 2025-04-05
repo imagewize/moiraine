@@ -1,6 +1,6 @@
 <?php
 /**
- * Title: Header Light w/ Hamburger Menu
+ * Title: Header Light with Hamburger Menu
  * Slug: moiraine/header-light-with-hamburger-menu
  * Description: Header with nav and social icons
  * Categories: header
