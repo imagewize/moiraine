@@ -12,6 +12,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **New Menu Pattern Category**: Added 14 specialized navigation patterns under `moiraine/menu` category for professional menu design
 - **Enhanced Translation Support**: Comprehensive translation preparation for all patterns with proper `esc_html_e()` implementation
 - **Improved Code Standards**: Enhanced WordPress Coding Standards compliance with updated composer scripts
+- **New Pattern Collection**: Added 5 new professional patterns including services feature cards, benefits lists, and call-to-action sections
+- **Enhanced Font Library**: Added 7 new Google Fonts including Big Shoulders, DM Sans, Fraunces, Mona Sans, Montagu Slab, Source Serif, and Space Grotesk
+- **New SVG Icons**: Added arrow circle filled icons (light and dark variants) and checkmark icon for pattern designs
 
 ### Changed
 - **Template Architecture Modernization**: Updated core templates (page.html, single.html, index.html) to use clean pattern-based approach matching Ollie architecture

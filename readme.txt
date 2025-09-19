@@ -17,6 +17,9 @@ Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block t
 = 2.0.0 - 09/19/25 =
 * MAJOR UPDATE: Enhanced WooCommerce Integration
 * NEW: Menu Pattern Category with 14 specialized navigation patterns
+* NEW: 5 professional patterns including Services Feature Cards, Benefits Lists (light/dark), and Call-to-Action sections
+* NEW: Enhanced font library with 7 Google Fonts (Big Shoulders, DM Sans, Fraunces, Mona Sans, Montagu Slab, Source Serif, Space Grotesk)
+* NEW: SVG icon collection with arrow circle filled icons and checkmark for pattern designs
 * IMPROVED: Comprehensive translation support for all patterns
 * ENHANCED: WordPress Coding Standards compliance
 * MODERNIZED: Template architecture now uses clean pattern-based approach for better Site Editor compatibility
