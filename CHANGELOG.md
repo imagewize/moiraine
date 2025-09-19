@@ -21,6 +21,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Template structure now properly references template patterns for better modularity and Site Editor compatibility
+- **Header Template Part**: Fixed pattern reference typo in `parts/header.html` (`moiraine/header-light-wth-action-button` → `moiraine/header-light-action-button`)
+- Template parts verification: All header, footer, and sidebar components now load correctly
 - Indentation consistency in navigation CSS files (spaces to tabs conversion)
 - Pattern translation readiness across all 88+ patterns
 - Composer script improvements for better code scanning

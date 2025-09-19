@@ -20,6 +20,8 @@ Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block t
 * IMPROVED: Comprehensive translation support for all patterns
 * ENHANCED: WordPress Coding Standards compliance
 * MODERNIZED: Template architecture now uses clean pattern-based approach for better Site Editor compatibility
+* FIXED: Header template part pattern reference typo - header now loads correctly with logo, menu, and action button
+* FIXED: Template parts verification - all header, footer, and sidebar components load properly
 * FIXED: Navigation styling and mobile experience improvements
 * UPDATED: Pattern internationalization with proper translation functions
 
