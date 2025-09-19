@@ -17,24 +17,24 @@
 
 <!-- wp:group {"metadata":{"name":"Navs"},"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"fontSize":"small","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center"}} -->
 <div class="wp-block-group has-small-font-size"><!-- wp:paragraph -->
-<p>Download</p>
+<p><?php esc_html_e( 'Download', 'moiraine' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>Visit Moiraine</p>
+<p><?php esc_html_e( 'Visit Moiraine', 'moiraine' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>Twitter</p>
+<p><?php esc_html_e( 'Twitter', 'moiraine' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>Visit Jasper</p>
+<p><?php esc_html_e( 'Visit Jasper', 'moiraine' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
 <!-- wp:paragraph {"align":"center","textColor":"main-accent","fontSize":"small"} -->
-<p class="has-text-align-center has-main-accent-color has-text-color has-small-font-size">© 2024 · Powered by WordPress and <a href="https://imagewize.com/moiraine">Moiraine</a></p>
+<p class="has-text-align-center has-main-accent-color has-text-color has-small-font-size"><?php esc_html_e( '© 2024 · Powered by WordPress and', 'moiraine' ); ?><a href="https://imagewize.com/moiraine"><?php esc_html_e( 'Moiraine', 'moiraine' ); ?></a></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:social-links {"iconColor":"main","iconColorValue":"#150E29","iconBackgroundColor":"base","iconBackgroundColorValue":"#fff","className":"is-style-default","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|small","left":"var:preset|spacing|small"}}},"layout":{"type":"flex","justifyContent":"center"}} -->

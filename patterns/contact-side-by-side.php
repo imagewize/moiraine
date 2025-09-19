@@ -21,11 +21,11 @@
 <div class="wp-block-column" style="padding-top:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);flex-basis:40%">
 
 <!-- wp:heading {"level":3,"style":{"typography":{"fontStyle":"normal","fontWeight":"600"}},"fontSize":"large"} -->
-<h3 class="wp-block-heading has-large-font-size" style="font-style:normal;font-weight:600">Get in touch</h3>
+<h3 class="wp-block-heading has-large-font-size" style="font-style:normal;font-weight:600"><?php esc_html_e( 'Get in touch', 'moiraine' ); ?></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Quam nunc nunc eu sed. Sed rhoncus quis ultricies ac pellentesque.</p>
+<p><?php esc_html_e( 'Quam nunc nunc eu sed. Sed rhoncus quis ultricies ac pellentesque.', 'moiraine' ); ?></p>
 <!-- /wp:paragraph -->
 
 </div>
@@ -45,10 +45,10 @@
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","right":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|medium"}},"border":{"radius":"5px"}},"backgroundColor":"tertiary","layout":{"type":"constrained"}} -->
 <div class="wp-block-group has-tertiary-background-color has-background" style="border-radius:5px;padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)">
 <!-- wp:heading {"level":4,"style":{"typography":{"fontWeight":"600"}}} -->
-<h4 class="wp-block-heading" style="font-weight:600">Collaborate</h4>
+<h4 class="wp-block-heading" style="font-weight:600"><?php esc_html_e( 'Collaborate', 'moiraine' ); ?></h4>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"fontSize":"small"} -->
-<p class="has-small-font-size">partner@example.com</p>
+<p class="has-small-font-size"><?php esc_html_e( 'partner@example.com', 'moiraine' ); ?></p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
@@ -60,10 +60,10 @@
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","right":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|medium"}},"border":{"radius":"5px"}},"backgroundColor":"tertiary","layout":{"type":"constrained"}} -->
 <div class="wp-block-group has-tertiary-background-color has-background" style="border-radius:5px;padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)">
 <!-- wp:heading {"level":4,"style":{"typography":{"fontWeight":"600"}}} -->
-<h4 class="wp-block-heading" style="font-weight:600">Press</h4>
+<h4 class="wp-block-heading" style="font-weight:600"><?php esc_html_e( 'Press', 'moiraine' ); ?></h4>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"fontSize":"small"} -->
-<p class="has-small-font-size">press@example.com</p>
+<p class="has-small-font-size"><?php esc_html_e( 'press@example.com', 'moiraine' ); ?></p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
@@ -81,10 +81,10 @@
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","right":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|medium"}},"border":{"radius":"5px"}},"backgroundColor":"tertiary","layout":{"type":"constrained"}} -->
 <div class="wp-block-group has-tertiary-background-color has-background" style="border-radius:5px;padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)">
 <!-- wp:heading {"level":4,"style":{"typography":{"fontWeight":"600"}}} -->
-<h4 class="wp-block-heading" style="font-weight:600">Join Our Team</h4>
+<h4 class="wp-block-heading" style="font-weight:600"><?php esc_html_e( 'Join Our Team', 'moiraine' ); ?></h4>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"fontSize":"small"} -->
-<p class="has-small-font-size">careers@example.com</p>
+<p class="has-small-font-size"><?php esc_html_e( 'careers@example.com', 'moiraine' ); ?></p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
@@ -96,10 +96,10 @@
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","right":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium","left":"var:preset|spacing|medium"}},"border":{"radius":"5px"}},"backgroundColor":"tertiary","layout":{"type":"constrained"}} -->
 <div class="wp-block-group has-tertiary-background-color has-background" style="border-radius:5px;padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)">
 <!-- wp:heading {"level":4,"style":{"typography":{"fontWeight":"600"}}} -->
-<h4 class="wp-block-heading" style="font-weight:600">Say Hello</h4>
+<h4 class="wp-block-heading" style="font-weight:600"><?php esc_html_e( 'Say Hello', 'moiraine' ); ?></h4>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"fontSize":"small"} -->
-<p class="has-small-font-size">hello@example.com</p>
+<p class="has-small-font-size"><?php esc_html_e( 'hello@example.com', 'moiraine' ); ?></p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
