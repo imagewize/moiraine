@@ -14,22 +14,22 @@
 <!-- wp:group {"metadata":{"name":"Testimonials"},"align":"full","style":{"spacing":{"margin":{"top":"0px","bottom":"0px"},"padding":{"top":"var:preset|spacing|xxx-large","bottom":"var:preset|spacing|xxx-large","right":"var:preset|spacing|medium","left":"var:preset|spacing|medium"},"blockGap":"var:preset|spacing|x-large"}},"layout":{"inherit":true,"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="margin-top:0px;margin-bottom:0px;padding-top:var(--wp--preset--spacing--xxx-large);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--xxx-large);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:group {"metadata":{"name":"Titles"},"style":{"spacing":{"blockGap":"var:preset|spacing|small"}}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"align":"center","style":{"typography":{"fontStyle":"normal","fontWeight":"500"}},"textColor":"primary","fontSize":"small"} -->
-<p class="has-text-align-center has-primary-color has-text-color has-small-font-size" style="font-style:normal;font-weight:500">Testimonials</p>
+<p class="has-text-align-center has-primary-color has-text-color has-small-font-size" style="font-style:normal;font-weight:500"><?php esc_html_e( 'Testimonials', 'moiraine' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"textAlign":"center"} -->
-<h2 class="wp-block-heading has-text-align-center">We love our customers</h2>
+<h2 class="wp-block-heading has-text-align-center"><?php esc_html_e( 'We love our customers', 'moiraine' ); ?></h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center">Customer happiness is at the core of our business model. If our customers aren't succeeding, we're not succeeding. See what they're saying below.</p>
+<p class="has-text-align-center"><?php esc_html_e( 'Customer happiness is at the core of our business model. If our customers aren\'t succeeding, we\'re not succeeding. See what they\'re saying below.', 'moiraine' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|large"}},"layout":{"type":"grid","minimumColumnWidth":"22rem"}} -->
 <div class="wp-block-group alignwide"><!-- wp:group {"metadata":{"name":"Testimonial"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|large","right":"var:preset|spacing|large"}},"border":{"radius":"5px","width":"1px"}},"backgroundColor":"base","borderColor":"border-light","layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch","verticalAlignment":"space-between"}} -->
 <div class="wp-block-group has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;border-radius:5px;padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large)"><!-- wp:paragraph {"fontSize":"small"} -->
-<p class="has-small-font-size">Wow, I really can't believe how powerful the WordPress Site Editor is combined with Moiraine. I don't even need my page builder plugin anymore! Everything I need is built right in and ready for me at the beginning of every project.</p>
+<p class="has-small-font-size"><?php esc_html_e( 'Wow, I really can\'t believe how powerful the WordPress Site Editor is combined with Moiraine. I don\'t even need my page builder plugin anymore! Everything I need is built right in and ready for me at the beginning of every project.', 'moiraine' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
@@ -39,11 +39,11 @@
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"0px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 <div class="wp-block-group"><!-- wp:paragraph -->
-<p><strong>Maryann Alpine</strong></p>
+<p><strong><?php esc_html_e( 'Maryann Alpine', 'moiraine' ); ?></strong></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"textColor":"secondary","fontSize":"small"} -->
-<p class="has-secondary-color has-text-color has-small-font-size">Product Designer</p>
+<p class="has-secondary-color has-text-color has-small-font-size"><?php esc_html_e( 'Product Designer', 'moiraine' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
@@ -51,7 +51,7 @@
 
 <!-- wp:group {"metadata":{"name":"Testimonial"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|large","right":"var:preset|spacing|large"}},"border":{"radius":"5px","width":"1px"}},"backgroundColor":"base","borderColor":"border-light","layout":{"type":"flex","orientation":"vertical","verticalAlignment":"space-between","justifyContent":"stretch"}} -->
 <div class="wp-block-group has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;border-radius:5px;padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large)"><!-- wp:paragraph {"fontSize":"small"} -->
-<p class="has-small-font-size">I love using WordPress but traditionally it has been hard to design in. Not any more! I can quickly build out page sections or full page designs with Moiraine patterns. Saves me so much time!</p>
+<p class="has-small-font-size"><?php esc_html_e( 'I love using WordPress but traditionally it has been hard to design in. Not any more! I can quickly build out page sections or full page designs with Moiraine patterns. Saves me so much time!', 'moiraine' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
@@ -61,11 +61,11 @@
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"0px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 <div class="wp-block-group"><!-- wp:paragraph -->
-<p><strong>Bill Glacier</strong></p>
+<p><strong><?php esc_html_e( 'Bill Glacier', 'moiraine' ); ?></strong></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"textColor":"secondary","fontSize":"small"} -->
-<p class="has-secondary-color has-text-color has-small-font-size">Marketer</p>
+<p class="has-secondary-color has-text-color has-small-font-size"><?php esc_html_e( 'Marketer', 'moiraine' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
@@ -73,7 +73,7 @@
 
 <!-- wp:group {"metadata":{"name":"Testimonial"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|large","right":"var:preset|spacing|large"}},"border":{"radius":"5px","width":"1px"}},"backgroundColor":"base","borderColor":"border-light","layout":{"type":"flex","orientation":"vertical","verticalAlignment":"space-between","justifyContent":"stretch"}} -->
 <div class="wp-block-group has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;border-radius:5px;padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large)"><!-- wp:paragraph {"fontSize":"small"} -->
-<p class="has-small-font-size">I create a lot of landing pages, and the Site Editor and Moiraine have been huge for this. I can choose from a pre-designed landing page, customize my brand colors, and I'm ready to launch.</p>
+<p class="has-small-font-size"><?php esc_html_e( 'I create a lot of landing pages, and the Site Editor and Moiraine have been huge for this. I can choose from a pre-designed landing page, customize my brand colors, and I\'m ready to launch.', 'moiraine' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
@@ -83,11 +83,11 @@
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"0px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 <div class="wp-block-group"><!-- wp:paragraph -->
-<p><strong>Erik Acadia</strong></p>
+<p><strong><?php esc_html_e( 'Erik Acadia', 'moiraine' ); ?></strong></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"textColor":"secondary","fontSize":"small"} -->
-<p class="has-secondary-color has-text-color has-small-font-size">Video Producer</p>
+<p class="has-secondary-color has-text-color has-small-font-size"><?php esc_html_e( 'Video Producer', 'moiraine' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
@@ -95,7 +95,7 @@
 
 <!-- wp:group {"metadata":{"name":"Testimonial"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|large","right":"var:preset|spacing|large"}},"border":{"radius":"5px","width":"1px"}},"backgroundColor":"base","borderColor":"border-light","layout":{"type":"flex","orientation":"vertical","verticalAlignment":"space-between","justifyContent":"stretch"}} -->
 <div class="wp-block-group has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;border-radius:5px;padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large)"><!-- wp:paragraph {"fontSize":"small"} -->
-<p class="has-small-font-size">I was skeptical about all the changes going on in WordPress, but now that I've seen how powerful it can be, I'm convinced. Moiraine made it super easy to get started with the "new" WordPress.</p>
+<p class="has-small-font-size"><?php esc_html_e( 'I was skeptical about all the changes going on in WordPress, but now that I\'ve seen how powerful it can be, I\'m convinced. Moiraine made it super easy to get started with the "new" WordPress.', 'moiraine' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
@@ -105,11 +105,11 @@
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"0px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 <div class="wp-block-group"><!-- wp:paragraph -->
-<p><strong>Andrea Sequoia</strong></p>
+<p><strong><?php esc_html_e( 'Andrea Sequoia', 'moiraine' ); ?></strong></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"textColor":"secondary","fontSize":"small"} -->
-<p class="has-secondary-color has-text-color has-small-font-size">Customer Support</p>
+<p class="has-secondary-color has-text-color has-small-font-size"><?php esc_html_e( 'Customer Support', 'moiraine' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
@@ -118,7 +118,7 @@
 
 <!-- wp:group {"metadata":{"name":"Logos"},"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|medium"}}} -->
 <div class="wp-block-group alignwide"><!-- wp:paragraph {"align":"center","textColor":"secondary","fontSize":"small"} -->
-<p class="has-text-align-center has-secondary-color has-text-color has-small-font-size">Trusted by the biggest brands on the planet</p>
+<p class="has-text-align-center has-secondary-color has-text-color has-small-font-size"><?php esc_html_e( 'Trusted by the biggest brands on the planet', 'moiraine' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|large"}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"center"}} -->

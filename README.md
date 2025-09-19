@@ -2,7 +2,7 @@
 
 Moiraine is a modern WordPress block theme designed to work seamlessly with the WordPress block editor and site editor, where you can create beautiful, fully-customizable websites with WordPress's built-in page builder — no page builder or coding skills required.
 
-Moiraine ships with over 50 beautifully-designed patterns, page templates, block styles, and style variations so you can design stunning pages quickly with drag and drop instead of code. Moiraine is also blazing fast, fully customizable via the WordPress UI, fully responsive out of the box, and scores 100% across the board on performance.
+Moiraine ships with **88+ beautifully-designed patterns** including 14 specialized menu patterns and 14 template layout patterns, plus page templates, block styles, and style variations so you can design stunning pages quickly with drag and drop instead of code. Moiraine features **WooCommerce integration** for e-commerce sites, **modern development tooling** with npm-based workflow, and is blazing fast, fully customizable via the WordPress UI, fully responsive out of the box, and scores 100% across the board on performance.
 
 ## Based on Ollie
 
@@ -11,6 +11,7 @@ Moiraine is based on the Ollie theme by [Mike McAlister](https://mikemcalister.c
 ## Table of Contents
 
 - [Getting Started with Moiraine](#getting-started-with-moiraine)
+- [Key Features](#key-features)
 - [Working with Block Themes](#working-with-block-themes)
   - [Site Editor](#site-editor)
   - [Patterns](#patterns)
@@ -28,6 +29,43 @@ Moiraine is based on the Ollie theme by [Mike McAlister](https://mikemcalister.c
 | [Download Moiraine Child Theme Zip](https://github.com/imagewize/moiraine-child)  | Download the Moiraine child theme zip for customizations  |
 
 Moiraine is built for modern WordPress features and requires WordPress 6.0 or later. To get started, download the theme and install it into your WordPress website by going to `Appearance → Themes → Add New`.
+
+## Key Features
+
+### 🎨 **88+ Professional Patterns**
+- **Hero Sections**: Eye-catching headers and banners
+- **Feature Presentations**: Showcase your products and services
+- **Call-to-Action Sections**: Drive conversions with beautiful CTAs
+- **Card Layouts**: Flexible content presentation
+- **Pricing Tables**: Professional pricing displays
+- **Testimonials**: Build trust with customer feedback
+- **Blog Post Layouts**: Beautiful post and archive designs
+- **Menu Patterns**: 14 specialized navigation designs (cards, mobile, panels)
+- **Template Patterns**: 14 complete page layout templates
+
+### 🛒 **WooCommerce Integration**
+- Automatic WooCommerce stylesheet loading when plugin is active
+- Enhanced e-commerce support for online stores
+- Pre-built cart and checkout page templates
+- Optimized for selling products and services
+
+### ⚡ **Modern Development Workflow**
+- **npm-based Development**: `npm run dev` for file watching and translation automation
+- **Pattern Translation**: `npm run translate:patterns` for internationalization
+- **WordPress Coding Standards**: Built-in linting and code quality tools
+- **Composer Support**: `composer require imagewize/moiraine`
+
+### 🎯 **Site Editor Ready**
+- Full Site Editing compatibility
+- Template and template part customization
+- Global styles system with theme.json
+- Export/import functionality for site designs
+
+### 🚀 **Performance Optimized**
+- Blazing fast load times
+- 100% performance scores
+- Minimal CSS and JavaScript footprint
+- Responsive design out of the box
 
 ## Working with Block Themes
 
@@ -67,7 +105,7 @@ Once you've finished building and customizing your site with the site editor, yo
 
 ## Developer Notes
 
-The Moiraine theme works out of the box, so no build steps are required. However, we have included a Composer file that is used for linting to PHP and WordPress core standards. 
+The Moiraine theme works out of the box, so no build steps are required. However, we have included both Node.js and Composer workflows for development and code quality.
 
 ### Installation with Composer
 
@@ -77,11 +115,45 @@ Moiraine can be installed using Composer:
 composer require imagewize/moiraine
 ```
 
-### Linting
+### Node.js Development Workflow
 
-- `composer run lint`
-- `composer run wpcs:scan`
-- `composer run wpcs:fix`
+Moiraine includes modern development tooling for pattern translation and file watching:
+
+```bash
+# Install Node.js dependencies
+npm install
+
+# Watch pattern files for changes and auto-escape for translations
+npm run dev
+
+# Process pattern files for translation readiness
+npm run translate:patterns
+```
+
+### PHP Linting and Code Quality
+
+For WordPress coding standards compliance:
+
+```bash
+# Install PHP dependencies
+composer install
+
+# Run PHP parallel lint on all PHP files
+composer run lint
+
+# Scan code against WordPress coding standards
+composer run wpcs:scan
+
+# Auto-fix WordPress coding standard violations
+composer run wpcs:fix
+```
+
+### Development Features
+
+- **Pattern Translation**: Automated text domain handling for internationalization
+- **File Watching**: Real-time development with automatic pattern processing
+- **Code Standards**: WordPress coding standards enforcement
+- **Modern Tooling**: Node.js-based utilities for enhanced development workflow
 
 ## Credits
 

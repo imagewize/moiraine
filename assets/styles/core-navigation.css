@@ -157,6 +157,6 @@ header .wp-block-navigation :where(.wp-block-navigation__submenu-container) .wp-
 
 /* Fix close button position in light header with hamburger menu */
 .moiraine-light-header-hamburger .wp-block-navigation__responsive-container-close {
-    top: var(--wp--preset--spacing--medium);
-    right: var(--wp--preset--spacing--medium);
+	top: var(--wp--preset--spacing--medium);
+	right: var(--wp--preset--spacing--medium);
 }

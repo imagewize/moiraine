@@ -1,18 +1,38 @@
 === Moiraine WordPress Block Theme ===
-Contributors: mmcalister, patrickposner, rhand
+Contributors: jfrumau
 Tags: blog, portfolio, entertainment, grid-layout, one-column, two-columns, three-columns, four-columns, block-patterns, block-styles, custom-logo, custom-menu, editor-style, featured-images, full-site-editing, full-width-template, rtl-language-support, style-variations, template-editing, theme-options, translation-ready, wide-blocks
 Requires at least: 5.8
 Tested up to: 6.7.1
 Requires PHP: 7.3
-Stable tag: 1.0.1
+Stable tag: 2.0.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block theme! Ollie features over 50 beautiful pattern designs, 7 full-page pattern layouts, and a fully-customizable design system with global styles. Ollie integrates seamlessly with all of the powerful new WordPress editor features, giving you the most lightweight and powerful website builder on the planet — no expensive page builder plugin required! ✶ Full demo: https://demo.olliewp.com ✶
+Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block theme! Moiraine features over 50 beautiful pattern designs, 7 full-page pattern layouts, and a fully-customizable design system with Global Styles. Moiraine integrates seamlessly with all of the powerful new WordPress editor features, giving you the most lightweight and powerful website builder on the planet — no expensive page builder plugin required! ✶ Full demo: https://demo.imagewize.com ✶
 
 == Changelog ==
+
+= 2.0.0 - 09/19/25 =
+* MAJOR UPDATE: Enhanced WooCommerce Integration
+* NEW: Menu Pattern Category with 14 specialized navigation patterns
+* NEW: 5 professional patterns including Services Feature Cards, Benefits Lists (light/dark), and Call-to-Action sections
+* NEW: Enhanced font library with 7 Google Fonts (Big Shoulders, DM Sans, Fraunces, Mona Sans, Montagu Slab, Source Serif, Space Grotesk)
+* NEW: SVG icon collection with arrow circle filled icons and checkmark for pattern designs
+* IMPROVED: Comprehensive translation support for all patterns
+* ENHANCED: WordPress Coding Standards compliance
+* MODERNIZED: Template architecture now uses clean pattern-based approach for better Site Editor compatibility
+* FIXED: Header template part pattern reference typo - header now loads correctly with logo, menu, and action button
+* FIXED: Template parts verification - all header, footer, and sidebar components load properly
+* FIXED: Navigation styling and mobile experience improvements
+* FIXED: Color system standardization - benefits patterns now use standard WordPress color slugs for better theme compatibility
+* FIXED: Typography presets implementation - converted hardcoded font sizes to WordPress presets in patterns
+* ADDED: Corporate Blue color variation with professional brand colors mapped to standard WordPress color system
+* UPDATED: Pattern internationalization with proper translation functions
+
+= 1.2.2 - 11/1/24 =
+* Fix header and footer calls for child themes
 
 = 1.0.1 - 04/04/24 =
 * Composer PHP version update
@@ -191,8 +211,8 @@ Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block t
 
 == Copyright ==
 
-Ollie Theme, (C) 2025 Mike McAlister
-Ollie is distributed under the terms of the GNU GPL.
+Moiraine Theme, (C) 2025 Jasper Frumau based on Ollie by Mike McAlister.
+Moiraine is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

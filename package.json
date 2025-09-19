@@ -1,0 +1,23 @@
+{
+	"name": "Moiraine",
+	"version": "1.2.2",
+	"description": "A modern WordPress block theme with 90+ patterns for building professional websites.",
+	"scripts": {
+	  "translate:patterns": "node theme-utils.mjs escape-patterns --text-domain=moiraine",
+	  "dev": "node theme-utils.mjs watch --text-domain=moiraine"
+	},
+	"keywords": [
+	  "wordpress",
+	  "theme",
+	  "block-theme",
+	  "translation"
+	],
+	"author": "Jasper Frumau",
+	"license": "GPL-2.0-or-later",
+	"dependencies": {
+	  "parse5-html-rewriting-stream": "^7.0.0",
+	  "fast-glob": "^3.3.2",
+	  "chokidar": "^3.5.3"
+	},
+	"type": "module"
+  }
