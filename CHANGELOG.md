@@ -29,6 +29,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Indentation consistency in navigation CSS files (spaces to tabs conversion)
 - Pattern translation readiness across all 88+ patterns
 - Composer script improvements for better code scanning
+- **Color System Standardization**: Fixed list-benefits-dark.php to use standard `backgroundColor="main"` instead of non-standard `dark-teal`
+- **Typography Presets**: Converted hardcoded font sizes to WordPress typography presets in benefits list patterns for better theme compatibility
+- **Corporate Blue Color Variation**: Added new corporate-blue.json color scheme with professional brand colors mapped to standard WordPress color slugs
 
 ### Previous Versions
 

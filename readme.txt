@@ -26,6 +26,9 @@ Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block t
 * FIXED: Header template part pattern reference typo - header now loads correctly with logo, menu, and action button
 * FIXED: Template parts verification - all header, footer, and sidebar components load properly
 * FIXED: Navigation styling and mobile experience improvements
+* FIXED: Color system standardization - benefits patterns now use standard WordPress color slugs for better theme compatibility
+* FIXED: Typography presets implementation - converted hardcoded font sizes to WordPress presets in patterns
+* ADDED: Corporate Blue color variation with professional brand colors mapped to standard WordPress color system
 * UPDATED: Pattern internationalization with proper translation functions
 
 = 1.2.2 - 11/1/24 =
