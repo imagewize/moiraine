@@ -19,6 +19,7 @@ Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block t
 * NEW: Menu Pattern Category with 14 specialized navigation patterns
 * IMPROVED: Comprehensive translation support for all patterns
 * ENHANCED: WordPress Coding Standards compliance
+* MODERNIZED: Template architecture now uses clean pattern-based approach for better Site Editor compatibility
 * FIXED: Navigation styling and mobile experience improvements
 * UPDATED: Pattern internationalization with proper translation functions
 

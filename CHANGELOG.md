@@ -14,11 +14,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Improved Code Standards**: Enhanced WordPress Coding Standards compliance with updated composer scripts
 
 ### Changed
+- **Template Architecture Modernization**: Updated core templates (page.html, single.html, index.html) to use clean pattern-based approach matching Ollie architecture
 - **Major Translation Update**: All hardcoded text in patterns now properly internationalized with translation functions
 - **Code Quality Improvements**: Updated PHPCS scanning to exclude node_modules and improve development workflow
 - **Navigation Styles**: Fixed close button positioning in light header with hamburger menu for better mobile experience
 
 ### Fixed
+- Template structure now properly references template patterns for better modularity and Site Editor compatibility
 - Indentation consistency in navigation CSS files (spaces to tabs conversion)
 - Pattern translation readiness across all 88+ patterns
 - Composer script improvements for better code scanning
