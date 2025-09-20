@@ -11,12 +11,18 @@
 - [x] Create moiraine-mega-menu.css styling framework (complete CSS integration)
 - [x] Create all 14 mega menu template parts based on existing patterns
 - [x] Run linting and code standards checks (all passed)
+- [x] **DISCOVERED ARCHITECTURAL ISSUE:** Template parts incorrectly wrapped content in HM blocks
+- [x] **DOCUMENTED CORRECT APPROACH:** HM Mega Menu as container, template parts as content only
 
-### 🔄 In Progress
-- [ ] Update theme documentation
+### ✅ Recently Completed
+- [x] **FIX TEMPLATE PARTS:** Remove HM block wrappers, content only
+- [x] **ADD BUNDLING CODE:** Include auto-loading functions in functions.php
+- [x] **CREATE CUSTOM MENU AREA:** Register 'menu' template part area via `default_wp_template_part_areas` filter
+- [x] **UPDATE TEMPLATE PART REGISTRATION:** Use custom 'menu' area for proper categorization
+- [x] Test corrected template parts via linting and WPCS checks
+- [x] Update theme documentation with corrected architecture
 
 ### 📋 Pending Tasks
-- [ ] Test template parts in WordPress Site Editor
 - [ ] Final quality assurance testing
 - [ ] User acceptance testing
 
@@ -49,7 +55,12 @@ This document outlines the plan for enhancing the Moiraine theme's existing menu
 
 ## Integration Strategy: HM Mega Menu Block + Pattern Conversion
 
-**Recommended Approach: Use HM Mega Menu Block as Foundation + Moiraine Pattern Styling**
+**CORRECTED APPROACH: HM Mega Menu Block as Container + Template Parts as Content**
+
+**Critical Fix - How HM Mega Menu Actually Works:**
+- ❌ **Wrong:** Template parts contain `<!-- wp:hm/mega-menu-block -->` wrapper
+- ✅ **Correct:** HM Mega Menu block is the container that loads template parts as content
+- ✅ **Architecture:** User adds HM Mega Menu block → selects template part as dropdown content
 
 **Advantages:**
 - Leverages existing battle-tested mega menu functionality
@@ -59,12 +70,71 @@ This document outlines the plan for enhancing the Moiraine theme's existing menu
 - Can style with existing Moiraine pattern designs
 - Fast development (1 week instead of 2 weeks)
 
-**Implementation:**
-1. **Install HM Mega Menu Block plugin** as dependency
-2. **Create template parts** using the mega menu block + Moiraine styling
-3. **Apply pattern designs** to mega menu template parts
-4. **Customize with Moiraine CSS** and design system integration
+**Corrected Implementation:**
+1. **Bundle HM Mega Menu Block plugin** with theme to avoid manual installation
+2. **Create template parts** containing only WordPress Navigation blocks + Moiraine styling
+3. **Apply pattern designs** to template part content (no HM wrapper)
+4. **Users add HM Mega Menu block** and select our template parts as content
 5. **Leverage built-in interactions** (no custom JavaScript needed)
+
+## Critical Discovery: Template Part Architecture Fix
+
+### The Problem with Initial Implementation
+The original template parts incorrectly wrapped content in `<!-- wp:hm/mega-menu-block -->`, causing:
+- "Block not supported" errors
+- Template parts appearing in "General" instead of "Menu" category
+- Block validation failures
+
+### The Correct HM Mega Menu Architecture
+```
+HM Mega Menu Block (container)
+└── Template Part Selection (content)
+    └── WordPress Navigation + Moiraine Styling
+```
+
+**User Workflow:**
+1. Add "Mega Menu by Human Made" block to header
+2. Block prompts to select a template part
+3. Choose from Moiraine mega menu template parts
+4. Template part provides styled navigation content
+
+### Solution: Bundled Plugin + Content-Only Template Parts
+
+**Bundle HM Mega Menu Block with Theme:**
+```php
+// functions.php - Auto-install HM Mega Menu Block
+function moiraine_load_bundled_hm_mega_menu() {
+    $plugin_file = get_template_directory() . '/vendor/humanmade/hm-mega-menu-block/hm-mega-menu-block.php';
+
+    if (file_exists($plugin_file) && !function_exists('create_block_hm_mega_menu_block_block_init')) {
+        include_once $plugin_file;
+    }
+}
+add_action('plugins_loaded', 'moiraine_load_bundled_hm_mega_menu', 1);
+
+/**
+ * Auto-activate HM Mega Menu Block functionality
+ * Ensures plugin is available without manual activation
+ */
+function moiraine_ensure_hm_mega_menu_active() {
+    if (!function_exists('create_block_hm_mega_menu_block_block_init')) {
+        moiraine_load_bundled_hm_mega_menu();
+    }
+}
+add_action('init', 'moiraine_ensure_hm_mega_menu_active', 5);
+```
+
+**Template Parts Contain Only Navigation Content:**
+```html
+<!-- mega-card-1.html - Content only, no HM wrapper -->
+<!-- wp:group {"className":"moiraine-mega-card"} -->
+<div class="wp-block-group moiraine-mega-card">
+    <!-- wp:navigation {"overlayMenu":"never"} -->
+    <!-- Navigation block with Moiraine card styling -->
+    <!-- /wp:navigation -->
+</div>
+<!-- /wp:group -->
+```
 
 ## Current Menu Pattern Analysis
 
@@ -289,18 +359,53 @@ moiraine/                               # Existing theme structure
 }
 ```
 
-#### Template Part Registration
+#### Template Part Registration (CORRECTED)
 ```php
 /**
- * Register HM Mega Menu template parts with Moiraine styling
- * Add to functions.php
+ * Bundle HM Mega Menu Block with theme to avoid manual installation
+ */
+function moiraine_load_bundled_hm_mega_menu() {
+    $plugin_file = get_template_directory() . '/vendor/humanmade/hm-mega-menu-block/hm-mega-menu-block.php';
+
+    if (file_exists($plugin_file) && !function_exists('create_block_hm_mega_menu_block_block_init')) {
+        include_once $plugin_file;
+    }
+}
+add_action('plugins_loaded', 'moiraine_load_bundled_hm_mega_menu', 1);
+
+/**
+ * Auto-activate HM Mega Menu Block functionality
+ * Ensures plugin is available without manual activation
+ */
+function moiraine_ensure_hm_mega_menu_active() {
+    if (!function_exists('create_block_hm_mega_menu_block_block_init')) {
+        moiraine_load_bundled_hm_mega_menu();
+    }
+}
+add_action('init', 'moiraine_ensure_hm_mega_menu_active', 5);
+
+/**
+ * Register custom Menu template part area
+ * Following the same pattern as Moiraine's existing sidebar area
+ */
+function moiraine_add_menu_template_part_area( array $areas ) {
+    $areas[] = array(
+        'area'        => 'menu',
+        'area_tag'    => 'nav',
+        'label'       => __( 'Menu', 'moiraine' ),
+        'description' => __( 'Template parts for mega menu and navigation content.', 'moiraine' ),
+        'icon'        => 'menu', // Will fall back to default icon
+    );
+
+    return $areas;
+}
+add_filter( 'default_wp_template_part_areas', 'moiraine_add_menu_template_part_area' );
+
+/**
+ * Register template parts with custom Menu area for proper categorization
+ * CORRECTED: Use custom 'menu' area for proper Site Editor categorization
  */
 function moiraine_register_mega_menu_template_parts() {
-    // Ensure HM Mega Menu Block is active
-    if (!function_exists('create_block_hm_mega_menu_block_block_init')) {
-        return;
-    }
-
     $mega_menu_template_parts = [
         'mega-card-1' => __('Moiraine Card Style 1 - Simple Icon Mega Menu', 'moiraine'),
         'mega-card-2' => __('Moiraine Card Style 2 - Feature List Mega Menu', 'moiraine'),
@@ -323,7 +428,7 @@ function moiraine_register_mega_menu_template_parts() {
             $slug,
             [
                 'title' => $title,
-                'area' => 'menu', // Uses HM Mega Menu's custom area
+                'area' => 'menu', // Custom menu area - will show in "Menu" category
                 'description' => sprintf(__('Mega menu template part: %s', 'moiraine'), $title),
             ]
         );
@@ -349,14 +454,16 @@ function moiraine_enqueue_mega_menu_styles() {
 add_action('wp_enqueue_scripts', 'moiraine_enqueue_mega_menu_styles');
 ```
 
-#### Template Part Structure
+#### Template Part Structure (CORRECTED)
 Each template part contains:
-- **HM Mega Menu Block** as the foundation
-- **WordPress Navigation block** within the mega menu
+- **WordPress Navigation block** as the main content (NO HM wrapper)
 - **Moiraine design styling** applied via CSS classes
-- **Built-in interactions** via WordPress Interactivity API
-- **Responsive behavior** inherited from HM Mega Menu
-- **Accessibility compliance** built into HM Mega Menu Block
+- **Group blocks** for layout structure and styling hooks
+- **Content that gets loaded INTO the HM Mega Menu block**
+- **Built-in interactions** via HM Mega Menu container (not in template part)
+- **Responsive behavior** provided by HM Mega Menu container
+
+**IMPORTANT:** Template parts are content only - they get loaded into the HM Mega Menu block container.
 
 ### Moiraine Styling Integration
 

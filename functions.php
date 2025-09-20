@@ -212,51 +212,44 @@ function template_part_areas( array $areas ) {
 		'icon'        => 'sidebar',
 	);
 
+	$areas[] = array(
+		'area'        => 'menu',
+		'area_tag'    => 'nav',
+		'label'       => __( 'Menu', 'moiraine' ),
+		'description' => __( 'Template parts for mega menu and navigation content.', 'moiraine' ),
+		'icon'        => 'menu',
+	);
+
 	return $areas;
 }
 add_filter( 'default_wp_template_part_areas', __NAMESPACE__ . '\template_part_areas' );
 
 
 /**
- * Register HM Mega Menu template parts with Moiraine styling
+ * Bundle HM Mega Menu Block with theme to avoid manual installation
  */
-function register_mega_menu_template_parts() {
-	// Ensure HM Mega Menu Block is active.
-	if ( ! function_exists( 'create_block_hm_mega_menu_block_block_init' ) ) {
-		return;
-	}
+function load_bundled_hm_mega_menu() {
+	$plugin_file = get_template_directory() . '/vendor/humanmade/hm-mega-menu-block/hm-mega-menu-block.php';
 
-	$mega_menu_template_parts = array(
-		'mega-card-1'   => __( 'Moiraine Card Style 1 - Simple Icon Mega Menu', 'moiraine' ),
-		'mega-card-2'   => __( 'Moiraine Card Style 2 - Feature List Mega Menu', 'moiraine' ),
-		'mega-card-3'   => __( 'Moiraine Card Style 3 - CTA Mega Menu', 'moiraine' ),
-		'mega-card-4'   => __( 'Moiraine Card Style 4 - Service Showcase Mega Menu', 'moiraine' ),
-		'mega-panel-1'  => __( 'Moiraine Panel Style 1 - Multi-column with Case Study', 'moiraine' ),
-		'mega-panel-2'  => __( 'Moiraine Panel Style 2 - Feature Grid Layout', 'moiraine' ),
-		'mega-panel-3'  => __( 'Moiraine Panel Style 3 - Enterprise Layout', 'moiraine' ),
-		'mega-panel-4'  => __( 'Moiraine Panel Style 4 - Product Showcase Layout', 'moiraine' ),
-		'mega-mobile-1' => __( 'Moiraine Mobile Style 1 - Sectioned Navigation', 'moiraine' ),
-		'mega-mobile-2' => __( 'Moiraine Mobile Style 2 - Category-based Navigation', 'moiraine' ),
-		'mega-mobile-3' => __( 'Moiraine Mobile Style 3 - Full-screen Navigation', 'moiraine' ),
-		'mega-mobile-4' => __( 'Moiraine Mobile Style 4 - Drawer-style Navigation', 'moiraine' ),
-		'mega-mobile-5' => __( 'Moiraine Mobile Style 5 - Tab-based Navigation', 'moiraine' ),
-		'mega-mobile-6' => __( 'Moiraine Mobile Style 6 - Accordion Navigation', 'moiraine' ),
-	);
-
-	foreach ( $mega_menu_template_parts as $slug => $title ) {
-		register_block_pattern(
-			'moiraine/' . $slug,
-			array(
-				'title'       => $title,
-				'categories'  => array( 'moiraine/menu' ),
-				/* translators: %s: The title of the mega menu template part */
-				'description' => sprintf( __( 'Mega menu template part: %s', 'moiraine' ), $title ),
-				'content'     => '',
-			)
-		);
+	if ( file_exists( $plugin_file ) && ! function_exists( 'create_block_hm_mega_menu_block_block_init' ) ) {
+		include_once $plugin_file;
 	}
 }
-add_action( 'init', __NAMESPACE__ . '\register_mega_menu_template_parts' );
+add_action( 'plugins_loaded', __NAMESPACE__ . '\load_bundled_hm_mega_menu', 1 );
+
+
+/**
+ * Auto-activate HM Mega Menu Block functionality
+ * Ensures plugin is available without manual activation
+ */
+function ensure_hm_mega_menu_active() {
+	if ( ! function_exists( 'create_block_hm_mega_menu_block_block_init' ) ) {
+		load_bundled_hm_mega_menu();
+	}
+}
+add_action( 'init', __NAMESPACE__ . '\ensure_hm_mega_menu_active', 5 );
+
+
 
 
 /**
