@@ -215,3 +215,62 @@ function template_part_areas( array $areas ) {
 	return $areas;
 }
 add_filter( 'default_wp_template_part_areas', __NAMESPACE__ . '\template_part_areas' );
+
+
+/**
+ * Register HM Mega Menu template parts with Moiraine styling
+ */
+function register_mega_menu_template_parts() {
+	// Ensure HM Mega Menu Block is active
+	if ( ! function_exists( 'create_block_hm_mega_menu_block_block_init' ) ) {
+		return;
+	}
+
+	$mega_menu_template_parts = array(
+		'mega-card-1'   => __( 'Moiraine Card Style 1 - Simple Icon Mega Menu', 'moiraine' ),
+		'mega-card-2'   => __( 'Moiraine Card Style 2 - Feature List Mega Menu', 'moiraine' ),
+		'mega-card-3'   => __( 'Moiraine Card Style 3 - CTA Mega Menu', 'moiraine' ),
+		'mega-card-4'   => __( 'Moiraine Card Style 4 - Service Showcase Mega Menu', 'moiraine' ),
+		'mega-panel-1'  => __( 'Moiraine Panel Style 1 - Multi-column with Case Study', 'moiraine' ),
+		'mega-panel-2'  => __( 'Moiraine Panel Style 2 - Feature Grid Layout', 'moiraine' ),
+		'mega-panel-3'  => __( 'Moiraine Panel Style 3 - Enterprise Layout', 'moiraine' ),
+		'mega-panel-4'  => __( 'Moiraine Panel Style 4 - Product Showcase Layout', 'moiraine' ),
+		'mega-mobile-1' => __( 'Moiraine Mobile Style 1 - Sectioned Navigation', 'moiraine' ),
+		'mega-mobile-2' => __( 'Moiraine Mobile Style 2 - Category-based Navigation', 'moiraine' ),
+		'mega-mobile-3' => __( 'Moiraine Mobile Style 3 - Full-screen Navigation', 'moiraine' ),
+		'mega-mobile-4' => __( 'Moiraine Mobile Style 4 - Drawer-style Navigation', 'moiraine' ),
+		'mega-mobile-5' => __( 'Moiraine Mobile Style 5 - Tab-based Navigation', 'moiraine' ),
+		'mega-mobile-6' => __( 'Moiraine Mobile Style 6 - Accordion Navigation', 'moiraine' ),
+	);
+
+	foreach ( $mega_menu_template_parts as $slug => $title ) {
+		register_block_pattern(
+			'moiraine/' . $slug,
+			array(
+				'title'       => $title,
+				'categories'  => array( 'moiraine/menu' ),
+				'description' => sprintf( __( 'Mega menu template part: %s', 'moiraine' ), $title ),
+				'content'     => '',
+			)
+		);
+	}
+}
+add_action( 'init', __NAMESPACE__ . '\register_mega_menu_template_parts' );
+
+
+/**
+ * Enqueue Moiraine mega menu styles
+ */
+function enqueue_mega_menu_styles() {
+	if ( is_admin() ) {
+		return;
+	}
+
+	wp_enqueue_style(
+		'moiraine-mega-menu',
+		get_template_directory_uri() . '/assets/css/moiraine-mega-menu.css',
+		array(),
+		wp_get_theme()->get( 'Version' )
+	);
+}
+add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_mega_menu_styles' );

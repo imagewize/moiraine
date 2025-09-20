@@ -10,7 +10,8 @@
 		}
 	],
 	"require": {
-		"php": ">=7.3"
+		"php": ">=7.3",
+		"humanmade/hm-mega-menu-block": "^1.0"
 	},
 	"require-dev": {
         "php-parallel-lint/php-parallel-lint": "^1.3",

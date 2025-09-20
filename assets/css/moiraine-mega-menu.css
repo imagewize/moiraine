@@ -1,0 +1,325 @@
+/**
+ * Moiraine Mega Menu Block Integration Styles
+ *
+ * This file provides Moiraine theme styling for HM Mega Menu Block,
+ * applying the existing pattern designs to functional mega menu components.
+ */
+
+/* ===== BASE MEGA MENU BLOCK STYLING ===== */
+
+.wp-block-hm-mega-menu-block {
+	/* Inherit Moiraine typography */
+	font-family: var(--wp--preset--font-family--primary);
+	color: var(--wp--preset--color--foreground);
+}
+
+.wp-block-hm-mega-menu-block .wp-block-navigation-item__content {
+	color: var(--wp--preset--color--foreground);
+	text-decoration: none;
+	transition: all 0.2s ease;
+}
+
+.wp-block-hm-mega-menu-block .wp-block-navigation-item__content:hover,
+.wp-block-hm-mega-menu-block .wp-block-navigation-item__content:focus {
+	color: var(--wp--preset--color--primary);
+}
+
+/* ===== CARD-STYLE MEGA MENU (based on menu-card patterns) ===== */
+
+.moiraine-mega-card .wp-block-hm-mega-menu-block__content {
+	border: 1px solid #E3E3F0;
+	border-radius: 10px;
+	padding: var(--wp--preset--spacing--medium);
+	background: var(--wp--preset--color--base);
+	box-shadow: var(--wp--preset--shadow--small-light);
+	min-width: 320px;
+	max-width: 400px;
+}
+
+.moiraine-mega-card .mega-menu-icon-row {
+	display: flex;
+	align-items: center;
+	gap: var(--wp--preset--spacing--medium);
+	padding: var(--wp--preset--spacing--small) 0;
+}
+
+.moiraine-mega-card .mega-menu-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 50px;
+	background: var(--wp--preset--color--tertiary);
+	border-radius: 10px;
+	font-weight: bold;
+	flex-shrink: 0;
+}
+
+.moiraine-mega-card .mega-menu-text {
+	flex: 1;
+}
+
+.moiraine-mega-card .mega-menu-title {
+	font-size: var(--wp--preset--font-size--base);
+	font-weight: bold;
+	margin: 0 0 5px 0;
+}
+
+.moiraine-mega-card .mega-menu-description {
+	font-size: var(--wp--preset--font-size--small);
+	color: var(--wp--preset--color--secondary);
+	margin: 0;
+}
+
+.moiraine-mega-card .mega-menu-separator {
+	border: none;
+	height: 1px;
+	background: var(--wp--preset--color--border-light);
+	margin: var(--wp--preset--spacing--medium) 0;
+}
+
+.moiraine-mega-card .mega-menu-footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: var(--wp--preset--spacing--small);
+	border-top: 1px solid var(--wp--preset--color--border-light);
+	margin-top: var(--wp--preset--spacing--medium);
+}
+
+.moiraine-mega-card .mega-menu-cta {
+	font-size: var(--wp--preset--font-size--small);
+}
+
+/* ===== PANEL-STYLE MEGA MENU (based on menu-panel patterns) ===== */
+
+.moiraine-mega-panel .wp-block-hm-mega-menu-block__content {
+	width: 800px;
+	max-width: 90vw;
+	padding: var(--wp--preset--spacing--large);
+	background: var(--wp--preset--color--base);
+	border: 1px solid #E3E3F0;
+	border-radius: 10px;
+	box-shadow: var(--wp--preset--shadow--small-light);
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 0;
+}
+
+.moiraine-mega-panel .mega-menu-main-content {
+	padding-right: var(--wp--preset--spacing--large);
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: var(--wp--preset--spacing--large);
+}
+
+.moiraine-mega-panel .mega-menu-section {
+	display: flex;
+	flex-direction: column;
+	gap: var(--wp--preset--spacing--medium);
+}
+
+.moiraine-mega-panel .mega-menu-section-title {
+	font-size: var(--wp--preset--font-size--x-small);
+	color: var(--wp--preset--color--secondary);
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: 0 0 var(--wp--preset--spacing--small) 0;
+}
+
+.moiraine-mega-panel .mega-menu-section-separator {
+	border: none;
+	height: 1px;
+	background: var(--wp--preset--color--border-light);
+	margin: 0 0 var(--wp--preset--spacing--medium) 0;
+}
+
+.moiraine-mega-panel .mega-menu-sidebar {
+	background: var(--wp--preset--color--tertiary);
+	padding: var(--wp--preset--spacing--large);
+	border-radius: 0 8px 8px 0;
+	margin: calc(var(--wp--preset--spacing--large) * -1);
+	margin-left: 0;
+	display: flex;
+	flex-direction: column;
+	gap: var(--wp--preset--spacing--small);
+}
+
+.moiraine-mega-panel .mega-menu-case-study-image {
+	border-radius: 8px;
+	aspect-ratio: 16/9;
+	object-fit: cover;
+	margin-bottom: var(--wp--preset--spacing--small);
+}
+
+.moiraine-mega-panel .mega-menu-case-study-title {
+	font-size: var(--wp--preset--font-size--small);
+	font-weight: bold;
+	margin: 0 0 var(--wp--preset--spacing--small) 0;
+}
+
+.moiraine-mega-panel .mega-menu-case-study-description {
+	font-size: var(--wp--preset--font-size--x-small);
+	color: var(--wp--preset--color--foreground);
+	margin: 0 0 var(--wp--preset--spacing--small) 0;
+}
+
+.moiraine-mega-panel .mega-menu-case-study-link {
+	font-size: var(--wp--preset--font-size--x-small);
+	color: var(--wp--preset--color--foreground);
+	text-decoration: none;
+}
+
+.moiraine-mega-panel .mega-menu-case-study-link:hover {
+	color: var(--wp--preset--color--primary);
+}
+
+/* Panel footer with CTA */
+.moiraine-mega-panel .mega-menu-panel-footer {
+	grid-column: span 2;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: var(--wp--preset--spacing--small);
+	border-top: 1px solid var(--wp--preset--color--border-light);
+	margin-top: var(--wp--preset--spacing--medium);
+}
+
+/* ===== MOBILE-RESPONSIVE MEGA MENU (based on menu-mobile patterns) ===== */
+
+.moiraine-mega-mobile .wp-block-hm-mega-menu-block__content {
+	background: var(--wp--preset--color--base);
+	padding: var(--wp--preset--spacing--medium);
+	border-radius: 8px;
+	margin-top: var(--wp--preset--spacing--small);
+	display: flex;
+	flex-direction: column;
+	gap: var(--wp--preset--spacing--medium);
+}
+
+.moiraine-mega-mobile .mega-menu-mobile-section {
+	background: var(--wp--preset--color--tertiary);
+	border-radius: 10px;
+	padding: var(--wp--preset--spacing--medium);
+	display: flex;
+	flex-direction: column;
+	gap: var(--wp--preset--spacing--small);
+}
+
+.moiraine-mega-mobile .mega-menu-mobile-section-title {
+	font-size: var(--wp--preset--font-size--x-small);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: bold;
+	margin: 0;
+}
+
+.moiraine-mega-mobile .mega-menu-mobile-separator {
+	border: none;
+	height: 1px;
+	background: var(--wp--preset--color--border-light);
+	margin: var(--wp--preset--spacing--small) 0;
+}
+
+.moiraine-mega-mobile .mega-menu-mobile-nav-list {
+	display: flex;
+	flex-direction: column;
+	gap: var(--wp--preset--spacing--small);
+}
+
+.moiraine-mega-mobile .mega-menu-mobile-nav-item {
+	font-size: var(--wp--preset--font-size--base);
+}
+
+.moiraine-mega-mobile .mega-menu-mobile-nav-item a {
+	color: var(--wp--preset--color--foreground);
+	text-decoration: none;
+}
+
+.moiraine-mega-mobile .mega-menu-mobile-nav-item a:hover {
+	color: var(--wp--preset--color--primary);
+}
+
+.moiraine-mega-mobile .mega-menu-mobile-cta {
+	margin-top: var(--wp--preset--spacing--medium);
+}
+
+.moiraine-mega-mobile .mega-menu-mobile-cta .wp-block-button {
+	width: 100%;
+}
+
+.moiraine-mega-mobile .mega-menu-mobile-footer-text {
+	text-align: center;
+	font-size: var(--wp--preset--font-size--small);
+	color: var(--wp--preset--color--secondary);
+	margin: var(--wp--preset--spacing--small) 0 0 0;
+}
+
+/* ===== RESPONSIVE BEHAVIOR ===== */
+
+@media (max-width: 768px) {
+	.moiraine-mega-panel .wp-block-hm-mega-menu-block__content {
+		width: 100%;
+		grid-template-columns: 1fr;
+		padding: var(--wp--preset--spacing--medium);
+	}
+
+	.moiraine-mega-panel .mega-menu-main-content {
+		grid-template-columns: 1fr;
+		padding-right: 0;
+		gap: var(--wp--preset--spacing--medium);
+	}
+
+	.moiraine-mega-panel .mega-menu-sidebar {
+		margin: var(--wp--preset--spacing--medium) calc(var(--wp--preset--spacing--medium) * -1) calc(var(--wp--preset--spacing--medium) * -1);
+		border-radius: 8px;
+	}
+
+	.moiraine-mega-panel .mega-menu-panel-footer {
+		grid-column: span 1;
+		flex-direction: column;
+		gap: var(--wp--preset--spacing--small);
+		text-align: center;
+	}
+
+	.moiraine-mega-card .wp-block-hm-mega-menu-block__content {
+		min-width: auto;
+		max-width: 100%;
+	}
+}
+
+/* ===== ACCESSIBILITY ENHANCEMENTS ===== */
+
+.wp-block-hm-mega-menu-block .wp-block-navigation-item__content:focus {
+	outline: 2px solid var(--wp--preset--color--primary);
+	outline-offset: 2px;
+}
+
+.wp-block-hm-mega-menu-block__content[aria-hidden="true"] {
+	display: none;
+}
+
+/* ===== MOIRAINE COLOR SCHEME INTEGRATION ===== */
+
+.moiraine-mega-menu {
+	font-size: var(--wp--preset--font-size--medium);
+	line-height: var(--wp--preset--line-height--normal);
+}
+
+.moiraine-mega-menu .wp-block-heading {
+	font-family: var(--wp--preset--font-family--heading, var(--wp--preset--font-family--primary));
+	margin-bottom: var(--wp--preset--spacing--small);
+}
+
+/* Button styling integration */
+.moiraine-mega-menu .wp-block-button__link {
+	border-radius: var(--wp--preset--spacing--small);
+	padding: var(--wp--preset--spacing--small) var(--wp--preset--spacing--medium);
+	transition: all 0.2s ease;
+}
+
+/* Ensure proper z-index for dropdown positioning */
+.wp-block-hm-mega-menu-block__content {
+	z-index: 999;
+	position: absolute;
+}
