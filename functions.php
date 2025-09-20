@@ -232,22 +232,10 @@ function load_bundled_hm_mega_menu() {
 	$plugin_file = get_template_directory() . '/vendor/humanmade/hm-mega-menu-block/hm-mega-menu-block.php';
 
 	if ( file_exists( $plugin_file ) && ! function_exists( 'create_block_hm_mega_menu_block_block_init' ) ) {
-		include_once $plugin_file;
+		require_once $plugin_file;
 	}
 }
-add_action( 'plugins_loaded', __NAMESPACE__ . '\load_bundled_hm_mega_menu', 1 );
-
-
-/**
- * Auto-activate HM Mega Menu Block functionality
- * Ensures plugin is available without manual activation
- */
-function ensure_hm_mega_menu_active() {
-	if ( ! function_exists( 'create_block_hm_mega_menu_block_block_init' ) ) {
-		load_bundled_hm_mega_menu();
-	}
-}
-add_action( 'init', __NAMESPACE__ . '\ensure_hm_mega_menu_active', 5 );
+add_action( 'after_setup_theme', __NAMESPACE__ . '\load_bundled_hm_mega_menu', 1 );
 
 
 
