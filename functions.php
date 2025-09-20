@@ -221,7 +221,7 @@ add_filter( 'default_wp_template_part_areas', __NAMESPACE__ . '\template_part_ar
  * Register HM Mega Menu template parts with Moiraine styling
  */
 function register_mega_menu_template_parts() {
-	// Ensure HM Mega Menu Block is active
+	// Ensure HM Mega Menu Block is active.
 	if ( ! function_exists( 'create_block_hm_mega_menu_block_block_init' ) ) {
 		return;
 	}
@@ -249,6 +249,7 @@ function register_mega_menu_template_parts() {
 			array(
 				'title'       => $title,
 				'categories'  => array( 'moiraine/menu' ),
+				/* translators: %s: The title of the mega menu template part */
 				'description' => sprintf( __( 'Mega menu template part: %s', 'moiraine' ), $title ),
 				'content'     => '',
 			)
