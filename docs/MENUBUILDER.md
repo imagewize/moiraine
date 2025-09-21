@@ -64,7 +64,7 @@ This document outlines the plan for enhancing the Moiraine theme's existing menu
 **FINAL APPROACH: HM Mega Menu Block Directly Integrated into Theme**
 
 **How the Integration Works:**
-- ✅ **Direct Integration:** HM Mega Menu Block code copied directly into theme (`blocks/hm-mega-menu-block/`)
+- ✅ **Direct Integration:** HM Mega Menu Block code copied directly into theme (`blocks/mega-menu-block/`)
 - ✅ **Custom Namespace:** Block renamed from `hm-blocks/hm-mega-menu-block` to `moiraine/mega-menu-block`
 - ✅ **No Dependencies:** No external plugins required - block registers directly in theme
 - ✅ **Template Parts as Content:** Template parts contain styled content that loads into the mega menu container
@@ -72,7 +72,7 @@ This document outlines the plan for enhancing the Moiraine theme's existing menu
 **Architecture:**
 ```
 moiraine/
-├── blocks/hm-mega-menu-block/          # Integrated block code
+├── blocks/mega-menu-block/              # Integrated block code
 │   ├── block.json                      # Block definition with moiraine namespace
 │   ├── render.php                      # Server-side rendering
 │   ├── view.js                         # Frontend interactions
@@ -380,7 +380,7 @@ moiraine/                               # Existing theme structure
  * Register the Moiraine Mega Menu Block directly in theme
  */
 function register_mega_menu_block() {
-    register_block_type_from_metadata( get_template_directory() . '/blocks/hm-mega-menu-block' );
+    register_block_type_from_metadata( get_template_directory() . '/blocks/mega-menu-block' );
 }
 add_action( 'init', __NAMESPACE__ . '\register_mega_menu_block' );
 ```
@@ -402,7 +402,7 @@ add_action( 'init', __NAMESPACE__ . '\register_mega_menu_block' );
 
 #### No Composer Dependencies Required
 - **Previous:** Required `humanmade/hm-mega-menu-block` via Composer
-- **Current:** Block code integrated directly into theme at `blocks/hm-mega-menu-block/`
+- **Current:** Block code integrated directly into theme at `blocks/mega-menu-block/`
 - **Result:** Zero external dependencies, self-contained theme
 
 #### Template Part Area Registration
@@ -747,7 +747,7 @@ This hybrid approach delivers enterprise-level mega menu functionality efficient
 - **Full Control:** Complete ownership of block functionality and styling
 
 ### 🎯 **Current State**
-- **Block Location:** `blocks/hm-mega-menu-block/` in theme directory
+- **Block Location:** `blocks/mega-menu-block/` in theme directory
 - **Registration:** Direct registration via `register_block_type_from_metadata()` in functions.php
 - **Styling:** SCSS files for maintainable, readable styling
 - **Functionality:** Full WordPress Interactivity API implementation
