@@ -242,8 +242,8 @@ add_action( 'wp_loaded', __NAMESPACE__ . '\clear_template_part_cache' );
  */
 function assign_menu_template_parts_early( $template_parts ) {
 	foreach ( $template_parts as &$template_part ) {
-		if ( isset( $template_part['slug'] ) && strpos( $template_part['slug'], 'mega-' ) === 0 ) {
-			$template_part['area'] = 'menu';
+		if ( isset( $template_part->slug ) && strpos( $template_part->slug, 'mega-' ) === 0 ) {
+			$template_part->area = 'menu';
 
 			// Set clean titles.
 			$clean_titles = array(
@@ -263,8 +263,8 @@ function assign_menu_template_parts_early( $template_parts ) {
 				'mega-mobile-6' => __( 'Mega Mobile Style 6 - Accordion Navigation', 'moiraine' ),
 			);
 
-			if ( isset( $clean_titles[ $template_part['slug'] ] ) ) {
-				$template_part['title'] = $clean_titles[ $template_part['slug'] ];
+			if ( isset( $clean_titles[ $template_part->slug ] ) ) {
+				$template_part->title = $clean_titles[ $template_part->slug ];
 			}
 		}
 	}
