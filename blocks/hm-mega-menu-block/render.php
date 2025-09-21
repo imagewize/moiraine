@@ -28,7 +28,15 @@ $toggle_icon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" widt
 	</button>
 
 	<div class="<?php echo esc_attr( $menu_classes ); ?>">
-		<?php echo wp_kses_post( block_template_part( $menu_slug ) ); ?>
+		<?php
+		// Clean up slug to prevent double slashes that can occur during save cycles.
+		$clean_slug = preg_replace( '/\/+/', '/', $menu_slug );
+		$clean_slug = trim( $clean_slug, '/' );
+
+		if ( ! empty( $clean_slug ) ) {
+			echo wp_kses_post( block_template_part( $clean_slug ) );
+		}
+		?>
 
 		<button aria-label="<?php echo esc_attr( __( 'Close menu', 'moiraine' ) ); ?>" class="menu-container__close-button" data-wp-on--click="actions.closeMenuOnClick" type="button">
 			<?php echo wp_kses_post( $close_icon ); ?>

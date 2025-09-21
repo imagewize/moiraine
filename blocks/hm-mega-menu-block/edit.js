@@ -141,9 +141,11 @@ export default function Edit( { attributes, setAttributes } ) {
 						label={ __( 'Menu Template', 'moiraine' ) }
 						value={ menuSlug }
 						options={ menuOptions }
-						onChange={ ( value ) =>
-							setAttributes( { menuSlug: value } )
-						}
+						onChange={ ( value ) => {
+							// Clean up slug to prevent double slashes
+							const cleanValue = value ? value.replace(/\/+/g, '/').replace(/^\/|\/$/g, '') : '';
+							setAttributes( { menuSlug: cleanValue } );
+						} }
 						help={
 							hasMenus &&
 							createInterpolateElement(
