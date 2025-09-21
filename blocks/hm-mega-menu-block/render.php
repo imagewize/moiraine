@@ -6,7 +6,7 @@
  */
 
 $label        = esc_html( $attributes['label'] ?? '' );
-$color_label  = esc_attr( $attributes['labelColor'] ?? '#000' );
+$color_label  = esc_attr( $attributes['labelColor'] ?? 'inherit' );
 $menu_slug    = esc_attr( $attributes['menuSlug'] ?? '' );
 $justify_menu = esc_attr( $attributes['justifyMenu'] ?? '' );
 $menu_width   = esc_attr( $attributes['width'] ?? 'content' );

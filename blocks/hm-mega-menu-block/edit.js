@@ -17,9 +17,9 @@ import {
 	PanelBody,
 	TextControl,
 	ColorPalette,
-	__experimentalHStack as HStack, //eslint-disable-line
-	__experimentalToggleGroupControl as ToggleGroupControl, //es-lint-disable
-	__experimentalToggleGroupControlOptionIcon as ToggleGroupControlOptionIcon //es-lint-disable
+	__experimentalHStack as HStack, // eslint-disable-line
+	__experimentalToggleGroupControl as ToggleGroupControl, // eslint-disable-line
+	__experimentalToggleGroupControlOptionIcon as ToggleGroupControlOptionIcon // eslint-disable-line
 } from '@wordpress/components';
 import {
 	alignNone,
@@ -40,7 +40,7 @@ export default function Edit( { attributes, setAttributes } ) {
 		width
 	 } = attributes;
 
-	const layout = useSelect( (select) => select('core/editor').getEditorSettings()?.__experimentalFeatures?.layout );
+	const layout = useSelect( (select) => select('core/editor').getEditorSettings()?.__experimentalFeatures?.layout ) || { contentSize: '840px', wideSize: '1100px' };
 
 	const siteUrl = useSelect( (select) => select('core').getSite().url );
 	const menuTemplateUrl = siteUrl ? siteUrl + '/wp-admin/site-editor.php?path%2Fpatterns&categoryType=wp_template_part&categoryId=menu' : '';
@@ -74,17 +74,17 @@ export default function Edit( { attributes, setAttributes } ) {
 		{
 			value: 'left',
 			icon: justifyLeft,
-			label: __( 'Justify menu left', 'hm-mega-menu-block' ),
+			label: __( 'Justify menu left', 'moiraine' ),
 		},
 		{
 			value: 'center',
 			icon: justifyCenter,
-			label: __( 'Justify menu center', 'hm-mega-menu-block' ),
+			label: __( 'Justify menu center', 'moiraine' ),
 		},
 		{
 			value: 'right',
 			icon: justifyRight,
-			label: __( 'Justify menu right', 'hm-mega-menu-block' ),
+			label: __( 'Justify menu right', 'moiraine' ),
 		},
 	];
 
@@ -94,8 +94,8 @@ export default function Edit( { attributes, setAttributes } ) {
 			icon: alignNone,
 			label: sprintf(
 				// translators: %s: container size (i.e. 600px etc)
-				__( 'Content width (%s wide)', 'hm-mega-menu-block' ),
-				layout.contentSize
+				__( 'Content width (%s wide)', 'moiraine' ),
+				layout?.contentSize || '840px'
 			),
 		},
 		{
@@ -103,14 +103,14 @@ export default function Edit( { attributes, setAttributes } ) {
 			icon: stretchWide,
 			label: sprintf(
 				// translators: %s: container size (i.e. 600px etc)
-				__( 'Wide width (%s wide)', 'hm-mega-menu-block' ),
-				layout.wideSize
+				__( 'Wide width (%s wide)', 'moiraine' ),
+				layout?.wideSize || '1100px'
 			),
 		},
 		{
 			value: 'full',
 			icon: stretchFullWidth,
-			label: __( 'Full width', 'hm-mega-menu-block' ),
+			label: __( 'Full width', 'moiraine' ),
 		},
 	];
 
@@ -119,11 +119,11 @@ export default function Edit( { attributes, setAttributes } ) {
 		<InspectorControls group="settings">
 				<PanelBody
 					className="mega-menu__settings-panel"
-					title={ __( 'Settings', 'hm-mega-menu-block' ) }
+					title={ __( 'Settings', 'moiraine' ) }
 					initialOpen={true}
 				>
 					<TextControl
-						label={ __( 'Label', 'hm-mega-menu-block' ) }
+						label={ __( 'Label', 'moiraine' ) }
 						type="text"
 						value={ label }
 						onChange={ ( value ) =>
@@ -132,13 +132,13 @@ export default function Edit( { attributes, setAttributes } ) {
 						autoComplete="off"
 					/>
 					 <ColorPalette
-                        label={ __( 'Label Color', 'hm-mega-menu-block' ) }
+                        label={ __( 'Label Color', 'moiraine' ) }
                         value={ labelColor }
                         onChange={ ( colorValue ) => setAttributes( { labelColor: colorValue } ) }
                         clearable={ true }
                     />
 					<ComboboxControl
-						label={ __( 'Menu Template', 'mega-block-menu' ) }
+						label={ __( 'Menu Template', 'moiraine' ) }
 						value={ menuSlug }
 						options={ menuOptions }
 						onChange={ ( value ) =>
@@ -149,7 +149,7 @@ export default function Edit( { attributes, setAttributes } ) {
 							createInterpolateElement(
 								__(
 									'Create and modify menu templates in the <a>Site Editor</a>.',
-									'hm-mega-menu-block'
+									'moiraine'
 								),
 								{
 									a: (
@@ -166,13 +166,13 @@ export default function Edit( { attributes, setAttributes } ) {
 				</PanelBody>
 				<PanelBody
 					className="hm-mega-menu__layout-panel"
-					title={ __( 'Layout', 'hm-mega-menu-block' ) }
+					title={ __( 'Layout', 'moiraine' ) }
 					initialOpen={ true }
 				>
 					<HStack alignment="top" justify="space-between">
 						<ToggleGroupControl
 							className="block-editor-hooks__flex-layout-justification-controls"
-							label={ __( 'Justification', 'hm-mega-menu-block' ) }
+							label={ __( 'Justification', 'moiraine' ) }
 							value={ justifyMenu }
 							onChange={ ( justificationValue ) => {
 								setAttributes( {
@@ -196,7 +196,7 @@ export default function Edit( { attributes, setAttributes } ) {
 						</ToggleGroupControl>
 						<ToggleGroupControl
 							className="block-editor-hooks__flex-layout-justification-controls"
-							label={ __( 'Width', 'hm-mega-menu-block' ) }
+							label={ __( 'Width', 'moiraine' ) }
 							value={ width || 'content' }
 							onChange={ ( widthValue ) => {
 								setAttributes( {
@@ -232,7 +232,7 @@ export default function Edit( { attributes, setAttributes } ) {
 								label: labelValue
 							} )
 						} }
-						placeholder={ __( 'Add label...', 'hm-mega-menu-block' ) }
+						placeholder={ __( 'Add label...', 'moiraine' ) }
 						allowedFormats={ [
 							'core/bold',
 							'core/italic',
