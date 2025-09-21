@@ -226,6 +226,43 @@ add_filter( 'default_wp_template_part_areas', __NAMESPACE__ . '\template_part_ar
 
 
 /**
+ * Assign mega menu template parts to Menu area and set clean titles
+ */
+function assign_menu_template_parts( $template_part ) {
+	if ( $template_part && isset( $template_part->slug ) ) {
+		// Check if this is a mega menu template part from parts/menu/ directory
+		if ( strpos( $template_part->slug, 'mega-' ) === 0 ) {
+			$template_part->area = 'menu';
+
+			// Set clean titles without double slashes
+			$clean_titles = array(
+				'mega-card-1'    => __( 'Mega Card Style 1 - Simple Icon Menu', 'moiraine' ),
+				'mega-card-2'    => __( 'Mega Card Style 2 - Feature List Menu', 'moiraine' ),
+				'mega-card-3'    => __( 'Mega Card Style 3 - CTA Menu', 'moiraine' ),
+				'mega-card-4'    => __( 'Mega Card Style 4 - Service Showcase Menu', 'moiraine' ),
+				'mega-panel-1'   => __( 'Mega Panel Style 1 - Multi-column Layout', 'moiraine' ),
+				'mega-panel-2'   => __( 'Mega Panel Style 2 - Feature Grid Layout', 'moiraine' ),
+				'mega-panel-3'   => __( 'Mega Panel Style 3 - Enterprise Layout', 'moiraine' ),
+				'mega-panel-4'   => __( 'Mega Panel Style 4 - Product Showcase Layout', 'moiraine' ),
+				'mega-mobile-1'  => __( 'Mega Mobile Style 1 - Sectioned Navigation', 'moiraine' ),
+				'mega-mobile-2'  => __( 'Mega Mobile Style 2 - Category Navigation', 'moiraine' ),
+				'mega-mobile-3'  => __( 'Mega Mobile Style 3 - Full-screen Navigation', 'moiraine' ),
+				'mega-mobile-4'  => __( 'Mega Mobile Style 4 - Drawer Navigation', 'moiraine' ),
+				'mega-mobile-5'  => __( 'Mega Mobile Style 5 - Tab Navigation', 'moiraine' ),
+				'mega-mobile-6'  => __( 'Mega Mobile Style 6 - Accordion Navigation', 'moiraine' ),
+			);
+
+			if ( isset( $clean_titles[ $template_part->slug ] ) ) {
+				$template_part->title = $clean_titles[ $template_part->slug ];
+			}
+		}
+	}
+	return $template_part;
+}
+add_filter( 'get_block_template', __NAMESPACE__ . '\assign_menu_template_parts' );
+
+
+/**
  * Register the Moiraine Mega Menu Block directly in theme
  */
 function register_mega_menu_block() {
