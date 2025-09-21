@@ -1,3 +1,9 @@
+/**
+ * Moiraine Mega Menu Block registration and editor interface.
+ *
+ * @package Moiraine
+ */
+
 import { registerBlockType } from '@wordpress/blocks';
 
 import './style.scss';
