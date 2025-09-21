@@ -94,9 +94,12 @@ moiraine/
 **User Workflow:**
 1. Open Site Editor → Header template
 2. Add Navigation block to header
-3. Inside Navigation block, add "Moiraine Mega Menu" block
-4. Select template part from the 14 available mega menu designs
-5. Template part content appears in styled mega menu dropdown
+3. Inside Navigation block, click the + button to add blocks
+4. Search for and add "Moiraine Mega Menu" block (appears only inside Navigation blocks)
+5. Select template part from the 14 available mega menu designs
+6. Template part content appears in styled mega menu dropdown
+
+**Note:** The Moiraine Mega Menu block only appears when adding blocks inside a Navigation block, not as a standalone block. This is the correct WordPress pattern for mega menu functionality.
 
 ## Critical Discovery: Template Part Architecture Fix
 
@@ -753,9 +756,11 @@ This hybrid approach delivers enterprise-level mega menu functionality efficient
 ### 🚀 **How to Use**
 1. **Site Editor:** Appearance → Editor → Header template
 2. **Add Navigation:** Insert Navigation block in header
-3. **Add Mega Menu:** Inside Navigation, add "Moiraine Mega Menu" block
+3. **Add Mega Menu:** Inside Navigation block, click + button and search for "Moiraine Mega Menu" block
 4. **Select Design:** Choose from 14 available template parts
 5. **Customize:** Edit template parts directly in Site Editor
+
+**Important:** The Moiraine Mega Menu block only appears when adding blocks inside a Navigation block, not as a standalone block.
 
 ### 💡 **Next Steps**
 - Optional: Add SASS compilation to package.json for easier style development
