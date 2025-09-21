@@ -1,9 +1,9 @@
 <?php
-$label = esc_html($attributes['label'] ?? '');
-$color_label = esc_attr($attributes['labelColor'] ?? '#000');
-$menu_slug = esc_attr($attributes['menuSlug'] ?? '');
-$justify_menu = esc_attr($attributes['justifyMenu'] ?? '');
-$menu_width = esc_attr($attributes['width'] ?? 'content');
+$label        = esc_html( $attributes['label'] ?? '' );
+$color_label  = esc_attr( $attributes['labelColor'] ?? '#000' );
+$menu_slug    = esc_attr( $attributes['menuSlug'] ?? '' );
+$justify_menu = esc_attr( $attributes['justifyMenu'] ?? '' );
+$menu_width   = esc_attr( $attributes['width'] ?? 'content' );
 
 $menu_classes  = 'hm-mega-menu wp-block-hm-mega-menu__menu-container';
 $menu_classes .= ' menu-width-' . $menu_width;
@@ -22,9 +22,9 @@ $toggle_icon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" widt
 	</button>
 
 	<div class="<?php echo $menu_classes; ?>">
-		<?php echo block_template_part($menu_slug); ?>
+		<?php echo block_template_part( $menu_slug ); ?>
 
-		<button aria-label="<?php echo __('Close menu', 'moiraine'); ?>" class="menu-container__close-button" data-wp-on--click="actions.closeMenuOnClick" type="button">
+		<button aria-label="<?php echo __( 'Close menu', 'moiraine' ); ?>" class="menu-container__close-button" data-wp-on--click="actions.closeMenuOnClick" type="button">
 			<?php echo $close_icon; ?>
 		</button>
 	</div>

@@ -3,85 +3,88 @@
  */
 import { store, getContext, getElement } from '@wordpress/interactivity';
 
-const { state, actions } = store('moiraine/mega-menu-block', {
-	state: {
-		get isMenuOpen() {
-			return Object.values(state.menuOpenedBy).filter(Boolean).length > 0;
+const { state, actions } = store(
+	'moiraine/mega-menu-block',
+	{
+		state: {
+			get isMenuOpen() {
+				return Object.values( state.menuOpenedBy ).filter( Boolean ).length > 0;
+			},
+
+			get menuOpenedBy() {
+				const context = getContext();
+
+				return context.menuOpenedBy;
+			},
 		},
 
-		get menuOpenedBy() {
-			const context = getContext();
+		actions: {
+			toggleMenuOnClick() {
+				const context = getContext();
+				const { ref } = getElement();
 
-			return context.menuOpenedBy;
-		},
-	},
-
-	actions: {
-		toggleMenuOnClick() {
-			const context = getContext();
-			const { ref } = getElement();
-
-			if (state.menuOpenedBy.click || state.menuOpenedBy.focus) {
-				actions.closeMenuOnClick();
-			} else {
-				context.previousFocus = ref;
-				actions.openMenu('click');
-			}
-		},
-
-		closeMenuOnClick() {
-			actions.closeMenu('click');
-			actions.closeMenu('focus');
-		},
-
-		handleMenuKeydown(event) {
-			if (state.menuOpenedBy.click) {
-				// If Escape close the menu.
-				if (event?.key === 'Escape') {
+				if (state.menuOpenedBy.click || state.menuOpenedBy.focus) {
 					actions.closeMenuOnClick();
+				} else {
+					context.previousFocus = ref;
+					actions.openMenu( 'click' );
 				}
-			}
-		},
+			},
 
-		handleOutsideClick(event) {
-			const context = getContext();
-			const megaMenu = context?.megaMenu;
+			closeMenuOnClick() {
+				actions.closeMenu( 'click' );
+				actions.closeMenu( 'focus' );
+			},
 
-			if (!megaMenu || megaMenu.contains(event.target)) {
-				return;
-			}
-
-			actions.closeMenuOnClick();
-		},
-
-		openMenu(menuOpenedOn = 'click') {
-			state.menuOpenedBy[menuOpenedOn] = true;
-		},
-
-		closeMenu(menuClosedOn = 'click') {
-			const context = getContext();
-			state.menuOpenedBy[menuClosedOn] = false;
-
-			// Reset the menu reference and button focus when closed.
-			if (!state.isMenuOpen) {
-				if (context.megaMenu?.contains(window.document.activeElement)) {
-					context.previousFocus?.focus();
+			handleMenuKeydown( event ) {
+				if (state.menuOpenedBy.click) {
+					// If Escape close the menu.
+					if (event ? .key === 'Escape') {
+						actions.closeMenuOnClick();
+					}
 				}
-				context.previousFocus = null;
-				context.megaMenu = null;
-			}
-		},
-	},
+			},
 
-	callbacks: {
-		initMenu() {
-			const context = getContext();
-			const { ref } = getElement();
+			handleOutsideClick( event ) {
+				const context  = getContext();
+				const megaMenu = context ? .megaMenu;
 
-			// Set the menu reference when initialized.
-			if (state.isMenuOpen) {
-				context.megaMenu = ref;
-			}
+				if ( ! megaMenu || megaMenu.contains( event.target )) {
+					return;
+				}
+
+				actions.closeMenuOnClick();
+			},
+
+			openMenu( menuOpenedOn = 'click' ) {
+				state.menuOpenedBy[menuOpenedOn] = true;
+			},
+
+			closeMenu( menuClosedOn = 'click' ) {
+				const context                    = getContext();
+				state.menuOpenedBy[menuClosedOn] = false;
+
+				// Reset the menu reference and button focus when closed.
+				if ( ! state.isMenuOpen) {
+					if (context.megaMenu ? .contains( window.document.activeElement )) {
+						context.previousFocus ? .focus();
+					}
+					context.previousFocus = null;
+					context.megaMenu      = null;
+				}
+			},
 		},
-	},
-});
+
+		callbacks: {
+			initMenu() {
+				const context = getContext();
+				const { ref } = getElement();
+
+				// Set the menu reference when initialized.
+				if (state.isMenuOpen) {
+					context.megaMenu = ref;
+				}
+			},
+		},
+	}
+);

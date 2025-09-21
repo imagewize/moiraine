@@ -232,7 +232,3 @@ function register_mega_menu_block() {
 	register_block_type_from_metadata( get_template_directory() . '/blocks/hm-mega-menu-block' );
 }
 add_action( 'init', __NAMESPACE__ . '\register_mega_menu_block' );
-
-
-
-
