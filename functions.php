@@ -214,7 +214,7 @@ function template_part_areas( array $areas ) {
 
 	$areas[] = array(
 		'area'        => 'menu',
-		'area_tag'    => 'nav',
+		'area_tag'    => 'header',
 		'label'       => __( 'Menu', 'moiraine' ),
 		'description' => __( 'Template parts for mega menu and navigation content.', 'moiraine' ),
 		'icon'        => 'menu',
