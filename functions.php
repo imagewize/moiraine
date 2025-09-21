@@ -226,17 +226,26 @@ add_filter( 'default_wp_template_part_areas', __NAMESPACE__ . '\template_part_ar
 
 
 /**
+ * Clear template part cache to force re-detection
+ */
+function clear_template_part_cache() {
+	wp_cache_delete( 'theme_template_parts', 'themes' );
+	wp_cache_delete( get_stylesheet() . '_template_parts', 'themes' );
+}
+add_action( 'after_switch_theme', __NAMESPACE__ . '\clear_template_part_cache' );
+add_action( 'wp_loaded', __NAMESPACE__ . '\clear_template_part_cache' );
+
+/**
  * Assign mega menu template parts to Menu area and set clean titles
  *
- * @param object $template_part The template part object to modify.
+ * @param array $template_parts The template parts array.
  */
-function assign_menu_template_parts( $template_part ) {
-	if ( $template_part && isset( $template_part->slug ) ) {
-		// Check if this is a mega menu template part from parts/menu/ directory.
-		if ( strpos( $template_part->slug, 'mega-' ) === 0 ) {
-			$template_part->area = 'menu';
+function assign_menu_template_parts_early( $template_parts ) {
+	foreach ( $template_parts as &$template_part ) {
+		if ( isset( $template_part['slug'] ) && strpos( $template_part['slug'], 'mega-' ) === 0 ) {
+			$template_part['area'] = 'menu';
 
-			// Set clean titles without double slashes.
+			// Set clean titles.
 			$clean_titles = array(
 				'mega-card-1'   => __( 'Mega Card Style 1 - Simple Icon Menu', 'moiraine' ),
 				'mega-card-2'   => __( 'Mega Card Style 2 - Feature List Menu', 'moiraine' ),
@@ -254,14 +263,14 @@ function assign_menu_template_parts( $template_part ) {
 				'mega-mobile-6' => __( 'Mega Mobile Style 6 - Accordion Navigation', 'moiraine' ),
 			);
 
-			if ( isset( $clean_titles[ $template_part->slug ] ) ) {
-				$template_part->title = $clean_titles[ $template_part->slug ];
+			if ( isset( $clean_titles[ $template_part['slug'] ] ) ) {
+				$template_part['title'] = $clean_titles[ $template_part['slug'] ];
 			}
 		}
 	}
-	return $template_part;
+	return $template_parts;
 }
-add_filter( 'get_block_template', __NAMESPACE__ . '\assign_menu_template_parts' );
+add_filter( 'get_block_templates', __NAMESPACE__ . '\assign_menu_template_parts_early' );
 
 
 /**
