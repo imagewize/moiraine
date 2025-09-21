@@ -226,33 +226,13 @@ add_filter( 'default_wp_template_part_areas', __NAMESPACE__ . '\template_part_ar
 
 
 /**
- * Bundle HM Mega Menu Block with theme to avoid manual installation
+ * Register the Moiraine Mega Menu Block directly in theme
  */
-function load_bundled_hm_mega_menu() {
-	$plugin_file = get_template_directory() . '/vendor/humanmade/hm-mega-menu-block/hm-mega-menu-block.php';
-
-	if ( file_exists( $plugin_file ) && ! function_exists( 'create_block_hm_mega_menu_block_block_init' ) ) {
-		require_once $plugin_file;
-	}
+function register_mega_menu_block() {
+	register_block_type_from_metadata( get_template_directory() . '/blocks/hm-mega-menu-block' );
 }
-add_action( 'after_setup_theme', __NAMESPACE__ . '\load_bundled_hm_mega_menu', 1 );
+add_action( 'init', __NAMESPACE__ . '\register_mega_menu_block' );
 
 
 
 
-/**
- * Enqueue Moiraine mega menu styles
- */
-function enqueue_mega_menu_styles() {
-	if ( is_admin() ) {
-		return;
-	}
-
-	wp_enqueue_style(
-		'moiraine-mega-menu',
-		get_template_directory_uri() . '/assets/css/moiraine-mega-menu.css',
-		array(),
-		wp_get_theme()->get( 'Version' )
-	);
-}
-add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_mega_menu_styles' );
