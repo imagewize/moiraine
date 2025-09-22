@@ -8,14 +8,10 @@ import { store, getContext, getElement } from '@wordpress/interactivity';
 const { state, actions } = store( 'moiraine/menu-designer', {
 	state: {
 		get isMenuOpen() {
-			return (
-				Object.values( state.menuOpenedBy ).filter( Boolean ).length > 0
-			);
-		},
-
-		get menuOpenedBy() {
 			const context = getContext();
-			return context.menuOpenedBy;
+			return (
+				Object.values( context.menuOpenedBy || {} ).filter( Boolean ).length > 0
+			);
 		},
 	},
 
@@ -24,7 +20,7 @@ const { state, actions } = store( 'moiraine/menu-designer', {
 			const context = getContext();
 			const { ref } = getElement();
 
-			if ( state.menuOpenedBy.click || state.menuOpenedBy.focus ) {
+			if ( context.menuOpenedBy.click || context.menuOpenedBy.focus ) {
 				actions.closeMenuOnClick();
 			} else {
 				context.previousFocus = ref;
@@ -38,7 +34,8 @@ const { state, actions } = store( 'moiraine/menu-designer', {
 		},
 
 		handleMenuKeydown( event ) {
-			if ( state.menuOpenedBy.click ) {
+			const context = getContext();
+			if ( context.menuOpenedBy.click ) {
 				// If Escape close the menu.
 				if ( event?.key === 'Escape' ) {
 					actions.closeMenuOnClick();
@@ -58,12 +55,13 @@ const { state, actions } = store( 'moiraine/menu-designer', {
 		},
 
 		openMenu( menuOpenedOn = 'click' ) {
-			state.menuOpenedBy[ menuOpenedOn ] = true;
+			const context = getContext();
+			context.menuOpenedBy[ menuOpenedOn ] = true;
 		},
 
 		closeMenu( menuClosedOn = 'click' ) {
 			const context = getContext();
-			state.menuOpenedBy[ menuClosedOn ] = false;
+			context.menuOpenedBy[ menuClosedOn ] = false;
 
 			// Reset the button focus when closed.
 			if ( ! state.isMenuOpen ) {

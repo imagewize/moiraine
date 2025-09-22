@@ -5,6 +5,11 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.6] - 2025-09-22
+
+### Fixed
+- **Menu Designer State Management**: Fixed inconsistent context vs state usage preventing aria-expanded attribute updates
+
 ## [2.1.5] - 2025-09-22
 
 ### Fixed
