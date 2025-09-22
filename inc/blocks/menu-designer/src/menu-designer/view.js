@@ -6,6 +6,8 @@
 import { store, getContext, getElement } from '@wordpress/interactivity';
 
 
+console.log('🔥 Menu Designer view.js loaded');
+
 const { state, actions } = store( 'moiraine/menu-designer', {
 	state: {
 		get isMenuOpen() {
@@ -16,12 +18,19 @@ const { state, actions } = store( 'moiraine/menu-designer', {
 
 	actions: {
 		toggleMenuOnClick() {
+			console.log('🔥 toggleMenuOnClick called');
 			const context = getContext();
 			const { ref } = getElement();
 
+			console.log('🔥 context:', context);
+			console.log('🔥 context.menuOpenedBy:', context.menuOpenedBy);
+			console.log('🔥 state.isMenuOpen:', state.isMenuOpen);
+
 			if ( context.menuOpenedBy.click || context.menuOpenedBy.focus ) {
+				console.log('🔥 Closing menu');
 				actions.closeMenuOnClick();
 			} else {
+				console.log('🔥 Opening menu');
 				context.previousFocus = ref;
 				actions.openMenu( 'click' );
 			}
@@ -54,8 +63,11 @@ const { state, actions } = store( 'moiraine/menu-designer', {
 		},
 
 		openMenu( menuOpenedOn = 'click' ) {
+			console.log('🔥 openMenu called with:', menuOpenedOn);
 			const context = getContext();
 			context.menuOpenedBy[ menuOpenedOn ] = true;
+			console.log('🔥 After setting, context.menuOpenedBy:', context.menuOpenedBy);
+			console.log('🔥 state.isMenuOpen after open:', state.isMenuOpen);
 		},
 
 		closeMenu( menuClosedOn = 'click' ) {
