@@ -1760,6 +1760,13 @@ Added debug logging to view.js to trace:
 - `state.isMenuOpen` value tracking
 - Menu open/close action calls
 
+#### Context Initialization Fix Attempt:
+**Changes Made** (September 22, 2025):
+1. **Context Format**: Changed from `{"menuOpenedBy": {"click": false, "focus": false}}` to `{"menuOpenedBy": {}}` to match Human Made's approach
+2. **Optional Chaining**: Added `?.` operators for safe property access (`context.menuOpenedBy?.click`)
+3. **Context Safety**: Added initialization check in `openMenu` to ensure `menuOpenedBy` is always a proper object
+4. **Build Size**: Updated view.js from 1.31 KiB to 1.44 KiB with enhanced debugging and safety checks
+
 #### Next Debugging Steps:
 1. **Check Console Logs**: Verify if `toggleMenuOnClick` is called when button is clicked
 2. **State Examination**: Check if `context.menuOpenedBy` is updating correctly
@@ -1777,12 +1784,33 @@ Added debug logging to view.js to trace:
 1. Open browser console
 2. Click the "test" menu button
 3. Look for debug messages:
-   - "🔥 Menu Designer view.js loaded"
-   - "🔥 toggleMenuOnClick called"
-   - Context state information
+   - "🔥 Menu Designer view.js loaded" (should appear on page load)
+   - "🔥 toggleMenuOnClick called" (should appear on button click)
+   - "🔥 context:" + object details
+   - "🔥 context.menuOpenedBy:" + object state
+   - "🔥 state.isMenuOpen:" + boolean value
+   - "🔥 Opening menu" or "🔥 Closing menu"
+   - "🔥 openMenu called with: click"
+   - "🔥 After setting, context.menuOpenedBy:" + updated object
+   - "🔥 state.isMenuOpen after open:" + boolean result
 4. Check if aria-expanded attribute changes in DOM inspector
 5. Verify if CSS classes and styles are applied correctly
 ```
+
+#### Expected Debug Output:
+```
+🔥 Menu Designer view.js loaded
+🔥 toggleMenuOnClick called
+🔥 context: {menuOpenedBy: {}}
+🔥 context.menuOpenedBy: {}
+🔥 state.isMenuOpen: false
+🔥 Opening menu
+🔥 openMenu called with: click
+🔥 After setting, context.menuOpenedBy: {click: true}
+🔥 state.isMenuOpen after open: true
+```
+
+If the above debug sequence appears, the JavaScript is working correctly and the issue is likely with CSS binding or selector specificity.
 
 **Status**: Actively debugging with enhanced logging to identify the exact failure point in the click-to-show workflow.
 

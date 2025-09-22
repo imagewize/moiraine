@@ -26,7 +26,7 @@ const { state, actions } = store( 'moiraine/menu-designer', {
 			console.log('🔥 context.menuOpenedBy:', context.menuOpenedBy);
 			console.log('🔥 state.isMenuOpen:', state.isMenuOpen);
 
-			if ( context.menuOpenedBy.click || context.menuOpenedBy.focus ) {
+			if ( context.menuOpenedBy?.click || context.menuOpenedBy?.focus ) {
 				console.log('🔥 Closing menu');
 				actions.closeMenuOnClick();
 			} else {
@@ -65,6 +65,13 @@ const { state, actions } = store( 'moiraine/menu-designer', {
 		openMenu( menuOpenedOn = 'click' ) {
 			console.log('🔥 openMenu called with:', menuOpenedOn);
 			const context = getContext();
+
+			// Ensure menuOpenedBy exists and is an object
+			if (!context.menuOpenedBy || typeof context.menuOpenedBy !== 'object') {
+				console.log('🔥 Initializing context.menuOpenedBy');
+				context.menuOpenedBy = {};
+			}
+
 			context.menuOpenedBy[ menuOpenedOn ] = true;
 			console.log('🔥 After setting, context.menuOpenedBy:', context.menuOpenedBy);
 			console.log('🔥 state.isMenuOpen after open:', state.isMenuOpen);
