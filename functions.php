@@ -256,6 +256,21 @@ add_action(
 				if ( $block ) {
 					error_log( '🔥 DEBUG: Block registered successfully. Name: ' . $block->name );
 					error_log( '🔥 DEBUG: View script handle: ' . ( $block->view_script ?? 'none' ) );
+
+					// Multisite patch: Fix relative URLs for view scripts
+					if ( is_multisite() && $block->view_script ) {
+						add_action( 'wp_enqueue_scripts', function() use ( $block ) {
+							global $wp_scripts;
+							if ( isset( $wp_scripts->registered[ $block->view_script ] ) ) {
+								$script = $wp_scripts->registered[ $block->view_script ];
+								// Convert relative URL to absolute URL for multisite
+								if ( 0 === strpos( $script->src, '/app/' ) ) {
+									$script->src = home_url( $script->src );
+									error_log( '🔥 DEBUG: Multisite patch applied. New src: ' . $script->src );
+								}
+							}
+						}, 5 );
+					}
 				} else {
 					error_log( '🔥 DEBUG: Block registration failed!' );
 				}
