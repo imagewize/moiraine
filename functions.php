@@ -225,6 +225,10 @@ function template_part_areas( array $areas ) {
 add_filter( 'default_wp_template_part_areas', __NAMESPACE__ . '\template_part_areas' );
 
 /**
- * Include custom blocks registration
+ * Register custom blocks
  */
-require_once get_template_directory() . '/inc/blocks/menu-designer/menu-designer.php';
+function register_custom_blocks() {
+	// Register Menu Designer block
+	register_block_type( get_template_directory() . '/inc/blocks/menu-designer/build/menu-designer' );
+}
+add_action( 'init', __NAMESPACE__ . '\register_custom_blocks' );
