@@ -252,7 +252,13 @@ add_action(
 
 			if ( file_exists( $block_json_path ) ) {
 				error_log( '🔥 DEBUG: Registering block type from: ' . $block_json_path );
-				register_block_type( $block_json_path );
+				$block = register_block_type( $block_json_path );
+				if ( $block ) {
+					error_log( '🔥 DEBUG: Block registered successfully. Name: ' . $block->name );
+					error_log( '🔥 DEBUG: View script handle: ' . ( $block->view_script ?? 'none' ) );
+				} else {
+					error_log( '🔥 DEBUG: Block registration failed!' );
+				}
 			} else {
 				error_log( '🔥 DEBUG: Block.json not found at: ' . $block_json_path );
 			}
