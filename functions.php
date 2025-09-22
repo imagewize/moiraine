@@ -225,10 +225,30 @@ function template_part_areas( array $areas ) {
 add_filter( 'default_wp_template_part_areas', __NAMESPACE__ . '\template_part_areas' );
 
 /**
- * Register custom blocks
+ * Register block types using block.json metadata from the theme's blocks directory.
+ * This function will scan the 'inc/blocks' directory for block.json files.
  */
-function register_custom_blocks() {
-	// Register Menu Designer block
-	register_block_type( get_template_directory() . '/inc/blocks/menu-designer/build/menu-designer' );
-}
-add_action( 'init', __NAMESPACE__ . '\register_custom_blocks' );
+add_action(
+	'init',
+	function () {
+		$blocks_dir = get_template_directory() . '/inc/blocks';
+		if ( ! is_dir( $blocks_dir ) ) {
+			return;
+		}
+
+		$block_folders = scandir( $blocks_dir );
+
+		foreach ( $block_folders as $folder ) {
+			if ( '.' === $folder || '..' === $folder ) {
+				continue;
+			}
+
+			$block_json_path = $blocks_dir . '/' . $folder . '/build/' . $folder . '/block.json';
+
+			if ( file_exists( $block_json_path ) ) {
+				register_block_type( $block_json_path );
+			}
+		}
+	},
+	10
+);
