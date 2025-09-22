@@ -198,7 +198,7 @@ add_action( 'wp_head', __NAMESPACE__ . '\is_paginated' );
 
 
 /**
- * Add a Sidebar template part area
+ * Add custom template part areas
  *
  * @param array $areas Array of template part areas.
  * @return array
@@ -210,6 +210,14 @@ function template_part_areas( array $areas ) {
 		'label'       => __( 'Sidebar', 'moiraine' ),
 		'description' => __( 'The Sidebar template defines a page area that can be found on the Page (With Sidebar) template.', 'moiraine' ),
 		'icon'        => 'sidebar',
+	);
+
+	$areas[] = array(
+		'area'        => 'menu',
+		'area_tag'    => 'nav',
+		'label'       => __( 'Menu', 'moiraine' ),
+		'description' => __( 'The Menu template parts are used by the Menu Designer block to create dynamic mega menus.', 'moiraine' ),
+		'icon'        => 'menu-alt',
 	);
 
 	return $areas;
