@@ -5,6 +5,12 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.2] - 2025-09-22
+
+### Fixed
+- **Menu Designer Block Integration**: Fixed template parts not appearing in Menu area by registering menu template parts in `theme.json`
+- **Template Part Area Assignment**: Menu template parts now properly assigned to "menu" area enabling menu designer block functionality
+
 ## [2.1.1] - 2025-09-22
 
 ### Added

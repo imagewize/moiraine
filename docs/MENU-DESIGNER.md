@@ -604,3 +604,296 @@ npm run format # Code formatting
 2. **Priority 2**: Test full integration with navigation blocks
 3. **Priority 3**: Create additional template parts for enhanced functionality
 4. **Priority 4**: Document best practices for custom template part creation
+
+---
+
+## 🚨 CRITICAL BUG: Template Parts Not Loading in Menu Area
+
+### Issue Summary
+**PERSISTENT FAILURE**: Template parts are not appearing in the menu designer block selector despite:
+- ✅ Menu template part area is registered in `functions.php`
+- ✅ Template parts exist and are created from menu patterns
+- ✅ Menu designer block is functional
+- ❌ Template parts are NOT assigned to "Menu" area (they default to "General")
+- ❌ Menu designer block finds ZERO template parts with `area === 'menu'`
+
+### Why Human Made's Plugin Works vs Our Implementation
+
+#### Human Made's Success Factors:
+1. **Plugin Context**: Their code runs as a plugin with proper initialization hooks
+2. **Early Registration**: Template part areas registered before Site Editor loads
+3. **Consistent Text Domain**: Uses `hm-mega-menu-block` throughout
+4. **Plugin Activation**: Template part area registration happens during plugin activation
+
+#### Our Implementation Issues:
+1. **Theme Context**: Code runs in theme which loads after plugins
+2. **Timing Problems**: Area registration might be too late in WordPress load sequence
+3. **Mixed Text Domains**: Using `moiraine` instead of matching the block registration
+4. **No Activation Hook**: No equivalent to plugin activation for themes
+
+### Root Cause Analysis
+
+**The Problem**: WordPress template part areas must be registered VERY early in the load process, ideally during plugin/theme activation or on the `init` hook with high priority.
+
+**Current Implementation in functions.php**:
+```php
+// This may be running too late or with wrong priority
+function moiraine_register_menu_template_part_area( $areas ) {
+    $areas[] = [
+        'area'        => 'menu',
+        'area_tag'    => 'div',
+        'description' => __( 'Menu template parts...', 'moiraine' ),
+        'icon'        => 'menu',
+        'label'       => __( 'Menu', 'moiraine' ),
+    ];
+    return $areas;
+}
+add_filter( 'default_wp_template_part_areas', 'moiraine_register_menu_template_part_area' );
+```
+
+### Immediate Solutions
+
+#### Solution 1: Early Hook Priority (Try First)
+```php
+/**
+ * Register menu template part area with high priority
+ */
+function moiraine_register_menu_template_part_area( $areas ) {
+    $areas[] = [
+        'area'        => 'menu',
+        'area_tag'    => 'div',
+        'description' => __( 'Menu template parts for mega menu sections', 'moiraine' ),
+        'icon'        => 'menu',
+        'label'       => __( 'Menu', 'moiraine' ),
+    ];
+    return $areas;
+}
+// HIGH PRIORITY - run before other plugins/theme code
+add_filter( 'default_wp_template_part_areas', 'moiraine_register_menu_template_part_area', 5 );
+```
+
+#### Solution 2: Force Theme Setup Hook
+```php
+/**
+ * Register menu template part area during theme setup
+ */
+function moiraine_setup_menu_template_parts() {
+    add_filter( 'default_wp_template_part_areas', function( $areas ) {
+        $areas[] = [
+            'area'        => 'menu',
+            'area_tag'    => 'div',
+            'description' => __( 'Menu template parts for mega menu sections', 'moiraine' ),
+            'icon'        => 'menu',
+            'label'       => __( 'Menu', 'moiraine' ),
+        ];
+        return $areas;
+    }, 1 );
+}
+add_action( 'after_setup_theme', 'moiraine_setup_menu_template_parts', 1 );
+```
+
+#### Solution 3: Database Direct Update (Immediate Fix)
+Since existing template parts are stuck in "General" area:
+
+**Option A: WP-CLI Method (Recommended for Trellis VM)**
+```bash
+# SSH into Trellis VM and run these commands
+# This safely updates template parts to use 'menu' area
+
+# First, check current template parts and their areas
+wp post list --post_type=wp_template_part --format=table --fields=post_name,post_excerpt
+
+# Update specific menu template parts to 'menu' area
+wp post update --post_type=wp_template_part --post_name=menu-card-simple --post_excerpt=menu
+wp post update --post_type=wp_template_part --post_name=menu-panel-features --post_excerpt=menu
+wp post update --post_type=wp_template_part --post_name=menu-panel-product --post_excerpt=menu
+wp post update --post_type=wp_template_part --post_name=menu-mobile-simple --post_excerpt=menu
+
+# Alternative: Bulk update all menu-* template parts
+wp db query "UPDATE wp_posts SET post_excerpt='menu' WHERE post_type='wp_template_part' AND post_name LIKE 'menu-%'"
+
+# Verify the changes
+wp post list --post_type=wp_template_part --format=table --fields=post_name,post_excerpt
+```
+
+**Option B: PHP Function Method**
+```php
+/**
+ * EMERGENCY FIX: Force existing template parts into menu area
+ * Run this once, then remove/comment out
+ */
+function moiraine_fix_menu_template_parts() {
+    global $wpdb;
+
+    $template_part_slugs = [
+        'menu-card-simple',
+        'menu-panel-features',
+        'menu-panel-product',
+        'menu-mobile-simple'
+    ];
+
+    foreach( $template_part_slugs as $slug ) {
+        $wpdb->update(
+            $wpdb->posts,
+            [ 'post_excerpt' => 'menu' ], // post_excerpt stores the area
+            [
+                'post_type' => 'wp_template_part',
+                'post_name' => $slug
+            ],
+            [ '%s' ],
+            [ '%s', '%s' ]
+        );
+    }
+}
+// RUN ONCE ONLY - then comment out or remove
+// add_action( 'init', 'moiraine_fix_menu_template_parts' );
+```
+
+#### Solution 4: Complete Re-registration
+```php
+/**
+ * Nuclear option: Re-register template part area on every admin page load
+ */
+function moiraine_force_menu_area_registration() {
+    if ( ! is_admin() ) return;
+
+    add_filter( 'default_wp_template_part_areas', function( $areas ) {
+        // Remove existing menu area if present
+        $areas = array_filter( $areas, function( $area ) {
+            return $area['area'] !== 'menu';
+        });
+
+        // Add our menu area
+        $areas[] = [
+            'area'        => 'menu',
+            'area_tag'    => 'div',
+            'description' => __( 'Menu template parts for mega menu sections', 'moiraine' ),
+            'icon'        => 'menu',
+            'label'       => __( 'Menu', 'moiraine' ),
+        ];
+
+        return $areas;
+    }, 999 );
+}
+add_action( 'admin_init', 'moiraine_force_menu_area_registration' );
+```
+
+### Debugging Steps
+
+#### Check Current Template Part Areas:
+```php
+// Add to functions.php temporarily to debug
+add_action( 'admin_notices', function() {
+    if ( is_admin() ) {
+        $areas = apply_filters( 'default_wp_template_part_areas', [] );
+        echo '<div class="notice notice-info"><pre>';
+        var_dump( array_column( $areas, 'area', 'label' ) );
+        echo '</pre></div>';
+    }
+});
+```
+
+#### Check Existing Template Parts:
+```php
+// Add to functions.php temporarily to debug
+add_action( 'admin_notices', function() {
+    if ( is_admin() ) {
+        $parts = get_posts([
+            'post_type' => 'wp_template_part',
+            'numberposts' => -1,
+            'post_status' => 'publish'
+        ]);
+
+        echo '<div class="notice notice-warning"><h3>Template Parts:</h3>';
+        foreach( $parts as $part ) {
+            echo "<p>{$part->post_name} - Area: {$part->post_excerpt}</p>";
+        }
+        echo '</div>';
+    }
+});
+```
+
+### Implementation Priority Order
+
+1. **IMMEDIATE**: Try Solution 3 (Database Update) to fix existing template parts
+2. **THEN**: Implement Solution 1 (High Priority Hook) for future template parts
+3. **IF FAILS**: Try Solution 2 (Theme Setup Hook)
+4. **LAST RESORT**: Use Solution 4 (Force Re-registration)
+
+### Success Verification
+
+After implementing solution:
+1. Check Site Editor > Template Parts > Should see "Menu" category
+2. Existing template parts should appear in Menu category
+3. Menu designer block should show template parts in dropdown
+4. Template parts should render correctly in editor and frontend
+
+### Why This Keeps Failing
+
+**WordPress Load Order Issue**: Template part areas must be registered before the Site Editor interface loads. Theme code often runs too late in the process, while plugin code (like Human Made's) runs earlier.
+
+**Area Assignment Persistence**: Once a template part is assigned to an area, WordPress caches this assignment. Changing the area registration doesn't automatically reassign existing template parts.
+
+**Cache Issues**: WordPress may cache template part queries, requiring cache clearing or database updates to see changes.
+
+### 🔍 NEW CRITICAL INSIGHT: Registration Is NOT The Problem
+
+**IMPORTANT DISCOVERY**: The Sidebar area is registered in the EXACT same function as Menu area in `functions.php:206-225`, and Sidebar template parts DO appear correctly in their area, while Menu template parts don't.
+
+**Current Registration Code** (WORKING for Sidebar, FAILING for Menu):
+```php
+function template_part_areas( array $areas ) {
+    $areas[] = array(
+        'area'        => 'sidebar',        // ✅ WORKS - parts appear in Sidebar area
+        'area_tag'    => 'section',
+        'label'       => __( 'Sidebar', 'moiraine' ),
+        'description' => __( 'The Sidebar template...', 'moiraine' ),
+        'icon'        => 'sidebar',
+    );
+
+    $areas[] = array(
+        'area'        => 'menu',          // ❌ FAILS - parts don't appear in Menu area
+        'area_tag'    => 'nav',
+        'label'       => __( 'Menu', 'moiraine' ),
+        'description' => __( 'The Menu template parts...', 'moiraine' ),
+        'icon'        => 'menu-alt',
+    );
+
+    return $areas;
+}
+add_filter( 'default_wp_template_part_areas', __NAMESPACE__ . '\template_part_areas' );
+```
+
+**This proves**:
+1. ✅ Area registration is working correctly
+2. ✅ WordPress is recognizing both areas
+3. ✅ The hook timing is correct
+4. ❌ The issue is specifically with Menu template parts NOT being assigned to Menu area
+5. ❌ Template parts are being created but assigned to "General" instead of "Menu"
+
+### Real Root Cause: Template Part Creation Process
+
+The issue is NOT with area registration - it's with how template parts are being created and assigned to areas during the creation process.
+
+**Likely causes**:
+1. **Manual Creation**: Template parts were manually created in Site Editor and defaulted to "General" area
+2. **Pattern Conversion**: Template parts were converted from patterns but area assignment failed
+3. **Bulk Import**: Template parts were imported/created without proper area assignment
+4. **Creation Timing**: Template parts were created before Menu area was registered
+
+**Solution Focus Shift**: Instead of fixing registration (which works), focus on fixing existing template part assignments and ensuring future template parts are created in the correct area.
+
+### 🎯 ACTUAL PROBLEM IDENTIFIED: No Menu Template Parts Exist
+
+**WP-CLI Discovery**: Running `wp post list --post_type=wp_template_part` reveals only one template part exists:
+```
++-----------+--------------+
+| post_name | post_excerpt |
++-----------+--------------+
+| header    |              |
++-----------+--------------+
+```
+
+**Root Cause**: The menu designer block shows zero options because **NO menu template parts have been created yet**. The template parts mentioned in this documentation (`menu-card-simple`, `menu-panel-features`, etc.) don't actually exist in the database.
+
+**Immediate Action Required**: Create the menu template parts first, then test the menu designer block.
