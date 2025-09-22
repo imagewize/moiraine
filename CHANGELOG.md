@@ -5,6 +5,19 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.3] - 2025-09-22
+
+### Fixed
+- **Menu Designer Block Navigation Integration**: Fixed critical issue preventing Menu Designer block from being inserted as navigation menu items
+- **Block Supports Configuration**: Updated block.json with required supports for WordPress navigation integration (`interactivity`, `renaming`, `reusable`, `__experimentalSlashInserter`)
+- **Typography Compatibility**: Corrected typography supports to use experimental features matching WordPress core navigation blocks
+- **Navigation Block Parent Relationship**: Menu Designer block now properly functions as child of `core/navigation` blocks
+
+### Enhanced
+- **Block Editor Integration**: Menu Designer block now appears in navigation block inserter when adding menu items
+- **Documentation**: Updated `docs/MENU-DESIGNER.md` with correct usage instructions and technical implementation details
+- **User Experience**: Simplified mega menu creation workflow - users can now directly add Menu Designer blocks within navigation
+
 ## [2.1.2] - 2025-09-22
 
 ### Fixed

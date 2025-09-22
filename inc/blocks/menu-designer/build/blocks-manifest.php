@@ -5,7 +5,7 @@ return array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
 		'name' => 'moiraine/menu-designer',
-		'version' => '0.1.0',
+		'version' => '0.1.1',
 		'title' => 'Menu Designer',
 		'category' => 'design',
 		'icon' => 'menu-alt',
@@ -64,27 +64,23 @@ return array(
 		),
 		'supports' => array(
 			'html' => false,
-			'color' => array(
-				'text' => true,
-				'background' => true,
-				'link' => true
-			),
+			'interactivity' => true,
+			'renaming' => false,
+			'reusable' => false,
 			'typography' => array(
 				'fontSize' => true,
-				'fontStyle' => true,
-				'fontWeight' => true,
-				'lineHeight' => true
+				'lineHeight' => true,
+				'__experimentalFontFamily' => true,
+				'__experimentalFontWeight' => true,
+				'__experimentalFontStyle' => true,
+				'__experimentalTextTransform' => true,
+				'__experimentalTextDecoration' => true,
+				'__experimentalLetterSpacing' => true,
+				'__experimentalDefaultControls' => array(
+					'fontSize' => true
+				)
 			),
-			'spacing' => array(
-				'margin' => true,
-				'padding' => true
-			),
-			'align' => array(
-				'left',
-				'center',
-				'right'
-			),
-			'anchor' => true
+			'__experimentalSlashInserter' => true
 		),
 		'textdomain' => 'moiraine',
 		'editorScript' => 'file:./index.js',
