@@ -1707,3 +1707,83 @@ console.log( '🔥 MENU DESIGNER: WordPress Interactivity API available:', !!win
 **The Menu Designer block is ready for production use!**
 
 ---
+
+## 🔧 CURRENT DEBUGGING: Click Functionality Issue
+
+### Issue Status: September 22, 2025 - In Progress
+
+**Problem**: While the Menu Designer block now loads view.js successfully and renders template parts correctly, the dropdown menu doesn't appear when clicking the menu button.
+
+#### Current Behavior:
+- ✅ Block renders correctly with proper HTML structure
+- ✅ Template part content loads and displays in dropdown container
+- ✅ view.js script loads from correct URL with no 404 errors
+- ✅ WordPress Interactivity API integration functional
+- ❌ Dropdown menu remains hidden (opacity: 0, visibility: hidden) when clicked
+- ❌ aria-expanded attribute doesn't update from "false" to "true"
+
+#### HTML Structure Analysis:
+```html
+<li class="wp-block-navigation-item wp-block-moiraine-menu-designer"
+    data-wp-interactive='{"namespace": "moiraine/menu-designer"}'
+    data-wp-context='{"menuOpenedBy": {"click": false, "focus": false}}'>
+
+    <button class="wp-block-navigation-item__content wp-block-moiraine-menu-designer__toggle"
+            data-wp-on--click="actions.toggleMenuOnClick"
+            data-wp-bind--aria-expanded="state.isMenuOpen"
+            aria-expanded="false">
+        <!-- Button content -->
+    </button>
+
+    <div class="moiraine-menu-designer wp-block-moiraine-menu-designer__menu-container menu-width-content menu-justified-left">
+        <!-- Template part content renders correctly here -->
+    </div>
+</li>
+```
+
+#### CSS Behavior Analysis:
+- Menu container is correctly hidden with `opacity: 0` and `visibility: hidden`
+- CSS selector `.wp-block-moiraine-menu-designer__toggle[aria-expanded=true] ~ .moiraine-menu-designer` should show menu
+- When `aria-expanded="true"` is set, menu should become visible with `opacity: 1` and `visibility: visible`
+
+#### Investigation Steps Taken:
+1. **Script Loading**: ✅ Fixed by implementing `viewScriptModule` and `--experimental-modules`
+2. **Block Registration**: ✅ Working correctly with auto-scan method
+3. **Template Parts**: ✅ Loading and rendering properly
+4. **Debug Logging**: ✅ Added console.log statements to trace JavaScript execution
+
+#### Debug Implementation:
+Added debug logging to view.js to trace:
+- Script loading confirmation
+- `toggleMenuOnClick` function execution
+- Context state examination
+- `state.isMenuOpen` value tracking
+- Menu open/close action calls
+
+#### Next Debugging Steps:
+1. **Check Console Logs**: Verify if `toggleMenuOnClick` is called when button is clicked
+2. **State Examination**: Check if `context.menuOpenedBy` is updating correctly
+3. **Binding Verification**: Confirm if `data-wp-bind--aria-expanded="state.isMenuOpen"` is working
+4. **CSS Selector Testing**: Verify CSS selectors are matching the updated aria-expanded state
+
+#### Possible Root Causes:
+1. **JavaScript State Issue**: `state.isMenuOpen` not updating properly
+2. **WordPress Interactivity API Binding**: `data-wp-bind` not working as expected
+3. **CSS Selector Specificity**: Styles not applying due to selector conflicts
+4. **Context Scope**: Context not shared properly between actions and state
+
+#### Test Instructions:
+```
+1. Open browser console
+2. Click the "test" menu button
+3. Look for debug messages:
+   - "🔥 Menu Designer view.js loaded"
+   - "🔥 toggleMenuOnClick called"
+   - Context state information
+4. Check if aria-expanded attribute changes in DOM inspector
+5. Verify if CSS classes and styles are applied correctly
+```
+
+**Status**: Actively debugging with enhanced logging to identify the exact failure point in the click-to-show workflow.
+
+---
