@@ -266,3 +266,25 @@ add_action(
 	},
 	10
 );
+
+/**
+ * Debug script enqueuing
+ */
+add_action( 'wp_enqueue_scripts', function() {
+	global $wp_scripts;
+	if ( isset( $wp_scripts->registered['moiraine-menu-designer-view-script'] ) ) {
+		error_log( '🔥 DEBUG: Menu Designer view script is registered for enqueue' );
+		error_log( '🔥 DEBUG: Script src: ' . $wp_scripts->registered['moiraine-menu-designer-view-script']->src );
+	} else {
+		error_log( '🔥 DEBUG: Menu Designer view script NOT registered for enqueue' );
+	}
+}, 999 );
+
+add_action( 'wp_print_scripts', function() {
+	global $wp_scripts;
+	if ( in_array( 'moiraine-menu-designer-view-script', $wp_scripts->queue ) ) {
+		error_log( '🔥 DEBUG: Menu Designer view script IS in queue to be printed' );
+	} else {
+		error_log( '🔥 DEBUG: Menu Designer view script NOT in queue to be printed' );
+	}
+}, 999 );
