@@ -272,6 +272,7 @@ add_action(
  */
 add_action( 'wp_enqueue_scripts', function() {
 	global $wp_scripts;
+	error_log( '🔥 DEBUG: get_template_directory_uri() = ' . get_template_directory_uri() );
 	if ( isset( $wp_scripts->registered['moiraine-menu-designer-view-script'] ) ) {
 		error_log( '🔥 DEBUG: Menu Designer view script is registered for enqueue' );
 		error_log( '🔥 DEBUG: Script src: ' . $wp_scripts->registered['moiraine-menu-designer-view-script']->src );
