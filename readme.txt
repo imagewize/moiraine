@@ -4,7 +4,7 @@ Tags: blog, portfolio, entertainment, grid-layout, one-column, two-columns, thre
 Requires at least: 5.8
 Tested up to: 6.7.1
 Requires PHP: 7.3
-Stable tag: 2.1.2
+Stable tag: 2.1.4
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -13,6 +13,23 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block theme! Moiraine features over 50 beautiful pattern designs, 7 full-page pattern layouts, and a fully-customizable design system with Global Styles. Moiraine integrates seamlessly with all of the powerful new WordPress editor features, giving you the most lightweight and powerful website builder on the planet — no expensive page builder plugin required! ✶ Full demo: https://demo.imagewize.com ✶
 
 == Changelog ==
+
+= 2.1.4 - 09/22/25 =
+* ENHANCED: Menu Designer Block responsiveness - improved CSS width constraints to prevent horizontal scrollbars and ensure proper viewport-aware positioning
+* ENHANCED: Menu Designer styling with better positioning logic for different navigation justification settings
+* ENHANCED: Documentation with comprehensive implementation guide for dropdown positioning and hover functionality
+* FIXED: Menu Designer CSS positioning with responsive width constraints using min() function to prevent viewport overflow
+* FIXED: Menu container styling with improved CSS selectors for both legacy and new menu container classes
+* FIXED: Mobile responsive design with proper breakpoint handling for menu positioning and width calculations
+
+= 2.1.3 - 09/22/25 =
+* FIXED: Menu Designer Block navigation integration - critical issue preventing block insertion as navigation menu items
+* FIXED: Block supports configuration with required WordPress navigation integration features
+* FIXED: Typography compatibility using experimental features matching WordPress core navigation blocks
+* FIXED: Navigation block parent relationship - Menu Designer now properly functions as child of core/navigation blocks
+* ENHANCED: Block editor integration - Menu Designer appears in navigation block inserter when adding menu items
+* ENHANCED: Documentation updated with correct usage instructions and technical implementation details
+* ENHANCED: User experience with simplified mega menu creation workflow
 
 = 2.1.2 - 09/22/25 =
 * FIXED: Menu Designer Block integration - template parts now properly appear in Menu area by registering menu template parts in theme.json

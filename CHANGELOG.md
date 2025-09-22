@@ -5,6 +5,18 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.4] - 2025-09-22
+
+### Enhanced
+- **Menu Designer Block Responsiveness**: Improved CSS width constraints to prevent horizontal scrollbars and ensure proper viewport-aware positioning
+- **Menu Designer Styling**: Enhanced positioning logic for better alignment across different navigation justification settings
+- **Documentation**: Comprehensive implementation guide added to Menu Designer documentation with solutions for dropdown positioning and hover functionality
+
+### Fixed
+- **Menu Designer CSS Positioning**: Fixed responsive width constraints using `min()` function to prevent overflow on smaller viewports
+- **Menu Container Styling**: Improved CSS selectors for both `.moiraine-menu-designer` and `.wp-block-moiraine-menu-designer__menu-container` classes
+- **Mobile Responsive Design**: Added proper mobile breakpoint handling for menu positioning and width calculations
+
 ## [2.1.3] - 2025-09-22
 
 ### Fixed

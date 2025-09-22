@@ -74,6 +74,16 @@ function register_theme_blocks() {
 add_action('init', 'register_theme_blocks');
 ```
 
+### Version Management
+- Review changes with `git diff` to understand what has been modified
+- Update version numbers following semantic versioning (MAJOR.MINOR.PATCH)
+- For patch releases (bug fixes, minor enhancements):
+  1. Update `CHANGELOG.md` with new patch version and changes summary
+  2. Update `readme.txt` stable tag and changelog section
+  3. Update `style.css` theme header version number
+- For minor/major releases, follow same process but increment appropriate version numbers
+- Always update all three files together to maintain version consistency
+
 ### Installation
 - `composer install` - Install PHP dependencies for development
 - `composer require imagewize/moiraine` - Install theme via Composer
