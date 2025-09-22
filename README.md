@@ -43,6 +43,12 @@ Moiraine is built for modern WordPress features and requires WordPress 6.0 or la
 - **Menu Patterns**: 14 specialized navigation designs (cards, mobile, panels)
 - **Template Patterns**: 14 complete page layout templates
 
+### 🧩 **Menu Designer Block**
+- **Custom Block Development**: Advanced mega menu functionality with template part integration
+- **Dynamic Navigation**: Create sophisticated navigation menus with drag-and-drop ease
+- **Template Parts Integration**: Seamless integration with WordPress template part system
+- **Modern Block Architecture**: Built using @wordpress/create-block for extensibility and performance
+
 ### 🛒 **WooCommerce Integration**
 - Automatic WooCommerce stylesheet loading when plugin is active
 - Enhanced e-commerce support for online stores
@@ -54,8 +60,15 @@ Moiraine is built for modern WordPress features and requires WordPress 6.0 or la
 - **Pattern Translation**: `npm run translate:patterns` for internationalization
 - **WordPress Coding Standards**: Built-in linting and code quality tools
 - **Composer Support**: `composer require imagewize/moiraine`
+- **Block Development**: Advanced @wordpress/create-block architecture for custom blocks
 
-### 🎯 **Site Editor Ready**
+### 🎯 **Enhanced Typography System**
+- **7 Google Fonts**: Big Shoulders Display, DM Sans, Fraunces, Mona Sans, Montagu Slab, Source Serif 4, Space Grotesk
+- **Typography Presets**: WordPress-native typography presets for consistent design
+- **Style Variations**: Multiple typography combinations for different design aesthetics
+- **Responsive Typography**: Optimized font scaling across all device sizes
+
+### 🖥️ **Site Editor Ready**
 - Full Site Editing compatibility
 - Template and template part customization
 - Global styles system with theme.json

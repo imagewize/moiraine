@@ -5,6 +5,19 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.1] - 2025-09-22
+
+### Added
+- **Base Menu Template Parts**: Added foundational menu template parts for enhanced navigation customization
+  - `parts/menu-card-simple.html` - Simple card-style menu template
+  - `parts/menu-mobile-simple.html` - Mobile-optimized menu template
+  - `parts/menu-panel-features.html` - Feature-focused panel menu template
+  - `parts/menu-panel-product.html` - Product-focused panel menu template
+
+### Enhanced
+- **Menu Designer Documentation**: Updated `docs/MENU-DESIGNER.md` with comprehensive implementation guidelines
+- **Menu System Integration**: Enhanced functions.php with improved menu template part support
+
 ## [2.1.0] - 2025-09-22
 
 ### Added
