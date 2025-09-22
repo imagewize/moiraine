@@ -19,7 +19,7 @@ import {
 	ColorPalette,
 	__experimentalHStack as HStack,
 	__experimentalToggleGroupControl as ToggleGroupControl,
-	__experimentalToggleGroupControlOptionIcon as ToggleGroupControlOptionIcon
+	__experimentalToggleGroupControlOptionIcon as ToggleGroupControlOptionIcon,
 } from '@wordpress/components';
 import {
 	alignNone,
@@ -47,21 +47,22 @@ import './editor.scss';
  * @return {Element} Element to render.
  */
 export default function Edit( { attributes, setAttributes } ) {
-	const {
-		label,
-		labelColor,
-		description,
-		menuSlug,
-		justifyMenu,
-		width
-	} = attributes;
+	const { label, labelColor, description, menuSlug, justifyMenu, width } =
+		attributes;
 
-	const layout = useSelect( (select) => select('core/editor').getEditorSettings()?.__experimentalFeatures?.layout );
+	const layout = useSelect(
+		( select ) =>
+			select( 'core/editor' ).getEditorSettings()?.__experimentalFeatures
+				?.layout
+	);
 
-	const siteUrl = useSelect( (select) => select('core').getSite().url );
-	const menuTemplateUrl = siteUrl ? siteUrl + '/wp-admin/site-editor.php?path%2Fpatterns&categoryType=wp_template_part&categoryId=menu' : '';
+	const siteUrl = useSelect( ( select ) => select( 'core' ).getSite().url );
+	const menuTemplateUrl = siteUrl
+		? siteUrl +
+		  '/wp-admin/site-editor.php?path%2Fpatterns&categoryType=wp_template_part&categoryId=menu'
+		: '';
 
-	const { hasResolved, records } = useEntityRecords (
+	const { hasResolved, records } = useEntityRecords(
 		'postType',
 		'wp_template_part',
 		{
@@ -71,20 +72,22 @@ export default function Edit( { attributes, setAttributes } ) {
 
 	let menuOptions = [];
 
-	if( hasResolved ) {
-		menuOptions = records.filter( ( item ) => item.area === 'menu' ).map( ( item ) => ( {
-			label: item.title.rendered,
-			value: item.slug
-		} ) );
+	if ( hasResolved ) {
+		menuOptions = records
+			.filter( ( item ) => item.area === 'menu' )
+			.map( ( item ) => ( {
+				label: item.title.rendered,
+				value: item.slug,
+			} ) );
 	}
 
 	const hasMenus = menuOptions.length > 0;
 
 	const blockProps = useBlockProps( {
-		className: 'wp-block-navigation-item wp-block-moiraine-menu-designer__toggle',
+		className:
+			'wp-block-navigation-item wp-block-moiraine-menu-designer__toggle',
 		style: { color: labelColor || 'inherit' },
-		}
-	);
+	} );
 
 	const justificationOptions = [
 		{
@@ -130,13 +133,13 @@ export default function Edit( { attributes, setAttributes } ) {
 		},
 	];
 
-	return(
+	return (
 		<>
-		<InspectorControls group="settings">
+			<InspectorControls group="settings">
 				<PanelBody
 					className="menu-designer__settings-panel"
 					title={ __( 'Settings', 'moiraine' ) }
-					initialOpen={true}
+					initialOpen={ true }
 				>
 					<TextControl
 						label={ __( 'Label', 'moiraine' ) }
@@ -154,15 +157,20 @@ export default function Edit( { attributes, setAttributes } ) {
 						onChange={ ( value ) =>
 							setAttributes( { description: value } )
 						}
-						help={ __( 'Optional description for accessibility', 'moiraine' ) }
+						help={ __(
+							'Optional description for accessibility',
+							'moiraine'
+						) }
 						autoComplete="off"
 					/>
-					 <ColorPalette
-                        label={ __( 'Label Color', 'moiraine' ) }
-                        value={ labelColor }
-                        onChange={ ( colorValue ) => setAttributes( { labelColor: colorValue } ) }
-                        clearable={ true }
-                    />
+					<ColorPalette
+						label={ __( 'Label Color', 'moiraine' ) }
+						value={ labelColor }
+						onChange={ ( colorValue ) =>
+							setAttributes( { labelColor: colorValue } )
+						}
+						clearable={ true }
+					/>
 					<ComboboxControl
 						label={ __( 'Menu Template', 'moiraine' ) }
 						value={ menuSlug }
@@ -212,13 +220,13 @@ export default function Edit( { attributes, setAttributes } ) {
 									return (
 										<ToggleGroupControlOptionIcon
 											key={ value }
-											value={ value}
+											value={ value }
 											icon={ icon }
 											label={ iconLabel }
 										/>
 									);
 								}
-							)}
+							) }
 						</ToggleGroupControl>
 						<ToggleGroupControl
 							className="block-editor-hooks__flex-layout-justification-controls"
@@ -242,21 +250,21 @@ export default function Edit( { attributes, setAttributes } ) {
 										/>
 									);
 								}
-							)}
+							) }
 						</ToggleGroupControl>
 					</HStack>
 				</PanelBody>
 			</InspectorControls>
-			<div {...blockProps}>
+			<div { ...blockProps }>
 				<button className="wp-block-navigation-item__content wp-block-moiraine-menu-designer__toggle">
 					<RichText
-						identifier='label'
-						className='wp-block-navigation-item__label'
+						identifier="label"
+						className="wp-block-navigation-item__label"
 						value={ label }
 						onChange={ ( labelValue ) => {
 							setAttributes( {
-								label: labelValue
-							} )
+								label: labelValue,
+							} );
 						} }
 						placeholder={ __( 'Add label...', 'moiraine' ) }
 						allowedFormats={ [

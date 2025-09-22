@@ -7,8 +7,8 @@
 	"category": "design",
 	"icon": "menu-alt",
 	"description": "Create dynamic mega menus with template parts and advanced styling options.",
-	"keywords": ["menu", "navigation", "mega menu", "dropdown"],
-	"parent": ["core/navigation"],
+	"keywords": [ "menu", "navigation", "mega menu", "dropdown" ],
+	"parent": [ "core/navigation" ],
 	"attributes": {
 		"label": {
 			"type": "string",
@@ -28,12 +28,12 @@
 		"justifyMenu": {
 			"type": "string",
 			"default": "left",
-			"enum": ["left", "center", "right"]
+			"enum": [ "left", "center", "right" ]
 		},
 		"width": {
 			"type": "string",
 			"default": "content",
-			"enum": ["content", "wide", "full"]
+			"enum": [ "content", "wide", "full" ]
 		}
 	},
 	"example": {
@@ -61,7 +61,7 @@
 			"margin": true,
 			"padding": true
 		},
-		"align": ["left", "center", "right"],
+		"align": [ "left", "center", "right" ],
 		"anchor": true
 	},
 	"textdomain": "moiraine",
