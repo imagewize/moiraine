@@ -5,6 +5,9 @@
  */
 import { store, getContext, getElement } from '@wordpress/interactivity';
 
+console.log( '🔥 MENU DESIGNER: view.js script loaded!' );
+console.log( '🔥 MENU DESIGNER: WordPress Interactivity API available:', !!window.wp?.interactivity );
+
 const { state, actions } = store( 'moiraine/menu-designer', {
 	state: {
 		get isMenuOpen() {
