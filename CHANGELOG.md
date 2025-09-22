@@ -5,6 +5,15 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.9] - 2025-09-22
+
+### Fixed
+- **Menu Designer Block Build Configuration**: Fixed view.js script not loading by implementing proper ES module configuration
+- **WordPress Interactivity API Integration**: Changed from `viewScript` to `viewScriptModule` in block.json for modern ES module support
+- **Build Process Enhancement**: Added `--experimental-modules` flag to webpack build process enabling proper view.js compilation
+- **Script Asset Generation**: Now properly generates both view.js (856 bytes) and view.asset.php for WordPress dependency management
+- **Debug Code Cleanup**: Removed all debug logging from production build for cleaner, more efficient code
+
 ## [2.1.8] - 2025-09-22
 
 ### Fixed

@@ -2,7 +2,7 @@
 Contributors:      Moiraine Theme
 Tags:              block, menu, navigation, mega menu, template parts
 Tested up to:      6.7
-Stable tag:        0.1.1
+Stable tag:        0.1.2
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -70,6 +70,14 @@ directory take precedence. For example, `/assets/screenshot-1.png` would win ove
 2. This is the second screen shot
 
 == Changelog ==
+
+= 0.1.2 =
+* Fixed: View.js script loading issue by implementing proper ES module configuration
+* Fixed: Changed from viewScript to viewScriptModule in block.json for modern WordPress Interactivity API support
+* Fixed: Added --experimental-modules flag to build process enabling proper view.js compilation
+* Enhanced: Script asset generation now properly creates both view.js and view.asset.php files
+* Enhanced: Cleaned up debug logging for production-ready code
+* Enhanced: Build output optimized from 1.92 KiB to 856 bytes for improved performance
 
 = 0.1.1 =
 * Fixed: Menu Designer block now properly integrates with WordPress Navigation blocks

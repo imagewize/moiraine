@@ -232,15 +232,12 @@ add_action(
 	'init',
 	function () {
 		$blocks_dir = get_template_directory() . '/inc/blocks';
-		error_log( '🔥 DEBUG: Scanning blocks directory: ' . $blocks_dir );
 
 		if ( ! is_dir( $blocks_dir ) ) {
-			error_log( '🔥 DEBUG: Blocks directory does not exist' );
 			return;
 		}
 
 		$block_folders = scandir( $blocks_dir );
-		error_log( '🔥 DEBUG: Found folders: ' . print_r( $block_folders, true ) );
 
 		foreach ( $block_folders as $folder ) {
 			if ( '.' === $folder || '..' === $folder ) {
@@ -248,48 +245,12 @@ add_action(
 			}
 
 			$block_json_path = $blocks_dir . '/' . $folder . '/build/' . $folder . '/block.json';
-			error_log( '🔥 DEBUG: Checking block.json at: ' . $block_json_path );
 
 			if ( file_exists( $block_json_path ) ) {
-				error_log( '🔥 DEBUG: Registering block type from: ' . $block_json_path );
-				$block = register_block_type( $block_json_path );
-				if ( $block ) {
-					error_log( '🔥 DEBUG: Block registered successfully. Name: ' . $block->name );
-					error_log( '🔥 DEBUG: View script handle: ' . ( $block->view_script ?? 'none' ) );
-
-					// Debug: Log block registration details
-					error_log( '🔥 DEBUG: is_multisite() = ' . ( is_multisite() ? 'true' : 'false' ) );
-					error_log( '🔥 DEBUG: block->view_script = ' . $block->view_script );
-				} else {
-					error_log( '🔥 DEBUG: Block registration failed!' );
-				}
-			} else {
-				error_log( '🔥 DEBUG: Block.json not found at: ' . $block_json_path );
+				register_block_type( $block_json_path );
 			}
 		}
 	},
 	10
 );
 
-/**
- * Debug script enqueuing
- */
-add_action( 'wp_enqueue_scripts', function() {
-	global $wp_scripts;
-	error_log( '🔥 DEBUG: get_template_directory_uri() = ' . get_template_directory_uri() );
-	if ( isset( $wp_scripts->registered['moiraine-menu-designer-view-script'] ) ) {
-		error_log( '🔥 DEBUG: Menu Designer view script is registered for enqueue' );
-		error_log( '🔥 DEBUG: Script src: ' . $wp_scripts->registered['moiraine-menu-designer-view-script']->src );
-	} else {
-		error_log( '🔥 DEBUG: Menu Designer view script NOT registered for enqueue' );
-	}
-}, 999 );
-
-add_action( 'wp_print_scripts', function() {
-	global $wp_scripts;
-	if ( in_array( 'moiraine-menu-designer-view-script', $wp_scripts->queue ) ) {
-		error_log( '🔥 DEBUG: Menu Designer view script IS in queue to be printed' );
-	} else {
-		error_log( '🔥 DEBUG: Menu Designer view script NOT in queue to be printed' );
-	}
-}, 999 );
