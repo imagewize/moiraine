@@ -215,3 +215,8 @@ function template_part_areas( array $areas ) {
 	return $areas;
 }
 add_filter( 'default_wp_template_part_areas', __NAMESPACE__ . '\template_part_areas' );
+
+/**
+ * Include custom blocks registration
+ */
+require_once get_template_directory() . '/inc/blocks/menu-designer/menu-designer.php';
