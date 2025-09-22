@@ -47,8 +47,8 @@ const { state, actions } = store( 'moiraine/menu-designer', {
 		},
 
 		handleOutsideClick( event ) {
-			const context = getContext();
-			const megaMenu = context?.megaMenu;
+			const { ref } = getElement();
+			const megaMenu = ref.querySelector('.moiraine-menu-designer');
 
 			if ( ! megaMenu || megaMenu.contains( event.target ) ) {
 				return;
@@ -65,27 +65,12 @@ const { state, actions } = store( 'moiraine/menu-designer', {
 			const context = getContext();
 			state.menuOpenedBy[ menuClosedOn ] = false;
 
-			// Reset the menu reference and button focus when closed.
+			// Reset the button focus when closed.
 			if ( ! state.isMenuOpen ) {
-				if (
-					context.megaMenu?.contains( window.document.activeElement )
-				) {
-					context.previousFocus?.focus();
+				if ( context.previousFocus ) {
+					context.previousFocus.focus();
 				}
 				context.previousFocus = null;
-				context.megaMenu = null;
-			}
-		},
-	},
-
-	callbacks: {
-		initMenu() {
-			const context = getContext();
-			const { ref } = getElement();
-
-			// Set the menu reference when initialized.
-			if ( state.isMenuOpen ) {
-				context.megaMenu = ref;
 			}
 		},
 	},

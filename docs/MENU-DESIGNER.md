@@ -1336,3 +1336,175 @@ After implementing these fixes:
 - ✅ Works seamlessly with WordPress navigation system
 
 This brings the menu designer block behavior in line with standard WordPress navigation expectations while preserving the advanced mega menu capabilities.
+
+---
+
+## 🔍 CRITICAL ANALYSIS: Human Made vs Moiraine Implementation Comparison
+
+### Issue: Dropdown Click Functionality Not Working
+
+**Status**: Menu content renders correctly but dropdown doesn't appear on click. Button `aria-expanded` attribute not updating properly.
+
+### Comparison Analysis: Human Made vs Moiraine Menu Designer Block
+
+#### JavaScript Structure Comparison
+
+**Human Made Implementation** (Working):
+```javascript
+const { state, actions } = store('hm-blocks/hm-mega-menu-block', {
+    state: {
+        get isMenuOpen() {
+            return Object.values(state.menuOpenedBy).filter(Boolean).length > 0;
+        },
+        get menuOpenedBy() {
+            const context = getContext();
+            return context.menuOpenedBy;
+        },
+    },
+    actions: {
+        // Standard actions only - no callbacks
+    }
+});
+```
+
+**Moiraine Implementation** (Not Working):
+```javascript
+const { state, actions } = store('moiraine/menu-designer', {
+    state: {
+        get isMenuOpen() {
+            return Object.values(state.menuOpenedBy).filter(Boolean).length > 0;
+        },
+        get menuOpenedBy() {
+            const context = getContext();
+            return context.menuOpenedBy;
+        },
+    },
+    actions: {
+        // Same actions as Human Made
+    },
+    callbacks: {
+        initMenu() {  // ⚠️ POTENTIAL ISSUE
+            const context = getContext();
+            const { ref } = getElement();
+
+            if (state.isMenuOpen) {
+                context.megaMenu = ref;
+            }
+        },
+    },
+});
+```
+
+#### Key Differences Identified
+
+1. **Callback Usage**:
+   - **Human Made**: No `callbacks` section at all
+   - **Moiraine**: Has `initMenu` callback that may cause timing issues
+
+2. **Menu Reference Management**:
+   - **Human Made**: Simpler approach to context management
+   - **Moiraine**: Complex `context.megaMenu` setup that might be problematic
+
+3. **Context Cleanup**:
+   - **Human Made**: Doesn't reset `context.megaMenu = null`
+   - **Moiraine**: Aggressively resets context references
+
+#### Root Cause Analysis
+
+**Primary Issue**: The `initMenu` callback in Moiraine only sets `context.megaMenu` when the menu is already open:
+
+```javascript
+// PROBLEMATIC CODE
+if (state.isMenuOpen) {  // This condition prevents initial setup
+    context.megaMenu = ref;
+}
+```
+
+This creates a chicken-and-egg problem:
+- The menu reference is only set when the menu is already open
+- But the menu can't open properly without the reference being set
+- Outside click detection fails because `context.megaMenu` is undefined
+
+**Secondary Issue**: Context cleanup may be too aggressive:
+```javascript
+// Moiraine resets context.megaMenu to null
+context.megaMenu = null;
+```
+
+While Human Made implementation doesn't appear to reset this reference.
+
+#### Recommended Fix Strategy
+
+**Option 1: Remove Callback Entirely** (Recommended)
+```javascript
+// Remove the entire callbacks section
+// Let WordPress Interactivity API handle initialization automatically
+```
+
+**Option 2: Fix Callback Logic**
+```javascript
+callbacks: {
+    initMenu() {
+        const context = getContext();
+        const { ref } = getElement();
+
+        // Always set menu reference, not just when open
+        if (!context.megaMenu) {
+            context.megaMenu = ref.querySelector('.moiraine-menu-designer');
+        }
+    },
+},
+```
+
+**Option 3: Move Reference Setup to openMenu Action**
+```javascript
+openMenu(menuOpenedOn = 'click') {
+    const context = getContext();
+    const { ref } = getElement();
+
+    state.menuOpenedBy[menuOpenedOn] = true;
+
+    // Set menu reference when opening
+    if (!context.megaMenu) {
+        context.megaMenu = ref.querySelector('.moiraine-menu-designer');
+    }
+},
+```
+
+#### Block Registration Differences
+
+**Human Made**: Uses modern ES module approach
+```json
+"viewScriptModule": "file:./view.js"
+```
+
+**Moiraine**: Uses traditional script approach
+```json
+"viewScript": "file:./view.js"
+```
+
+Both should work, but ES modules are the preferred modern approach.
+
+### Implementation Priority
+
+1. **IMMEDIATE**: Remove or fix the `initMenu` callback (Option 1 recommended)
+2. **TEST**: Verify dropdown click functionality after callback removal
+3. **ENHANCE**: Consider switching to `viewScriptModule` for modern ES module support
+4. **VALIDATE**: Ensure outside click detection works correctly
+
+### Expected Outcome
+
+After fixing the callback issue:
+- ✅ Button `aria-expanded` attribute should update correctly on click
+- ✅ Menu dropdown should appear/disappear as expected
+- ✅ Outside click detection should work properly
+- ✅ Keyboard navigation (Escape key) should function correctly
+
+### Testing Checklist
+
+- [ ] Click menu item - dropdown appears
+- [ ] Click outside dropdown - menu closes
+- [ ] Press Escape key - menu closes
+- [ ] Multiple menu items work independently
+- [ ] Template parts render correctly in dropdown
+- [ ] No JavaScript console errors

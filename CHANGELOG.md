@@ -5,6 +5,19 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.5] - 2025-09-22
+
+### Fixed
+- **Menu Designer Block Click Functionality**: Fixed critical issue where dropdown menus wouldn't appear on click due to JavaScript state management problems
+- **WordPress Interactivity API Integration**: Removed problematic callback timing that prevented proper aria-expanded attribute updates
+- **Menu State Management**: Simplified JavaScript implementation to match working Human Made mega menu block approach
+- **Outside Click Detection**: Fixed menu reference handling for proper click-outside-to-close functionality
+
+### Enhanced
+- **JavaScript Performance**: Streamlined Menu Designer block JavaScript by removing unnecessary initialization callbacks
+- **Code Quality**: Eliminated circular dependency issues in menu reference management
+- **Documentation**: Added comprehensive comparison analysis between Human Made and Moiraine implementations in Menu Designer documentation
+
 ## [2.1.4] - 2025-09-22
 
 ### Enhanced
