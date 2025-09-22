@@ -1508,3 +1508,122 @@ After fixing the callback issue:
 - [ ] Multiple menu items work independently
 - [ ] Template parts render correctly in dropdown
 - [ ] No JavaScript console errors
+
+---
+
+## 🚨 CRITICAL DEBUGGING STATUS - view.js Script Loading Issue
+
+### Current Problem (September 22, 2025)
+**Issue**: Menu Designer block HTML renders correctly with proper attributes, but the view.js script is not executing. Console shows no debug logs from the Menu Designer script.
+
+### Root Cause Analysis ✅ COMPLETED
+
+**Found the exact issue**: WordPress multisite URL resolution problem causing 404 errors on script loading.
+
+#### Debug Investigation Results:
+```
+✅ Block registration: WORKING
+   - Block name: moiraine/menu-designer
+   - View script handle: moiraine-menu-designer-view-script
+   - Block successfully registered via auto-scan method
+
+✅ WordPress script queuing: WORKING
+   - Script is registered for enqueue ✓
+   - Script is in queue to be printed ✓
+   - WordPress generates correct absolute URL ✓
+
+❌ Browser script loading: FAILING
+   - WordPress outputs: http://demo.imagewize.test/app/themes/moiraine/inc/blocks/menu-designer/build/menu-designer/view.js
+   - Browser requests: http://demo.imagewize.test/auctor/app/themes/moiraine/inc/blocks/menu-designer/build/menu-designer/view.js
+   - Status: 404 Not Found (incorrect /auctor/ prefix added by browser)
+```
+
+#### Multisite Configuration Discovery:
+- **WordPress multisite**: `is_multisite() = true` ✓
+- **Site path**: `/auctor/` (multisite subdirectory installation)
+- **Theme URI**: `http://demo.imagewize.test/app/themes/moiraine` (correct absolute URL)
+- **File accessibility**: Direct URL test returns 200 OK ✓
+
+### The Real Issue: Browser URL Resolution
+
+**WordPress generates correct absolute URLs** but **browser adds `/auctor/` prefix** when making the request.
+
+**Possible causes**:
+1. **Browser caching** of previous relative URLs
+2. **Service worker** intercepting and modifying requests
+3. **WordPress script concatenation** changing URLs during output
+4. **HTTP redirect** rules on server adding site prefix
+5. **Base href** tag or similar affecting relative URL resolution
+
+### Solutions Attempted:
+
+#### ❌ Solution 1: Multisite URL Patch (Failed)
+```php
+// This patch failed because WordPress already outputs absolute URLs
+if ( 0 === strpos( $script->src, '/app/' ) ) {
+    $script->src = home_url( $script->src );
+}
+// Condition never matches - script->src is already absolute
+```
+
+#### ✅ Solution 2: Auto-scan Block Registration (Success)
+```php
+// Successfully implemented working auto-scan method from Nynaeve theme
+// Block registration now works correctly
+```
+
+### Next Steps Required:
+
+1. **🔥 IMMEDIATE**: Clear all browser cache, service workers, and try hard refresh
+2. **🔍 INVESTIGATE**: Check for WordPress script concatenation/minification plugins
+3. **🛠️ SERVER**: Verify nginx/Apache redirect rules not affecting theme asset URLs
+4. **🧪 TEST**: Try incognito browser window to rule out cache issues
+5. **📝 MONITOR**: Check Network tab in multiple browsers (Chrome, Firefox, Safari)
+
+### Current Status: **DEBUGGING IN PROGRESS**
+- **Block registration**: ✅ FIXED (confirmed in all browsers)
+- **Script enqueuing**: ❓ BROWSER DEPENDENT (Safari: working, Firefox: missing)
+- **URL generation**: ✅ CORRECT (when enqueuing happens)
+- **Browser loading**: ❌ FAILING (Safari: 404 due to /auctor/ prefix, Firefox: not enqueued)
+- **Script execution**: ❌ NOT RUNNING (due to load/enqueue failure)
+
+### New Discovery: Browser-Specific Behavior
+
+**Safari Debug Log** (Script enqueuing works):
+```
+✅ Menu Designer view script is registered for enqueue
+✅ Script src: http://demo.imagewize.test/app/themes/moiraine/inc/blocks/menu-designer/build/menu-designer/view.js
+✅ Menu Designer view script IS in queue to be printed
+❌ Browser requests: http://demo.imagewize.test/auctor/app/themes/... (404 error)
+```
+
+**Firefox Debug Log** (Script enqueuing missing):
+```
+✅ Block registered successfully. Name: moiraine/menu-designer
+✅ View script handle: moiraine-menu-designer-view-script
+❌ Missing: wp_enqueue_scripts debug messages
+❌ Missing: wp_print_scripts debug messages
+❌ Script never gets enqueued or printed
+```
+
+**Analysis**: Different browsers showing different behavior suggests either:
+1. **Conditional script loading** based on browser/user agent
+2. **WordPress caching** serving different content to different browsers
+3. **Menu Designer block not present** on the page in Firefox session
+4. **WordPress script concatenation** plugin affecting specific browsers
+
+### Files Affected:
+- `/functions.php` - Enhanced with auto-scan block registration + multisite debugging
+- `/inc/blocks/menu-designer/src/menu-designer/view.js` - Contains debug logging
+- `/inc/blocks/menu-designer/build/menu-designer/view.js` - Compiled with debug code
+
+### Debug Code Added:
+```javascript
+console.log( '🔥 MENU DESIGNER: view.js script loaded!' );
+console.log( '🔥 MENU DESIGNER: WordPress Interactivity API available:', !!window.wp?.interactivity );
+```
+
+**Expected behavior**: These console logs should appear when page loads if script executes.
+**Current behavior**: No console logs appear, confirming script load failure.
+
+---
