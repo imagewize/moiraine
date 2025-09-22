@@ -232,11 +232,15 @@ add_action(
 	'init',
 	function () {
 		$blocks_dir = get_template_directory() . '/inc/blocks';
+		error_log( '🔥 DEBUG: Scanning blocks directory: ' . $blocks_dir );
+
 		if ( ! is_dir( $blocks_dir ) ) {
+			error_log( '🔥 DEBUG: Blocks directory does not exist' );
 			return;
 		}
 
 		$block_folders = scandir( $blocks_dir );
+		error_log( '🔥 DEBUG: Found folders: ' . print_r( $block_folders, true ) );
 
 		foreach ( $block_folders as $folder ) {
 			if ( '.' === $folder || '..' === $folder ) {
@@ -244,9 +248,13 @@ add_action(
 			}
 
 			$block_json_path = $blocks_dir . '/' . $folder . '/build/' . $folder . '/block.json';
+			error_log( '🔥 DEBUG: Checking block.json at: ' . $block_json_path );
 
 			if ( file_exists( $block_json_path ) ) {
+				error_log( '🔥 DEBUG: Registering block type from: ' . $block_json_path );
 				register_block_type( $block_json_path );
+			} else {
+				error_log( '🔥 DEBUG: Block.json not found at: ' . $block_json_path );
 			}
 		}
 	},
