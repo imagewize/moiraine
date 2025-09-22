@@ -258,18 +258,30 @@ add_action(
 					error_log( '🔥 DEBUG: View script handle: ' . ( $block->view_script ?? 'none' ) );
 
 					// Multisite patch: Fix relative URLs for view scripts
+					error_log( '🔥 DEBUG: is_multisite() = ' . ( is_multisite() ? 'true' : 'false' ) );
+					error_log( '🔥 DEBUG: block->view_script = ' . $block->view_script );
+
 					if ( is_multisite() && $block->view_script ) {
+						error_log( '🔥 DEBUG: Setting up multisite patch for view script' );
 						add_action( 'wp_enqueue_scripts', function() use ( $block ) {
 							global $wp_scripts;
+							error_log( '🔥 DEBUG: Multisite patch running in wp_enqueue_scripts' );
 							if ( isset( $wp_scripts->registered[ $block->view_script ] ) ) {
 								$script = $wp_scripts->registered[ $block->view_script ];
+								error_log( '🔥 DEBUG: Current script src: ' . $script->src );
 								// Convert relative URL to absolute URL for multisite
 								if ( 0 === strpos( $script->src, '/app/' ) ) {
 									$script->src = home_url( $script->src );
 									error_log( '🔥 DEBUG: Multisite patch applied. New src: ' . $script->src );
+								} else {
+									error_log( '🔥 DEBUG: Script src does not start with /app/, no patch needed' );
 								}
+							} else {
+								error_log( '🔥 DEBUG: Script not found in registered scripts' );
 							}
 						}, 5 );
+					} else {
+						error_log( '🔥 DEBUG: Multisite patch not needed (not multisite or no view script)' );
 					}
 				} else {
 					error_log( '🔥 DEBUG: Block registration failed!' );
