@@ -29,7 +29,7 @@ if ($label_color) {
 }
 ?>
 
-<li <?php echo $wrapper_attributes; ?> data-wp-interactive='{"namespace": "moiraine/menu-designer"}' data-wp-context='{"menuOpenedBy": {}}' data-wp-on-document--keydown="actions.handleMenuKeydown" data-wp-on-document--click="actions.handleOutsideClick">
+<li <?php echo $wrapper_attributes; ?> data-wp-interactive='{"namespace": "moiraine/menu-designer"}' data-wp-context='{"menuOpenedBy": {"click": false, "focus": false}}' data-wp-on-document--keydown="actions.handleMenuKeydown" data-wp-on-document--click="actions.handleOutsideClick">
 
 	<button class="wp-block-navigation-item__content wp-block-moiraine-menu-designer__toggle" data-wp-on--click="actions.toggleMenuOnClick" data-wp-bind--aria-expanded="state.isMenuOpen" <?php echo $button_style; ?> <?php if ($description): ?>aria-describedby="menu-description-<?php echo esc_attr($menu_slug); ?>"<?php endif; ?>>
 		<span class="wp-block-navigation-item__label"><?php echo $label; ?></span>
