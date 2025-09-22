@@ -4,7 +4,7 @@ Tags: blog, portfolio, entertainment, grid-layout, one-column, two-columns, thre
 Requires at least: 5.8
 Tested up to: 6.7.1
 Requires PHP: 7.3
-Stable tag: 2.0.0
+Stable tag: 2.1.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -13,6 +13,17 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block theme! Moiraine features over 50 beautiful pattern designs, 7 full-page pattern layouts, and a fully-customizable design system with Global Styles. Moiraine integrates seamlessly with all of the powerful new WordPress editor features, giving you the most lightweight and powerful website builder on the planet — no expensive page builder plugin required! ✶ Full demo: https://demo.imagewize.com ✶
 
 == Changelog ==
+
+= 2.1.0 - 09/22/25 =
+* NEW: Menu Designer Block with mega menu functionality for creating dynamic navigation menus with template part integration
+* NEW: Advanced block development workflow using @wordpress/create-block architecture in inc/blocks/ directory
+* NEW: Modern block registration system using wp_register_block_types_from_metadata_collection() for WordPress 6.8+ compatibility
+* ENHANCED: WordPress Coding Standards configuration with improved exclusions for block directories
+* ENHANCED: Development workflow with updated composer scripts for better code quality management
+* ENHANCED: Block development architecture with standardized workflow using @wordpress/scripts build system
+* IMPROVED: Code quality with enhanced formatting and linting processes
+* ADDED: Comprehensive Menu Designer block documentation with implementation guidelines
+* UPDATED: Development tools with enhanced build processes for theme and block development
 
 = 2.0.0 - 09/19/25 =
 * MAJOR UPDATE: Enhanced WooCommerce Integration

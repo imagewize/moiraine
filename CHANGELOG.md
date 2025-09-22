@@ -5,6 +5,26 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.0] - 2025-09-22
+
+### Added
+- **Menu Designer Block**: New custom block with mega menu functionality for creating dynamic navigation menus with template part integration
+- **Advanced Block Development Workflow**: Implemented @wordpress/create-block architecture for custom block development in `inc/blocks/` directory
+- **Enhanced PHPCS Configuration**: Updated WordPress Coding Standards configuration with improved exclusions for block directories
+- **Block Registration System**: Modern block manifest approach using `wp_register_block_types_from_metadata_collection()` for WordPress 6.8+ compatibility
+
+### Changed
+- **WordPress Coding Standards**: Enhanced PHPCS configuration to exclude block directories while maintaining theme-level standards compliance
+- **Development Workflow**: Updated composer scripts for better code quality management and block development support
+- **Block Development Architecture**: Established standardized workflow for custom blocks using @wordpress/scripts build system
+
+### Enhanced
+- **Code Quality**: Improved formatting and linting processes across theme and block development
+- **Documentation**: Added comprehensive Menu Designer block documentation with implementation guidelines
+- **Development Tools**: Enhanced build processes for both theme and block development workflows
+
+### Previous Versions
+
 ## [2.0.0] - 2025-09-19
 
 ### Added
