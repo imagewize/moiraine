@@ -5,7 +5,11 @@
 	position: relative;
 }
 
-.backdrop-blur {
+/* Safari backdrop-filter flickering fix using pseudo-element approach */
+/* Isolates blur effect from conflicting CSS properties (border-radius, box-shadow) */
+/* Prevents WordPress block validation errors by avoiding extra HTML elements */
+.is-style-background-blur::before {
+	content: "";
 	position: absolute;
 	inset: 0;
 	-webkit-backdrop-filter: blur(20px);
