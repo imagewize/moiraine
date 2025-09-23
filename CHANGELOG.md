@@ -5,18 +5,7 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.1.1] - 2025-09-23
-
-### Fixed
-- **Menu Designer CSS Positioning**: Simplified positioning system by adopting Human Made's class-based approach, removing complex navigation-level detection in favor of direct `.menu-justified-*` classes
-- **Mobile Menu Responsiveness**: Extended mobile viewport optimizations to all menu positions (left, center, right) ensuring proper fit on mobile devices regardless of desktop alignment
-- **CSS Architecture**: Streamlined mega menu positioning logic by eliminating duplicate selectors and complex cascade rules for more maintainable code
-
-### Changed
-- **CSS Positioning Strategy**: Replaced navigation-context positioning with direct menu class positioning for cleaner, more predictable behavior
-- **Mobile-First Approach**: All menu alignments now respect mobile viewport constraints with consistent `calc(100vw - 2rem)` width calculation
-
-## [2.1.0] - 2025-09-22
+## [2.1.0] - 2025-09-23
 
 ### Added
 - **Menu Designer Block**: New custom block with mega menu functionality for creating dynamic navigation menus with template part integration
@@ -41,6 +30,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Code Quality**: Improved formatting and linting processes across theme and block development
 
 ### Fixed
+- **Menu Designer CSS Positioning**: Simplified positioning system by adopting Human Made's class-based approach, removing complex navigation-level detection in favor of direct `.menu-justified-*` classes
+- **Mobile Menu Responsiveness**: Extended mobile viewport optimizations to all menu positions (left, center, right) ensuring proper fit on mobile devices regardless of desktop alignment
+- **CSS Architecture**: Streamlined mega menu positioning logic by eliminating duplicate selectors and complex cascade rules for more maintainable code
+- **Template Part Image Paths**: Fixed 403 errors by moving `computer-hands.webp` from `patterns/images/` to `parts/images/` for menu template parts
 - **Menu Designer Block Navigation Integration**: Fixed critical issue preventing Menu Designer block from being inserted as navigation menu items
 - **Block Supports Configuration**: Updated block.json with required supports for WordPress navigation integration (`interactivity`, `renaming`, `reusable`, `__experimentalSlashInserter`)
 - **WordPress Interactivity API State Management**: Fixed state management pattern to match Human Made implementation with proper `state.menuOpenedBy` getter and context separation
@@ -57,6 +50,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Script Asset Generation**: Now properly generates both view.js and view.asset.php for WordPress dependency management
 
 ### Changed
+- **CSS Positioning Strategy**: Replaced navigation-context positioning with direct menu class positioning for cleaner, more predictable behavior
+- **Mobile-First Approach**: All menu alignments now respect mobile viewport constraints with consistent `calc(100vw - 2rem)` width calculation
 - **WordPress Coding Standards**: Enhanced PHPCS configuration to exclude block directories while maintaining theme-level standards compliance
 - **Development Workflow**: Updated composer scripts for better code quality management and block development support
 - **Block Development Architecture**: Established standardized workflow for custom blocks using @wordpress/scripts build system

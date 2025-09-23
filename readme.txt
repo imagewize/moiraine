@@ -4,7 +4,7 @@ Tags: blog, portfolio, entertainment, grid-layout, one-column, two-columns, thre
 Requires at least: 5.8
 Tested up to: 6.7.1
 Requires PHP: 7.3
-Stable tag: 2.1.1
+Stable tag: 2.1.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -14,14 +14,7 @@ Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block t
 
 == Changelog ==
 
-= 2.1.1 - 09/23/25 =
-* FIXED: Menu Designer CSS positioning - simplified by adopting Human Made's class-based approach, removing complex navigation-level detection in favor of direct .menu-justified-* classes
-* FIXED: Mobile menu responsiveness - extended mobile viewport optimizations to all menu positions (left, center, right) ensuring proper fit on mobile devices regardless of desktop alignment
-* IMPROVED: CSS architecture - streamlined mega menu positioning logic by eliminating duplicate selectors and complex cascade rules for more maintainable code
-* UPDATED: CSS positioning strategy - replaced navigation-context positioning with direct menu class positioning for cleaner, more predictable behavior
-* ENHANCED: Mobile-first approach - all menu alignments now respect mobile viewport constraints with consistent calc(100vw - 2rem) width calculation
-
-= 2.1.0 - 09/22/25 =
+= 2.1.0 - 09/23/25 =
 * NEW: Menu Designer Block with mega menu functionality for creating dynamic navigation menus with template part integration
 * NEW: Advanced block development workflow using @wordpress/create-block architecture in inc/blocks/ directory
 * NEW: Modern block registration system using wp_register_block_types_from_metadata_collection() for WordPress 6.8+ compatibility
@@ -34,6 +27,9 @@ Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block t
 * ENHANCED: Documentation with comprehensive Menu Designer implementation guide, WordPress Interactivity API best practices, and Human Made Mega Menu Block implementation patterns
 * ENHANCED: Development tools with enhanced build processes for theme and block development workflows
 * ENHANCED: Code quality with improved formatting and linting processes across theme and block development
+* FIXED: Menu Designer CSS positioning - simplified by adopting Human Made's class-based approach, removing complex navigation-level detection in favor of direct .menu-justified-* classes
+* FIXED: Mobile menu responsiveness - extended mobile viewport optimizations to all menu positions (left, center, right) ensuring proper fit on mobile devices regardless of desktop alignment
+* FIXED: Template part image paths - fixed 403 errors by moving computer-hands.webp from patterns/images/ to parts/images/ for menu template parts
 * FIXED: Menu Designer Block navigation integration - critical issue preventing block insertion as navigation menu items
 * FIXED: Block supports configuration with required WordPress navigation integration features (interactivity, renaming, reusable, __experimentalSlashInserter)
 * FIXED: Menu Designer script loading - critical issue where view.js script wasn't being enqueued using auto-scan block registration method
@@ -43,6 +39,9 @@ Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block t
 * FIXED: Build process with --experimental-modules flag enabling proper view.js compilation as separate entry point
 * FIXED: Script asset generation now properly creates both view.js and view.asset.php for WordPress dependency management
 * IMPROVED: WordPress Coding Standards configuration with improved exclusions for block directories
+* IMPROVED: CSS architecture - streamlined mega menu positioning logic by eliminating duplicate selectors and complex cascade rules for more maintainable code
+* UPDATED: CSS positioning strategy - replaced navigation-context positioning with direct menu class positioning for cleaner, more predictable behavior
+* ENHANCED: Mobile-first approach - all menu alignments now respect mobile viewport constraints with consistent calc(100vw - 2rem) width calculation
 * UPDATED: Development workflow with composer scripts for better code quality management and block development support
 * UPDATED: Block development architecture with standardized workflow using @wordpress/scripts build system
 

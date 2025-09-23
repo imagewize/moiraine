@@ -337,6 +337,180 @@ npm run build && ls -la build/menu-designer/view.*
 
 ---
 
+## 🚧 Viewport-Aware Positioning Solution
+
+### Problem Statement
+When using Menu Designer blocks positioned on the right side of navigation, wide template parts (like `menu-panel-features.html`) can cause horizontal scrolling because the dropdown attempts to expand rightward beyond the viewport boundaries.
+
+### Solution: Smart Positioning Logic
+
+The Menu Designer block can be enhanced with viewport-aware positioning that automatically prevents horizontal scrollbars by intelligently choosing the best dropdown position based on available space.
+
+#### Implementation Steps
+
+**Step 1: Enhance Interactivity API (`view.js`)**
+
+Add viewport calculation logic to the existing Interactivity API:
+
+```javascript
+actions: {
+    openMenu( menuOpenedOn = 'click' ) {
+        state.menuOpenedBy[ menuOpenedOn ] = true;
+
+        // Add smart positioning after menu opens
+        setTimeout(() => {
+            actions.calculateOptimalPosition();
+        }, 0);
+    },
+
+    calculateOptimalPosition() {
+        const context = getContext();
+        const { ref } = getElement();
+        const dropdown = context.megaMenu;
+        const trigger = ref.closest('.wp-block-moiraine-menu-designer__toggle');
+
+        if (!dropdown || !trigger) return;
+
+        // Measure available space
+        const triggerRect = trigger.getBoundingClientRect();
+        const viewportWidth = window.innerWidth;
+        const spaceToRight = viewportWidth - triggerRect.right;
+        const spaceToLeft = triggerRect.left;
+
+        // Temporarily measure dropdown natural width
+        dropdown.style.visibility = 'hidden';
+        dropdown.style.opacity = '1';
+        dropdown.style.left = '-9999px';
+        const naturalWidth = dropdown.offsetWidth;
+        dropdown.style.visibility = '';
+        dropdown.style.left = '';
+        dropdown.style.opacity = '';
+
+        // Apply optimal positioning strategy
+        dropdown.classList.remove(
+            'menu-position-left-aligned',
+            'menu-position-right-aligned',
+            'menu-position-viewport-centered',
+            'menu-position-constrained-responsive'
+        );
+
+        if (spaceToRight >= naturalWidth) {
+            dropdown.classList.add('menu-position-left-aligned');
+        } else if (spaceToLeft >= naturalWidth) {
+            dropdown.classList.add('menu-position-right-aligned');
+        } else if (viewportWidth >= naturalWidth + 32) {
+            dropdown.classList.add('menu-position-viewport-centered');
+        } else {
+            dropdown.classList.add('menu-position-constrained-responsive');
+        }
+    }
+}
+```
+
+**Step 2: Add CSS Positioning Classes (`style.scss`)**
+
+Extend the existing styles with smart positioning classes:
+
+```scss
+// Smart positioning classes for viewport-aware behavior
+.moiraine-menu-designer,
+.wp-block-moiraine-menu-designer__menu-container {
+
+    &.menu-position-left-aligned {
+        left: -1px;
+        right: auto;
+        transform: none;
+    }
+
+    &.menu-position-right-aligned {
+        left: auto;
+        right: -1px;
+        transform: none;
+    }
+
+    &.menu-position-viewport-centered {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        max-width: calc(100vw - 2rem);
+    }
+
+    &.menu-position-constrained-responsive {
+        left: 1rem;
+        right: 1rem;
+        width: calc(100vw - 2rem);
+        max-width: none;
+        transform: none;
+
+        // Force template part responsive behavior
+        .wp-block-columns {
+            flex-wrap: wrap;
+
+            .wp-block-column {
+                flex-basis: 100% !important;
+                min-width: 0;
+            }
+        }
+
+        // Ensure feature grids stack vertically
+        .wp-block-group {
+            max-width: 100%;
+
+            .wp-block-columns {
+                display: block;
+
+                .wp-block-column {
+                    width: 100%;
+                    margin-bottom: var(--wp--preset--spacing--medium);
+                }
+            }
+        }
+    }
+}
+```
+
+**Step 3: Testing Strategy**
+
+1. **Right Edge Testing**: Place Menu Designer as the rightmost navigation item
+2. **Viewport Simulation**: Test at various viewport widths (320px, 768px, 1024px, 1400px+)
+3. **Content Variation**: Test with different template parts (`menu-panel-features`, `menu-panel-product`)
+4. **Responsive Verification**: Ensure template parts maintain their responsive behavior within constraints
+
+#### Positioning Logic Flow
+
+```
+1. User clicks menu trigger
+2. Dropdown renders with natural content width
+3. System measures:
+   - Space available to the right of trigger
+   - Space available to the left of trigger
+   - Dropdown's natural width requirements
+4. Apply positioning strategy:
+   ├─ Sufficient right space → Left-aligned (default)
+   ├─ Insufficient right, sufficient left → Right-aligned
+   ├─ Insufficient both sides, fits viewport → Viewport-centered
+   └─ Too wide for viewport → Constrained responsive mode
+```
+
+#### Benefits
+
+- **No Horizontal Scrollbars**: Guaranteed viewport containment
+- **Content-Aware**: Adapts to actual template part dimensions
+- **Graceful Degradation**: Progressive fallback strategies
+- **Template Part Compatibility**: Preserves responsive design within constraints
+- **Performance Optimized**: Minimal JavaScript, CSS-driven positioning
+- **Accessibility Maintained**: No impact on keyboard navigation or screen readers
+
+#### Fallback Scenarios
+
+- **Scenario A**: Right-positioned trigger, 800px dropdown, 1200px viewport → Right-aligned positioning
+- **Scenario B**: Any position, 1200px dropdown, 1024px viewport → Viewport-centered with max-width
+- **Scenario C**: Any position, 1400px dropdown, 1024px viewport → Constrained mode forces two-column layout
+
+This solution builds upon the existing simplified CSS approach while adding intelligent positioning that prevents overflow issues without sacrificing the responsive design of template parts.
+
+---
+
 ## 🎯 Success Criteria Met
 
 - ✅ **Seamless Integration**: Works perfectly within WordPress navigation blocks
