@@ -50,7 +50,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Mobile Menu Responsiveness**: Enhanced mobile breakpoint handling with proper width resets while maintaining desktop improvements
 - **Build Process Enhancement**: Added `--experimental-modules` flag to webpack build process enabling proper view.js compilation
 - **Script Asset Generation**: Now properly generates both view.js and view.asset.php for WordPress dependency management
-- **Safari Blinking Fix**: Fixed Safari flickering in backdrop-filter blur effects by adding GPU acceleration properties (`transform: translate3d(0, 0, 0)` and `will-change: transform`) to force hardware acceleration instead of CPU processing, maintaining premium blur appearance while eliminating compositing conflicts
+- **Safari Blinking Fix**: Fixed Safari flickering in backdrop-filter blur effects by implementing separate backdrop element architecture, isolating blur effects from conflicting CSS properties (border-radius, box-shadow) to eliminate GPU compositing conflicts while maintaining premium blur appearance
 
 ### Changed
 - **CSS Positioning Strategy**: Replaced navigation-context positioning with direct menu class positioning for cleaner, more predictable behavior
