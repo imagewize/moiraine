@@ -4,6 +4,10 @@
 .is-style-background-blur {
 	-webkit-backdrop-filter: blur(20px);
 	backdrop-filter: blur(20px);
+	/* GPU acceleration fixes for Safari flickering */
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	will-change: transform;
 }
 
 /* Improvements for row group */
