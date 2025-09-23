@@ -5,6 +5,12 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.1] - 2025-09-23
+
+### Updated
+- **Menu Designer Block Dependencies**: Updated npm dependencies for Menu Designer block including Playwright (1.55.0 → 1.55.1), Sass (1.93.0 → 1.93.1), and various @cacheable packages for improved performance and security
+- **Development Tools**: Enhanced caching and testing dependencies in Menu Designer block development workflow
+
 ## [2.1.0] - 2025-09-23
 
 ### Added
