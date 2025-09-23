@@ -123,6 +123,13 @@ Patterns are organized into categories:
 - `moiraine/pages` - Full page layouts
 - `moiraine/menu` - Navigation and menu patterns (14 patterns: cards, mobile, panels)
 
+**Pattern Image Guidelines:**
+- **NEVER use hardcoded media IDs** in `wp:image` blocks (e.g., `"id":59`)
+- Always use direct file paths: `<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/filename.webp`
+- Hardcoded IDs cause performance issues: database queries for non-existent media, blinking/flashing effects, console errors, and validation failures
+- All pattern images should be stored in `patterns/images/` directory
+- Removing hardcoded IDs ensures patterns work consistently across all WordPress installations
+
 ### Block Styles System
 Custom block styles are registered in functions.php and loaded dynamically:
 - List styles (check, boxed)

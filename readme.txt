@@ -27,6 +27,7 @@ Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block t
 * ENHANCED: Documentation with comprehensive Menu Designer implementation guide, WordPress Interactivity API best practices, and Human Made Mega Menu Block implementation patterns
 * ENHANCED: Development tools with enhanced build processes for theme and block development workflows
 * ENHANCED: Code quality with improved formatting and linting processes across theme and block development
+* FIXED: Pattern media ID references - removed hardcoded media IDs from all pattern wp:image blocks to eliminate blinking/flashing effects, console errors, and performance issues caused by WordPress attempting to load non-existent media library references. Patterns now load images directly from file paths for consistent, faster performance across all WordPress installations
 * FIXED: Menu Designer CSS positioning - simplified by adopting Human Made's class-based approach, removing complex navigation-level detection in favor of direct .menu-justified-* classes
 * FIXED: Mobile menu responsiveness - extended mobile viewport optimizations to all menu positions (left, center, right) ensuring proper fit on mobile devices regardless of desktop alignment
 * FIXED: Template part architecture - modernized menu template parts to follow WordPress best practices by converting them from full content to lightweight pattern references, eliminating image path issues and reducing duplication

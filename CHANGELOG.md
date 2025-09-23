@@ -30,6 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Code Quality**: Improved formatting and linting processes across theme and block development
 
 ### Fixed
+- **Pattern Media ID References**: Removed hardcoded media IDs from all pattern wp:image blocks to eliminate blinking/flashing effects, console errors, and performance issues caused by WordPress attempting to load non-existent media library references. Patterns now load images directly from file paths for consistent, faster performance across all WordPress installations
 - **Menu Designer CSS Positioning**: Simplified positioning system by adopting Human Made's class-based approach, removing complex navigation-level detection in favor of direct `.menu-justified-*` classes
 - **Mobile Menu Responsiveness**: Extended mobile viewport optimizations to all menu positions (left, center, right) ensuring proper fit on mobile devices regardless of desktop alignment
 - **CSS Architecture**: Streamlined mega menu positioning logic by eliminating duplicate selectors and complex cascade rules for more maintainable code
