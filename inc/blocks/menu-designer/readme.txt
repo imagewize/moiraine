@@ -77,6 +77,11 @@ directory take precedence. For example, `/assets/screenshot-1.png` would win ove
 * Fixed: Implemented missing initMenu callback with data-wp-watch integration for proper initialization timing
 * Fixed: Outside click detection now uses proper context reference management instead of DOM queries
 * Fixed: View.js script loading issue by implementing proper ES module configuration
+* Fixed: Menu Designer width management - removed restrictive 300px minimum width causing narrow desktop dropdowns
+* Fixed: Template part expansion within mega menus by adding CSS overrides for width constraints in menu context
+* Enhanced: Dynamic width calculation using max-content and viewport-aware sizing for better responsive behavior
+* Enhanced: Added new flexible width classes (menu-width-auto, menu-width-flexible) for different content types
+* Enhanced: Mobile breakpoint handling with proper width resets while maintaining desktop functionality
 * Enhanced: State management now uses menuOpenedBy getter with clean separation between state and context
 * Enhanced: JavaScript architecture streamlined with simplified action methods and cleaner state updates
 * Enhanced: Build output optimized to 978 bytes with clean production-ready code

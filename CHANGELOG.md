@@ -38,7 +38,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Outside Click Detection**: Fixed outside click functionality by using proper context reference management instead of DOM queries
 - **Menu Designer Script Loading**: Fixed critical issue where view.js script wasn't being enqueued using auto-scan block registration method
 - **Menu Designer CSS Positioning**: Fixed responsive width constraints using `min()` function to prevent overflow on smaller viewports
+- **Menu Designer Width Management**: Fixed restrictive 300px minimum width constraint causing narrow desktop dropdowns by implementing dynamic width calculation with `max-content` and viewport-aware sizing
 - **Template Part Integration**: Fixed template parts not appearing in Menu area by properly registering menu template parts in `theme.json`
+- **Template Part Expansion**: Fixed template parts not displaying at full width within mega menus by adding CSS overrides for width constraints in menu context
+- **Mobile Menu Responsiveness**: Enhanced mobile breakpoint handling with proper width resets while maintaining desktop improvements
 - **Build Process Enhancement**: Added `--experimental-modules` flag to webpack build process enabling proper view.js compilation
 - **Script Asset Generation**: Now properly generates both view.js and view.asset.php for WordPress dependency management
 

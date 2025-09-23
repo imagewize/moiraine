@@ -78,14 +78,14 @@
 
     &.menu-width-content {
         max-width: min(var(--wp--style--global--content-size, 1200px), 95vw);
-        width: 100%;
-        min-width: 300px;
+        width: max-content;
+        min-width: max(400px, 30vw);
     }
 
     &.menu-width-wide {
         max-width: min(var(--wp--style--global--wide-size, 1600px), 95vw);
-        width: 100%;
-        min-width: 300px;
+        width: max-content;
+        min-width: max(500px, 40vw);
     }
 
     &.menu-width-full {
@@ -93,6 +93,20 @@
         width: 100%;
         left: 50%;
         transform: translateX(-50%);
+    }
+
+    // Auto-sizing based on content
+    &.menu-width-auto {
+        width: max-content;
+        max-width: min(90vw, 800px);
+        min-width: 320px;
+    }
+
+    // Flexible sizing for template parts
+    &.menu-width-flexible {
+        width: max-content;
+        max-width: 85vw;
+        min-width: max(350px, 25vw);
     }
 
     .menu-container__close-button {
@@ -132,6 +146,29 @@
     .is-responsive {
         display: flex;
     }
+
+    // Template part optimization for menu containers
+    .wp-block-template-part {
+        width: 100%;
+        max-width: none;
+
+        // Override any width constraints from template parts in menu context
+        &[data-type="menu"] {
+            width: 100%;
+            flex: 1;
+        }
+    }
+
+    // Ensure groups and columns expand properly in menu context
+    .wp-block-group,
+    .wp-block-columns {
+        width: 100%;
+        max-width: none;
+
+        .wp-block-column {
+            min-width: 0; // Allow columns to shrink if needed
+        }
+    }
 }
 
 // Navigation block integration - position based on navigation alignment
@@ -149,7 +186,9 @@
         .moiraine-menu-designer,
         .wp-block-moiraine-menu-designer__menu-container {
             &.menu-width-content,
-            &.menu-width-wide {
+            &.menu-width-wide,
+            &.menu-width-auto,
+            &.menu-width-flexible {
                 left: 50%;
                 transform: translateX(-50%);
 
@@ -158,6 +197,8 @@
                     right: 1rem;
                     transform: none;
                     width: calc(100vw - 2rem);
+                    max-width: none;
+                    min-width: auto;
                 }
             }
         }
@@ -188,6 +229,8 @@
                 right: 1rem;
                 transform: none;
                 width: calc(100vw - 2rem);
+                max-width: none;
+                min-width: auto;
             }
         }
     }
