@@ -171,67 +171,47 @@
     }
 }
 
-// Navigation block integration - position based on navigation alignment
-.wp-block-navigation {
-    &.items-justified-right {
-        .moiraine-menu-designer,
-        .wp-block-moiraine-menu-designer__menu-container {
-            left: auto;
-            right: -1px;
+// Menu positioning - Human Made approach with mobile-first responsiveness
+.moiraine-menu-designer,
+.wp-block-moiraine-menu-designer__menu-container {
+    &.menu-justified-left {
+        left: -1px;
+        right: auto;
+
+        @media (max-width: 768px) {
+            left: 1rem;
+            right: 1rem;
+            width: calc(100vw - 2rem);
+            max-width: none;
+            min-width: auto;
         }
     }
 
-    &.items-justified-center,
-    &.items-justified-space-between {
-        .moiraine-menu-designer,
-        .wp-block-moiraine-menu-designer__menu-container {
-            &.menu-width-content,
-            &.menu-width-wide,
-            &.menu-width-auto,
-            &.menu-width-flexible {
-                left: 50%;
-                transform: translateX(-50%);
+    &.menu-justified-right {
+        left: auto;
+        right: -1px;
 
-                @media (max-width: 768px) {
-                    left: 1rem;
-                    right: 1rem;
-                    transform: none;
-                    width: calc(100vw - 2rem);
-                    max-width: none;
-                    min-width: auto;
-                }
-            }
+        @media (max-width: 768px) {
+            left: 1rem;
+            right: 1rem;
+            width: calc(100vw - 2rem);
+            max-width: none;
+            min-width: auto;
         }
     }
-}
 
-// Menu-specific alignment overrides
-.wp-block-navigation {
-    .moiraine-menu-designer,
-    .wp-block-moiraine-menu-designer__menu-container {
-        &.menu-justified-left {
-            left: -1px;
-            right: auto;
-        }
+    &.menu-justified-center {
+        left: 50%;
+        transform: translateX(-50%);
+        right: auto;
 
-        &.menu-justified-right {
-            left: auto;
-            right: -1px;
-        }
-
-        &.menu-justified-center {
-            left: 50%;
-            transform: translateX(-50%);
-            right: auto;
-
-            @media (max-width: 768px) {
-                left: 1rem;
-                right: 1rem;
-                transform: none;
-                width: calc(100vw - 2rem);
-                max-width: none;
-                min-width: auto;
-            }
+        @media (max-width: 768px) {
+            left: 1rem;
+            right: 1rem;
+            transform: none;
+            width: calc(100vw - 2rem);
+            max-width: none;
+            min-width: auto;
         }
     }
 }

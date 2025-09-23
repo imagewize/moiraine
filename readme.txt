@@ -4,7 +4,7 @@ Tags: blog, portfolio, entertainment, grid-layout, one-column, two-columns, thre
 Requires at least: 5.8
 Tested up to: 6.7.1
 Requires PHP: 7.3
-Stable tag: 2.1.0
+Stable tag: 2.1.1
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -13,6 +13,13 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block theme! Moiraine features over 50 beautiful pattern designs, 7 full-page pattern layouts, and a fully-customizable design system with Global Styles. Moiraine integrates seamlessly with all of the powerful new WordPress editor features, giving you the most lightweight and powerful website builder on the planet — no expensive page builder plugin required! ✶ Full demo: https://demo.imagewize.com ✶
 
 == Changelog ==
+
+= 2.1.1 - 09/23/25 =
+* FIXED: Menu Designer CSS positioning - simplified by adopting Human Made's class-based approach, removing complex navigation-level detection in favor of direct .menu-justified-* classes
+* FIXED: Mobile menu responsiveness - extended mobile viewport optimizations to all menu positions (left, center, right) ensuring proper fit on mobile devices regardless of desktop alignment
+* IMPROVED: CSS architecture - streamlined mega menu positioning logic by eliminating duplicate selectors and complex cascade rules for more maintainable code
+* UPDATED: CSS positioning strategy - replaced navigation-context positioning with direct menu class positioning for cleaner, more predictable behavior
+* ENHANCED: Mobile-first approach - all menu alignments now respect mobile viewport constraints with consistent calc(100vw - 2rem) width calculation
 
 = 2.1.0 - 09/22/25 =
 * NEW: Menu Designer Block with mega menu functionality for creating dynamic navigation menus with template part integration
