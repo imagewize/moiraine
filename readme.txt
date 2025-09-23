@@ -4,7 +4,7 @@ Tags: blog, portfolio, entertainment, grid-layout, one-column, two-columns, thre
 Requires at least: 5.8
 Tested up to: 6.7.1
 Requires PHP: 7.3
-Stable tag: 2.1.9
+Stable tag: 2.1.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -14,67 +14,30 @@ Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block t
 
 == Changelog ==
 
-= 2.1.9 - 09/22/25 =
-* FIXED: Menu Designer Block build configuration - view.js script not loading due to incorrect ES module configuration
-* FIXED: WordPress Interactivity API integration by changing from viewScript to viewScriptModule in block.json for modern ES module support
-* FIXED: Build process with --experimental-modules flag enabling proper view.js compilation as separate entry point
-* ENHANCED: Script asset generation now properly creates both view.js (856 bytes) and view.asset.php for dependency management
-* ENHANCED: Code quality by removing all debug logging from production build for cleaner, more efficient code
-
-= 2.1.8 - 09/22/25 =
-* FIXED: Menu Designer script loading - critical issue where view.js script wasn't being enqueued, implemented working auto-scan block registration method from Nynaeve theme
-
-= 2.1.7 - 09/22/25 =
-* FIXED: Menu Designer context initialization - critical context initialization preventing click functionality, context properties now properly defined
-
-= 2.1.6 - 09/22/25 =
-* FIXED: Menu Designer state management - inconsistent context vs state usage preventing aria-expanded attribute updates
-
-= 2.1.5 - 09/22/25 =
-* FIXED: Menu Designer Block click functionality - critical issue where dropdown menus wouldn't appear on click due to JavaScript state management problems
-* FIXED: WordPress Interactivity API integration - removed problematic callback timing that prevented proper aria-expanded attribute updates
-* FIXED: Menu state management - simplified JavaScript implementation to match working Human Made mega menu block approach
-* FIXED: Outside click detection with improved menu reference handling for proper click-outside-to-close functionality
-* ENHANCED: JavaScript performance by streamlining Menu Designer block JavaScript and removing unnecessary initialization callbacks
-* ENHANCED: Code quality by eliminating circular dependency issues in menu reference management
-* ENHANCED: Documentation with comprehensive comparison analysis between Human Made and Moiraine implementations
-
-= 2.1.4 - 09/22/25 =
-* ENHANCED: Menu Designer Block responsiveness - improved CSS width constraints to prevent horizontal scrollbars and ensure proper viewport-aware positioning
-* ENHANCED: Menu Designer styling with better positioning logic for different navigation justification settings
-* ENHANCED: Documentation with comprehensive implementation guide for dropdown positioning and hover functionality
-* FIXED: Menu Designer CSS positioning with responsive width constraints using min() function to prevent viewport overflow
-* FIXED: Menu container styling with improved CSS selectors for both legacy and new menu container classes
-* FIXED: Mobile responsive design with proper breakpoint handling for menu positioning and width calculations
-
-= 2.1.3 - 09/22/25 =
-* FIXED: Menu Designer Block navigation integration - critical issue preventing block insertion as navigation menu items
-* FIXED: Block supports configuration with required WordPress navigation integration features
-* FIXED: Typography compatibility using experimental features matching WordPress core navigation blocks
-* FIXED: Navigation block parent relationship - Menu Designer now properly functions as child of core/navigation blocks
-* ENHANCED: Block editor integration - Menu Designer appears in navigation block inserter when adding menu items
-* ENHANCED: Documentation updated with correct usage instructions and technical implementation details
-* ENHANCED: User experience with simplified mega menu creation workflow
-
-= 2.1.2 - 09/22/25 =
-* FIXED: Menu Designer Block integration - template parts now properly appear in Menu area by registering menu template parts in theme.json
-* FIXED: Template part area assignment - menu template parts now correctly assigned to "menu" area enabling full menu designer block functionality
-
-= 2.1.1 - 09/22/25 =
-* ADDED: Base menu template parts for enhanced navigation customization (menu-card-simple, menu-mobile-simple, menu-panel-features, menu-panel-product)
-* ENHANCED: Menu Designer documentation with comprehensive implementation guidelines
-* ENHANCED: Menu system integration with improved template part support in functions.php
-
 = 2.1.0 - 09/22/25 =
 * NEW: Menu Designer Block with mega menu functionality for creating dynamic navigation menus with template part integration
 * NEW: Advanced block development workflow using @wordpress/create-block architecture in inc/blocks/ directory
 * NEW: Modern block registration system using wp_register_block_types_from_metadata_collection() for WordPress 6.8+ compatibility
-* ENHANCED: WordPress Coding Standards configuration with improved exclusions for block directories
-* ENHANCED: Development workflow with updated composer scripts for better code quality management
-* ENHANCED: Block development architecture with standardized workflow using @wordpress/scripts build system
-* IMPROVED: Code quality with enhanced formatting and linting processes
-* ADDED: Comprehensive Menu Designer block documentation with implementation guidelines
-* UPDATED: Development tools with enhanced build processes for theme and block development
+* NEW: Base menu template parts for enhanced navigation customization (menu-card-simple, menu-mobile-simple, menu-panel-features, menu-panel-product)
+* ENHANCED: WordPress Interactivity API integration with proper ES module configuration following Human Made Mega Menu Block patterns
+* ENHANCED: Menu Designer Block responsiveness with improved CSS width constraints to prevent horizontal scrollbars and ensure proper viewport-aware positioning
+* ENHANCED: Block editor integration - Menu Designer appears in navigation block inserter when adding menu items
+* ENHANCED: JavaScript performance by streamlining Menu Designer block with clean state management and removed debug logging from view.js for production-ready code
+* ENHANCED: User experience with simplified mega menu creation workflow for adding Menu Designer blocks within navigation
+* ENHANCED: Documentation with comprehensive Menu Designer implementation guide, WordPress Interactivity API best practices, and Human Made Mega Menu Block implementation patterns
+* ENHANCED: Development tools with enhanced build processes for theme and block development workflows
+* ENHANCED: Code quality with improved formatting and linting processes across theme and block development
+* FIXED: Menu Designer Block navigation integration - critical issue preventing block insertion as navigation menu items
+* FIXED: Block supports configuration with required WordPress navigation integration features (interactivity, renaming, reusable, __experimentalSlashInserter)
+* FIXED: Menu Designer script loading - critical issue where view.js script wasn't being enqueued using auto-scan block registration method
+* FIXED: WordPress Interactivity API context initialization and state management for proper dropdown functionality
+* FIXED: Menu Designer CSS positioning with responsive width constraints using min() function to prevent viewport overflow
+* FIXED: Template part integration - template parts now properly appear in Menu area by registering menu template parts in theme.json
+* FIXED: Build process with --experimental-modules flag enabling proper view.js compilation as separate entry point
+* FIXED: Script asset generation now properly creates both view.js and view.asset.php for WordPress dependency management
+* IMPROVED: WordPress Coding Standards configuration with improved exclusions for block directories
+* UPDATED: Development workflow with composer scripts for better code quality management and block development support
+* UPDATED: Block development architecture with standardized workflow using @wordpress/scripts build system
 
 = 2.0.0 - 09/19/25 =
 * MAJOR UPDATE: Enhanced WooCommerce Integration

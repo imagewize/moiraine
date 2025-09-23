@@ -1,36 +1,32 @@
 /**
  * WordPress Interactivity API for Menu Designer Block
+ * Based on Human Made Mega Menu Block implementation
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/interactivity-api/
+ * @see https://github.com/humanmade/hm-mega-menu-block
  */
 import { store, getContext, getElement } from '@wordpress/interactivity';
-
-
-console.log('🔥 Menu Designer view.js loaded');
 
 const { state, actions } = store( 'moiraine/menu-designer', {
 	state: {
 		get isMenuOpen() {
+			return Object.values( state.menuOpenedBy ).filter( Boolean ).length > 0;
+		},
+
+		get menuOpenedBy() {
 			const context = getContext();
-			return Object.values( context.menuOpenedBy || {} ).filter( Boolean ).length > 0;
+			return context.menuOpenedBy || {};
 		},
 	},
 
 	actions: {
 		toggleMenuOnClick() {
-			console.log('🔥 toggleMenuOnClick called');
 			const context = getContext();
 			const { ref } = getElement();
 
-			console.log('🔥 context:', context);
-			console.log('🔥 context.menuOpenedBy:', context.menuOpenedBy);
-			console.log('🔥 state.isMenuOpen:', state.isMenuOpen);
-
-			if ( context.menuOpenedBy?.click || context.menuOpenedBy?.focus ) {
-				console.log('🔥 Closing menu');
+			if ( state.menuOpenedBy.click || state.menuOpenedBy.focus ) {
 				actions.closeMenuOnClick();
 			} else {
-				console.log('🔥 Opening menu');
 				context.previousFocus = ref;
 				actions.openMenu( 'click' );
 			}
@@ -42,8 +38,7 @@ const { state, actions } = store( 'moiraine/menu-designer', {
 		},
 
 		handleMenuKeydown( event ) {
-			const context = getContext();
-			if ( context.menuOpenedBy.click ) {
+			if ( state.menuOpenedBy.click ) {
 				// If Escape close the menu.
 				if ( event?.key === 'Escape' ) {
 					actions.closeMenuOnClick();
@@ -52,8 +47,8 @@ const { state, actions } = store( 'moiraine/menu-designer', {
 		},
 
 		handleOutsideClick( event ) {
-			const { ref } = getElement();
-			const megaMenu = ref.querySelector('.moiraine-menu-designer');
+			const context = getContext();
+			const megaMenu = context?.megaMenu;
 
 			if ( ! megaMenu || megaMenu.contains( event.target ) ) {
 				return;
@@ -63,30 +58,32 @@ const { state, actions } = store( 'moiraine/menu-designer', {
 		},
 
 		openMenu( menuOpenedOn = 'click' ) {
-			console.log('🔥 openMenu called with:', menuOpenedOn);
-			const context = getContext();
-
-			// Ensure menuOpenedBy exists and is an object
-			if (!context.menuOpenedBy || typeof context.menuOpenedBy !== 'object') {
-				console.log('🔥 Initializing context.menuOpenedBy');
-				context.menuOpenedBy = {};
-			}
-
-			context.menuOpenedBy[ menuOpenedOn ] = true;
-			console.log('🔥 After setting, context.menuOpenedBy:', context.menuOpenedBy);
-			console.log('🔥 state.isMenuOpen after open:', state.isMenuOpen);
+			state.menuOpenedBy[ menuOpenedOn ] = true;
 		},
 
 		closeMenu( menuClosedOn = 'click' ) {
 			const context = getContext();
-			context.menuOpenedBy[ menuClosedOn ] = false;
+			state.menuOpenedBy[ menuClosedOn ] = false;
 
-			// Reset the button focus when closed.
+			// Reset the menu reference and button focus when closed.
 			if ( ! state.isMenuOpen ) {
-				if ( context.previousFocus ) {
-					context.previousFocus.focus();
+				if ( context.megaMenu?.contains( window.document.activeElement ) ) {
+					context.previousFocus?.focus();
 				}
 				context.previousFocus = null;
+				context.megaMenu = null;
+			}
+		},
+	},
+
+	callbacks: {
+		initMenu() {
+			const context = getContext();
+			const { ref } = getElement();
+
+			// Set the menu reference when initialized.
+			if ( state.isMenuOpen ) {
+				context.megaMenu = ref;
 			}
 		},
 	},

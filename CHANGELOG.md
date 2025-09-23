@@ -5,77 +5,12 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.1.9] - 2025-09-22
-
-### Fixed
-- **Menu Designer Block Build Configuration**: Fixed view.js script not loading by implementing proper ES module configuration
-- **WordPress Interactivity API Integration**: Changed from `viewScript` to `viewScriptModule` in block.json for modern ES module support
-- **Build Process Enhancement**: Added `--experimental-modules` flag to webpack build process enabling proper view.js compilation
-- **Script Asset Generation**: Now properly generates both view.js (856 bytes) and view.asset.php for WordPress dependency management
-- **Debug Code Cleanup**: Removed all debug logging from production build for cleaner, more efficient code
-
-## [2.1.8] - 2025-09-22
-
-### Fixed
-- **Menu Designer Script Loading**: Fixed critical issue where view.js script wasn't being enqueued - implemented working auto-scan block registration method from Nynaeve theme
-
-## [2.1.7] - 2025-09-22
-
-### Fixed
-- **Menu Designer Context Initialization**: Fixed critical context initialization preventing click functionality - context properties now properly defined
-
-## [2.1.6] - 2025-09-22
-
-### Fixed
-- **Menu Designer State Management**: Fixed inconsistent context vs state usage preventing aria-expanded attribute updates
-
-## [2.1.5] - 2025-09-22
-
-### Fixed
-- **Menu Designer Block Click Functionality**: Fixed critical issue where dropdown menus wouldn't appear on click due to JavaScript state management problems
-- **WordPress Interactivity API Integration**: Removed problematic callback timing that prevented proper aria-expanded attribute updates
-- **Menu State Management**: Simplified JavaScript implementation to match working Human Made mega menu block approach
-- **Outside Click Detection**: Fixed menu reference handling for proper click-outside-to-close functionality
-
-### Enhanced
-- **JavaScript Performance**: Streamlined Menu Designer block JavaScript by removing unnecessary initialization callbacks
-- **Code Quality**: Eliminated circular dependency issues in menu reference management
-- **Documentation**: Added comprehensive comparison analysis between Human Made and Moiraine implementations in Menu Designer documentation
-
-## [2.1.4] - 2025-09-22
-
-### Enhanced
-- **Menu Designer Block Responsiveness**: Improved CSS width constraints to prevent horizontal scrollbars and ensure proper viewport-aware positioning
-- **Menu Designer Styling**: Enhanced positioning logic for better alignment across different navigation justification settings
-- **Documentation**: Comprehensive implementation guide added to Menu Designer documentation with solutions for dropdown positioning and hover functionality
-
-### Fixed
-- **Menu Designer CSS Positioning**: Fixed responsive width constraints using `min()` function to prevent overflow on smaller viewports
-- **Menu Container Styling**: Improved CSS selectors for both `.moiraine-menu-designer` and `.wp-block-moiraine-menu-designer__menu-container` classes
-- **Mobile Responsive Design**: Added proper mobile breakpoint handling for menu positioning and width calculations
-
-## [2.1.3] - 2025-09-22
-
-### Fixed
-- **Menu Designer Block Navigation Integration**: Fixed critical issue preventing Menu Designer block from being inserted as navigation menu items
-- **Block Supports Configuration**: Updated block.json with required supports for WordPress navigation integration (`interactivity`, `renaming`, `reusable`, `__experimentalSlashInserter`)
-- **Typography Compatibility**: Corrected typography supports to use experimental features matching WordPress core navigation blocks
-- **Navigation Block Parent Relationship**: Menu Designer block now properly functions as child of `core/navigation` blocks
-
-### Enhanced
-- **Block Editor Integration**: Menu Designer block now appears in navigation block inserter when adding menu items
-- **Documentation**: Updated `docs/MENU-DESIGNER.md` with correct usage instructions and technical implementation details
-- **User Experience**: Simplified mega menu creation workflow - users can now directly add Menu Designer blocks within navigation
-
-## [2.1.2] - 2025-09-22
-
-### Fixed
-- **Menu Designer Block Integration**: Fixed template parts not appearing in Menu area by registering menu template parts in `theme.json`
-- **Template Part Area Assignment**: Menu template parts now properly assigned to "menu" area enabling menu designer block functionality
-
-## [2.1.1] - 2025-09-22
+## [2.1.0] - 2025-09-22
 
 ### Added
+- **Menu Designer Block**: New custom block with mega menu functionality for creating dynamic navigation menus with template part integration
+- **Advanced Block Development Workflow**: Implemented @wordpress/create-block architecture for custom block development in `inc/blocks/` directory
+- **Block Registration System**: Modern block manifest approach using `wp_register_block_types_from_metadata_collection()` for WordPress 6.8+ compatibility
 - **Base Menu Template Parts**: Added foundational menu template parts for enhanced navigation customization
   - `parts/menu-card-simple.html` - Simple card-style menu template
   - `parts/menu-mobile-simple.html` - Mobile-optimized menu template
@@ -83,28 +18,34 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `parts/menu-panel-product.html` - Product-focused panel menu template
 
 ### Enhanced
-- **Menu Designer Documentation**: Updated `docs/MENU-DESIGNER.md` with comprehensive implementation guidelines
-- **Menu System Integration**: Enhanced functions.php with improved menu template part support
+- **WordPress Interactivity API Integration**: Complete implementation following Human Made Mega Menu Block patterns with proper state management, context references, and callback system
+- **Menu Designer Block State Management**: Updated to match Human Made's exact implementation pattern with `menuOpenedBy` getter, proper DOM reference handling via `context.megaMenu`, and enhanced focus management
+- **JavaScript Architecture**: Added `initMenu` callback with `data-wp-watch` integration for proper initialization timing and streamlined action methods for cleaner state updates
+- **Menu Designer Block Responsiveness**: Improved CSS width constraints to prevent horizontal scrollbars and ensure proper viewport-aware positioning
+- **Block Editor Integration**: Menu Designer block now appears in navigation block inserter when adding menu items
+- **ES Module Configuration**: Implemented proper `viewScriptModule` configuration with `--experimental-modules` build flag for modern WordPress Interactivity API support
+- **User Experience**: Simplified mega menu creation workflow - users can now directly add Menu Designer blocks within navigation with full click, keyboard, and outside click functionality
+- **Documentation**: Completely reorganized Menu Designer implementation guide with clear structure, quick start guide, and comprehensive technical documentation
+- **Development Tools**: Enhanced build processes for both theme and block development workflows
+- **Code Quality**: Improved formatting and linting processes across theme and block development
 
-## [2.1.0] - 2025-09-22
-
-### Added
-- **Menu Designer Block**: New custom block with mega menu functionality for creating dynamic navigation menus with template part integration
-- **Advanced Block Development Workflow**: Implemented @wordpress/create-block architecture for custom block development in `inc/blocks/` directory
-- **Enhanced PHPCS Configuration**: Updated WordPress Coding Standards configuration with improved exclusions for block directories
-- **Block Registration System**: Modern block manifest approach using `wp_register_block_types_from_metadata_collection()` for WordPress 6.8+ compatibility
+### Fixed
+- **Menu Designer Block Navigation Integration**: Fixed critical issue preventing Menu Designer block from being inserted as navigation menu items
+- **Block Supports Configuration**: Updated block.json with required supports for WordPress navigation integration (`interactivity`, `renaming`, `reusable`, `__experimentalSlashInserter`)
+- **WordPress Interactivity API State Management**: Fixed state management pattern to match Human Made implementation with proper `state.menuOpenedBy` getter and context separation
+- **Menu Designer Context References**: Fixed DOM reference management by implementing `context.megaMenu` pattern with proper cleanup and focus restoration
+- **Menu Designer Callback System**: Added missing `initMenu` callback with `data-wp-watch` attribute for proper WordPress Interactivity API initialization timing
+- **Outside Click Detection**: Fixed outside click functionality by using proper context reference management instead of DOM queries
+- **Menu Designer Script Loading**: Fixed critical issue where view.js script wasn't being enqueued using auto-scan block registration method
+- **Menu Designer CSS Positioning**: Fixed responsive width constraints using `min()` function to prevent overflow on smaller viewports
+- **Template Part Integration**: Fixed template parts not appearing in Menu area by properly registering menu template parts in `theme.json`
+- **Build Process Enhancement**: Added `--experimental-modules` flag to webpack build process enabling proper view.js compilation
+- **Script Asset Generation**: Now properly generates both view.js and view.asset.php for WordPress dependency management
 
 ### Changed
 - **WordPress Coding Standards**: Enhanced PHPCS configuration to exclude block directories while maintaining theme-level standards compliance
 - **Development Workflow**: Updated composer scripts for better code quality management and block development support
 - **Block Development Architecture**: Established standardized workflow for custom blocks using @wordpress/scripts build system
-
-### Enhanced
-- **Code Quality**: Improved formatting and linting processes across theme and block development
-- **Documentation**: Added comprehensive Menu Designer block documentation with implementation guidelines
-- **Development Tools**: Enhanced build processes for both theme and block development workflows
-
-### Previous Versions
 
 ## [2.0.0] - 2025-09-19
 

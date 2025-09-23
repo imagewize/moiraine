@@ -72,12 +72,15 @@ directory take precedence. For example, `/assets/screenshot-1.png` would win ove
 == Changelog ==
 
 = 0.1.2 =
+* Fixed: WordPress Interactivity API state management updated to match Human Made Mega Menu Block implementation patterns exactly
+* Fixed: Added proper context reference management with context.megaMenu DOM reference and enhanced focus restoration
+* Fixed: Implemented missing initMenu callback with data-wp-watch integration for proper initialization timing
+* Fixed: Outside click detection now uses proper context reference management instead of DOM queries
 * Fixed: View.js script loading issue by implementing proper ES module configuration
-* Fixed: Changed from viewScript to viewScriptModule in block.json for modern WordPress Interactivity API support
-* Fixed: Added --experimental-modules flag to build process enabling proper view.js compilation
-* Enhanced: Script asset generation now properly creates both view.js and view.asset.php files
-* Enhanced: Cleaned up debug logging for production-ready code
-* Enhanced: Build output optimized from 1.92 KiB to 856 bytes for improved performance
+* Enhanced: State management now uses menuOpenedBy getter with clean separation between state and context
+* Enhanced: JavaScript architecture streamlined with simplified action methods and cleaner state updates
+* Enhanced: Build output optimized to 978 bytes with clean production-ready code
+* Enhanced: Documentation completely reorganized with clear structure and comprehensive technical guide
 
 = 0.1.1 =
 * Fixed: Menu Designer block now properly integrates with WordPress Navigation blocks
