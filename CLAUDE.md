@@ -18,6 +18,72 @@ Moiraine is a WordPress block theme based on the Ollie theme by Mike McAlister. 
 - `composer run wpcs:scan` - Scan code against WordPress coding standards
 - `composer run wpcs:fix` - Auto-fix WordPress coding standard violations
 
+**WPCS Requirements for Blocks and Code:**
+- All PHP code must follow WordPress Coding Standards (WPCS)
+- Block directories (`inc/blocks/*`) are excluded from WPCS as they use `@wordpress/create-block` conventions
+- Block files use WordPress-standard naming conventions (e.g., `index.asset.php`, `view.asset.php`)
+- Only edit source files in `inc/blocks/*/src/` - never edit build files directly
+- Run `composer run wpcs:fix` to auto-fix most violations before committing
+- WPCS exclusions are configured in `composer.json` scripts and GitHub Actions workflow
+- WPCS is enforced in CI/CD pipeline via GitHub Actions
+
+### Block Development Workflow
+- `cd inc/blocks/[block-name]` - Navigate to block directory
+- `npm install` - Install block dependencies
+- `npm start` - Development mode with file watching
+- `npm run build` - Production build (compiles src/ to build/)
+- `npm run lint:js` - JavaScript linting
+- `npm run lint:css` - CSS/SCSS linting
+- `npm run format` - Code formatting
+
+### Block Registration
+Custom blocks must be registered with WordPress. Three main approaches:
+
+**Single Block Registration**:
+```php
+function register_my_block() {
+    register_block_type( __DIR__ . '/inc/blocks/my-block/build/my-block/block.json' );
+}
+add_action( 'init', 'register_my_block' );
+```
+
+**Auto-scan Multiple Blocks** (recommended for themes):
+```php
+add_action('init', function () {
+    $blocks_dir = get_template_directory() . '/inc/blocks';
+    if (!is_dir($blocks_dir)) return;
+
+    foreach (scandir($blocks_dir) as $folder) {
+        if ($folder === '.' || $folder === '..') continue;
+
+        $block_json_path = $blocks_dir . '/' . $folder . '/build/' . $folder . '/block.json';
+        if (file_exists($block_json_path)) {
+            register_block_type($block_json_path);
+        }
+    }
+});
+```
+
+**Block Manifest** (WordPress 6.7+, most efficient):
+```php
+function register_theme_blocks() {
+    if (function_exists('wp_register_block_types_from_metadata_collection')) {
+        wp_register_block_types_from_metadata_collection(__DIR__ . '/build', __DIR__ . '/build/blocks-manifest.php');
+    }
+}
+add_action('init', 'register_theme_blocks');
+```
+
+### Version Management
+- Review changes with `git diff` to understand what has been modified
+- Update version numbers following semantic versioning (MAJOR.MINOR.PATCH)
+- For patch releases (bug fixes, minor enhancements):
+  1. Update `CHANGELOG.md` with new patch version and changes summary
+  2. Update `readme.txt` stable tag and changelog section
+  3. Update `style.css` theme header version number
+- For minor/major releases, follow same process but increment appropriate version numbers
+- Always update all three files together to maintain version consistency
+
 ### Installation
 - `composer install` - Install PHP dependencies for development
 - `composer require imagewize/moiraine` - Install theme via Composer
@@ -57,6 +123,13 @@ Patterns are organized into categories:
 - `moiraine/pages` - Full page layouts
 - `moiraine/menu` - Navigation and menu patterns (14 patterns: cards, mobile, panels)
 
+**Pattern Image Guidelines:**
+- **NEVER use hardcoded media IDs** in `wp:image` blocks (e.g., `"id":59`)
+- Always use direct file paths: `<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/filename.webp`
+- Hardcoded IDs cause performance issues: database queries for non-existent media, blinking/flashing effects, console errors, and validation failures
+- All pattern images should be stored in `patterns/images/` directory
+- Removing hardcoded IDs ensures patterns work consistently across all WordPress installations
+
 ### Block Styles System
 Custom block styles are registered in functions.php and loaded dynamically:
 - List styles (check, boxed)
@@ -95,3 +168,13 @@ Multiple style variations available in `styles/` directory:
 - 14 specialized navigation patterns for professional menu design
 - Mobile-responsive menu variations
 - Card, panel, and mobile menu styles
+
+### Block Development
+- Uses `@wordpress/create-block` for custom block development
+- Block source files in `inc/blocks/*/src/` directories
+- Build output auto-generated in `inc/blocks/*/build/` directories
+- **IMPORTANT**: Never edit build files directly - always edit source files in `src/` and run `npm run build`
+- Build process compiles TypeScript/JSX, processes SCSS, and generates block manifest
+- Use `npm start` for development (watches files and rebuilds automatically)
+- Use `npm run build` for production builds before committing
+- Blocks must be registered with WordPress using `register_block_type()` function

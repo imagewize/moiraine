@@ -1,0 +1,73 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "moiraine/menu-designer",
+	"version": "0.1.1",
+	"title": "Menu Designer",
+	"category": "design",
+	"icon": "menu-alt",
+	"description": "Create dynamic mega menus with template parts and advanced styling options.",
+	"keywords": [ "menu", "navigation", "mega menu", "dropdown" ],
+	"parent": [ "core/navigation" ],
+	"attributes": {
+		"label": {
+			"type": "string",
+			"default": ""
+		},
+		"labelColor": {
+			"type": "string"
+		},
+		"description": {
+			"type": "string",
+			"default": ""
+		},
+		"menuSlug": {
+			"type": "string",
+			"default": ""
+		},
+		"justifyMenu": {
+			"type": "string",
+			"default": "left",
+			"enum": [ "left", "center", "right" ]
+		},
+		"width": {
+			"type": "string",
+			"default": "content",
+			"enum": [ "content", "wide", "full" ]
+		}
+	},
+	"example": {
+		"attributes": {
+			"label": "Features",
+			"description": "Explore our powerful features",
+			"justifyMenu": "center",
+			"width": "wide"
+		}
+	},
+	"supports": {
+		"html": false,
+		"interactivity": true,
+		"renaming": false,
+		"reusable": false,
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"__experimentalFontFamily": true,
+			"__experimentalFontWeight": true,
+			"__experimentalFontStyle": true,
+			"__experimentalTextTransform": true,
+			"__experimentalTextDecoration": true,
+			"__experimentalLetterSpacing": true,
+			"__experimentalDefaultControls": {
+				"fontSize": true
+			}
+		},
+		"__experimentalSlashInserter": true
+	},
+	"textdomain": "moiraine",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScriptModule": "file:./view.js",
+	"render": "file:./render.php"
+}

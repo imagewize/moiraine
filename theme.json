@@ -938,6 +938,26 @@
 			"name": "sidebar",
 			"title": "Sidebar",
 			"area": "sidebar"
+		},
+		{
+			"name": "menu-card-simple",
+			"title": "Menu Card Simple",
+			"area": "menu"
+		},
+		{
+			"name": "menu-panel-features",
+			"title": "Menu Panel Features",
+			"area": "menu"
+		},
+		{
+			"name": "menu-panel-product",
+			"title": "Menu Panel Product",
+			"area": "menu"
+		},
+		{
+			"name": "menu-mobile-simple",
+			"title": "Menu Mobile Simple",
+			"area": "menu"
 		}
 	]
 }

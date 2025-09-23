@@ -198,7 +198,7 @@ add_action( 'wp_head', __NAMESPACE__ . '\is_paginated' );
 
 
 /**
- * Add a Sidebar template part area
+ * Add custom template part areas
  *
  * @param array $areas Array of template part areas.
  * @return array
@@ -212,6 +212,44 @@ function template_part_areas( array $areas ) {
 		'icon'        => 'sidebar',
 	);
 
+	$areas[] = array(
+		'area'        => 'menu',
+		'area_tag'    => 'nav',
+		'label'       => __( 'Menu', 'moiraine' ),
+		'description' => __( 'The Menu template parts are used by the Menu Designer block to create dynamic mega menus.', 'moiraine' ),
+		'icon'        => 'menu-alt',
+	);
+
 	return $areas;
 }
 add_filter( 'default_wp_template_part_areas', __NAMESPACE__ . '\template_part_areas' );
+
+/**
+ * Register block types using block.json metadata from the theme's blocks directory.
+ * This function will scan the 'inc/blocks' directory for block.json files.
+ */
+add_action(
+	'init',
+	function () {
+		$blocks_dir = get_template_directory() . '/inc/blocks';
+
+		if ( ! is_dir( $blocks_dir ) ) {
+			return;
+		}
+
+		$block_folders = scandir( $blocks_dir );
+
+		foreach ( $block_folders as $folder ) {
+			if ( '.' === $folder || '..' === $folder ) {
+				continue;
+			}
+
+			$block_json_path = $blocks_dir . '/' . $folder . '/build/' . $folder . '/block.json';
+
+			if ( file_exists( $block_json_path ) ) {
+				register_block_type( $block_json_path );
+			}
+		}
+	},
+	10
+);

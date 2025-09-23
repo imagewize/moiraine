@@ -4,7 +4,7 @@ Tags: blog, portfolio, entertainment, grid-layout, one-column, two-columns, thre
 Requires at least: 5.8
 Tested up to: 6.7.1
 Requires PHP: 7.3
-Stable tag: 2.0.0
+Stable tag: 2.1.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -13,6 +13,40 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block theme! Moiraine features over 50 beautiful pattern designs, 7 full-page pattern layouts, and a fully-customizable design system with Global Styles. Moiraine integrates seamlessly with all of the powerful new WordPress editor features, giving you the most lightweight and powerful website builder on the planet — no expensive page builder plugin required! ✶ Full demo: https://demo.imagewize.com ✶
 
 == Changelog ==
+
+= 2.1.0 - 09/23/25 =
+* NEW: Menu Designer Block with mega menu functionality for creating dynamic navigation menus with template part integration
+* NEW: Advanced block development workflow using @wordpress/create-block architecture in inc/blocks/ directory
+* NEW: Modern block registration system using wp_register_block_types_from_metadata_collection() for WordPress 6.8+ compatibility
+* NEW: Base menu template parts for enhanced navigation customization following WordPress best practices with lightweight pattern references (menu-card-simple, menu-mobile-simple, menu-panel-features, menu-panel-product)
+* ENHANCED: WordPress Interactivity API integration with proper ES module configuration following Human Made Mega Menu Block patterns
+* ENHANCED: Menu Designer Block responsiveness with improved CSS width constraints to prevent horizontal scrollbars and intelligent viewport-aware positioning system using modern CSS techniques
+* ENHANCED: Block editor integration - Menu Designer appears in navigation block inserter when adding menu items
+* ENHANCED: JavaScript performance by streamlining Menu Designer block with clean state management and removed debug logging from view.js for production-ready code
+* ENHANCED: User experience with simplified mega menu creation workflow for adding Menu Designer blocks within navigation
+* ENHANCED: Documentation with comprehensive Menu Designer implementation guide, WordPress Interactivity API best practices, and Human Made Mega Menu Block implementation patterns
+* ENHANCED: Development tools with enhanced build processes for theme and block development workflows
+* ENHANCED: Code quality with improved formatting and linting processes across theme and block development
+* FIXED: Pattern media ID references - removed hardcoded media IDs from all pattern wp:image blocks to eliminate blinking/flashing effects, console errors, and performance issues caused by WordPress attempting to load non-existent media library references. Patterns now load images directly from file paths for consistent, faster performance across all WordPress installations
+* FIXED: Menu Designer CSS positioning - simplified by adopting Human Made's class-based approach, removing complex navigation-level detection in favor of direct .menu-justified-* classes
+* FIXED: Mobile menu responsiveness - extended mobile viewport optimizations to all menu positions (left, center, right) ensuring proper fit on mobile devices regardless of desktop alignment
+* FIXED: Template part architecture - modernized menu template parts to follow WordPress best practices by converting them from full content to lightweight pattern references, eliminating image path issues and reducing duplication
+* FIXED: Template part image integration - fixed image loading issues by adopting Twenty Twenty-Five pattern reference approach where template parts reference patterns instead of containing full content
+* FIXED: Menu Designer Block navigation integration - critical issue preventing block insertion as navigation menu items
+* FIXED: Block supports configuration with required WordPress navigation integration features (interactivity, renaming, reusable, __experimentalSlashInserter)
+* FIXED: Menu Designer script loading - critical issue where view.js script wasn't being enqueued using auto-scan block registration method
+* FIXED: WordPress Interactivity API context initialization and state management for proper dropdown functionality
+* FIXED: Menu Designer CSS positioning with responsive width constraints using min() function to prevent viewport overflow and reliable CSS positioning with viewport-aware sizing to prevent horizontal scroll bars when mega menus extend beyond viewport boundaries
+* FIXED: Template part integration - template parts now properly appear in Menu area by registering menu template parts in theme.json
+* FIXED: Build process with --experimental-modules flag enabling proper view.js compilation as separate entry point
+* FIXED: Script asset generation now properly creates both view.js and view.asset.php for WordPress dependency management
+* FIXED: Safari blinking fix - fixed Safari flickering in backdrop-filter blur effects using browser-specific CSS approach that disables blur only in Safari while maintaining full backdrop-filter effects in other browsers, with semi-transparent background fallback for Safari users to preserve visual quality
+* IMPROVED: WordPress Coding Standards configuration with improved exclusions for block directories
+* IMPROVED: CSS architecture - streamlined mega menu positioning logic by eliminating duplicate selectors and complex cascade rules for more maintainable code
+* UPDATED: CSS positioning strategy - replaced navigation-context positioning with direct menu class positioning for cleaner, more predictable behavior
+* ENHANCED: Mobile-first approach - all menu alignments now respect mobile viewport constraints with consistent calc(100vw - 2rem) width calculation
+* UPDATED: Development workflow with composer scripts for better code quality management and block development support
+* UPDATED: Block development architecture with standardized workflow using @wordpress/scripts build system
 
 = 2.0.0 - 09/19/25 =
 * MAJOR UPDATE: Enhanced WooCommerce Integration

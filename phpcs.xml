@@ -5,10 +5,7 @@
     <!-- Use WordPress standards -->
     <rule ref="WordPress" />
 
-    <!-- Exclude pattern files -->
-    <exclude-pattern>/patterns/*</exclude-pattern>
-    <exclude-pattern>/vendor/*</exclude-pattern>
-    
+    <!-- Note: Exclusions are handled in composer.json scripts -->
     <!-- Additional exclusions if needed -->
     <exclude-pattern>*.js</exclude-pattern>
     <exclude-pattern>*.css</exclude-pattern>
