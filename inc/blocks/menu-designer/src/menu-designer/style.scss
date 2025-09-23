@@ -65,7 +65,7 @@
 .moiraine-menu-designer,
 .wp-block-moiraine-menu-designer__menu-container {
     height: auto;
-    left: clamp(-1px, -50vw + 50%, calc(100% - min(95vw, var(--menu-computed-width, 400px))));
+    left: -1px;
     opacity: 0;
     overflow: hidden;
     position: absolute;
@@ -77,22 +77,19 @@
     border-radius: var(--wp--preset--spacing--20, 0.5rem);
 
     &.menu-width-content {
-        --menu-computed-width: min(var(--wp--style--global--content-size, 1200px), 95vw);
-        max-width: var(--menu-computed-width);
+        max-width: min(var(--wp--style--global--content-size, 1200px), 95vw);
         width: max-content;
         min-width: max(400px, 30vw);
     }
 
     &.menu-width-wide {
-        --menu-computed-width: min(var(--wp--style--global--wide-size, 1600px), 95vw);
-        max-width: var(--menu-computed-width);
+        max-width: min(var(--wp--style--global--wide-size, 1600px), 95vw);
         width: max-content;
         min-width: max(500px, 40vw);
     }
 
     &.menu-width-full {
-        --menu-computed-width: 95vw;
-        max-width: var(--menu-computed-width);
+        max-width: 95vw;
         width: 100%;
         left: 50%;
         transform: translateX(-50%);
@@ -100,17 +97,15 @@
 
     // Auto-sizing based on content
     &.menu-width-auto {
-        --menu-computed-width: min(90vw, 800px);
         width: max-content;
-        max-width: var(--menu-computed-width);
+        max-width: min(90vw, 800px);
         min-width: 320px;
     }
 
     // Flexible sizing for template parts
     &.menu-width-flexible {
-        --menu-computed-width: 85vw;
         width: max-content;
-        max-width: var(--menu-computed-width);
+        max-width: 85vw;
         min-width: max(350px, 25vw);
     }
 
@@ -176,20 +171,13 @@
     }
 }
 
-// Container query support for responsive positioning
-.wp-block-moiraine-menu-designer {
-    container-type: inline-size;
-}
-
-// Navigation block integration using container queries
+// Navigation block integration - position based on navigation alignment
 .wp-block-navigation {
-    container-type: inline-size;
-
     &.items-justified-right {
         .moiraine-menu-designer,
         .wp-block-moiraine-menu-designer__menu-container {
             left: auto;
-            right: clamp(-1px, -50vw + 50%, calc(100% - min(95vw, var(--menu-computed-width, 400px))));
+            right: -1px;
         }
     }
 
@@ -203,21 +191,17 @@
             &.menu-width-flexible {
                 left: 50%;
                 transform: translateX(-50%);
+
+                @media (max-width: 768px) {
+                    left: 1rem;
+                    right: 1rem;
+                    transform: none;
+                    width: calc(100vw - 2rem);
+                    max-width: none;
+                    min-width: auto;
+                }
             }
         }
-    }
-}
-
-// Container queries for responsive menu behavior
-@container (max-width: 768px) {
-    .moiraine-menu-designer,
-    .wp-block-moiraine-menu-designer__menu-container {
-        left: 1rem !important;
-        right: 1rem;
-        transform: none !important;
-        width: calc(100vw - 2rem) !important;
-        max-width: none !important;
-        min-width: auto !important;
     }
 }
 
@@ -226,19 +210,28 @@
     .moiraine-menu-designer,
     .wp-block-moiraine-menu-designer__menu-container {
         &.menu-justified-left {
-            left: clamp(-1px, -50vw + 50%, calc(100% - min(95vw, var(--menu-computed-width, 400px))));
+            left: -1px;
             right: auto;
         }
 
         &.menu-justified-right {
             left: auto;
-            right: clamp(-1px, -50vw + 50%, calc(100% - min(95vw, var(--menu-computed-width, 400px))));
+            right: -1px;
         }
 
         &.menu-justified-center {
             left: 50%;
             transform: translateX(-50%);
             right: auto;
+
+            @media (max-width: 768px) {
+                left: 1rem;
+                right: 1rem;
+                transform: none;
+                width: calc(100vw - 2rem);
+                max-width: none;
+                min-width: auto;
+            }
         }
     }
 }
