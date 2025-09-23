@@ -20,7 +20,7 @@ Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block t
 * NEW: Modern block registration system using wp_register_block_types_from_metadata_collection() for WordPress 6.8+ compatibility
 * NEW: Base menu template parts for enhanced navigation customization (menu-card-simple, menu-mobile-simple, menu-panel-features, menu-panel-product)
 * ENHANCED: WordPress Interactivity API integration with proper ES module configuration following Human Made Mega Menu Block patterns
-* ENHANCED: Menu Designer Block responsiveness with improved CSS width constraints to prevent horizontal scrollbars and ensure proper viewport-aware positioning
+* ENHANCED: Menu Designer Block responsiveness with improved CSS width constraints to prevent horizontal scrollbars and intelligent viewport-aware positioning system using WordPress Interactivity API
 * ENHANCED: Block editor integration - Menu Designer appears in navigation block inserter when adding menu items
 * ENHANCED: JavaScript performance by streamlining Menu Designer block with clean state management and removed debug logging from view.js for production-ready code
 * ENHANCED: User experience with simplified mega menu creation workflow for adding Menu Designer blocks within navigation
@@ -31,7 +31,7 @@ Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block t
 * FIXED: Block supports configuration with required WordPress navigation integration features (interactivity, renaming, reusable, __experimentalSlashInserter)
 * FIXED: Menu Designer script loading - critical issue where view.js script wasn't being enqueued using auto-scan block registration method
 * FIXED: WordPress Interactivity API context initialization and state management for proper dropdown functionality
-* FIXED: Menu Designer CSS positioning with responsive width constraints using min() function to prevent viewport overflow
+* FIXED: Menu Designer CSS positioning with responsive width constraints using min() function to prevent viewport overflow and dynamic positioning logic to prevent horizontal scroll bars when mega menus extend beyond viewport boundaries
 * FIXED: Template part integration - template parts now properly appear in Menu area by registering menu template parts in theme.json
 * FIXED: Build process with --experimental-modules flag enabling proper view.js compilation as separate entry point
 * FIXED: Script asset generation now properly creates both view.js and view.asset.php for WordPress dependency management

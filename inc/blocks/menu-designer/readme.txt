@@ -79,12 +79,14 @@ directory take precedence. For example, `/assets/screenshot-1.png` would win ove
 * Fixed: View.js script loading issue by implementing proper ES module configuration
 * Fixed: Menu Designer width management - removed restrictive 300px minimum width causing narrow desktop dropdowns
 * Fixed: Template part expansion within mega menus by adding CSS overrides for width constraints in menu context
+* Fixed: Dynamic positioning system to prevent horizontal scroll bars when mega menus extend beyond viewport boundaries
 * Enhanced: Dynamic width calculation using max-content and viewport-aware sizing for better responsive behavior
 * Enhanced: Added new flexible width classes (menu-width-auto, menu-width-flexible) for different content types
 * Enhanced: Mobile breakpoint handling with proper width resets while maintaining desktop functionality
 * Enhanced: State management now uses menuOpenedBy getter with clean separation between state and context
 * Enhanced: JavaScript architecture streamlined with simplified action methods and cleaner state updates
-* Enhanced: Build output optimized to 978 bytes with clean production-ready code
+* Enhanced: Intelligent viewport-aware positioning system using WordPress Interactivity API that automatically calculates optimal menu positioning (left/center/right) based on button location and available space
+* Enhanced: Build output optimized with clean production-ready code and responsive window resize handling
 * Enhanced: Documentation completely reorganized with clear structure and comprehensive technical guide
 
 = 0.1.1 =

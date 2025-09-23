@@ -21,7 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **WordPress Interactivity API Integration**: Complete implementation following Human Made Mega Menu Block patterns with proper state management, context references, and callback system
 - **Menu Designer Block State Management**: Updated to match Human Made's exact implementation pattern with `menuOpenedBy` getter, proper DOM reference handling via `context.megaMenu`, and enhanced focus management
 - **JavaScript Architecture**: Added `initMenu` callback with `data-wp-watch` integration for proper initialization timing and streamlined action methods for cleaner state updates
-- **Menu Designer Block Responsiveness**: Improved CSS width constraints to prevent horizontal scrollbars and ensure proper viewport-aware positioning
+- **Menu Designer Block Responsiveness**: Improved CSS width constraints to prevent horizontal scrollbars and implemented intelligent viewport-aware positioning system using WordPress Interactivity API
 - **Block Editor Integration**: Menu Designer block now appears in navigation block inserter when adding menu items
 - **ES Module Configuration**: Implemented proper `viewScriptModule` configuration with `--experimental-modules` build flag for modern WordPress Interactivity API support
 - **User Experience**: Simplified mega menu creation workflow - users can now directly add Menu Designer blocks within navigation with full click, keyboard, and outside click functionality
@@ -37,7 +37,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Menu Designer Callback System**: Added missing `initMenu` callback with `data-wp-watch` attribute for proper WordPress Interactivity API initialization timing
 - **Outside Click Detection**: Fixed outside click functionality by using proper context reference management instead of DOM queries
 - **Menu Designer Script Loading**: Fixed critical issue where view.js script wasn't being enqueued using auto-scan block registration method
-- **Menu Designer CSS Positioning**: Fixed responsive width constraints using `min()` function to prevent overflow on smaller viewports
+- **Menu Designer CSS Positioning**: Fixed responsive width constraints using `min()` function to prevent overflow on smaller viewports and added dynamic positioning logic to prevent horizontal scroll bars when mega menus extend beyond viewport boundaries
 - **Menu Designer Width Management**: Fixed restrictive 300px minimum width constraint causing narrow desktop dropdowns by implementing dynamic width calculation with `max-content` and viewport-aware sizing
 - **Template Part Integration**: Fixed template parts not appearing in Menu area by properly registering menu template parts in `theme.json`
 - **Template Part Expansion**: Fixed template parts not displaying at full width within mega menus by adding CSS overrides for width constraints in menu context
