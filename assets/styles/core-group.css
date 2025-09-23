@@ -5,9 +5,9 @@
 	position: relative;
 }
 
-/* Safari backdrop-filter flickering fix using pseudo-element approach */
-/* Isolates blur effect from conflicting CSS properties (border-radius, box-shadow) */
-/* Prevents WordPress block validation errors by avoiding extra HTML elements */
+/* Safari backdrop-filter flickering fix using browser-specific approach */
+/* Disables blur in Safari while maintaining it for other browsers */
+/* Uses semi-transparent background as fallback for Safari */
 .is-style-background-blur::before {
 	content: "";
 	position: absolute;
@@ -17,6 +17,15 @@
 	pointer-events: none;
 	border-radius: inherit;
 	z-index: -1;
+}
+
+/* Safari-specific fix to disable backdrop-filter and use transparency fallback */
+@supports (-webkit-hyphens:none) {
+	.is-style-background-blur::before {
+		-webkit-backdrop-filter: none;
+		backdrop-filter: none;
+		background-color: rgba(255, 255, 255, 0.95);
+	}
 }
 
 /* Improvements for row group */
