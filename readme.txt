@@ -40,6 +40,7 @@ Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block t
 * FIXED: Template part integration - template parts now properly appear in Menu area by registering menu template parts in theme.json
 * FIXED: Build process with --experimental-modules flag enabling proper view.js compilation as separate entry point
 * FIXED: Script asset generation now properly creates both view.js and view.asset.php for WordPress dependency management
+* FIXED: Safari blinking fix - removed problematic is-style-background-blur class from menu-panel-1 pattern to eliminate Safari flickering caused by GPU compositing conflicts with backdrop-filter, border-radius, and box-shadow combinations
 * IMPROVED: WordPress Coding Standards configuration with improved exclusions for block directories
 * IMPROVED: CSS architecture - streamlined mega menu positioning logic by eliminating duplicate selectors and complex cascade rules for more maintainable code
 * UPDATED: CSS positioning strategy - replaced navigation-context positioning with direct menu class positioning for cleaner, more predictable behavior
