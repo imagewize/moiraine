@@ -1,27 +1,19 @@
 # Moiraine — A WordPress Block Theme
 
-Moiraine is a modern WordPress block theme designed to work seamlessly with the WordPress block editor and site editor, where you can create beautiful, fully-customizable websites with WordPress's built-in page builder — no page builder or coding skills required.
+Moiraine is a modern WordPress block theme designed for the WordPress block editor and site editor. Create beautiful, fully-customizable websites with WordPress's built-in tools — no coding required.
 
-Moiraine ships with **88+ beautifully-designed patterns** including 14 specialized menu patterns and 14 template layout patterns, plus page templates, block styles, and style variations so you can design stunning pages quickly with drag and drop instead of code. Moiraine features **WooCommerce integration** for e-commerce sites, **modern development tooling** with npm-based workflow, and is blazing fast, fully customizable via the WordPress UI, fully responsive out of the box, and scores 100% across the board on performance.
-
-## Based on Ollie
-
-Moiraine is based on the Ollie theme by [Mike McAlister](https://mikemcalister.com). We would like to express our gratitude to Mike for creating such an excellent foundation for WordPress block themes. You can find the original Ollie theme at [OllieWP's GitHub repository](https://github.com/OllieWP/ollie).
+Features **88+ professional patterns**, WooCommerce integration, modern development tooling, and blazing-fast performance with 100% scores across the board.
 
 ## Table of Contents
 
-- [Getting Started with Moiraine](#getting-started-with-moiraine)
+- [Getting Started](#getting-started)
 - [Key Features](#key-features)
 - [Working with Block Themes](#working-with-block-themes)
-  - [Site Editor](#site-editor)
-  - [Patterns](#patterns)
-  - [Global Styles](#global-styles)
-  - [Template Parts](#template-parts)
-  - [Export Your Site](#export-your-site)
 - [Developer Notes](#developer-notes)
+- [Credits](#credits)
 - [License](#license)
 
-## Getting Started with Moiraine
+## Getting Started
 
 | Links  | Description |
 | ------------- | ------------- |
@@ -43,134 +35,90 @@ Moiraine is built for modern WordPress features and requires WordPress 6.0 or la
 - **Menu Patterns**: 14 specialized navigation designs (cards, mobile, panels)
 - **Template Patterns**: 14 complete page layout templates
 
-### 🧩 **Menu Designer Block**
-- **Custom Block Development**: Advanced mega menu functionality with template part integration
-- **Dynamic Navigation**: Create sophisticated navigation menus with drag-and-drop ease
-- **Template Parts Integration**: Seamless integration with WordPress template part system
-- **Modern Block Architecture**: Built using @wordpress/create-block for extensibility and performance
+### 🧩 **Menu Designer Block** (NEW in 2.1.0)
+- Advanced mega menu functionality with template part integration
+- WordPress Interactivity API with modern state management
+- Drag-and-drop navigation creation
+- Responsive design with mobile-first approach
+- Full keyboard navigation and accessibility support
 
 ### 🛒 **WooCommerce Integration**
-- Automatic WooCommerce stylesheet loading when plugin is active
-- Enhanced e-commerce support for online stores
+- Automatic stylesheet loading when WooCommerce is active
 - Pre-built cart and checkout page templates
-- Optimized for selling products and services
+- E-commerce optimized patterns and styles
 
-### ⚡ **Modern Development Workflow**
-- **npm-based Development**: `npm run dev` for file watching and translation automation
-- **Pattern Translation**: `npm run translate:patterns` for internationalization
-- **WordPress Coding Standards**: Built-in linting and code quality tools
-- **Composer Support**: `composer require imagewize/moiraine`
-- **Block Development**: Advanced @wordpress/create-block architecture for custom blocks
-
-### 🎯 **Enhanced Typography System**
-- **7 Google Fonts**: Big Shoulders Display, DM Sans, Fraunces, Mona Sans, Montagu Slab, Source Serif 4, Space Grotesk
-- **Typography Presets**: WordPress-native typography presets for consistent design
-- **Style Variations**: Multiple typography combinations for different design aesthetics
-- **Responsive Typography**: Optimized font scaling across all device sizes
-
-### 🖥️ **Site Editor Ready**
+### 🎯 **Typography & Design**
+- 7 Google Fonts with responsive scaling
+- Multiple typography presets and style variations
+- Global styles system via theme.json
 - Full Site Editing compatibility
-- Template and template part customization
-- Global styles system with theme.json
-- Export/import functionality for site designs
 
-### 🚀 **Performance Optimized**
-- Blazing fast load times
-- 100% performance scores
-- Minimal CSS and JavaScript footprint
-- Responsive design out of the box
+### 🚀 **Performance & Compatibility**
+- 100% performance scores with minimal footprint
+- Fully responsive design out of the box
+- Safari compatibility with backdrop-filter fixes
+- Clean pattern architecture prevents block validation errors
 
 ## Working with Block Themes
 
-Once you activate Moiraine, it will largely behave like any other traditional WordPress theme. You can create posts and pages just like you always have. However, as a block theme, Moiraine also supports powerful new features like the site editor, patterns, global styles, and more. 
+Moiraine is a WordPress block theme with templates entirely composed of blocks, allowing you to edit all areas of your site — headers, footers, templates, and more.
 
-A block theme is a WordPress theme with templates entirely composed of blocks so that in addition to post and page content, the block editor can also be used to edit all areas of the site — headers, footers, templates, and more.
+### Key Concepts
 
-### Site Editor
+- **Site Editor**: Access via `Appearance → Editor` to customize templates, styles, typography, and more
+- **Patterns**: Pre-designed page elements accessible via the block inserter for quick page creation
+- **Global Styles**: Modify colors, fonts, and layout defaults site-wide through the theme.json system
+- **Template Parts**: Reusable components like headers and footers that appear across pages
+- **Export**: Save your customizations as a theme zip file via the Site Editor options menu
 
-The WordPress site editor is the new way to build beautiful websites with WordPress. Using blocks, patterns, and a full suite of drag-and-drop design tools, you can build pages right inside WordPress without an extra page builder.
+### Using Full-Page Patterns
 
-To edit your site via the site editor, go to `Appearance → Editor`. Here, you can create and edit templates, create menus, customize your website styles, color palette, typography, block styles, and much more. This interface is where you'll design and build your site before exporting it later.
-
-### Patterns
-
-Patterns are pre-designed page elements that can be used to quickly design a page section or a full page layout. Instead of designing a page from scratch, WordPress creators can now lean on patterns to quickly design their full website in the WordPress Site Editor.
-
-You can access Moiraine's patterns via the block inserter on posts, pages, or in the site editor. 
-
-#### Creating page designs with patterns
-
-To create beautiful pages, simply insert Moiraine's full-page patterns onto any page, and apply the No Page Title template via the editor sidebar. This template removes the default page title, which better accommodates the full-page patterns, so make sure you have an H1 in your design for SEO best practices.
-
-### Global Styles
-
-Global styles is the user interface in the Site Editor where you can modify all the styles associated with your site. This could be typography, fonts, button colors, link colors, layout defaults, and more. 
-
-Global styles is powered by a `theme.json` in the root of the theme folder. This configuration file lets you define site-wide and block-specific styles to be used by the global styles interface.
-
-### Template Parts
-
-A template part is a part of your site that appears across most or all pages. The most common template parts are for the header, footer, and sidebar of a website. Template parts let you easily make global changes to the design or markup of global site elements.
-
-### Export Your Site
-
-Once you've finished building and customizing your site with the site editor, you can export a zip to install on another site. While in the site editor, go to the Options menu (upper right hand corner), and select Export under the Tools heading. WordPress will write all of your changes to a theme zip file.
+For best results with full-page patterns, apply the "No Page Title" template and ensure your design includes an H1 for SEO.
 
 ## Developer Notes
 
-The Moiraine theme works out of the box, so no build steps are required. However, we have included both Node.js and Composer workflows for development and code quality.
+Moiraine works out of the box with no build steps required. Development workflows are available for advanced users.
 
-### Installation with Composer
+**Requirements:** WordPress 6.0+, PHP 7.3+
 
-Moiraine can be installed using Composer:
+### Installation
 
 ```bash
+# Via Composer
 composer require imagewize/moiraine
+
+# Development setup
+npm install && composer install
 ```
 
-### Node.js Development Workflow
-
-Moiraine includes modern development tooling for pattern translation and file watching:
+### Development Commands
 
 ```bash
-# Install Node.js dependencies
-npm install
+# Pattern development
+npm run dev                    # Watch and auto-translate patterns
+npm run translate:patterns     # Process patterns for i18n
 
-# Watch pattern files for changes and auto-escape for translations
-npm run dev
+# Code quality
+composer run lint             # PHP linting
+composer run wpcs:scan        # WordPress coding standards
+composer run wpcs:fix         # Auto-fix WPCS violations
 
-# Process pattern files for translation readiness
-npm run translate:patterns
+# Block development (Menu Designer)
+cd inc/blocks/menu-designer
+npm start                     # Development with file watching
+npm run build                 # Production build
 ```
 
-### PHP Linting and Code Quality
-
-For WordPress coding standards compliance:
-
-```bash
-# Install PHP dependencies
-composer install
-
-# Run PHP parallel lint on all PHP files
-composer run lint
-
-# Scan code against WordPress coding standards
-composer run wpcs:scan
-
-# Auto-fix WordPress coding standard violations
-composer run wpcs:fix
-```
-
-### Development Features
-
-- **Pattern Translation**: Automated text domain handling for internationalization
-- **File Watching**: Real-time development with automatic pattern processing
-- **Code Standards**: WordPress coding standards enforcement
-- **Modern Tooling**: Node.js-based utilities for enhanced development workflow
+See `CLAUDE.md` for detailed development documentation.
 
 ## Credits
 
-- Favicon: We used the [ladybug icon](https://blade-ui-kit.com/blade-icons/mdi-ladybug) from Blade UI Kit for our favicon.
+### Theme Foundation
+Moiraine is based on the [Ollie theme](https://github.com/OllieWP/ollie) by [Mike McAlister](https://mikemcalister.com). We express our gratitude to Mike for creating such an excellent foundation for WordPress block themes.
+
+### Additional Credits
+- **Menu Designer Block**: Built upon the foundational work of [Human Made's Mega Menu Block](https://github.com/humanmade/hm-mega-menu-block)
+- Favicon: [Ladybug icon](https://blade-ui-kit.com/blade-icons/mdi-ladybug) from Blade UI Kit
 
 ## License
 
