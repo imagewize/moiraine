@@ -11,11 +11,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Menu Designer Block**: New custom block with mega menu functionality for creating dynamic navigation menus with template part integration
 - **Advanced Block Development Workflow**: Implemented @wordpress/create-block architecture for custom block development in `inc/blocks/` directory
 - **Block Registration System**: Modern block manifest approach using `wp_register_block_types_from_metadata_collection()` for WordPress 6.8+ compatibility
-- **Base Menu Template Parts**: Added foundational menu template parts for enhanced navigation customization
-  - `parts/menu-card-simple.html` - Simple card-style menu template
-  - `parts/menu-mobile-simple.html` - Mobile-optimized menu template
-  - `parts/menu-panel-features.html` - Feature-focused panel menu template
-  - `parts/menu-panel-product.html` - Product-focused panel menu template
+- **Base Menu Template Parts**: Added foundational menu template parts for enhanced navigation customization following WordPress best practices
+  - `parts/menu-card-simple.html` - Lightweight reference to menu-card-1 pattern
+  - `parts/menu-mobile-simple.html` - Lightweight reference to menu-mobile-1 pattern
+  - `parts/menu-panel-features.html` - Lightweight reference to menu-panel-1 pattern
+  - `parts/menu-panel-product.html` - Lightweight reference to menu-panel-2 pattern
 
 ### Enhanced
 - **WordPress Interactivity API Integration**: Complete implementation following Human Made Mega Menu Block patterns with proper state management, context references, and callback system
@@ -33,7 +33,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Menu Designer CSS Positioning**: Simplified positioning system by adopting Human Made's class-based approach, removing complex navigation-level detection in favor of direct `.menu-justified-*` classes
 - **Mobile Menu Responsiveness**: Extended mobile viewport optimizations to all menu positions (left, center, right) ensuring proper fit on mobile devices regardless of desktop alignment
 - **CSS Architecture**: Streamlined mega menu positioning logic by eliminating duplicate selectors and complex cascade rules for more maintainable code
-- **Template Part Image Paths**: Fixed 403 errors by moving `computer-hands.webp` from `patterns/images/` to `parts/images/` for menu template parts
+- **Template Part Architecture**: Modernized menu template parts to follow WordPress best practices by converting them from full content to lightweight pattern references, eliminating image path issues and reducing duplication
+- **Template Part Image Integration**: Fixed image loading issues by adopting Twenty Twenty-Five pattern reference approach where template parts reference patterns instead of containing full content
 - **Menu Designer Block Navigation Integration**: Fixed critical issue preventing Menu Designer block from being inserted as navigation menu items
 - **Block Supports Configuration**: Updated block.json with required supports for WordPress navigation integration (`interactivity`, `renaming`, `reusable`, `__experimentalSlashInserter`)
 - **WordPress Interactivity API State Management**: Fixed state management pattern to match Human Made implementation with proper `state.menuOpenedBy` getter and context separation

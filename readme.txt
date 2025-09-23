@@ -18,7 +18,7 @@ Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block t
 * NEW: Menu Designer Block with mega menu functionality for creating dynamic navigation menus with template part integration
 * NEW: Advanced block development workflow using @wordpress/create-block architecture in inc/blocks/ directory
 * NEW: Modern block registration system using wp_register_block_types_from_metadata_collection() for WordPress 6.8+ compatibility
-* NEW: Base menu template parts for enhanced navigation customization (menu-card-simple, menu-mobile-simple, menu-panel-features, menu-panel-product)
+* NEW: Base menu template parts for enhanced navigation customization following WordPress best practices with lightweight pattern references (menu-card-simple, menu-mobile-simple, menu-panel-features, menu-panel-product)
 * ENHANCED: WordPress Interactivity API integration with proper ES module configuration following Human Made Mega Menu Block patterns
 * ENHANCED: Menu Designer Block responsiveness with improved CSS width constraints to prevent horizontal scrollbars and intelligent viewport-aware positioning system using modern CSS techniques
 * ENHANCED: Block editor integration - Menu Designer appears in navigation block inserter when adding menu items
@@ -29,7 +29,8 @@ Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block t
 * ENHANCED: Code quality with improved formatting and linting processes across theme and block development
 * FIXED: Menu Designer CSS positioning - simplified by adopting Human Made's class-based approach, removing complex navigation-level detection in favor of direct .menu-justified-* classes
 * FIXED: Mobile menu responsiveness - extended mobile viewport optimizations to all menu positions (left, center, right) ensuring proper fit on mobile devices regardless of desktop alignment
-* FIXED: Template part image paths - fixed 403 errors by moving computer-hands.webp from patterns/images/ to parts/images/ for menu template parts
+* FIXED: Template part architecture - modernized menu template parts to follow WordPress best practices by converting them from full content to lightweight pattern references, eliminating image path issues and reducing duplication
+* FIXED: Template part image integration - fixed image loading issues by adopting Twenty Twenty-Five pattern reference approach where template parts reference patterns instead of containing full content
 * FIXED: Menu Designer Block navigation integration - critical issue preventing block insertion as navigation menu items
 * FIXED: Block supports configuration with required WordPress navigation integration features (interactivity, renaming, reusable, __experimentalSlashInserter)
 * FIXED: Menu Designer script loading - critical issue where view.js script wasn't being enqueued using auto-scan block registration method
