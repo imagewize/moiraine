@@ -5,6 +5,17 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.2.0] - 2025-09-24
+
+### Enhanced
+- **Duotone System Standardization**: Unified duotone color system across all style variations with consistent naming and color palettes
+- **Pattern Duotone Consistency**: Standardized all patterns to use `var:preset|duotone|primary` instead of hardcoded color values for better theme integration and customization
+- **Style Variation Duotone Support**: Added comprehensive duotone color sets to all style variations (Agency, Consulting, Creator, Publisher, Startup, Studio) with matching brand color schemes
+
+### Fixed
+- **Theme-wide Duotone Integration**: Replaced hardcoded duotone colors in 8 pattern files with theme preset variables for consistent visual styling across all style variations
+- **Cross-variation Compatibility**: Ensured duotone effects automatically adapt to active style variation colors for seamless theme switching
+
 ## [2.1.4] - 2025-09-24
 
 ### Added

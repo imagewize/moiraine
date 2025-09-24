@@ -4,6 +4,33 @@
 	"title": "Creator",
 	"settings": {
 		"color": {
+			"duotone": [
+				{
+					"name": "Primary",
+					"slug": "primary",
+					"colors": ["#5A20FF", "#E2D8FF"]
+				},
+				{
+					"name": "Secondary",
+					"slug": "secondary",
+					"colors": ["#1E0E2E", "#F8F3FC"]
+				},
+				{
+					"name": "Accent",
+					"slug": "accent",
+					"colors": ["#E3D0FF", "#2E2738"]
+				},
+				{
+					"name": "Neutral",
+					"slug": "neutral",
+					"colors": ["#695280", "#E6D7F1"]
+				},
+				{
+					"name": "High Contrast",
+					"slug": "high-contrast",
+					"colors": ["#000000", "#ffffff"]
+				}
+			],
 			"palette": [
 				{
 					"name": "Brand",

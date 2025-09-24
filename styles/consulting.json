@@ -4,6 +4,33 @@
 	"title": "Consulting",
 	"settings": {
 		"color": {
+			"duotone": [
+				{
+					"name": "Primary",
+					"slug": "primary",
+					"colors": ["#1E3A8A", "#B1C2FF"]
+				},
+				{
+					"name": "Secondary",
+					"slug": "secondary",
+					"colors": ["#171A1F", "#F8F7F9"]
+				},
+				{
+					"name": "Accent",
+					"slug": "accent",
+					"colors": ["#4F68C6", "#263042"]
+				},
+				{
+					"name": "Neutral",
+					"slug": "neutral",
+					"colors": ["#3b5570", "#DADEE3"]
+				},
+				{
+					"name": "High Contrast",
+					"slug": "high-contrast",
+					"colors": ["#000000", "#ffffff"]
+				}
+			],
 			"palette": [
 				{
 					"name": "Brand",

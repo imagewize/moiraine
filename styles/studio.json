@@ -4,6 +4,33 @@
 	"title": "Studio",
 	"settings": {
 		"color": {
+			"duotone": [
+				{
+					"name": "Primary",
+					"slug": "primary",
+					"colors": ["#FF50A9", "#FFE7F3"]
+				},
+				{
+					"name": "Secondary",
+					"slug": "secondary",
+					"colors": ["#1E181B", "#F7F3F5"]
+				},
+				{
+					"name": "Accent",
+					"slug": "accent",
+					"colors": ["#FFCFD7", "#463235"]
+				},
+				{
+					"name": "Neutral",
+					"slug": "neutral",
+					"colors": ["#6c4659", "#EDE0E6"]
+				},
+				{
+					"name": "High Contrast",
+					"slug": "high-contrast",
+					"colors": ["#000000", "#ffffff"]
+				}
+			],
 			"palette": [
 				{
 					"name": "Brand",
