@@ -4,7 +4,7 @@ Tags: blog, portfolio, entertainment, grid-layout, one-column, two-columns, thre
 Requires at least: 5.8
 Tested up to: 6.7.1
 Requires PHP: 7.3
-Stable tag: 2.1.3
+Stable tag: 2.1.4
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -13,6 +13,14 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block theme! Moiraine features over 50 beautiful pattern designs, 7 full-page pattern layouts, and a fully-customizable design system with Global Styles. Moiraine integrates seamlessly with all of the powerful new WordPress editor features, giving you the most lightweight and powerful website builder on the planet — no expensive page builder plugin required! ✶ Full demo: https://demo.imagewize.com ✶
 
 == Changelog ==
+
+= 2.1.4 - 09/24/25 =
+* NEW: Publisher Style Variation - new elegant publishing-focused style variation with premium typography using Bodoni Moda serif font family for refined content presentation
+* NEW: Bodoni Moda Font Integration - added Bodoni Moda regular and italic WOFF2 font files for premium typography experience with optimized file sizes
+* NEW: Publisher Color Palette - professional color scheme optimized for content publishing with refined contrast ratios and enhanced readability
+* NEW: Typography Preset 10 - new typography preset featuring Bodoni Moda for headings with enhanced readability settings and proper font fallbacks
+* ENHANCED: Theme Configuration - updated theme.json with Publisher style variation support, font family definitions, and typography presets integration
+* ENHANCED: Documentation - expanded AUCTOR.md with comprehensive Publisher style variation implementation details, usage guidelines, and technical specifications
 
 = 2.1.3 - 01/27/25 =
 * NEW: Mobile menu panel pattern - created menu-panel-1-mobile.php with simplified single-column layout optimized for mobile screens with 4 key features (Real-time Analytics, Team Collaboration, Advanced Security, 24/7 Support)

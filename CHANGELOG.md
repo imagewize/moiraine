@@ -5,6 +5,18 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.4] - 2025-09-24
+
+### Added
+- **Publisher Style Variation**: New elegant publishing-focused style variation with premium typography using Bodoni Moda serif font family
+- **Bodoni Moda Font Integration**: Added Bodoni Moda regular and italic WOFF2 font files for premium typography experience
+- **Publisher Color Palette**: Professional color scheme optimized for content publishing with refined contrast and readability
+- **Typography Preset 10**: New typography preset featuring Bodoni Moda for headings with enhanced readability settings
+
+### Enhanced
+- **Theme Configuration**: Updated theme.json with Publisher style variation support and font family definitions
+- **Documentation**: Expanded AUCTOR.md with comprehensive Publisher style variation implementation details and usage guidelines
+
 ## [2.1.3] - 2025-01-27
 
 ### Added
