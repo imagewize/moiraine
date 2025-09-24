@@ -5,6 +5,11 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.2] - 2025-09-24
+
+### Fixed
+- **Template Part Pattern Reference**: Fixed `parts/menu-mobile-simple.html` referencing incorrect pattern slug `moiraine/menu-mobile-1` instead of the correct `moiraine/mobile-menu-1`, which was preventing the mobile menu pattern from loading
+
 ## [2.1.1] - 2025-09-23
 
 ### Updated
