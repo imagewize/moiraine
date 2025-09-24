@@ -423,6 +423,34 @@
 					]
 				},
 				{
+					"fontFamily": "Bodoni Moda, serif",
+					"name": "Bodoni Moda",
+					"slug": "bodoni-moda",
+					"fontFace": [
+						{
+							"fontDisplay": "swap",
+							"fontFamily": "Bodoni Moda",
+							"fontStyle": "normal",
+							"fontWeight": "400 900",
+							"src": ["file:./assets/fonts/bodoni-moda/Bodoni-Moda.woff2"]
+						}
+					]
+				},
+				{
+					"fontFamily": "Bodoni Moda, serif",
+					"name": "Bodoni Moda Italic",
+					"slug": "bodoni-moda-italic",
+					"fontFace": [
+						{
+							"fontDisplay": "swap",
+							"fontFamily": "Bodoni Moda",
+							"fontStyle": "italic",
+							"fontWeight": "400 900",
+							"src": ["file:./assets/fonts/bodoni-moda/Bodoni-Moda-Italic.woff2"]
+						}
+					]
+				},
+				{
 					"fontFamily": "monospace",
 					"name": "Monospace",
 					"slug": "monospace"
