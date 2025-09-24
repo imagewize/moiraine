@@ -5,6 +5,22 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.3] - 2025-01-27
+
+### Added
+- **Mobile Menu Panel Pattern**: Created `menu-panel-1-mobile.php` with simplified single-column layout optimized for mobile screens
+- **Conditional Menu Loading**: Added responsive pattern loading to `menu-panel-features.html` that automatically loads desktop or mobile versions based on screen size
+
+### Enhanced
+- **Mobile Menu Experience**: Mobile menu panels now display 4 key features (Real-time Analytics, Team Collaboration, Advanced Security, 24/7 Support) with optimized spacing and touch-friendly design
+- **Responsive Design**: Added CSS media queries at 782px breakpoint for seamless desktop/mobile menu transitions
+
+### Fixed
+- **Mobile Menu Overflow**: Resolved mobile menu panel extending beyond viewport boundaries by creating dedicated mobile-optimized pattern
+- **Touch Interaction**: Improved mobile usability with smaller icons (36px vs 50px) and reduced padding for better touch targets
+- **Mobile Menu Positioning**: Fixed Menu Designer container positioning on mobile using proper CSS cascade without !important overrides, ensuring mobile menus align correctly within viewport boundaries
+- **CSS Architecture**: Cleaned up mobile positioning logic by working with existing layout system rather than fighting it with heavy-handed overrides
+
 ## [2.1.2] - 2025-09-24
 
 ### Fixed
