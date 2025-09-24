@@ -9,107 +9,43 @@
 			"defaultPalette": false,
 			"duotone": [
 				{
-					"name": "Blue",
-					"slug": "blue",
+					"name": "Primary",
+					"slug": "primary",
 					"colors": [
-						"#462CFF",
-						"#ECE8FF"
+						"#5344F4",
+						"#e9e7ff"
 					]
 				},
 				{
-					"name": "Royal Blue",
-					"slug": "royal-blue",
+					"name": "Secondary",
+					"slug": "secondary",
 					"colors": [
-						"#1E3A8A",
-						"#4F68C6"
+						"#1E1E26",
+						"#f8f7fc"
 					]
 				},
 				{
-					"name": "Pink",
-					"slug": "Pink",
+					"name": "Accent",
+					"slug": "accent",
 					"colors": [
 						"#F22AAA",
 						"#FFDBF0"
 					]
 				},
 				{
-					"name": "Green",
-					"slug": "green",
+					"name": "Neutral",
+					"slug": "neutral",
 					"colors": [
-						"#196A64",
-						"#E0FFFD"
+						"#545473",
+						"#E3E3F0"
 					]
 				},
 				{
-					"name": "Yellow",
-					"slug": "yellow",
+					"name": "High Contrast",
+					"slug": "high-contrast",
 					"colors": [
-						"#4B420D",
-						"#FFE465"
-					]
-				},
-				{
-					"name": "Red",
-					"slug": "red",
-					"colors": [
-						"#33120B",
-						"#FF756B"
-					]
-				},
-				{
-					"name": "Teal",
-					"slug": "teal",
-					"colors": [
-						"#233938",
-						"#67EBFF"
-					]
-				},
-				{
-					"name": "Orange",
-					"slug": "orange",
-					"colors": [
-						"#31210D",
-						"#FFA15B"
-					]
-				},
-				{
-					"name": "Punchy",
-					"slug": "punchy",
-					"colors": [
-						"#00007e",
-						"#6aff7e"
-					]
-				},
-				{
-					"name": "Blueberry",
-					"slug": "blueberry",
-					"colors": [
-						"#7f02d3",
-						"#00dbfe"
-					]
-				},
-				{
-					"name": "Lime",
-					"slug": "lime",
-					"colors": [
-						"#02794c",
-						"#fbf01a"
-					]
-				},
-				{
-					"name": "Sunset",
-					"slug": "sunset",
-					"colors": [
-						"#FF3253",
-						"#FFDC53"
-					]
-				},
-				{
-					"name": "Grayscale",
-					"slug": "grayscale",
-					"colors": [
-						"#000",
-						"#fff"
+						"#000000",
+						"#ffffff"
 					]
 				}
 			],

@@ -4,6 +4,33 @@
 	"title": "Agency",
 	"settings": {
 		"color": {
+			"duotone": [
+				{
+					"name": "Primary",
+					"slug": "primary",
+					"colors": ["#495148", "#e5f0e4"]
+				},
+				{
+					"name": "Secondary",
+					"slug": "secondary",
+					"colors": ["#0E0E0E", "#F5F5F0"]
+				},
+				{
+					"name": "Accent",
+					"slug": "accent",
+					"colors": ["#CEF453", "#44473b"]
+				},
+				{
+					"name": "Neutral",
+					"slug": "neutral",
+					"colors": ["#51524e", "#E2E2D9"]
+				},
+				{
+					"name": "High Contrast",
+					"slug": "high-contrast",
+					"colors": ["#000000", "#ffffff"]
+				}
+			],
 			"palette": [
 				{
 					"name": "Brand",

@@ -39,7 +39,7 @@
 <!-- /wp:buttons --></div>
 <!-- /wp:group -->
 
-<!-- wp:image {"sizeSlug":"full","linkDestination":"none","align":"wide","className":"is-style-default","style":{"color":{"duotone":["#462CFF","#ECE8FF"]},"border":{"radius":{"bottomLeft":"0px","bottomRight":"0px"}}}} -->
+<!-- wp:image {"sizeSlug":"full","linkDestination":"none","align":"wide","className":"is-style-default","style":{"color":{"duotone":"var:preset|duotone|primary"},"border":{"radius":{"bottomLeft":"0px","bottomRight":"0px"}}}} -->
 <figure class="wp-block-image alignwide size-full has-custom-border is-style-default"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/desktop.webp" alt="" class="" style="border-bottom-left-radius:0px;border-bottom-right-radius:0px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div></div>

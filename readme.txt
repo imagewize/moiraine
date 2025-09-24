@@ -4,7 +4,7 @@ Tags: blog, portfolio, entertainment, grid-layout, one-column, two-columns, thre
 Requires at least: 5.8
 Tested up to: 6.7.1
 Requires PHP: 7.3
-Stable tag: 2.1.4
+Stable tag: 2.2.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -13,6 +13,13 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block theme! Moiraine features over 50 beautiful pattern designs, 7 full-page pattern layouts, and a fully-customizable design system with Global Styles. Moiraine integrates seamlessly with all of the powerful new WordPress editor features, giving you the most lightweight and powerful website builder on the planet — no expensive page builder plugin required! ✶ Full demo: https://demo.imagewize.com ✶
 
 == Changelog ==
+
+= 2.2.0 - 09/24/25 =
+* ENHANCED: Duotone System Standardization - unified duotone color system across all style variations with consistent naming and color palettes for better theme integration
+* ENHANCED: Pattern Duotone Consistency - standardized all patterns to use var:preset|duotone|primary instead of hardcoded color values for improved theme integration and customization flexibility
+* ENHANCED: Style Variation Duotone Support - added comprehensive duotone color sets to all style variations (Agency, Consulting, Creator, Publisher, Startup, Studio) with matching brand color schemes
+* FIXED: Theme-wide Duotone Integration - replaced hardcoded duotone colors in 8 pattern files with theme preset variables for consistent visual styling across all style variations
+* FIXED: Cross-variation Compatibility - ensured duotone effects automatically adapt to active style variation colors for seamless theme switching experience
 
 = 2.1.4 - 09/24/25 =
 * NEW: Publisher Style Variation - new elegant publishing-focused style variation with premium typography using Bodoni Moda serif font family for refined content presentation

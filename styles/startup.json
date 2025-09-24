@@ -4,6 +4,33 @@
 	"title": "Startup",
 	"settings": {
 		"color": {
+			"duotone": [
+				{
+					"name": "Primary",
+					"slug": "primary",
+					"colors": ["#454DFF", "#DBDDFF"]
+				},
+				{
+					"name": "Secondary",
+					"slug": "secondary",
+					"colors": ["#171A1F", "#F8F7F9"]
+				},
+				{
+					"name": "Accent",
+					"slug": "accent",
+					"colors": ["#B1C2FF", "#263042"]
+				},
+				{
+					"name": "Neutral",
+					"slug": "neutral",
+					"colors": ["#3b5570", "#DADEE3"]
+				},
+				{
+					"name": "High Contrast",
+					"slug": "high-contrast",
+					"colors": ["#000000", "#ffffff"]
+				}
+			],
 			"palette": [
 				{
 					"name": "Brand",
