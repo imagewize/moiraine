@@ -153,6 +153,34 @@ Multiple style variations available in `styles/` directory:
 - No build process required - works out of the box
 - Uses namespaced functions under `Moiraine\` namespace
 
+### WordPress Development Mode
+For optimal theme development experience, enable WordPress development mode:
+
+**In Bedrock environments** (like demo site), add to `config/environments/development.php`:
+```php
+Config::define('WP_DEVELOPMENT_MODE', 'theme');
+```
+
+**In standard WordPress**, add to `wp-config.php`:
+```php
+define('WP_DEVELOPMENT_MODE', 'theme');
+```
+
+**Benefits for theme development:**
+- Bypasses theme.json caching for immediate changes
+- Pattern modifications appear instantly without cache clearing
+- Essential for block theme and pattern development
+- Ensures theme.json color/spacing/typography changes apply immediately
+
+**Values:**
+- `'theme'` - Theme development mode (recommended for Moiraine development)
+- `'plugin'` - Plugin development mode
+- `'core'` - WordPress core development mode
+- `'all'` - All development modes enabled
+- `''` - Development mode disabled
+
+**Important:** Disable in production environments for optimal performance.
+
 ## Enhanced Features
 
 ### WooCommerce Integration

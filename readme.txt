@@ -4,7 +4,7 @@ Tags: blog, portfolio, entertainment, grid-layout, one-column, two-columns, thre
 Requires at least: 5.8
 Tested up to: 6.7.1
 Requires PHP: 7.3
-Stable tag: 2.2.0
+Stable tag: 2.3.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -13,6 +13,14 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block theme! Moiraine features over 50 beautiful pattern designs, 7 full-page pattern layouts, and a fully-customizable design system with Global Styles. Moiraine integrates seamlessly with all of the powerful new WordPress editor features, giving you the most lightweight and powerful website builder on the planet — no expensive page builder plugin required! ✶ Full demo: https://demo.imagewize.com ✶
 
 == Changelog ==
+
+= 2.3.0 - 09/25/25 =
+* NEW: Featured Post Two Column Pattern - new post-featured-two-column.php pattern displaying a single featured post with image and title on the left, excerpt on the right in a 40/60 column layout with tertiary background for enhanced content presentation
+* NEW: Enhanced Post Layout Options - added horizontal two-column layout option to complement existing vertical post card patterns for more flexible and professional content display
+* NEW: SVG Upload Support - added SVG file upload capability to media library with proper display handling in admin interface for better icon and graphic management
+* NEW: Block Extensions System - added inc/block-extensions.php for enhanced block functionality and future extensibility
+* ENHANCED: Pattern Categories - featured post pattern includes both moiraine/posts and moiraine/features categories for better discoverability in pattern inserter
+* ENHANCED: WordPress Standards Compliance - updated composer scripts to exclude JavaScript files from PHP coding standards scanning for cleaner development workflow
 
 = 2.2.0 - 09/24/25 =
 * ENHANCED: Duotone System Standardization - unified duotone color system across all style variations with consistent naming and color palettes for better theme integration

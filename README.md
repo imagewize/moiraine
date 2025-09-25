@@ -2,7 +2,7 @@
 
 Moiraine is a modern WordPress block theme designed for the WordPress block editor and site editor. Create beautiful, fully-customizable websites with WordPress's built-in tools — no coding required.
 
-Features **88+ professional patterns**, WooCommerce integration, modern development tooling, and blazing-fast performance with 100% scores across the board.
+Features **89+ professional patterns**, WooCommerce integration, modern development tooling, and blazing-fast performance with 100% scores across the board.
 
 ## Table of Contents
 
@@ -31,9 +31,15 @@ Moiraine is built for modern WordPress features and requires WordPress 6.0 or la
 - **Card Layouts**: Flexible content presentation
 - **Pricing Tables**: Professional pricing displays
 - **Testimonials**: Build trust with customer feedback
-- **Blog Post Layouts**: Beautiful post and archive designs
+- **Blog Post Layouts**: Beautiful post and archive designs including horizontal two-column featured posts
 - **Menu Patterns**: 14 specialized navigation designs (cards, mobile, panels)
 - **Template Patterns**: 14 complete page layout templates
+
+### 🧩 **Block Extensions System** (NEW in 2.3.0)
+- **Post Excerpt Linking**: Extend core post-excerpt blocks with customizable link functionality
+- **Link Controls**: Toggle excerpt-to-post linking with underline options via inspector controls
+- **Developer-Friendly**: Extensible architecture for adding functionality to core WordPress blocks
+- **Standards Compliant**: Uses WordPress hooks and filters for seamless integration
 
 ### 🧩 **Menu Designer Block** (NEW in 2.1.0)
 - Advanced mega menu functionality with template part integration
