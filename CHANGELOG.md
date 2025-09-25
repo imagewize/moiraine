@@ -5,6 +5,18 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.3.0] - 2025-09-25
+
+### Added
+- **Featured Post Two Column Pattern**: New `post-featured-two-column.php` pattern displaying a single featured post with image and title on the left, excerpt on the right in a 40/60 column layout with tertiary background
+- **Enhanced Post Layout Options**: Added horizontal two-column layout option to complement existing vertical post card patterns for more flexible content presentation
+- **SVG Upload Support**: Added SVG file upload capability to media library with proper display handling in admin interface
+- **Block Extensions System**: Added `inc/block-extensions.php` for enhanced block functionality and extensibility
+
+### Enhanced
+- **Pattern Categories**: Featured post pattern includes both `moiraine/posts` and `moiraine/features` categories for better discoverability
+- **WordPress Standards Compliance**: Updated composer scripts to exclude JavaScript files from PHP coding standards scanning
+
 ## [2.2.0] - 2025-09-24
 
 ### Enhanced

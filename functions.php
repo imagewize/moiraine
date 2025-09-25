@@ -253,3 +253,34 @@ add_action(
 	},
 	10
 );
+
+
+/**
+ * Allow SVG uploads to the media library.
+ *
+ * @param array $mimes Allowed MIME types.
+ * @return array Modified MIME types array.
+ */
+function allow_svg_uploads( $mimes ) {
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
+}
+add_filter( 'upload_mimes', __NAMESPACE__ . '\\allow_svg_uploads' );
+
+/**
+ * Fix SVG display in media library.
+ */
+function fix_svg_display() {
+	echo '<style>
+		.media-icon img[src$=".svg"], img[src$=".svg"].attachment-post-thumbnail {
+			width: 100% !important;
+			height: auto !important;
+		}
+	</style>';
+}
+add_action( 'admin_head', __NAMESPACE__ . '\\fix_svg_display' );
+
+/**
+ * Include block extensions for enhanced functionality.
+ */
+require_once get_theme_file_path( 'inc/block-extensions.php' );
