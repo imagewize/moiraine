@@ -12,4 +12,4 @@ jobs:
           uses: 10up/wpcs-action@stable
           with:
             standard: 'WordPress'
-            excludes: 'patterns/,inc/blocks/'
+            excludes: 'patterns/,inc/blocks/,blocks/,*/build/'
