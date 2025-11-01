@@ -28,13 +28,39 @@ Moiraine is a WordPress block theme based on the Ollie theme by Mike McAlister. 
 - WPCS is enforced in CI/CD pipeline via GitHub Actions
 
 ### Block Development Workflow
-- `cd inc/blocks/[block-name]` - Navigate to block directory
-- `npm install` - Install block dependencies
-- `npm start` - Development mode with file watching
-- `npm run build` - Production build (compiles src/ to build/)
-- `npm run lint:js` - JavaScript linting
-- `npm run lint:css` - CSS/SCSS linting
-- `npm run format` - Code formatting
+
+#### Creating Blocks with WP Native Blocks Plugin
+**IMPORTANT**: The demo site uses the WP Native Blocks plugin for block scaffolding. All WP-CLI commands must be run from the Trellis VM, not from your local machine.
+
+```bash
+# From the project root (imagewize.com repository)
+cd trellis
+
+# Create a new block using WP Native Blocks plugin
+trellis vm shell --workdir /srv/www/demo.imagewize.com/current -- wp block create imagewize/block-name --url=http://demo.imagewize.test --path=web/wp
+
+# OR from interactive VM shell
+trellis vm shell
+cd /srv/www/demo.imagewize.com/current
+wp block create imagewize/block-name --url=http://demo.imagewize.test --path=web/wp
+```
+
+**Why Trellis VM?**
+- Database connection is configured in the VM environment
+- WordPress installation is accessible at `/srv/www/demo.imagewize.com/current/`
+- All WP-CLI commands require database access
+- Local machine doesn't have correct database credentials
+- **Important**: If you have another database server (MySQL, MariaDB, PostgreSQL) running locally on your machine, it will conflict with the Trellis VM's database port. In this case, you **must** run `wp` commands from within the VM.
+
+**After Block Creation:**
+- Block files are created in `inc/blocks/[block-name]/`
+- Navigate to block directory: `cd inc/blocks/[block-name]`
+- Install block dependencies: `npm install`
+- Start development mode: `npm start` (file watching with auto-rebuild)
+- Production build: `npm run build` (compiles src/ to build/)
+- JavaScript linting: `npm run lint:js`
+- CSS/SCSS linting: `npm run lint:css`
+- Code formatting: `npm run format`
 
 ### Block Registration
 Custom blocks must be registered with WordPress. Three main approaches:
