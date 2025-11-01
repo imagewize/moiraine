@@ -284,7 +284,7 @@ add_action(
 			$block_folders = scandir( $blocks_dir );
 
 			foreach ( $block_folders as $folder ) {
-				if ( $folder === '.' || $folder === '..' ) {
+				if ( '.' === $folder || '..' === $folder ) {
 					continue;
 				}
 
