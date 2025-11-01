@@ -28,3 +28,4 @@ fsestudio-data.json
 .rsync
 rsync
 
+create-pr.sh
