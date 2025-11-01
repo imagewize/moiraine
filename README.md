@@ -1,4 +1,9 @@
-# Moiraine — A WordPress Block Theme
+<div align="center">
+  <img src="moiraine-logo.svg" alt="Moiraine Logo" width="128" height="128">
+<h1>Moiraine</h1>
+<h2>Professional WordPress Sites in Minutes, Not Days</h2>
+</div>
+
 
 Moiraine is a modern WordPress block theme designed for the WordPress block editor and site editor. Create beautiful, fully-customizable websites with WordPress's built-in tools — no coding required.
 

@@ -5,6 +5,17 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.3.2] - 2025-11-01
+
+### Changed
+- **Block Directory Structure**: Migrated Menu Designer block from `inc/blocks/` to root `blocks/` directory for consistency with WP Native Blocks plugin architecture
+- **Block Registration**: Consolidated block registration to use single auto-registration system for all native blocks in `blocks/` directory
+- **Code Organization**: Removed duplicate block registration code from functions.php, now using unified registration approach
+
+### Removed
+- **Legacy Block Registration**: Removed old block registration system that scanned `inc/blocks/` directory
+- **inc/blocks Directory**: Removed empty `inc/blocks/` directory as all blocks now reside in root `blocks/` directory
+
 ## [2.3.1] - 2025-10-11
 
 ### Added

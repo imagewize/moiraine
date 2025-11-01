@@ -19,9 +19,8 @@
 	},
 	"scripts": {
 		"lint": "@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor --exclude patterns .",
-		"wpcs:scan": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs --ignore=*/vendor/*,*/patterns/*,*/node_modules/*,*/inc/blocks/*,*.js --standard=WordPress .",
-    "wpcs:fix": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcbf --ignore=*/vendor/*,*/patterns/*,*/node_modules/*,*/inc/blocks/*,*.js --standard=WordPress ."
-		
+		"wpcs:scan": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs --ignore=*/vendor/*,*/patterns/*,*/node_modules/*,*/inc/blocks/*,*/blocks/*/build/*,*.js,*.css --standard=WordPress .",
+		"wpcs:fix": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcbf --ignore=*/vendor/*,*/patterns/*,*/node_modules/*,*/inc/blocks/*,*/blocks/*/build/*,*.js,*.css --standard=WordPress ."
 	},
 	"config": {
 		"allow-plugins": {
