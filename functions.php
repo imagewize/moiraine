@@ -263,34 +263,38 @@ require_once get_theme_file_path( 'inc/block-extensions.php' );
  * - Parent theme blocks are registered first (available to all child themes)
  * - Child theme blocks are registered second (can override parent blocks)
  */
-add_action('init', function () {
-    $directories = [];
+add_action(
+	'init',
+	function () {
+		$directories = array();
 
-    // Add parent theme blocks directory (if exists and different from child)
-    if (get_template_directory() !== get_stylesheet_directory()) {
-        $directories[] = get_template_directory() . '/blocks';
-    }
+		// Add parent theme blocks directory (if exists and different from child).
+		if ( get_template_directory() !== get_stylesheet_directory() ) {
+			$directories[] = get_template_directory() . '/blocks';
+		}
 
-    // Add child/active theme blocks directory
-    $directories[] = get_stylesheet_directory() . '/blocks';
+		// Add child/active theme blocks directory.
+		$directories[] = get_stylesheet_directory() . '/blocks';
 
-    foreach ($directories as $blocks_dir) {
-        if (!is_dir($blocks_dir)) {
-            continue;
-        }
+		foreach ( $directories as $blocks_dir ) {
+			if ( ! is_dir( $blocks_dir ) ) {
+				continue;
+			}
 
-        $block_folders = scandir($blocks_dir);
+			$block_folders = scandir( $blocks_dir );
 
-        foreach ($block_folders as $folder) {
-            if ($folder === '.' || $folder === '..') {
-                continue;
-            }
+			foreach ( $block_folders as $folder ) {
+				if ( $folder === '.' || $folder === '..' ) {
+					continue;
+				}
 
-            $block_json_path = $blocks_dir . '/' . $folder . '/build/block.json';
+				$block_json_path = $blocks_dir . '/' . $folder . '/build/block.json';
 
-            if (file_exists($block_json_path)) {
-                register_block_type($block_json_path);
-            }
-        }
-    }
-}, 10);
+				if ( file_exists( $block_json_path ) ) {
+					register_block_type( $block_json_path );
+				}
+			}
+		}
+	},
+	10
+);
