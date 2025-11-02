@@ -2,7 +2,7 @@
 Contributors:      Moiraine Theme
 Tags:              block, menu, navigation, mega menu, template parts
 Tested up to:      6.7
-Stable tag:        0.1.2
+Stable tag:        0.1.3
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -70,6 +70,10 @@ directory take precedence. For example, `/assets/screenshot-1.png` would win ove
 2. This is the second screen shot
 
 == Changelog ==
+
+= 0.1.3 =
+* Fixed: Site Editor link in block settings now correctly navigates to Menu template parts area
+* Fixed: Updated URL from incorrect path parameter to proper p=%2Fpattern&postType=wp_template_part format
 
 = 0.1.2 =
 * Fixed: WordPress Interactivity API state management updated to match Human Made Mega Menu Block implementation patterns exactly
