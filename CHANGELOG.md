@@ -5,6 +5,14 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.3.3] - 2025-11-02
+
+### Fixed
+- **Menu Designer Block**: Fixed Site Editor link in block settings now correctly navigates to Menu template parts area (`/wp-admin/site-editor.php?p=%2Fpattern&postType=wp_template_part&categoryId=menu`)
+- **Menu Designer URL Generation**: Updated URL construction from incorrect `path%2Fpatterns&categoryType` parameters to proper `p=%2Fpattern&postType` format
+- **Menu Designer Reliability**: Added fallback to `window.location.origin` when WordPress site URL isn't available from data store, ensuring link always works
+- **Menu Designer Version**: Updated Menu Designer block to version 0.1.3
+
 ## [2.3.2] - 2025-11-01
 
 ### Changed

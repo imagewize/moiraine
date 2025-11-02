@@ -56,11 +56,10 @@ export default function Edit( { attributes, setAttributes } ) {
 				?.layout
 	);
 
-	const siteUrl = useSelect( ( select ) => select( 'core' ).getSite().url );
-	const menuTemplateUrl = siteUrl
-		? siteUrl +
-		  '/wp-admin/site-editor.php?path%2Fpatterns&categoryType=wp_template_part&categoryId=menu'
-		: '';
+	const siteUrl = useSelect( ( select ) => select( 'core' ).getSite()?.url );
+	const menuTemplateUrl =
+		( siteUrl || window.location.origin ) +
+		'/wp-admin/site-editor.php?p=%2Fpattern&postType=wp_template_part&categoryId=menu';
 
 	const { hasResolved, records } = useEntityRecords(
 		'postType',
