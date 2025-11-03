@@ -29,3 +29,6 @@ fsestudio-data.json
 rsync
 
 create-pr.sh
+
+# Backup directories for pattern images
+patterns/images/backup-*/

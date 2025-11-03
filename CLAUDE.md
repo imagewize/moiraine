@@ -224,11 +224,46 @@ define('WP_DEVELOPMENT_MODE', 'theme');
 - Card, panel, and mobile menu styles
 
 ### Block Development
-- Uses `@wordpress/create-block` for custom block development
-- Block source files in `inc/blocks/*/src/` directories
-- Build output auto-generated in `inc/blocks/*/build/` directories
+- Uses `@wordpress/create-block` and `@wordpress/scripts` for custom block development
+- Block source files in `blocks/*/src/` directories
+- Build output auto-generated in `blocks/*/build/` directories
 - **IMPORTANT**: Never edit build files directly - always edit source files in `src/` and run `npm run build`
 - Build process compiles TypeScript/JSX, processes SCSS, and generates block manifest
 - Use `npm start` for development (watches files and rebuilds automatically)
 - Use `npm run build` for production builds before committing
 - Blocks must be registered with WordPress using `register_block_type()` function
+
+**Block Structure Requirements:**
+- `block.json` must be in `src/` directory (not root) - `@wordpress/scripts` automatically copies it to `build/` during build
+- Source files in `src/`: `index.js`, `edit.js`, `save.js`, `editor.scss`, `style.scss`, `view.js` (if needed)
+- Import `block.json` from same directory: `import metadata from './block.json';` (not `'../block.json'`)
+- WordPress registration looks for `block.json` at: `blocks/[block-name]/build/block.json`
+- Each block needs its own `package.json` with `@wordpress/scripts` devDependency
+
+**Example Block Structure:**
+```
+blocks/
+└── carousel/
+    ├── package.json          # npm scripts and dependencies
+    ├── src/                  # Source files (edit these)
+    │   ├── block.json       # Block metadata (copied to build/)
+    │   ├── index.js         # Block registration
+    │   ├── edit.js          # Editor component
+    │   ├── save.js          # Frontend save component
+    │   ├── editor.scss      # Editor styles
+    │   ├── style.scss       # Frontend styles
+    │   └── view.js          # Frontend JavaScript (optional)
+    ├── build/               # Build output (auto-generated, don't edit)
+    │   ├── block.json       # Copied from src/
+    │   ├── index.js         # Compiled JavaScript
+    │   ├── index.css        # Compiled editor styles
+    │   ├── style-index.css  # Compiled frontend styles
+    │   └── index.asset.php  # WordPress asset dependencies
+    └── node_modules/        # Block dependencies (gitignored)
+```
+
+**Enqueuing Block Assets:**
+- For blocks requiring external libraries (like Slick Carousel), create a separate function in `functions.php`
+- Use `has_block()` to conditionally load assets only when block is used
+- Use `is_admin()` to prevent frontend-only scripts from loading in editor
+- Example in `functions.php`: `enqueue_carousel_assets()` function

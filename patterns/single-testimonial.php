@@ -27,7 +27,7 @@
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"0px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"textColor":"base"} -->
-<p class="has-base-color has-text-color"><strong><?php esc_html_e( 'Maryann Alpine', 'moiraine' ); ?></strong></p>
+<p class="has-base-color has-text-color"><strong><?php esc_html_e( 'Mandi Alpine', 'moiraine' ); ?></strong></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"textColor":"main-accent","fontSize":"small"} -->
