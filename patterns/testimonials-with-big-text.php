@@ -54,7 +54,7 @@
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"0px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"500"}}} -->
-<p style="font-style:normal;font-weight:500"><?php esc_html_e( 'Alex Glacier', 'moiraine' ); ?></p>
+<p style="font-style:normal;font-weight:500"><?php esc_html_e( 'Aria Acadia', 'moiraine' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
@@ -72,7 +72,7 @@
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"0px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"500"}}} -->
-<p style="font-style:normal;font-weight:500"><?php esc_html_e( 'Maryann Alpine', 'moiraine' ); ?></p>
+<p style="font-style:normal;font-weight:500"><?php esc_html_e( 'Marcus Thompson', 'moiraine' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>

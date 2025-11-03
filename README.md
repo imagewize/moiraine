@@ -7,7 +7,7 @@
 
 Moiraine is a modern WordPress block theme designed for the WordPress block editor and site editor. Create beautiful, fully-customizable websites with WordPress's built-in tools — no coding required.
 
-Features **89+ professional patterns**, WooCommerce integration, modern development tooling, and blazing-fast performance with 100% scores across the board.
+Features **89+ professional patterns**, **custom carousel block**, WooCommerce integration, modern development tooling, and blazing-fast performance with 100% scores across the board.
 
 ## Table of Contents
 
@@ -29,7 +29,14 @@ Moiraine is built for modern WordPress features and requires WordPress 6.0 or la
 
 ## Key Features
 
-### 🎨 **88+ Professional Patterns**
+### 🎠 **Carousel Blocks** (NEW in 2.4.0)
+- **Responsive Carousels**: Create stunning image and content sliders with Slick Carousel integration
+- **Flexible Slide Content**: Use InnerBlocks to add any content to slides (images, text, buttons, etc.)
+- **Customizable Settings**: Control autoplay, navigation arrows, dots, transitions, and more
+- **Performance Optimized**: Conditional asset loading ensures carousel scripts only load when needed
+- **Mobile-First Design**: Touch-friendly navigation and responsive breakpoints
+
+### 🎨 **89+ Professional Patterns**
 - **Hero Sections**: Eye-catching headers and banners
 - **Feature Presentations**: Showcase your products and services
 - **Call-to-Action Sections**: Drive conversions with beautiful CTAs
@@ -114,8 +121,12 @@ composer run lint             # PHP linting
 composer run wpcs:scan        # WordPress coding standards
 composer run wpcs:fix         # Auto-fix WPCS violations
 
-# Block development (Menu Designer)
-cd inc/blocks/menu-designer
+# Block development
+cd blocks/carousel            # Carousel block
+npm start                     # Development with file watching
+npm run build                 # Production build
+
+cd blocks/menu-designer       # Menu Designer block
 npm start                     # Development with file watching
 npm run build                 # Production build
 ```

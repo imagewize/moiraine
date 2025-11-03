@@ -31,11 +31,11 @@
 <div class="wp-block-cover is-light has-custom-content-position is-position-bottom-center is-style-rounded-cover" style="border-radius:5px;padding-bottom:var(--wp--preset--spacing--medium);min-height:500px"><span aria-hidden="true" class="wp-block-cover__background has-main-background-color has-background-dim"></span><img class="wp-block-cover__image-background " alt="" src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/avatar-2.webp" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"blockGap":"5px"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
 <div class="wp-block-group"><!-- wp:heading {"textAlign":"center","level":4,"textColor":"base"} -->
-<h4 class="wp-block-heading has-text-align-center has-base-color has-text-color"><?php esc_html_e( 'Tracy Capitan', 'moiraine' ); ?></h4>
+<h4 class="wp-block-heading has-text-align-center has-base-color has-text-color"><?php esc_html_e( 'Marcus Sequoia', 'moiraine' ); ?></h4>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center","textColor":"tertiary","fontSize":"small"} -->
-<p class="has-text-align-center has-tertiary-color has-text-color has-small-font-size"><?php esc_html_e( 'Product Designer', 'moiraine' ); ?></p>
+<p class="has-text-align-center has-tertiary-color has-text-color has-small-font-size"><?php esc_html_e( 'Customer Support', 'moiraine' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -53,11 +53,11 @@
 <div class="wp-block-cover is-light has-custom-content-position is-position-bottom-center is-style-rounded-cover" style="border-radius:5px;padding-bottom:var(--wp--preset--spacing--medium);min-height:500px"><span aria-hidden="true" class="wp-block-cover__background has-main-background-color has-background-dim"></span><img class="wp-block-cover__image-background " alt="" src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/avatar-1.webp" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"blockGap":"5px"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
 <div class="wp-block-group"><!-- wp:heading {"textAlign":"center","level":4,"textColor":"base"} -->
-<h4 class="wp-block-heading has-text-align-center has-base-color has-text-color"><?php esc_html_e( 'Michael Glacier', 'moiraine' ); ?></h4>
+<h4 class="wp-block-heading has-text-align-center has-base-color has-text-color"><?php esc_html_e( 'Priya Sharma', 'moiraine' ); ?></h4>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center","textColor":"tertiary","fontSize":"small"} -->
-<p class="has-text-align-center has-tertiary-color has-text-color has-small-font-size"><?php esc_html_e( 'Product Designer', 'moiraine' ); ?></p>
+<p class="has-text-align-center has-tertiary-color has-text-color has-small-font-size"><?php esc_html_e( 'Lead Developer', 'moiraine' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -75,7 +75,7 @@
 <div class="wp-block-cover is-light has-custom-content-position is-position-bottom-center is-style-rounded-cover" style="border-radius:5px;padding-bottom:var(--wp--preset--spacing--medium);min-height:500px"><span aria-hidden="true" class="wp-block-cover__background has-main-background-color has-background-dim"></span><img class="wp-block-cover__image-background " alt="" src="<?php echo esc_url( get_template_directory_uri() ); ?>/patterns/images/avatar-3.webp" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"blockGap":"5px"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
 <div class="wp-block-group"><!-- wp:heading {"textAlign":"center","level":4,"textColor":"base"} -->
-<h4 class="wp-block-heading has-text-align-center has-base-color has-text-color"><?php esc_html_e( 'Maryann Alpine', 'moiraine' ); ?></h4>
+<h4 class="wp-block-heading has-text-align-center has-base-color has-text-color"><?php esc_html_e( 'Mandi Alpine', 'moiraine' ); ?></h4>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center","textColor":"tertiary","fontSize":"small"} -->

@@ -4,7 +4,7 @@ Tags: blog, portfolio, entertainment, grid-layout, one-column, two-columns, thre
 Requires at least: 5.8
 Tested up to: 6.7.1
 Requires PHP: 7.3
-Stable tag: 2.3.0
+Stable tag: 2.4.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -13,6 +13,46 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block theme! Moiraine features over 50 beautiful pattern designs, 7 full-page pattern layouts, and a fully-customizable design system with Global Styles. Moiraine integrates seamlessly with all of the powerful new WordPress editor features, giving you the most lightweight and powerful website builder on the planet — no expensive page builder plugin required! ✶ Full demo: https://demo.imagewize.com ✶
 
 == Changelog ==
+
+= 2.4.0 - 11/03/25 =
+* NEW: Carousel Block - custom WordPress block for creating responsive image/content carousels with Slick Carousel integration for stunning visual presentations
+* NEW: Slide Block - companion block for individual carousel slides with InnerBlocks support allowing any content type (images, text, buttons, etc.)
+* NEW: Slick Carousel Library - added professional carousel JavaScript library with complete theme assets and initialization scripts
+* NEW: Demo Content Export - comprehensive WordPress XML export (moiraine.WordPress.2025-11-03.xml) with complete demo site content for easy setup
+* NEW: Demo Enhancement Documentation - extensive documentation covering image audit, content creation phases, and homepage refinement strategies
+* NEW: Pattern Images - added logo-5.webp and optimized existing avatar/logo images for superior performance and visual quality
+* NEW: Database Backup Scripts - automated backup script (backup-db.sh) for both main and demo sites with timestamp organization
+* NEW: Content Management Scripts - Python script for homepage updates and Bash automation for applying changes efficiently
+* ENHANCED: Pattern Images - optimized all avatar images (avatar-1 through avatar-7) reducing file sizes by 50-80% while maintaining visual quality
+* ENHANCED: Logo Images - refreshed all logo images (logo-1 through logo-6) with improved designs matching OllieWP aesthetic standards
+* ENHANCED: Hero Pattern - updated hero-text-image-and-logos.php with refined layout, improved spacing, and better logo grid presentation
+* ENHANCED: Testimonial Patterns - updated 6 testimonial patterns (card-testimonial, single-testimonial, testimonial-highlight, testimonials-and-logos, testimonials-with-big-text, testimonials-with-social-links) with new avatar images and refined styling
+* ENHANCED: Team Members Pattern - enhanced team member display with updated avatar images, improved typography, and better layout spacing
+* ENHANCED: Demo Site Content - complete content refresh with new blog posts, showcase pages, and templates optimized for multi-site WordPress setup
+* ENHANCED: Block Development Workflow - enhanced CLAUDE.md documentation with detailed block structure requirements and asset enqueuing best practices
+* ENHANCED: Functions.php - added carousel asset enqueuing function with smart conditional loading using has_block() for optimal performance
+* CHANGED: Package Dependencies - updated npm packages for improved security patches and performance optimizations
+* CHANGED: Git Configuration - updated .gitignore to exclude carousel backup directories and rsync temporary files for cleaner repository
+* CHANGED: Documentation Structure - organized demo enhancement documentation into dedicated docs/demo-enhancement/ directory for better navigation
+* FIXED: Image Performance - significantly reduced pattern image file sizes (computer-hands.webp: 145KB → 84KB, guy-laptop.webp improved quality at 129KB)
+* FIXED: Asset Loading - implemented intelligent conditional loading for carousel assets preventing unnecessary script/style enqueuing on pages without carousels
+
+= 2.3.3 - 11/02/25 =
+* FIXED: Menu Designer Block - Site Editor link in block settings now correctly navigates to Menu template parts area (/wp-admin/site-editor.php?p=%2Fpattern&postType=wp_template_part&categoryId=menu)
+* FIXED: Menu Designer URL Generation - updated URL construction from incorrect path%2Fpatterns&categoryType parameters to proper p=%2Fpattern&postType format
+* FIXED: Menu Designer Reliability - added fallback to window.location.origin when WordPress site URL isn't available from data store, ensuring link always works
+* UPDATED: Menu Designer block to version 0.1.3
+
+= 2.3.2 - 11/01/25 =
+* CHANGED: Block Directory Structure - migrated Menu Designer block from inc/blocks/ to root blocks/ directory for consistency with WP Native Blocks plugin architecture
+* CHANGED: Block Registration - consolidated block registration to use single auto-registration system for all native blocks in blocks/ directory
+* CHANGED: Code Organization - removed duplicate block registration code from functions.php, now using unified registration approach
+* REMOVED: Legacy Block Registration - removed old block registration system that scanned inc/blocks/ directory
+* REMOVED: inc/blocks Directory - removed empty inc/blocks/ directory as all blocks now reside in root blocks/ directory
+
+= 2.3.1 - 10/11/25 =
+* NEW: Documentation Protection - added docs/index.php with directory index blocking for security
+* CHANGED: .gitignore - added rsync to ignored files list for cleaner repository
 
 = 2.3.0 - 09/25/25 =
 * NEW: Featured Post Two Column Pattern - new post-featured-two-column.php pattern displaying a single featured post with image and title on the left, excerpt on the right in a 40/60 column layout with tertiary background for enhanced content presentation

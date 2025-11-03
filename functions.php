@@ -225,34 +225,89 @@ function template_part_areas( array $areas ) {
 add_filter( 'default_wp_template_part_areas', __NAMESPACE__ . '\template_part_areas' );
 
 /**
- * Allow SVG uploads to the media library.
+ * Allow SVG and WebP uploads to the media library.
  *
  * @param array $mimes Allowed MIME types.
  * @return array Modified MIME types array.
  */
-function allow_svg_uploads( $mimes ) {
-	$mimes['svg'] = 'image/svg+xml';
+function allow_additional_mime_types( $mimes ) {
+	$mimes['svg']  = 'image/svg+xml';
+	$mimes['webp'] = 'image/webp';
 	return $mimes;
 }
-add_filter( 'upload_mimes', __NAMESPACE__ . '\\allow_svg_uploads' );
+add_filter( 'upload_mimes', __NAMESPACE__ . '\\allow_additional_mime_types' );
 
 /**
- * Fix SVG display in media library.
+ * Fix SVG and WebP display in media library.
  */
-function fix_svg_display() {
+function fix_media_display() {
 	echo '<style>
 		.media-icon img[src$=".svg"], img[src$=".svg"].attachment-post-thumbnail {
 			width: 100% !important;
 			height: auto !important;
 		}
+		.media-icon img[src$=".webp"], img[src$=".webp"].attachment-post-thumbnail {
+			width: 100% !important;
+			height: auto !important;
+		}
 	</style>';
 }
-add_action( 'admin_head', __NAMESPACE__ . '\\fix_svg_display' );
+add_action( 'admin_head', __NAMESPACE__ . '\\fix_media_display' );
 
 /**
  * Include block extensions for enhanced functionality.
  */
 require_once get_theme_file_path( 'inc/block-extensions.php' );
+
+/**
+ * Enqueue Slick Carousel assets for carousel block
+ * Only loads when the block is actually used on the page
+ */
+function enqueue_carousel_assets() {
+	// Only enqueue on frontend, not in admin/editor.
+	if ( is_admin() ) {
+		return;
+	}
+
+	// Check if carousel block is being used on this page.
+	if ( ! has_block( 'imagewize/carousel' ) ) {
+		return;
+	}
+
+	// Enqueue Slick Carousel CSS.
+	wp_enqueue_style(
+		'slick-carousel',
+		get_template_directory_uri() . '/assets/js/vendor/slick/slick.css',
+		array(),
+		'1.8.1'
+	);
+
+	wp_enqueue_style(
+		'slick-carousel-theme',
+		get_template_directory_uri() . '/assets/js/vendor/slick/slick-theme.css',
+		array( 'slick-carousel' ),
+		'1.8.1'
+	);
+
+	// Enqueue Slick Carousel JS.
+	wp_enqueue_script(
+		'slick-carousel',
+		get_template_directory_uri() . '/assets/js/vendor/slick/slick.min.js',
+		array( 'jquery' ),
+		'1.8.1',
+		true
+	);
+
+	// Enqueue carousel initialization script.
+	wp_enqueue_script(
+		'slick-carousel-init',
+		get_template_directory_uri() . '/assets/js/vendor/slick/init.js',
+		array( 'jquery', 'slick-carousel' ),
+		'1.0.0',
+		true
+	);
+}
+add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_carousel_assets' );
 
 
 /**

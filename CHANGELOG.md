@@ -5,6 +5,37 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.4.0] - 2025-11-03
+
+### Added
+- **Carousel Block**: New custom WordPress block for creating responsive image/content carousels with Slick Carousel integration
+- **Slide Block**: Companion block for individual carousel slides with InnerBlocks support for flexible content
+- **Slick Carousel Library**: Added Slick Carousel JavaScript library and theme assets for carousel functionality
+- **Demo Content Export**: Comprehensive WordPress XML export (moiraine.WordPress.2025-11-03.xml) with complete demo site content
+- **Demo Enhancement Documentation**: Extensive documentation covering image audit, content creation, and homepage refinement phases
+- **New Pattern Images**: Added logo-5.webp and optimized existing avatar and logo images for better performance
+- **Database Backup Scripts**: Added automated backup script (backup-db.sh) for both main and demo sites
+- **Content Management Scripts**: Python script for homepage content updates and Bash script for applying homepage updates
+
+### Enhanced
+- **Pattern Images**: Optimized all avatar images (avatar-1 through avatar-7) reducing file sizes by 50-80% while maintaining quality
+- **Logo Images**: Refreshed all logo images (logo-1 through logo-6) with improved designs matching OllieWP aesthetic
+- **Hero Pattern**: Updated hero-text-image-and-logos.php with refined layout and improved logo grid
+- **Testimonial Patterns**: Updated 6 testimonial patterns with new avatar images and refined styling
+- **Team Members Pattern**: Enhanced team member display with updated avatar images and layout improvements
+- **Demo Site Content**: Complete content refresh with new blog posts, pages, and showcase templates for multi-site setup
+- **Block Development Workflow**: Enhanced documentation in CLAUDE.md for block structure requirements and asset enqueuing
+- **Functions.php**: Added carousel asset enqueuing function with conditional loading using has_block()
+
+### Changed
+- **Package Dependencies**: Updated npm packages for improved security and performance
+- **Git Configuration**: Updated .gitignore to exclude carousel backup directories and rsync files
+- **Documentation Structure**: Organized demo enhancement documentation into dedicated docs/demo-enhancement/ directory
+
+### Fixed
+- **Image Performance**: Reduced pattern image file sizes significantly (computer-hands.webp: 145KB → 84KB, guy-laptop.webp: 38KB → 129KB with better quality)
+- **Asset Loading**: Implemented conditional loading for carousel assets to prevent unnecessary script/style enqueuing
+
 ## [2.3.3] - 2025-11-02
 
 ### Fixed
