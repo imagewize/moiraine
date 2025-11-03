@@ -5,6 +5,20 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.4.1] - 2025-11-03
+
+### Added
+- **Playwright Testing Scripts**: Added dedicated menu testing script (`.playwright/scripts/test-menu.js`) for automated desktop and mobile menu behavior testing with screenshots
+
+### Enhanced
+- **Menu Designer Block Styles**: Refactored SCSS architecture with modern Sass features including variables, improved BEM nesting, and better code organization for enhanced maintainability
+- **Documentation**: Updated CLAUDE.md with comprehensive Playwright browser testing and screenshot guidelines, including usage examples for both general screenshots and specialized menu testing
+
+### Changed
+- **SCSS Structure**: Introduced reusable variables for transitions, sizes, and z-indexes in Menu Designer block
+- **CSS Organization**: Improved nesting patterns following BEM methodology for cleaner, more maintainable code
+- **Code Quality**: Consolidated duplicate mobile menu styles using Sass features for DRY principles
+
 ## [2.4.0] - 2025-11-03
 
 ### Added
