@@ -13,6 +13,37 @@ Moiraine is a WordPress block theme based on the Ollie theme by Mike McAlister. 
 - `npm run dev` - Watch pattern files for changes and auto-escape for translations
 - `npm run translate:patterns` - Process pattern files for translation readiness
 
+### Browser Testing and Screenshots
+**IMPORTANT**: Always use the local Playwright scripts for browser testing and screenshots instead of MCP browser tools.
+
+```bash
+# From project root (imagewize.com repository)
+
+# Take screenshots (available viewports: mobile, tablet, desktop)
+node .playwright/scripts/test.js <url> screenshot <name> [--mobile|--tablet|--desktop]
+
+# Examples:
+node .playwright/scripts/test.js http://demo.imagewize.test/ screenshot demo-home --desktop
+node .playwright/scripts/test.js http://demo.imagewize.test/ screenshot blog-page --mobile
+
+# Test menu behavior (both desktop and mobile automatically)
+node .playwright/scripts/test-menu.js <url>
+
+# Example:
+node .playwright/scripts/test-menu.js http://demo.imagewize.test/
+```
+
+**Benefits:**
+- Consistent screenshot output to `.playwright/screenshots/`
+- Proper viewport handling (mobile: 390×844, tablet: 768×1024, desktop: 1920×1080)
+- Automatic image resizing to prevent errors
+- Better suited for local development testing
+- Screenshots are timestamped and saved with descriptive names
+
+**Available Scripts:**
+- `test.js` - General purpose: screenshots, CSS checks, custom evaluations
+- `test-menu.js` - Specialized menu testing: captures desktop menu dropdown and mobile hamburger menu states
+
 ### Linting and Code Quality
 - `composer run lint` - Run PHP parallel lint on all PHP files
 - `composer run wpcs:scan` - Scan code against WordPress coding standards
