@@ -5,6 +5,24 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.4.2] - 2025-11-04
+
+### Added
+- **Pattern Screenshot Assets**: Added 15 optimized WebP landscape screenshots (1400x800px) for pattern carousel showcase
+- **Pattern Carousel Documentation**: Comprehensive documentation for pattern selection criteria and carousel implementation (`docs/demo-enhancement/PATTERNS-CAROUSEL.md`)
+- **Phase 7 Documentation**: Pattern showcase implementation guide (`docs/demo-enhancement/PHASE7-PATTERNS-SHOWCASE.md`) and automation commands (`docs/demo-enhancement/PHASE7-COMMANDS.md`)
+
+### Enhanced
+- **Services Feature Cards Pattern**: Improved responsive layout with CSS Grid (`minimumColumnWidth: 20rem`) replacing fixed 3-column layout for better mobile responsiveness
+- **Blog Post Columns Pattern**: Updated to use responsive CSS Grid layout instead of fixed 2-column grid
+- **Pattern Color Consistency**: Standardized `services-feature-cards.php` to use `primary` and `tertiary` background colors instead of non-standard `ocean-blue` and `dark-teal`
+- **Pattern Text Contrast**: Improved text color consistency in service cards - changed nested text from `base` to `main` for better accessibility on tertiary backgrounds
+- **Demo Enhancement Tracking**: Updated `docs/demo-enhancement/PROGRESS.md` with Phase 7 completion tracking
+
+### Changed
+- **Pattern Layout System**: Migrated patterns from fixed column layouts to flexible CSS Grid layouts for improved responsiveness across all viewport sizes
+- **Pattern Color Palette**: Aligned all pattern colors to standard theme color system for better theme variation compatibility
+
 ## [2.4.1] - 2025-11-03
 
 ### Added
