@@ -156,9 +156,9 @@ function enqueue_navigation_frontend_script() {
 	wp_enqueue_script(
 		'moiraine-navigation-frontend',
 		$js_file_url,
-		array(), // No dependencies needed
+		array(), // No dependencies needed.
 		filemtime( $js_file_path ),
-		true // Load in footer
+		true // Load in footer.
 	);
 }
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_navigation_frontend_script' );
