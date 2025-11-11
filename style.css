@@ -172,14 +172,14 @@ a.more-link {
 
 	/* Hide desktop menu panel on mobile */
 	.moiraine-menu-desktop-only,
-	.moiraine-menu-desktop-only .moiraine-menu-designer,
-	.moiraine-menu-desktop-only .wp-block-moiraine-menu-designer__menu-container {
+	.moiraine-menu-desktop-only .moiraine-mega-menu,
+	.moiraine-menu-desktop-only .wp-block-moiraine-mega-menu__menu-container {
 		display: none !important;
 	}
 
 	/* Mobile menu positioning - work with existing layout */
-	.moiraine-menu-designer.menu-justified-center,
-	.wp-block-moiraine-menu-designer__menu-container.menu-justified-center {
+	.moiraine-mega-menu.menu-justified-center,
+	.wp-block-moiraine-mega-menu__menu-container.menu-justified-center {
 		left: -1rem;
 		right: 1rem;
 		transform: none;
@@ -192,8 +192,8 @@ a.more-link {
 @media (min-width: 782px) {
 	/* Hide mobile menu panel on desktop */
 	.moiraine-menu-mobile-only,
-	.moiraine-menu-mobile-only .moiraine-menu-designer,
-	.moiraine-menu-mobile-only .wp-block-moiraine-menu-designer__menu-container {
+	.moiraine-menu-mobile-only .moiraine-mega-menu,
+	.moiraine-menu-mobile-only .wp-block-moiraine-mega-menu__menu-container {
 		display: none !important;
 	}
 }

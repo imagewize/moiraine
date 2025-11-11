@@ -5,6 +5,60 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.5.0] - 2025-11-09
+
+### Added
+- **Navigation Block Extension**: Extended WordPress core Navigation block with custom features while preserving visual editing capabilities
+  - Clickable parent menu items - click text navigates to parent page, click chevron toggles submenu
+  - Improved chevron positioning with better inline alignment on mobile menus
+  - Inspector Controls panel with toggle switches for "Clickable parent items" and "Improved chevron positioning"
+  - Frontend JavaScript that transforms parent buttons into clickable links + separate toggle buttons
+  - Preserves WordPress Interactivity API for native submenu functionality
+  - Full integration with Site Editor - drag/drop menu editing, inline text editing, visual menu management
+- **Navigation Extension Implementation**: Following post-excerpt extension pattern for consistency
+  - Block extension JavaScript: `assets/js/block-extensions/navigation.js`
+  - Frontend enhancement: `assets/js/navigation-frontend.js`
+  - PHP filters: `render_block` filters for `core/navigation` and `core/navigation-submenu` blocks
+  - CSS styling: Extension styles in `assets/styles/core-navigation.css`
+  - Automatic `data-parent-url` attribute injection for submenu items
+- **Navigation Documentation**: Comprehensive implementation plan at `docs/NAVIGATION-EXTENSION-PLAN.md`
+  - Architecture overview and implementation steps
+  - Comparison: why block extension instead of custom block
+  - Testing plan and rollback procedures
+  - 8-hour estimated timeline with phase breakdown
+- **Core Navigation Styles**: Added hamburger menu icon styles to `assets/styles/core-navigation.css` with increased size (32px) and thickness for better visibility
+
+### Changed
+- **Menu Designer Block Renamed to Mega Menu**: Complete rebrand from "Menu Designer" to "Mega Menu" for clarity and consistency
+  - Updated block name: `moiraine/menu-designer` → `moiraine/mega-menu`
+  - Updated all CSS class names: `.wp-block-moiraine-menu-designer` → `.wp-block-moiraine-mega-menu`
+  - Updated namespace: `moiraine/menu-designer` → `moiraine/mega-menu`
+  - Updated text domain and all references across 15+ files
+- **Header Pattern Enhancement**: Updated `header-light-with-hamburger-menu.php` with navigation extension attributes
+  - Added `hasClickableParents` and `hasImprovedChevrons` attributes
+  - Enabled `moiraine-hamburger-large` class for improved mobile navigation visibility
+- **Navigation Architecture**: Switched from custom nav-builder block to core Navigation block extension approach
+  - Preserves native WordPress navigation features and Site Editor integration
+  - Maintains visual menu editing capabilities (drag/drop, inline editing)
+  - Simpler maintenance using WordPress core block as foundation
+
+### Fixed
+- **Mega Menu Interactivity API**: Fixed state management to consistently use context instead of mixing state and context access
+  - Updated `toggleMenuOnClick`, `handleMenuKeydown`, `openMenu`, and `closeMenu` actions to properly access `context.menuOpenedBy`
+  - Resolved issue where menu wasn't responding to click events due to state/context disconnect
+- **Mega Menu CSS Class References**: Fixed SCSS file still using old `menu-designer` class names after block rename
+  - Updated all class selectors in `src/style.scss` to use `mega-menu` naming
+  - Fixed menu visibility toggle that was preventing dropdown overlay from working
+  - Menu now properly hides by default and shows on click with smooth transitions
+- **Navigation Submenu Chevrons**: Fixed mobile submenu chevron arrows appearing below menu items instead of inline (right-aligned) using block extension approach with CSS flexbox and JavaScript DOM transformation
+- **Clickable Parent Menu Items**: Enabled parent menu items to function as both navigation links and submenu toggles by separating link and chevron into distinct clickable elements while preserving WordPress Interactivity API
+
+### Removed
+- **Nav Builder Block**: Removed custom nav-builder block in favor of extending core Navigation block
+  - Custom block lacked visual menu editing in Site Editor
+  - Extension approach provides better user experience and maintainability
+  - Documentation archived in `docs/NAVIGATION-EXTENSION-PLAN.md` explaining the decision
+
 ## [2.4.2] - 2025-11-04
 
 ### Added

@@ -1,7 +1,7 @@
 {
-	"name": "menu-designer",
+	"name": "mega-menu",
 	"version": "2.1.1",
-	"description": "Example block scaffolded with Create Block tool.",
+	"description": "Create dynamic mega menus with template parts and advanced styling options.",
 	"author": "The WordPress Contributors",
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",

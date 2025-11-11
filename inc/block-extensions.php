@@ -23,7 +23,7 @@ function enqueue_block_extensions() {
 		wp_mkdir_p( $js_path );
 	}
 
-	// Create file path and URL.
+	// Post Excerpt Extension.
 	$js_file_path = $js_path . '/post-excerpt.js';
 	$asset_file   = get_theme_file_uri( '/assets/js/block-extensions/post-excerpt.js' );
 
@@ -68,6 +68,22 @@ function enqueue_block_extensions() {
             );
         });',
 		'after'
+	);
+
+	// Navigation Extension.
+	$nav_js_file_path = $js_path . '/navigation.js';
+	$nav_asset_file   = get_theme_file_uri( '/assets/js/block-extensions/navigation.js' );
+
+	$nav_asset_version = file_exists( $nav_js_file_path )
+		? filemtime( $nav_js_file_path )
+		: wp_get_theme()->get( 'Version' );
+
+	wp_enqueue_script(
+		'moiraine-navigation-extension',
+		$nav_asset_file,
+		array( 'wp-blocks', 'wp-element', 'wp-components', 'wp-block-editor', 'wp-compose', 'wp-hooks', 'wp-i18n' ),
+		$nav_asset_version,
+		true
 	);
 }
 add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\enqueue_block_extensions' );
@@ -135,3 +151,80 @@ function excerpt_link_styles() {
 }
 add_action( 'wp_head', __NAMESPACE__ . '\excerpt_link_styles' );
 add_action( 'admin_head', __NAMESPACE__ . '\excerpt_link_styles' );
+
+/**
+ * Filter the navigation block output to add extension classes and attributes.
+ *
+ * @param string $block_content The block content.
+ * @param array  $block         The block array.
+ * @return string Modified block content.
+ */
+function filter_navigation_block_output( $block_content, $block ) {
+	if ( ! is_array( $block ) || 'core/navigation' !== $block['blockName'] ) {
+		return $block_content;
+	}
+
+	$attributes              = $block['attrs'] ?? array();
+	$has_clickable_parents   = $attributes['hasClickableParents'] ?? false;
+	$has_improved_chevrons   = $attributes['hasImprovedChevrons'] ?? false;
+
+	// Add CSS classes to the nav element.
+	if ( $has_clickable_parents ) {
+		$block_content = add_css_class_to_nav( $block_content, 'has-clickable-parents' );
+	}
+
+	if ( $has_improved_chevrons ) {
+		$block_content = add_css_class_to_nav( $block_content, 'has-improved-chevrons' );
+	}
+
+	return $block_content;
+}
+add_filter( 'render_block', __NAMESPACE__ . '\filter_navigation_block_output', 10, 2 );
+
+/**
+ * Helper function to add CSS class to navigation block.
+ *
+ * @param string $block_content The block content.
+ * @param string $class_name    The class name to add.
+ * @return string Modified block content.
+ */
+function add_css_class_to_nav( $block_content, $class_name ) {
+	$block_content = preg_replace(
+		'/<nav\s+class="([^"]*)"/',
+		'<nav class="$1 ' . esc_attr( $class_name ) . '"',
+		$block_content,
+		1
+	);
+	return $block_content;
+}
+
+/**
+ * Filter navigation submenu blocks to add parent URL data attribute.
+ *
+ * @param string $block_content The block content.
+ * @param array  $block         The block array.
+ * @return string Modified block content.
+ */
+function filter_navigation_submenu_output( $block_content, $block ) {
+	if ( ! is_array( $block ) || 'core/navigation-submenu' !== $block['blockName'] ) {
+		return $block_content;
+	}
+
+	// Get parent URL from block attributes.
+	$url = $block['attrs']['url'] ?? '';
+
+	if ( empty( $url ) ) {
+		return $block_content;
+	}
+
+	// Add data-parent-url to the list item.
+	$block_content = preg_replace(
+		'/<li\s+class="([^"]*wp-block-navigation-item[^"]*)"/',
+		'<li class="$1" data-parent-url="' . esc_attr( $url ) . '"',
+		$block_content,
+		1
+	);
+
+	return $block_content;
+}
+add_filter( 'render_block', __NAMESPACE__ . '\filter_navigation_submenu_output', 10, 2 );

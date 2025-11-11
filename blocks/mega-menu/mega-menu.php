@@ -1,14 +1,14 @@
 <?php
 /**
- * Plugin Name:       Menu Designer
- * Description:       Example block scaffolded with Create Block tool.
+ * Plugin Name:       Mega Menu
+ * Description:       Create dynamic mega menus with template parts and advanced styling options.
  * Version:           0.1.0
  * Requires at least: 6.7
  * Requires PHP:      7.4
  * Author:            The WordPress Contributors
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       menu-designer
+ * Text Domain:       mega-menu
  *
  * @package Moiraine
  */
@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @see https://make.wordpress.org/core/2025/03/13/more-efficient-block-type-registration-in-6-8/
  * @see https://make.wordpress.org/core/2024/10/17/new-block-type-registration-apis-to-improve-performance-in-wordpress-6-7/
  */
-function moiraine_menu_designer_block_init() {
+function moiraine_mega_menu_block_init() {
 	/**
 	 * Registers the block(s) metadata from the `blocks-manifest.php` and registers the block type(s)
 	 * based on the registered block metadata.
@@ -56,4 +56,4 @@ function moiraine_menu_designer_block_init() {
 		register_block_type( __DIR__ . "/build/{$block_type}" );
 	}
 }
-add_action( 'init', 'moiraine_menu_designer_block_init' );
+add_action( 'init', 'moiraine_mega_menu_block_init' );
