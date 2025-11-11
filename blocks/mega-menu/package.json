@@ -16,6 +16,9 @@
 	},
 	"devDependencies": {
 		"@wordpress/icons": "^11.1.0",
-		"@wordpress/scripts": "^30.24.0"
+		"@wordpress/scripts": "^30.27.0"
+	},
+	"overrides": {
+		"webpack-dev-server": "^5.2.0"
 	}
 }
