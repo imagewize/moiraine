@@ -1,9 +1,9 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "moiraine/menu-designer",
+  "name": "moiraine/mega-menu",
   "version": "0.1.3",
-  "title": "Menu Designer",
+  "title": "Mega Menu",
   "category": "design",
   "icon": "menu-alt",
   "description": "Create dynamic mega menus with template parts and advanced styling options.",
@@ -14,7 +14,8 @@
     "dropdown"
   ],
   "parent": [
-    "core/navigation"
+    "core/navigation",
+    "moiraine/nav-builder"
   ],
   "attributes": {
     "label": {

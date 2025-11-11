@@ -84,7 +84,7 @@ export default function Edit( { attributes, setAttributes } ) {
 
 	const blockProps = useBlockProps( {
 		className:
-			'wp-block-navigation-item wp-block-moiraine-menu-designer__toggle',
+			'wp-block-navigation-item wp-block-moiraine-mega-menu__toggle',
 		style: { color: labelColor || 'inherit' },
 	} );
 
@@ -136,7 +136,7 @@ export default function Edit( { attributes, setAttributes } ) {
 		<>
 			<InspectorControls group="settings">
 				<PanelBody
-					className="menu-designer__settings-panel"
+					className="mega-menu__settings-panel"
 					title={ __( 'Settings', 'moiraine' ) }
 					initialOpen={ true }
 				>
@@ -198,7 +198,7 @@ export default function Edit( { attributes, setAttributes } ) {
 					/>
 				</PanelBody>
 				<PanelBody
-					className="menu-designer__layout-panel"
+					className="mega-menu__layout-panel"
 					title={ __( 'Layout', 'moiraine' ) }
 					initialOpen={ true }
 				>
@@ -255,7 +255,7 @@ export default function Edit( { attributes, setAttributes } ) {
 				</PanelBody>
 			</InspectorControls>
 			<div { ...blockProps }>
-				<button className="wp-block-navigation-item__content wp-block-moiraine-menu-designer__toggle">
+				<button className="wp-block-navigation-item__content wp-block-moiraine-mega-menu__toggle">
 					<RichText
 						identifier="label"
 						className="wp-block-navigation-item__label"
