@@ -5,6 +5,12 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.5.1] - 2025-11-11
+
+### Fixed
+- **Mega Menu Block Security**: Updated `@wordpress/scripts` dependency from 30.24.0 to 30.27.0 and added package override to force `webpack-dev-server` to version 5.2.0+ to address moderate severity vulnerabilities (GHSA-9jgg-88mc-972h and GHSA-4v9v-hfq4-rm2v)
+- **Mega Menu Block Build**: Rebuilt block assets with updated dependencies
+
 ## [2.5.0] - 2025-11-09
 
 ### Added
