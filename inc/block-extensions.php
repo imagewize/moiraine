@@ -23,7 +23,7 @@ function enqueue_block_extensions() {
 		wp_mkdir_p( $js_path );
 	}
 
-	// Post Excerpt Extension
+	// Post Excerpt Extension.
 	$js_file_path = $js_path . '/post-excerpt.js';
 	$asset_file   = get_theme_file_uri( '/assets/js/block-extensions/post-excerpt.js' );
 
@@ -70,7 +70,7 @@ function enqueue_block_extensions() {
 		'after'
 	);
 
-	// Navigation Extension
+	// Navigation Extension.
 	$nav_js_file_path = $js_path . '/navigation.js';
 	$nav_asset_file   = get_theme_file_uri( '/assets/js/block-extensions/navigation.js' );
 
@@ -168,7 +168,7 @@ function filter_navigation_block_output( $block_content, $block ) {
 	$has_clickable_parents   = $attributes['hasClickableParents'] ?? false;
 	$has_improved_chevrons   = $attributes['hasImprovedChevrons'] ?? false;
 
-	// Add CSS classes to the nav element
+	// Add CSS classes to the nav element.
 	if ( $has_clickable_parents ) {
 		$block_content = add_css_class_to_nav( $block_content, 'has-clickable-parents' );
 	}
@@ -210,14 +210,14 @@ function filter_navigation_submenu_output( $block_content, $block ) {
 		return $block_content;
 	}
 
-	// Get parent URL from block attributes
+	// Get parent URL from block attributes.
 	$url = $block['attrs']['url'] ?? '';
 
 	if ( empty( $url ) ) {
 		return $block_content;
 	}
 
-	// Add data-parent-url to the list item
+	// Add data-parent-url to the list item.
 	$block_content = preg_replace(
 		'/<li\s+class="([^"]*wp-block-navigation-item[^"]*)"/',
 		'<li class="$1" data-parent-url="' . esc_attr( $url ) . '"',
