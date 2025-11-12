@@ -17,6 +17,9 @@
 		"classnames": "^2.5.1"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^30.24.0"
+		"@wordpress/scripts": "^30.27.0"
+	},
+	"overrides": {
+		"webpack-dev-server": "^5.2.2"
 	}
 }
