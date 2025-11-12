@@ -457,6 +457,7 @@ header .wp-block-navigation :where(.wp-block-navigation__submenu-container) .wp-
 }
 
 /* Combined: Clickable Parents + Improved Chevrons */
-.has-clickable-parents.has-improved-chevrons .moiraine-nav-toggle {
+/* Only add spacing in overlay mode where touch targets need more room */
+.wp-block-navigation__responsive-container.is-menu-open .has-clickable-parents.has-improved-chevrons .moiraine-nav-toggle {
 	margin-left: 0.5rem;
 }

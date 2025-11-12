@@ -5,6 +5,11 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.5.2] - 2025-11-12
+
+### Fixed
+- **Navigation Toggle Spacing**: Fixed excessive spacing between parent links and toggle buttons on desktop when using both `has-clickable-parents` and `has-improved-chevrons` classes together. The `margin-left: 0.5rem` now only applies in mobile overlay mode where touch-friendly spacing is needed.
+
 ## [2.5.1] - 2025-11-11
 
 ### Fixed
