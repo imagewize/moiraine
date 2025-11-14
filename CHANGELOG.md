@@ -5,6 +5,16 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.5.5] - 2025-11-14
+
+### Changed
+- **Screenshot**: Updated theme screenshot to WordPress.org compliant dimensions (1200×900 pixels, 4:3 aspect ratio)
+  - Previous: 1500×911 pixels (incorrect aspect ratio)
+  - New: 1200×900 pixels (WordPress.org standard)
+  - File size reduced from 352KB to 156KB (56% reduction)
+  - Captures demo site homepage with hero section and key features
+- **Documentation**: Updated readme.txt with complete changelog entries for versions 2.4.1 through 2.5.4
+
 ## [2.5.4] - 2025-11-12
 
 ### Security
