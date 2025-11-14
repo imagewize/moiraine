@@ -15,7 +15,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Run Theme Check
-        uses: WPTT/theme-check-action@v1
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
-          theme_path: './'
+          node-version: '18'
+
+      - name: Run Theme Review Tests
+        id: theme-test
+        uses: WordPress/theme-review-action@trunk
+        with:
+          accessible-ready: true
+          ui-debug: true
