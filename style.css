@@ -197,3 +197,40 @@ a.more-link {
 		display: none !important;
 	}
 }
+
+/* Accessibility Fixes
+---------------------------------------------------------------------------- */
+
+/* Fix navigation list structure - ensure only li elements are direct children */
+.wp-block-navigation__container > :not(li):not(script):not(template) {
+	display: contents;
+}
+
+/* Skip link - improved focus state visibility */
+.skip-link:focus,
+a.skip-link:focus {
+	background-color: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--base);
+	outline: 3px solid var(--wp--preset--color--main);
+	outline-offset: 3px;
+	padding: 1em 1.5em;
+	text-decoration: none;
+	box-shadow: 0 0 0 3px var(--wp--preset--color--primary);
+}
+
+/* Ensure skip link is visually hidden but accessible */
+.skip-link:not(:focus),
+a.skip-link:not(:focus) {
+	position: absolute;
+	left: -9999px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+/* Skip link tab order priority - position at top of page */
+.skip-link,
+a.skip-link {
+	z-index: 100000;
+}
