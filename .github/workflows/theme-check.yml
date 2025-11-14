@@ -1,0 +1,21 @@
+name: Theme Check
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - develop
+
+jobs:
+  theme-check:
+    runs-on: ubuntu-latest
+    name: Theme Check
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Run Theme Check
+        uses: WPTT/theme-check-action@v1
+        with:
+          theme_path: './'

@@ -1,0 +1,31 @@
+# Directories
+.git
+.github
+node_modules
+vendor
+docs
+inc/settings/src
+patterns/images/backup-*
+blocks/*/src
+blocks/*/node_modules
+blocks/*/.playwright
+inc/blocks/*/src
+inc/blocks/*/node_modules
+
+# Development files
+.DS_Store
+.gitignore
+.distignore
+.rsync
+rsync
+phpcs.xml
+composer.json
+composer.lock
+package.json
+package-lock.json
+theme-utils.mjs
+CLAUDE.md
+*.sh
+
+# Playwright/Testing
+.playwright-mcp
