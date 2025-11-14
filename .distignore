@@ -4,13 +4,9 @@
 node_modules
 vendor
 docs
+demo-content
 inc/settings/src
 patterns/images/backup-*
-blocks/*/src
-blocks/*/node_modules
-blocks/*/.playwright
-inc/blocks/*/src
-inc/blocks/*/node_modules
 
 # Development files
 .DS_Store

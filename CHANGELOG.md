@@ -5,6 +5,33 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.6.0] - 2025-11-14
+
+### Changed
+- **WordPress.org Alignment**: Migrated all custom blocks to separate "Moiraine Blocks" companion plugin to comply with WordPress.org Theme Review requirements
+  - Moved Mega Menu block to plugin
+  - Moved Carousel block to plugin
+  - Moved Slide block to plugin
+  - Removed custom block registration from theme
+- **Plugin Territory Compliance**: Moved SVG/WebP upload functionality to companion plugin (plugin-territory functionality)
+  - Removed `upload_mimes` filter from theme
+  - Removed `fix_media_display()` function from theme
+  - All MIME type handling now in plugin
+
+### Removed
+- **Custom Block Registration**: Removed all `register_block_type()` calls from theme (WordPress.org requirement)
+- **Blocks Directory**: Removed `/blocks/` directory from theme (now in companion plugin)
+- **Carousel Assets**: Removed Slick Carousel asset enqueuing from theme (now handled by plugin)
+- **Upload MIME Filters**: Removed SVG/WebP upload filters (plugin-territory functionality)
+
+### Notes
+- **Breaking Change**: This release requires the "Moiraine Blocks" companion plugin for:
+  - Mega Menu functionality
+  - Carousel/Slide blocks
+  - SVG upload support
+- Theme now follows WordPress.org Theme Review guidelines (blocks in plugins, not themes)
+- See `docs/WORDPRESS-ORG-ALIGNMENT.md` for full compliance details
+
 ## [2.5.5] - 2025-11-14
 
 ### Changed
