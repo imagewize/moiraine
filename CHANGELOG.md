@@ -15,6 +15,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Captures demo site homepage with hero section and key features
 - **Documentation**: Updated readme.txt with complete changelog entries for versions 2.4.1 through 2.5.4
 
+### Fixed
+- **Accessibility - Navigation List Structure**: Fixed axe violation where `.wp-block-navigation__container` had invalid direct children by using `display: contents` to ensure only `<li>`, `<script>`, and `<template>` elements are recognized as direct children
+- **Accessibility - Skip Link Focus State**: Enhanced skip-link visibility when focused with high-contrast styling (primary brand color background, white text, 3px outline with offset, box-shadow) and proper padding (1em × 1.5em) for improved keyboard navigation accessibility
+- **Accessibility - Skip Link Tab Order**: Fixed tab order to prioritize skip-link as first focusable element with proper off-screen positioning when not focused (absolute positioning at -9999px) and very high z-index (100000) when focused to ensure it appears above all content
+
 ## [2.5.4] - 2025-11-12
 
 ### Security
