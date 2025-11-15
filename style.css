@@ -7,7 +7,7 @@ Description: Launch a blazing-fast, pixel-perfect website with the Moiraine Word
 Tags: blog, portfolio, entertainment, grid-layout, one-column, two-columns, three-columns, four-columns, block-patterns, block-styles, custom-logo, custom-menu, editor-style, featured-images, full-site-editing, full-width-template, rtl-language-support, style-variations, template-editing, theme-options, translation-ready, wide-blocks
 Tested up to: 6.7
 Requires PHP: 7.3
-Version: 2.6.1
+Version: 2.6.2
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: moiraine
@@ -206,31 +206,48 @@ a.more-link {
 	display: contents;
 }
 
-/* Skip link - improved focus state visibility */
-.skip-link:focus,
-a.skip-link:focus {
-	background-color: var(--wp--preset--color--primary);
-	color: var(--wp--preset--color--base);
-	outline: 3px solid var(--wp--preset--color--main);
-	outline-offset: 3px;
-	padding: 1em 1.5em;
-	text-decoration: none;
-	box-shadow: 0 0 0 3px var(--wp--preset--color--primary);
+/* Skip link - improved focus state visibility
+   Uses !important to override WordPress core inline CSS for accessibility compliance */
+.skip-link.screen-reader-text:focus,
+a.skip-link.screen-reader-text:focus {
+	background-color: var(--wp--preset--color--primary) !important;
+	color: var(--wp--preset--color--base) !important;
+	outline: 3px solid var(--wp--preset--color--main) !important;
+	outline-offset: 3px !important;
+	padding: 1em 1.5em !important;
+	text-decoration: none !important;
+	box-shadow: 0 0 0 3px var(--wp--preset--color--primary) !important;
+	z-index: 100000 !important;
+	clip-path: none !important;
+	height: auto !important;
+	width: auto !important;
+	position: absolute !important;
+	top: 0 !important;
+	left: 0 !important;
+	display: block !important;
 }
 
-/* Ensure skip link is visually hidden but accessible */
+/* Ensure skip link is visually hidden but accessible
+   Modern technique using clip instead of left: -9999px for better tab order */
 .skip-link:not(:focus),
 a.skip-link:not(:focus) {
-	position: absolute;
-	left: -9999px;
-	top: auto;
-	width: 1px;
-	height: 1px;
-	overflow: hidden;
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	padding: 0 !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	clip: rect(0, 0, 0, 0) !important;
+	clip-path: inset(50%) !important;
+	white-space: nowrap !important;
+	border-width: 0 !important;
 }
 
-/* Skip link tab order priority - position at top of page */
+/* Skip link tab order priority - position at top of page when focused */
 .skip-link,
 a.skip-link {
-	z-index: 100000;
+	position: absolute !important;
+	top: 0 !important;
+	left: 0 !important;
+	z-index: 100000 !important;
 }
