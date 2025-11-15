@@ -20,9 +20,22 @@ jobs:
         with:
           node-version: '18'
 
+      - name: Temporarily hide docs folder
+        run: |
+          if [ -d "docs" ]; then
+            mv docs ../docs-temp
+          fi
+
       - name: Run Theme Review Tests
         id: theme-test
         uses: WordPress/theme-review-action@trunk
         with:
           accessible-ready: true
           ui-debug: true
+
+      - name: Restore docs folder
+        if: always()
+        run: |
+          if [ -d "../docs-temp" ]; then
+            mv ../docs-temp docs
+          fi
