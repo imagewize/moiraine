@@ -32,4 +32,4 @@ create-pr.sh
 
 # Backup directories for pattern images
 patterns/images/backup-*/
-blocks/nav-builder/.playwright/screenshots/*
+.playwright/*
