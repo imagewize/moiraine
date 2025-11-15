@@ -4,7 +4,7 @@ Tags: blog, portfolio, entertainment, grid-layout, one-column, two-columns, thre
 Requires at least: 5.8
 Tested up to: 6.7.1
 Requires PHP: 7.3
-Stable tag: 2.5.5
+Stable tag: 2.6.1
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -13,6 +13,18 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block theme! Moiraine features over 50 beautiful pattern designs, 7 full-page pattern layouts, and a fully-customizable design system with Global Styles. Moiraine integrates seamlessly with all of the powerful new WordPress editor features, giving you the most lightweight and powerful website builder on the planet — no expensive page builder plugin required! ✶ Full demo: https://demo.imagewize.com ✶
 
 == Changelog ==
+
+= 2.6.1 - 11/15/25 =
+* CHANGED: Theme Logo - updated moiraine-logo.svg to ladybug icon design (sourced from Blade UI Kit) maintaining the existing sky blue color (#38bdf8) for consistent brand identity
+
+= 2.6.0 - 11/15/25 =
+* CHANGED: WordPress.org Alignment - migrated all custom blocks to separate "Moiraine Blocks" companion plugin to comply with WordPress.org Theme Review requirements
+* CHANGED: Plugin Territory Compliance - moved SVG/WebP upload functionality to companion plugin (plugin-territory functionality)
+* CHANGED: GPL-Compatible Images - replaced all 9 pattern images with GPL-compatible alternatives for WordPress.org compliance
+* REMOVED: Custom Block Registration - removed all register_block_type() calls from theme (WordPress.org requirement)
+* REMOVED: Blocks Directory - removed /blocks/ directory from theme (now in companion plugin)
+* REMOVED: Upload MIME Filters - removed SVG/WebP upload filters (plugin-territory functionality)
+* NOTE: Breaking Change - this release requires the "Moiraine Blocks" companion plugin for Mega Menu functionality, Carousel/Slide blocks, and SVG upload support
 
 = 2.5.5 - 11/14/25 =
 * CHANGED: Screenshot - updated theme screenshot to WordPress.org compliant dimensions (1200×900 pixels, 4:3 aspect ratio) reducing file size from 352KB to 156KB (56% reduction)
