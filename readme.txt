@@ -4,7 +4,7 @@ Tags: blog, portfolio, entertainment, grid-layout, one-column, two-columns, thre
 Requires at least: 5.8
 Tested up to: 6.7.1
 Requires PHP: 7.3
-Stable tag: 2.4.0
+Stable tag: 2.5.5
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -13,6 +13,67 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block theme! Moiraine features over 50 beautiful pattern designs, 7 full-page pattern layouts, and a fully-customizable design system with Global Styles. Moiraine integrates seamlessly with all of the powerful new WordPress editor features, giving you the most lightweight and powerful website builder on the planet — no expensive page builder plugin required! ✶ Full demo: https://demo.imagewize.com ✶
 
 == Changelog ==
+
+= 2.5.5 - 11/14/25 =
+* CHANGED: Screenshot - updated theme screenshot to WordPress.org compliant dimensions (1200×900 pixels, 4:3 aspect ratio) reducing file size from 352KB to 156KB (56% reduction)
+* CHANGED: Documentation - updated readme.txt with complete changelog entries for versions 2.4.1 through 2.5.4
+
+= 2.5.4 - 11/12/25 =
+* SECURITY: Slide Block - fixed webpack-dev-server security vulnerabilities (CVE-2018-14732) by updating @wordpress/scripts from 30.24.0 to 30.27.0 with npm override forcing webpack-dev-server 5.2.2
+* SECURITY: Resolved GHSA-9jgg-88mc-972h (CVSS 6.5) - source code theft via malicious websites with non-Chromium browsers
+* SECURITY: Resolved GHSA-4v9v-hfq4-rm2v (CVSS 5.3) - source code theft via malicious websites
+* NOTE: Security vulnerabilities affect development environment only (webpack-dev-server is a devDependency)
+
+= 2.5.3 - 11/12/25 =
+* SECURITY: Carousel Block - fixed webpack-dev-server security vulnerabilities (CVE-2018-14732) by updating @wordpress/scripts from 30.24.0 to 30.27.0 with npm override forcing webpack-dev-server 5.2.2
+* SECURITY: Resolved GHSA-9jgg-88mc-972h (CVSS 6.5) and GHSA-4v9v-hfq4-rm2v (CVSS 5.3) - source code theft vulnerabilities
+* NOTE: Affects development environment only (webpack-dev-server is a devDependency)
+
+= 2.5.2 - 11/12/25 =
+* FIXED: Navigation Toggle Spacing - fixed excessive spacing between parent links and toggle buttons on desktop when using both has-clickable-parents and has-improved-chevrons classes together. The margin-left: 0.5rem now only applies in mobile overlay mode where touch-friendly spacing is needed
+
+= 2.5.1 - 11/11/25 =
+* FIXED: Mega Menu Block Security - updated @wordpress/scripts dependency from 30.24.0 to 30.27.0 and added package override to force webpack-dev-server to version 5.2.0+ to address moderate severity vulnerabilities (GHSA-9jgg-88mc-972h and GHSA-4v9v-hfq4-rm2v)
+* FIXED: Mega Menu Block Build - rebuilt block assets with updated dependencies
+
+= 2.5.0 - 11/09/25 =
+* NEW: Navigation Block Extension - extended WordPress core Navigation block with custom features while preserving visual editing capabilities
+* NEW: Clickable Parent Menu Items - click text navigates to parent page, click chevron toggles submenu with separate clickable elements
+* NEW: Improved Chevron Positioning - better inline alignment on mobile menus with enhanced visual presentation
+* NEW: Navigation Inspector Controls - added toggle switches for "Clickable parent items" and "Improved chevron positioning" in block settings panel
+* NEW: Frontend JavaScript Enhancement - transforms parent buttons into clickable links plus separate toggle buttons while preserving WordPress Interactivity API
+* NEW: Navigation Documentation - comprehensive implementation plan at docs/NAVIGATION-EXTENSION-PLAN.md with architecture overview, testing plan, and rollback procedures
+* NEW: Core Navigation Hamburger Styles - added hamburger menu icon styles to assets/styles/core-navigation.css with increased size (32px) and thickness for better visibility
+* CHANGED: Menu Designer Block Renamed to Mega Menu - complete rebrand from "Menu Designer" to "Mega Menu" for clarity and consistency across 15+ files
+* CHANGED: Block Namespace - updated from moiraine/menu-designer to moiraine/mega-menu with all CSS class names updated accordingly
+* CHANGED: Header Pattern Enhancement - updated header-light-with-hamburger-menu.php with navigation extension attributes (hasClickableParents and hasImprovedChevrons)
+* CHANGED: Navigation Architecture - switched from custom nav-builder block to core Navigation block extension approach for better WordPress integration
+* FIXED: Mega Menu Interactivity API - fixed state management to consistently use context instead of mixing state and context access
+* FIXED: Mega Menu State Access - updated toggleMenuOnClick, handleMenuKeydown, openMenu, and closeMenu actions to properly access context.menuOpenedBy
+* FIXED: Mega Menu CSS Class References - fixed SCSS file still using old menu-designer class names after block rename
+* FIXED: Menu Visibility Toggle - fixed menu visibility that was preventing dropdown overlay from working, now properly hides by default and shows on click with smooth transitions
+* FIXED: Navigation Submenu Chevrons - fixed mobile submenu chevron arrows appearing below menu items instead of inline (right-aligned) using block extension approach with CSS flexbox and JavaScript DOM transformation
+* REMOVED: Nav Builder Block - removed custom nav-builder block in favor of extending core Navigation block for better Site Editor integration and visual menu editing
+
+= 2.4.2 - 11/04/25 =
+* NEW: Pattern Screenshot Assets - added 15 optimized WebP landscape screenshots (1400x800px) for pattern carousel showcase
+* NEW: Pattern Carousel Documentation - comprehensive documentation for pattern selection criteria and carousel implementation (docs/demo-enhancement/PATTERNS-CAROUSEL.md)
+* NEW: Phase 7 Documentation - pattern showcase implementation guide (docs/demo-enhancement/PHASE7-PATTERNS-SHOWCASE.md) and automation commands (docs/demo-enhancement/PHASE7-COMMANDS.md)
+* ENHANCED: Services Feature Cards Pattern - improved responsive layout with CSS Grid (minimumColumnWidth: 20rem) replacing fixed 3-column layout for better mobile responsiveness
+* ENHANCED: Blog Post Columns Pattern - updated to use responsive CSS Grid layout instead of fixed 2-column grid
+* ENHANCED: Pattern Color Consistency - standardized services-feature-cards.php to use primary and tertiary background colors instead of non-standard ocean-blue and dark-teal
+* ENHANCED: Pattern Text Contrast - improved text color consistency in service cards, changed nested text from base to main for better accessibility on tertiary backgrounds
+* ENHANCED: Demo Enhancement Tracking - updated docs/demo-enhancement/PROGRESS.md with Phase 7 completion tracking
+* CHANGED: Pattern Layout System - migrated patterns from fixed column layouts to flexible CSS Grid layouts for improved responsiveness across all viewport sizes
+* CHANGED: Pattern Color Palette - aligned all pattern colors to standard theme color system for better theme variation compatibility
+
+= 2.4.1 - 11/03/25 =
+* NEW: Playwright Testing Scripts - added dedicated menu testing script (.playwright/scripts/test-menu.js) for automated desktop and mobile menu behavior testing with screenshots
+* ENHANCED: Menu Designer Block Styles - refactored SCSS architecture with modern Sass features including variables, improved BEM nesting, and better code organization for enhanced maintainability
+* ENHANCED: Documentation - updated CLAUDE.md with comprehensive Playwright browser testing and screenshot guidelines, including usage examples for both general screenshots and specialized menu testing
+* CHANGED: SCSS Structure - introduced reusable variables for transitions, sizes, and z-indexes in Menu Designer block
+* CHANGED: CSS Organization - improved nesting patterns following BEM methodology for cleaner, more maintainable code
+* CHANGED: Code Quality - consolidated duplicate mobile menu styles using Sass features for DRY principles
 
 = 2.4.0 - 11/03/25 =
 * NEW: Carousel Block - custom WordPress block for creating responsive image/content carousels with Slick Carousel integration for stunning visual presentations

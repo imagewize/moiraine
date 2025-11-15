@@ -5,6 +5,54 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.6.0] - 2025-11-15
+
+### Changed
+- **WordPress.org Alignment**: Migrated all custom blocks to separate "Moiraine Blocks" companion plugin to comply with WordPress.org Theme Review requirements
+  - Moved Mega Menu block to plugin
+  - Moved Carousel block to plugin
+  - Moved Slide block to plugin
+  - Removed custom block registration from theme
+- **Plugin Territory Compliance**: Moved SVG/WebP upload functionality to companion plugin (plugin-territory functionality)
+  - Removed `upload_mimes` filter from theme
+  - Removed `fix_media_display()` function from theme
+  - All MIME type handling now in plugin
+- **GPL-Compatible Images**: Replaced all 9 pattern images with GPL-compatible alternatives for WordPress.org compliance
+  - 3 workspace images replaced with CC0 Public Domain images from StockSnap.io (computer-hands.webp, desktop.webp, guy-laptop.webp)
+  - 6 avatar images replaced with Pexels License images (avatar-1 through avatar-7, excluding avatar-6)
+  - All images optimized for web performance (WebP format, appropriate dimensions)
+  - Full attribution documented in `docs/demo-enhancement/IMAGE-CREDITS-NEW.md`
+
+### Removed
+- **Custom Block Registration**: Removed all `register_block_type()` calls from theme (WordPress.org requirement)
+- **Blocks Directory**: Removed `/blocks/` directory from theme (now in companion plugin)
+- **Carousel Assets**: Removed Slick Carousel asset enqueuing from theme (now handled by plugin)
+- **Upload MIME Filters**: Removed SVG/WebP upload filters (plugin-territory functionality)
+
+### Notes
+- **Breaking Change**: This release requires the "Moiraine Blocks" companion plugin for:
+  - Mega Menu functionality
+  - Carousel/Slide blocks
+  - SVG upload support
+- Theme now follows WordPress.org Theme Review guidelines (blocks in plugins, not themes)
+- All pattern images now use GPL-compatible licenses (CC0 Public Domain and Pexels License)
+- See `docs/WORDPRESS-ORG-ALIGNMENT.md` for full compliance details
+
+## [2.5.5] - 2025-11-14
+
+### Changed
+- **Screenshot**: Updated theme screenshot to WordPress.org compliant dimensions (1200×900 pixels, 4:3 aspect ratio)
+  - Previous: 1500×911 pixels (incorrect aspect ratio)
+  - New: 1200×900 pixels (WordPress.org standard)
+  - File size reduced from 352KB to 156KB (56% reduction)
+  - Captures demo site homepage with hero section and key features
+- **Documentation**: Updated readme.txt with complete changelog entries for versions 2.4.1 through 2.5.4
+
+### Fixed
+- **Accessibility - Navigation List Structure**: Fixed axe violation where `.wp-block-navigation__container` had invalid direct children by using `display: contents` to ensure only `<li>`, `<script>`, and `<template>` elements are recognized as direct children
+- **Accessibility - Skip Link Focus State**: Enhanced skip-link visibility when focused with high-contrast styling (primary brand color background, white text, 3px outline with offset, box-shadow) and proper padding (1em × 1.5em) for improved keyboard navigation accessibility
+- **Accessibility - Skip Link Tab Order**: Fixed tab order to prioritize skip-link as first focusable element with proper off-screen positioning when not focused (absolute positioning at -9999px) and very high z-index (100000) when focused to ensure it appears above all content
+
 ## [2.5.4] - 2025-11-12
 
 ### Security
