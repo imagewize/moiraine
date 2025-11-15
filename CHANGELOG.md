@@ -5,7 +5,7 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.6.0] - 2025-11-14
+## [2.6.0] - 2025-11-15
 
 ### Changed
 - **WordPress.org Alignment**: Migrated all custom blocks to separate "Moiraine Blocks" companion plugin to comply with WordPress.org Theme Review requirements
@@ -17,6 +17,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Removed `upload_mimes` filter from theme
   - Removed `fix_media_display()` function from theme
   - All MIME type handling now in plugin
+- **GPL-Compatible Images**: Replaced all 9 pattern images with GPL-compatible alternatives for WordPress.org compliance
+  - 3 workspace images replaced with CC0 Public Domain images from StockSnap.io (computer-hands.webp, desktop.webp, guy-laptop.webp)
+  - 6 avatar images replaced with Pexels License images (avatar-1 through avatar-7, excluding avatar-6)
+  - All images optimized for web performance (WebP format, appropriate dimensions)
+  - Full attribution documented in `docs/demo-enhancement/IMAGE-CREDITS-NEW.md`
 
 ### Removed
 - **Custom Block Registration**: Removed all `register_block_type()` calls from theme (WordPress.org requirement)
@@ -30,6 +35,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Carousel/Slide blocks
   - SVG upload support
 - Theme now follows WordPress.org Theme Review guidelines (blocks in plugins, not themes)
+- All pattern images now use GPL-compatible licenses (CC0 Public Domain and Pexels License)
 - See `docs/WORDPRESS-ORG-ALIGNMENT.md` for full compliance details
 
 ## [2.5.5] - 2025-11-14

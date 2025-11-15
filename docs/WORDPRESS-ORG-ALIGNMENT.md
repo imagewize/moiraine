@@ -8,6 +8,27 @@
 
 This document outlines the required changes to align Moiraine theme with WordPress.org Theme Review requirements based on automated theme check results.
 
+## Latest Test Results Summary (2025-11-14)
+
+### ✅ Resolved Issues
+- **Demo Content XML Files**: Added to `.distignore`
+- **Plugin Territory - Block Registration**: Moved to moiraine-blocks plugin
+- **Plugin Territory - upload_mimes**: Moved to moiraine-blocks plugin
+
+### ✅ Completed Issues
+- **GPL-Compatible Images**: All 9 Unsplash images replaced with GPL-compatible alternatives (2025-11-15)
+  - 3 workspace images replaced with CC0 Public Domain from StockSnap.io
+  - 6 avatar images replaced with Pexels License images
+  - See [IMAGE-CREDITS-NEW.md](demo-enhancement/IMAGE-CREDITS-NEW.md) for full attribution
+
+### ⚠️ Outstanding Issues - CRITICAL
+- **Navigation List Structure**: Accessibility issue with `<ul>` containing invalid children
+- **Skip Link Focus State**: Insufficient visual contrast when focused
+- **Skip Link Tab Order**: Not first tabbable element
+
+### 📋 Recommended Actions
+- **Tested Up To**: Change from "6.7.1" to "6.7" in style.css
+
 ---
 
 ## Critical Issues (Must Fix)
@@ -32,34 +53,75 @@ Add `demo-content` directory to `.distignore` file to exclude it from distributi
 **Rationale:**
 WordPress.org doesn't allow demo content XML files in themes. These should be hosted separately or provided as a separate download.
 
-**Status:** ❌ Not implemented
+**Status:** ✅ Resolved - Added to `.distignore`
 
 ---
 
-### 2. Remove Unsplash License References
+### 2. GPL-Compatible Image Licensing ✅ COMPLETED
 
-**Issue:**
+**Original Issue:**
 ```
 [ Non_GPL_Check ]
-REQUIRED: Found a reference to unsplash.com. Assets from this website does not use a license
-that is compatible with GPL. https://unsplash.com/license
+REQUIRED: Found references to images with non-GPL-compatible licenses.
 ```
 
-**Affected Files:**
-- `docs/demo-enhancement/PROGRESS.md`
-- `docs/demo-enhancement/README.md`
-- `docs/demo-enhancement/PHASE1-SUMMARY.md`
-- `docs/demo-enhancement/PHASE1-IMAGE-AUDIT.md`
-- `docs/demo-enhancement/MOIRAINE-DEMO-ENHANCEMENT.md`
-- `docs/demo-enhancement/IMAGE-CREDITS.md`
+**Resolution (2025-11-15):**
+All pattern images have been replaced with GPL-compatible alternatives:
 
-**Solution:**
-Since all unsplash references are in the `docs/` directory, and `docs` is already in `.distignore`, this is automatically resolved when building distribution packages.
+**Replaced Image Files:**
+- `computer-hands.webp` - Now CC0 Public Domain (StockSnap.io)
+- `desktop.webp` - Now CC0 Public Domain (StockSnap.io)
+- `guy-laptop.webp` - Now CC0 Public Domain (StockSnap.io)
+- `avatar-1.webp` through `avatar-7.webp` (6 images) - Now Pexels License (GPL-compatible)
 
-**Verification Required:**
-Confirm `.distignore` properly excludes docs directory from distribution builds.
+**Total:** 9 images replaced with GPL-compatible licenses
 
-**Status:** ✅ Already handled by `.distignore`
+**GPL-Compatible Image Sources:**
+1. **[Pexels](https://www.pexels.com/license/)** - Free for commercial use, no attribution required
+2. **[Pixabay](https://pixabay.com/service/license/)** - Pixabay License (compatible with GPL)
+3. **[WordPress Photo Directory](https://wordpress.org/photos/)** - CC0 (Public Domain)
+4. **[Openverse](https://wordpress.org/openverse/)** - WordPress-maintained search for CC-licensed media
+5. **[Unsplash (with proper license)](https://unsplash.com/license)** - *Wait, actually Unsplash license is NOT GPL-compatible!*
+6. **[StockSnap.io](https://stocksnap.io/license)** - CC0 Public Domain
+
+**Recommended Approach:**
+Use **[Openverse](https://wordpress.org/openverse/)** (WordPress.org's official CC-licensed media search):
+- Official WordPress.org resource for finding CC-licensed images
+- Searches across multiple sources (Flickr, Wikimedia, etc.)
+- Filters for license type (CC0, CC BY, etc.)
+- GPL-compatible Creative Commons licenses
+- Shows attribution requirements clearly
+- Best choice for WordPress theme development
+
+**Alternative Sources:**
+- **[Pexels](https://www.pexels.com/)** - High quality, no attribution required
+- **[WordPress Photo Directory](https://wordpress.org/photos/)** - CC0 Public Domain
+
+**Action Plan:**
+1. ✅ Identify all Unsplash images (documented in IMAGE-CREDITS.md)
+2. ✅ Search for GPL-compatible replacements on Pexels and StockSnap.io
+3. ✅ Download and optimize replacement images (WebP format, same dimensions)
+4. ✅ Replace files in `patterns/images/` directory
+5. ✅ Create new IMAGE-CREDITS-NEW.md with Pexels/CC0 license attribution
+6. ⏳ Test patterns to ensure images display correctly
+7. ✅ Verify `.distignore` excludes IMAGE-CREDITS.md (keep credits in docs)
+
+**Openverse Search Links:**
+- [Person typing on laptop](https://wordpress.org/openverse/search/?q=person+typing+laptop) (for computer-hands.webp)
+- [Desk setup monitor](https://wordpress.org/openverse/search/?q=desk+setup+monitor) (for desktop.webp)
+- [Business meeting laptop](https://wordpress.org/openverse/search/?q=business+meeting+laptop) (for guy-laptop.webp)
+- [Professional headshot](https://wordpress.org/openverse/search/?q=professional+headshot) (for avatar images)
+- [Technology workspace](https://wordpress.org/openverse/search/?q=technology+workspace) (for blog images)
+
+**License Recommendation:**
+When searching on Openverse, filter for:
+- **CC0** (Public Domain) - No attribution required ✅ Best option
+- **CC BY** (Attribution) - Attribution required in credits file
+
+**Status:** ✅ **COMPLETED** (2025-11-15) - All 9 Unsplash images replaced with GPL-compatible alternatives
+- 3 workspace images: StockSnap.io (CC0 Public Domain)
+- 6 avatar images: Pexels (Pexels License, GPL-compatible)
+- Full documentation: [IMAGE-CREDITS-NEW.md](demo-enhancement/IMAGE-CREDITS-NEW.md)
 
 ---
 
@@ -138,7 +200,11 @@ Use Option A for WordPress.org submission. Create a "Moiraine Blocks" companion 
    - Provide installation instructions
    - Update README.md
 
-**Status:** ❌ Not implemented
+**Status:** ✅ **COMPLETED** - Moiraine Blocks plugin created and installed
+- Plugin repository: [imagewize/moiraine-blocks](https://github.com/imagewize/moiraine-blocks)
+- Installed via Composer: `"imagewize/moiraine-blocks": "^1.0"`
+- All custom blocks moved to plugin
+- Theme now only uses `register_block_style()` and `register_block_pattern()`
 
 ---
 
@@ -181,7 +247,10 @@ add_filter( 'upload_mimes', __NAMESPACE__ . '\\allow_additional_mime_types' );
 **Alternative:**
 Since WebP is now natively supported in WordPress, only SVG needs addressing. Users can install a dedicated SVG plugin.
 
-**Status:** ❌ Not implemented
+**Status:** ✅ **COMPLETED** - Moved to moiraine-blocks plugin
+- SVG and WebP upload support moved to companion plugin
+- Removed from theme functions.php
+- Theme is now compliant with plugin-territory guidelines
 
 ---
 
@@ -351,9 +420,10 @@ Ensure skip-link is:
 
 ### Phase 1: Critical Blockers (Required for WordPress.org)
 1. ✅ Verify `.distignore` excludes demo-content and docs
-2. ❌ Remove `upload_mimes` filter from theme
-3. ❌ Remove/move custom block registration
-4. ❌ Create companion plugin for custom blocks (if keeping blocks)
+2. ✅ Remove `upload_mimes` filter from theme (moved to moiraine-blocks plugin)
+3. ✅ Remove/move custom block registration (moved to moiraine-blocks plugin)
+4. ✅ Create companion plugin for custom blocks (moiraine-blocks created and published)
+5. ✅ Replace all Unsplash images with GPL-compatible alternatives (2025-11-15)
 
 ### Phase 2: Accessibility Fixes (Required for WordPress.org)
 5. ❌ Fix skip-link focus state visibility
@@ -454,13 +524,54 @@ Consider keeping current implementation and distributing theme through:
 
 ---
 
-## Next Steps
+## Next Steps - Priority Order
 
-1. **Decision Point:** Determine if WordPress.org submission is required
-2. **If YES:** Implement Phase 1 and Phase 2 changes
-3. **If NO:** Document current limitations and distribute independently
-4. **Create Issues:** Track each fix as a separate task
-5. **Test Thoroughly:** Run all tests before submission
+### Immediate Actions (Before WordPress.org Submission)
+
+#### 1. Replace GPL-Incompatible Images ✅ COMPLETED
+- **Status**: ✅ Completed (2025-11-15)
+- **Effort**: ~3 hours
+- **Priority**: HIGHEST
+- All 9 images replaced with GPL-compatible alternatives
+- 3 workspace images from StockSnap.io (CC0)
+- 6 avatar images from Pexels (Pexels License)
+- Documentation: [IMAGE-CREDITS-NEW.md](demo-enhancement/IMAGE-CREDITS-NEW.md)
+
+#### 2. Fix Skip-Link Accessibility Issues (REQUIRED)
+- **Status**: ❌ Not started
+- **Effort**: ~30 minutes
+- **Priority**: HIGH
+- Enhance focus state visibility in style.css
+- Ensure skip-link is first tabbable element
+- Test with keyboard navigation
+
+#### 3. Fix Navigation List Structure (REQUIRED)
+- **Status**: ❌ Not started
+- **Effort**: ~1-2 hours
+- **Priority**: HIGH
+- Investigate navigation block HTML structure
+- Review theme.json navigation settings
+- Test with accessibility tools
+
+#### 4. Update "Tested up to" Version (RECOMMENDED)
+- **Status**: ❌ Not started
+- **Effort**: 5 minutes
+- **Priority**: LOW
+- Change from "6.7.1" to "6.7" in style.css
+
+### Testing Before Submission
+
+- [x] Replace all GPL-incompatible images with compatible alternatives (2025-11-15)
+- [ ] Run Theme Check plugin - should pass with no errors
+- [ ] Run accessibility tests (axe, WAVE) - should pass
+- [ ] Verify `.distignore` properly excludes docs/ and demo-content/
+- [ ] Build distribution zip and verify no excluded files present
+- [ ] Test theme installation on clean WordPress instance
+- [ ] Verify moiraine-blocks plugin is documented in README
+- [ ] Test all patterns display correctly with new images
+
+### Estimated Total Time to WordPress.org Ready
+**~4-6 hours of work**
 
 ---
 
