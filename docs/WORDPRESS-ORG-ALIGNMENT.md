@@ -331,34 +331,134 @@ Rule: "list" (<ul> and <ol> must only directly contain <li>, <script> or <templa
 Affected Nodes: .wp-block-navigation__container
 ```
 
-**Root Cause:**
-WordPress core navigation block may be rendering invalid HTML structure. This is a known issue with certain navigation configurations.
+**Root Cause (IDENTIFIED):**
+WordPress core navigation block renders submenu chevron icons (`<span class="wp-block-navigation__submenu-icon">`) as direct children of `<li>` elements, positioned OUTSIDE the `<button>` element. This violates HTML5 list structure rules.
 
-**Investigation Required:**
-1. Check navigation block configuration in theme.json
-2. Review navigation patterns
-3. Test with different navigation depths
-4. Check if custom CSS is interfering with navigation structure
+**Current HTML Structure:**
+```html
+<ul class="wp-block-navigation__container">
+  <li class="has-child">
+    <button>Services</button>
+    <span class="wp-block-navigation__submenu-icon">  <!-- ❌ Invalid! -->
+      <svg>...</svg>
+    </span>
+    <ul class="wp-block-navigation__submenu-container">
+      <li>FAQ</li>
+    </ul>
+  </li>
+</ul>
+```
 
-**Possible Solutions:**
+**Why Current CSS Fix Doesn't Work:**
+```css
+/* style.css line 204-207 - Attempts to use display: contents */
+.wp-block-navigation__container > :not(li):not(script):not(template) {
+  display: contents;
+}
+```
 
-1. **Update Navigation Block Settings in theme.json**
-   - Review `core/navigation` block settings
-   - Ensure proper overlay/dropdown configuration
+This selector targets direct children of `.wp-block-navigation__container`, but the problematic `<span>` is a child of `<li>`, not `<ul>`. The accessibility checker examines the DOM structure, not the rendered box tree.
 
-2. **Simplify Navigation Patterns**
-   - Review and test all navigation patterns
-   - Ensure they follow proper HTML structure
+**Solution Options:**
 
-3. **Check for JavaScript Interference**
-   - Review `assets/js/navigation-frontend.js`
-   - Ensure it's not manipulating DOM in invalid ways
+#### Option A: JavaScript DOM Restructuring (RECOMMENDED)
+Move the chevron `<span>` inside the `<button>` element using JavaScript after page load.
 
-4. **Report to WordPress Core** (if core bug)
-   - If this is a core block issue, report to WordPress
-   - Document workaround if needed
+**Implementation:**
+```javascript
+// Add to assets/js/navigation-frontend.js or create new file
+document.addEventListener('DOMContentLoaded', function() {
+  // Find all navigation items with submenus
+  const navItems = document.querySelectorAll('.wp-block-navigation-item.has-child');
 
-**Status:** ❌ Requires investigation
+  navItems.forEach(item => {
+    const button = item.querySelector('.wp-block-navigation-submenu__toggle');
+    const chevron = item.querySelector(':scope > .wp-block-navigation__submenu-icon');
+
+    // Move chevron inside button if both exist
+    if (button && chevron && chevron.parentNode === item) {
+      button.appendChild(chevron);
+    }
+  });
+});
+```
+
+**Pros:**
+- Fixes HTML validation
+- Minimal code change
+- Works with existing navigation structure
+- No impact on functionality
+
+**Cons:**
+- JavaScript dependency for accessibility (not ideal)
+- May flash incorrect structure before JS loads
+
+#### Option B: CSS Fix with Correct Selector
+Update CSS to target the actual problematic element.
+
+**Implementation:**
+```css
+/* Fix navigation list structure - move chevron icon using display: contents */
+.wp-block-navigation__container .wp-block-navigation-item.has-child > .wp-block-navigation__submenu-icon {
+  display: contents;
+}
+```
+
+**Pros:**
+- Pure CSS solution
+- No JavaScript required
+- Works immediately
+
+**Cons:**
+- May not pass accessibility checker (still sees DOM structure)
+- `display: contents` browser support edge cases
+
+#### Option C: PHP Filter to Modify Block Output
+Use WordPress filter to modify navigation block HTML output.
+
+**Implementation:**
+```php
+// Add to functions.php
+add_filter('render_block', function($block_content, $block) {
+  if ($block['blockName'] === 'core/navigation') {
+    // Use DOMDocument to restructure HTML
+    // Move chevron spans inside buttons
+  }
+  return $block_content;
+}, 10, 2);
+```
+
+**Pros:**
+- Server-side fix
+- No JavaScript dependency
+- Proper HTML from the start
+
+**Cons:**
+- Complex implementation
+- May break with WordPress updates
+- Performance impact
+
+#### Option D: Accept as WordPress Core Issue
+Document this as a WordPress core limitation and accept the warning.
+
+**Rationale:**
+- This is a WordPress core navigation block issue, not theme-specific
+- Many themes likely have this same issue
+- WordPress.org reviewers may understand this is unavoidable
+- Could report to WordPress core team
+
+**Pros:**
+- No code changes needed
+- Not actually a theme bug
+
+**Cons:**
+- May block WordPress.org approval
+- Accessibility issue remains
+
+**RECOMMENDED APPROACH:**
+Try **Option A (JavaScript)** first as it's the most reliable fix. If WordPress.org rejects, escalate with documentation that this is a core block issue.
+
+**Status:** ⏳ Solution proposed - awaiting decision
 
 ---
 
@@ -370,21 +470,104 @@ The element "<a class="skip-link screen-reader-text"...>" does not have enough v
 difference when focused.
 ```
 
-**Solution:**
-Enhance skip-link focus styles in `style.css`:
+**Root Cause (IDENTIFIED):**
+WordPress core injects inline CSS with weak focus styles that have higher specificity than the theme's CSS.
 
+**Current Situation:**
+
+WordPress core injects this inline CSS:
 ```css
-.skip-link:focus {
-	background-color: var(--wp--preset--color--contrast);
-	color: var(--wp--preset--color--base);
-	box-shadow: 0 0 0 3px var(--wp--preset--color--primary);
-	outline: 3px solid var(--wp--preset--color--primary);
-	outline-offset: 2px;
-	z-index: 100000;
+.skip-link.screen-reader-text:focus {
+  background-color: #eee;  /* ← Too subtle! Gray on white */
+  color: #444;
+  /* ... other styles ... */
 }
 ```
 
-**Status:** ❌ Not implemented
+Moiraine theme CSS (style.css lines 210-219):
+```css
+.skip-link:focus,
+a.skip-link:focus {
+  background-color: var(--wp--preset--color--primary);
+  color: var(--wp--preset--color--base);
+  outline: 3px solid var(--wp--preset--color--main);
+  /* ... */
+}
+```
+
+**The Problem:**
+WordPress core's selector `.skip-link.screen-reader-text:focus` (2 classes) has higher specificity than theme's `.skip-link:focus` (1 class), so WordPress core's gray styling wins.
+
+**Solution Options:**
+
+#### Option A: Increase CSS Specificity (RECOMMENDED)
+Match or exceed WordPress core's specificity without using `!important`.
+
+**Implementation:**
+```css
+/* Update style.css lines 210-219 */
+.skip-link.screen-reader-text:focus,
+a.skip-link.screen-reader-text:focus {
+  background-color: var(--wp--preset--color--primary) !important;
+  color: var(--wp--preset--color--base) !important;
+  outline: 3px solid var(--wp--preset--color--main) !important;
+  outline-offset: 3px !important;
+  padding: 1em 1.5em !important;
+  text-decoration: none !important;
+  box-shadow: 0 0 0 3px var(--wp--preset--color--primary) !important;
+  z-index: 100000 !important;
+  clip-path: none !important;
+  height: auto !important;
+  width: auto !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+```
+
+**Pros:**
+- Guaranteed to override WordPress core inline CSS
+- Simple implementation
+- Immediate fix
+
+**Cons:**
+- Requires `!important` (generally discouraged but necessary here)
+- May need updates if WordPress core changes
+
+#### Option B: Remove WordPress Core Inline CSS
+Use `wp_dequeue_style()` to remove WordPress core's skip-link inline CSS.
+
+**Implementation:**
+```php
+// Add to functions.php
+add_action('wp_enqueue_scripts', function() {
+  // Remove WordPress core skip-link inline styles
+  wp_dequeue_style('wp-block-template-skip-link');
+}, 100);
+```
+
+**Pros:**
+- Cleaner CSS without `!important`
+- Full control over skip-link styling
+
+**Cons:**
+- May break if WordPress core changes how it handles skip links
+- Removes all core skip-link functionality
+
+#### Option C: Use Inline Styles (Not Recommended)
+Add inline styles directly to the skip link.
+
+**Cons:**
+- Not possible since skip link is generated by WordPress core JavaScript
+- Would require JavaScript manipulation
+
+**RECOMMENDED APPROACH:**
+Use **Option A** with `!important` declarations. This is the most reliable approach when dealing with WordPress core inline CSS that you need to override for accessibility compliance.
+
+**Accessibility Justification:**
+Using `!important` is acceptable (and necessary) when overriding WordPress core inline styles to meet WCAG 2.1 AA contrast requirements.
+
+**Status:** ⏳ Solution proposed - awaiting decision
 
 ---
 
@@ -397,22 +580,277 @@ Expected: <a class="skip-link...">Skip to content</a>
 Current: <a href="http://localhost:8485"...>trunk</a>
 ```
 
-**Root Cause:**
-Skip link may not be the first focusable element in the DOM, or may be hidden in a way that prevents proper focus.
+**Root Cause (IDENTIFIED):**
+WordPress core JavaScript generates the skip link and injects it into the DOM, but it may not be truly the first tabbable element due to:
+1. WordPress core's default CSS hiding method may interfere with focus
+2. Theme CSS positioning may affect tab order
+3. Other elements may have explicit `tabindex` attributes
 
-**Investigation Required:**
-1. Check where skip-link is rendered in templates
-2. Ensure it's the first element in `<body>`
-3. Verify CSS doesn't prevent focus
-4. Test tab order
+**Current Situation:**
 
-**Solution:**
-Ensure skip-link is:
-- First child in body (or visually positioned first)
-- Properly hidden until focused
-- Has proper z-index when focused
+WordPress core JavaScript (injected inline):
+```javascript
+// Creates skip link and injects it before .wp-site-blocks
+skipLink = document.createElement('a');
+skipLink.classList.add('skip-link', 'screen-reader-text');
+skipLink.id = 'wp-skip-link';
+skipLink.href = '#wp--skip-link--target';
+skipLink.innerText = 'Skip to content';
+sibling.parentElement.insertBefore(skipLink, sibling);
+```
 
-**Status:** ❌ Requires investigation
+Moiraine theme CSS (style.css lines 222-230):
+```css
+/* Hides skip link when not focused */
+.skip-link:not(:focus),
+a.skip-link:not(:focus) {
+  position: absolute;
+  left: -9999px;  /* Off-screen positioning */
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+```
+
+**The Problem:**
+The test shows the site logo link (`<a href="http://localhost:8485"...>trunk</a>`) receives focus first instead of the skip link. This could be due to:
+1. CSS `left: -9999px` positioning may confuse some browsers' tab order
+2. WordPress core's inline CSS may override theme positioning
+3. The skip link may not truly be the first element in DOM order
+
+**Solution Options:**
+
+#### Option A: Ensure Skip Link is Visually First (RECOMMENDED)
+Use modern CSS visually-hidden technique instead of off-screen positioning.
+
+**Implementation:**
+```css
+/* Update style.css lines 222-230 */
+/* Ensure skip link is visually hidden but accessible - modern approach */
+.skip-link:not(:focus),
+a.skip-link:not(:focus) {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border-width: 0 !important;
+  /* DO NOT use left: -9999px - it can break tab order */
+}
+
+/* Skip link tab order priority - ensure it appears at top when focused */
+.skip-link,
+a.skip-link {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  z-index: 100000 !important;
+}
+```
+
+**Pros:**
+- Modern accessibility best practice
+- Better browser compatibility
+- Reliable tab order
+- Follows WordPress core recommendations
+
+**Cons:**
+- Requires `!important` to override WordPress core inline CSS
+
+#### Option B: Force Tab Order with JavaScript
+Explicitly ensure skip link is first in tab order by manipulating tabindex.
+
+**Implementation:**
+```javascript
+// Add to functions.php or enqueue as separate script
+document.addEventListener('DOMContentLoaded', function() {
+  const skipLink = document.getElementById('wp-skip-link');
+
+  if (skipLink) {
+    // Ensure skip link is definitely first tabbable element
+    skipLink.tabIndex = 0;
+
+    // Move it to be first child of body if it isn't already
+    if (document.body.firstChild !== skipLink) {
+      document.body.insertBefore(skipLink, document.body.firstChild);
+    }
+  }
+});
+```
+
+**Pros:**
+- Guaranteed to work
+- Forces correct tab order
+
+**Cons:**
+- JavaScript dependency
+- May conflict with WordPress core skip-link generation
+- Could cause race conditions
+
+#### Option C: Combine CSS + JavaScript Fix
+Use improved CSS hiding method PLUS JavaScript to verify DOM position.
+
+**Implementation:**
+Combine Option A CSS with minimal JavaScript verification:
+
+```javascript
+// Lightweight check to ensure skip link is first
+document.addEventListener('DOMContentLoaded', function() {
+  const skipLink = document.getElementById('wp-skip-link');
+  if (skipLink && document.body.firstElementChild !== skipLink) {
+    document.body.insertBefore(skipLink, document.body.firstElementChild);
+  }
+});
+```
+
+**Pros:**
+- Most robust solution
+- Handles edge cases
+- Works even if WordPress core changes
+
+**Cons:**
+- Requires both CSS and JavaScript changes
+
+#### Option D: Test with WordPress Core Defaults First
+Before implementing fixes, test if the issue is actually caused by theme CSS overrides.
+
+**Testing Steps:**
+1. Temporarily disable theme skip-link CSS
+2. Test tab order with only WordPress core styles
+3. If it works, adjust theme CSS selectors
+4. If it doesn't work, it's a WordPress core issue
+
+**RECOMMENDED APPROACH:**
+Start with **Option A** (improved CSS hiding method). This follows WordPress accessibility best practices and should fix the tab order issue. If that doesn't work, escalate to **Option C** (CSS + JavaScript).
+
+**Why Modern CSS Matters:**
+The old `left: -9999px` technique can cause:
+- Tab order confusion in some browsers
+- Horizontal scrollbar flashes
+- Performance issues with large pages
+- Screen reader navigation problems
+
+Modern `clip` + `overflow: hidden` technique is now the standard.
+
+**References:**
+- [WordPress Core Trac: Skip Link Best Practices](https://core.trac.wordpress.org/ticket/42331)
+- [WebAIM: CSS in Action - Invisible Content](https://webaim.org/techniques/css/invisiblecontent/)
+- [A11y Project: How to Hide Content](https://www.a11yproject.com/posts/how-to-hide-content/)
+
+**Status:** ⏳ Solution proposed - awaiting decision
+
+---
+
+## Accessibility Issues - Decision Matrix
+
+### Quick Summary
+
+| Issue | Current State | Recommended Fix | Estimated Time | Risk Level |
+|-------|---------------|-----------------|----------------|------------|
+| **#7 Navigation List** | Invalid HTML: `<span>` as child of `<li>` | JavaScript to move chevron into button | 30 min | Low |
+| **#8 Skip Link Focus** | WordPress core CSS overrides theme styles | Add `!important` to theme CSS | 15 min | Very Low |
+| **#9 Skip Link Tab Order** | Using outdated `left: -9999px` technique | Modern `clip` + `overflow: hidden` CSS | 15 min | Very Low |
+
+### Implementation Recommendation
+
+**All three issues can be fixed with minimal code changes in ~1 hour total:**
+
+1. **Skip Link Issues (#8 & #9)** - CSS-only fixes in `style.css`
+   - Very low risk
+   - Follows modern accessibility best practices
+   - No JavaScript dependencies
+   - **Action**: Update 20 lines of CSS
+
+2. **Navigation Structure (#7)** - Small JavaScript addition
+   - Low risk
+   - Works around WordPress core limitation
+   - Falls back gracefully if JavaScript disabled (still functional, just fails accessibility test)
+   - **Action**: Add 15 lines of JavaScript
+
+**Alternative (Not Recommended):**
+Accept navigation issue as WordPress core bug and hope reviewers understand. This is risky as it may block WordPress.org approval.
+
+### Risk Assessment
+
+**If we implement all fixes:**
+- ✅ High confidence of passing WordPress.org accessibility review
+- ✅ Follows WCAG 2.1 AA standards
+- ✅ Modern, maintainable code
+- ⚠️ Minor: Uses `!important` in CSS (but justified for accessibility)
+- ⚠️ Minor: JavaScript dependency for navigation fix (but progressive enhancement)
+
+**If we skip fixes:**
+- ❌ Will likely fail WordPress.org accessibility review
+- ❌ Does not meet WCAG 2.1 AA standards
+- ❌ May require multiple review cycles
+
+### Code Changes Overview
+
+**File: `style.css` (lines 210-237)**
+```css
+/* BEFORE: 27 lines */
+.skip-link:focus,
+a.skip-link:focus {
+  background-color: var(--wp--preset--color--primary);
+  /* ... existing styles ... */
+}
+
+.skip-link:not(:focus),
+a.skip-link:not(:focus) {
+  position: absolute;
+  left: -9999px;  /* ← Outdated technique */
+  /* ... */
+}
+
+/* AFTER: 35 lines with !important and modern hiding */
+.skip-link.screen-reader-text:focus,
+a.skip-link.screen-reader-text:focus {
+  background-color: var(--wp--preset--color--primary) !important;
+  /* ... styles with !important ... */
+}
+
+.skip-link:not(:focus),
+a.skip-link:not(:focus) {
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0) !important;  /* ← Modern technique */
+  /* ... no more left: -9999px ... */
+}
+```
+
+**New File: `assets/js/accessibility-fixes.js` (~20 lines)**
+```javascript
+// Fix navigation list structure by moving chevron inside button
+document.addEventListener('DOMContentLoaded', function() {
+  const navItems = document.querySelectorAll('.wp-block-navigation-item.has-child');
+  navItems.forEach(item => {
+    const button = item.querySelector('.wp-block-navigation-submenu__toggle');
+    const chevron = item.querySelector(':scope > .wp-block-navigation__submenu-icon');
+    if (button && chevron && chevron.parentNode === item) {
+      button.appendChild(chevron);
+    }
+  });
+});
+```
+
+**File: `functions.php` (1 line to enqueue new JS)**
+```php
+wp_enqueue_script('moiraine-accessibility-fixes', get_template_directory_uri() . '/assets/js/accessibility-fixes.js', array(), MOIRAINE_VERSION, true);
+```
+
+### Recommendation: Implement All Fixes
+
+**Rationale:**
+- Total implementation time: ~1 hour
+- High probability of WordPress.org approval
+- Improves actual user accessibility
+- Follows current best practices
+- Low risk, high reward
+
+**Status:** ⏳ Solution proposed - awaiting decision
 
 ---
 
@@ -426,9 +864,9 @@ Ensure skip-link is:
 5. ✅ Replace all Unsplash images with GPL-compatible alternatives (2025-11-15)
 
 ### Phase 2: Accessibility Fixes (Required for WordPress.org)
-5. ❌ Fix skip-link focus state visibility
-6. ❌ Fix skip-link tab order
-7. ❌ Investigate and fix navigation list structure
+5. ⏳ Fix skip-link focus state visibility (Solution proposed - Issue #8, Option A)
+6. ⏳ Fix skip-link tab order (Solution proposed - Issue #9, Option A)
+7. ⏳ Fix navigation list structure (Solution proposed - Issue #7, Option A recommended)
 
 ### Phase 3: Polish (Recommended)
 8. ❌ Update "Tested up to" version format
@@ -538,20 +976,24 @@ Consider keeping current implementation and distributing theme through:
 - Documentation: [IMAGE-CREDITS-NEW.md](demo-enhancement/IMAGE-CREDITS-NEW.md)
 
 #### 2. Fix Skip-Link Accessibility Issues (REQUIRED)
-- **Status**: ❌ Not started
+- **Status**: ⏳ Solutions identified, ready for implementation
 - **Effort**: ~30 minutes
 - **Priority**: HIGH
-- Enhance focus state visibility in style.css
-- Ensure skip-link is first tabbable element
-- Test with keyboard navigation
+- **Issue #8**: Update CSS specificity with `!important` to override WordPress core inline styles
+- **Issue #9**: Replace `left: -9999px` with modern `clip` + `overflow: hidden` technique
+- **Files to modify**: `style.css` (lines 210-230)
+- **Recommended approach**: CSS-only fix (Options A for both issues)
+- Test with keyboard navigation after implementation
 
 #### 3. Fix Navigation List Structure (REQUIRED)
-- **Status**: ❌ Not started
-- **Effort**: ~1-2 hours
+- **Status**: ⏳ Solution identified, ready for implementation
+- **Effort**: ~30 minutes
 - **Priority**: HIGH
-- Investigate navigation block HTML structure
-- Review theme.json navigation settings
-- Test with accessibility tools
+- **Issue #7**: WordPress core renders chevron `<span>` outside `<button>`, violating HTML5 list rules
+- **Recommended solution**: JavaScript to move chevron inside button after page load
+- **Alternative**: Accept as WordPress core limitation and document
+- **Files to modify**: Create new `assets/js/accessibility-fixes.js` or add to existing navigation JS
+- Test with accessibility tools (axe DevTools) after implementation
 
 #### 4. Update "Tested up to" Version (RECOMMENDED)
 - **Status**: ❌ Not started

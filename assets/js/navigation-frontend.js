@@ -1,10 +1,37 @@
 /**
  * Navigation Frontend Enhancement
  *
- * Converts parent menu buttons to clickable links with separate toggle buttons
- * when the hasClickableParents attribute is enabled on the navigation block.
+ * 1. Accessibility fix: Move chevron icons inside buttons (all navigation blocks)
+ * 2. Clickable parents: Convert parent buttons to links with separate toggles
  */
 document.addEventListener('DOMContentLoaded', () => {
+    // ============================================
+    // 1. ACCESSIBILITY FIX - Standard Navigation
+    // ============================================
+    // Fix navigation list structure by moving chevron inside button
+    // This resolves HTML5 validation issue where <span> is direct child of <li>
+    // Only needed for navigation blocks WITHOUT clickable parents (they handle it differently)
+    const standardNavs = document.querySelectorAll('.wp-block-navigation:not(.has-clickable-parents)');
+
+    standardNavs.forEach(nav => {
+        const navItems = nav.querySelectorAll('.wp-block-navigation-item.has-child');
+
+        navItems.forEach(item => {
+            const button = item.querySelector('.wp-block-navigation-submenu__toggle');
+            const chevron = item.querySelector(':scope > .wp-block-navigation__submenu-icon');
+
+            // Move chevron inside button if both exist and chevron is orphaned outside button
+            if (button && chevron && chevron.parentNode === item) {
+                button.appendChild(chevron);
+            }
+        });
+    });
+
+    // ============================================
+    // 2. CLICKABLE PARENTS FEATURE
+    // ============================================
+    // Converts parent menu buttons to clickable links with separate toggle buttons
+    // when the hasClickableParents attribute is enabled on the navigation block
     const navs = document.querySelectorAll('.wp-block-navigation.has-clickable-parents');
 
     navs.forEach(nav => {

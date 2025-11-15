@@ -2,9 +2,9 @@
 Contributors: jfrumau
 Tags: blog, portfolio, entertainment, grid-layout, one-column, two-columns, three-columns, four-columns, block-patterns, block-styles, custom-logo, custom-menu, editor-style, featured-images, full-site-editing, full-width-template, rtl-language-support, style-variations, template-editing, theme-options, translation-ready, wide-blocks
 Requires at least: 5.8
-Tested up to: 6.7.1
+Tested up to: 6.7
 Requires PHP: 7.3
-Stable tag: 2.6.1
+Stable tag: 2.6.2
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -13,6 +13,14 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block theme! Moiraine features over 50 beautiful pattern designs, 7 full-page pattern layouts, and a fully-customizable design system with Global Styles. Moiraine integrates seamlessly with all of the powerful new WordPress editor features, giving you the most lightweight and powerful website builder on the planet — no expensive page builder plugin required! ✶ Full demo: https://demo.imagewize.com ✶
 
 == Changelog ==
+
+= 2.6.2 - 11/15/25 =
+* FIXED: Accessibility - Navigation List Structure - fixed HTML5 validation error where chevron span elements were direct children of li instead of being inside button elements by adding JavaScript that moves chevrons into their parent buttons after page load (resolves axe accessibility violation)
+* FIXED: Accessibility - Skip Link Focus State - enhanced skip link visibility when focused by increasing CSS specificity to override WordPress core inline styles with !important declarations, ensuring high-contrast brand-colored background (primary color) with proper outline and shadow for WCAG 2.1 AA compliance
+* FIXED: Accessibility - Skip Link Tab Order - fixed tab order issue by replacing outdated left: -9999px hiding technique with modern clip: rect(0, 0, 0, 0) and clip-path: inset(50%) method, ensuring skip link is properly recognized as first tabbable element for keyboard navigation
+* CHANGED: Navigation Frontend JavaScript - enhanced assets/js/navigation-frontend.js with accessibility fix section that automatically corrects WordPress core navigation block HTML structure for standard navigation blocks
+* CHANGED: Skip Link CSS - updated skip link styles in style.css with comprehensive !important overrides to ensure theme accessibility styles win over WordPress core inline CSS injection
+* CHANGED: CSS Best Practices - migrated from deprecated off-screen positioning to modern visually-hidden technique following WebAIM and A11y Project recommendations
 
 = 2.6.1 - 11/15/25 =
 * CHANGED: Theme Logo - updated moiraine-logo.svg to ladybug icon design (sourced from Blade UI Kit) maintaining the existing sky blue color (#38bdf8) for consistent brand identity

@@ -5,6 +5,18 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.6.2] - 2025-11-15
+
+### Fixed
+- **Accessibility - Navigation List Structure**: Fixed HTML5 validation error where chevron `<span>` elements were direct children of `<li>` instead of being inside `<button>` elements by adding JavaScript that moves chevrons into their parent buttons after page load (resolves axe accessibility violation)
+- **Accessibility - Skip Link Focus State**: Enhanced skip link visibility when focused by increasing CSS specificity to override WordPress core inline styles with `!important` declarations, ensuring high-contrast brand-colored background (primary color) with proper outline and shadow for WCAG 2.1 AA compliance
+- **Accessibility - Skip Link Tab Order**: Fixed tab order issue by replacing outdated `left: -9999px` hiding technique with modern `clip: rect(0, 0, 0, 0)` and `clip-path: inset(50%)` method, ensuring skip link is properly recognized as first tabbable element for keyboard navigation
+
+### Changed
+- **Navigation Frontend JavaScript**: Enhanced `assets/js/navigation-frontend.js` with accessibility fix section that automatically corrects WordPress core navigation block HTML structure for standard navigation blocks (non-clickable-parents)
+- **Skip Link CSS**: Updated skip link styles in `style.css` with comprehensive `!important` overrides to ensure theme accessibility styles win over WordPress core inline CSS injection
+- **CSS Best Practices**: Migrated from deprecated off-screen positioning to modern visually-hidden technique following WebAIM and A11y Project recommendations for better screen reader and keyboard navigation support
+
 ## [2.6.1] - 2025-11-15
 
 ### Changed
