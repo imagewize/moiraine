@@ -5,6 +5,15 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.6.4] - 2025-11-16
+
+### Changed
+- **Repository Structure**: Relocated theme documentation and demo content to project root for WordPress.org compliance
+  - Moved `demo-content/` directory to `/demo-content/moiraine/` at imagewize.com project root
+  - Moved `docs/` directory to `/docs/moiraine/` at imagewize.com project root
+  - Theme directory is now WordPress.org ready without excluded directories
+  - Documentation remains accessible for development while keeping theme clean for distribution
+
 ## [2.6.3] - 2025-11-16
 
 ### Added

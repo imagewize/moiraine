@@ -4,7 +4,7 @@ Tags: blog, portfolio, entertainment, grid-layout, one-column, two-columns, thre
 Requires at least: 5.8
 Tested up to: 6.7
 Requires PHP: 7.3
-Stable tag: 2.6.3
+Stable tag: 2.6.4
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -13,6 +13,12 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block theme! Moiraine features over 50 beautiful pattern designs, 7 full-page pattern layouts, and a fully-customizable design system with Global Styles. Moiraine integrates seamlessly with all of the powerful new WordPress editor features, giving you the most lightweight and powerful website builder on the planet — no expensive page builder plugin required! ✶ Full demo: https://demo.imagewize.com ✶
 
 == Changelog ==
+
+= 2.6.4 - 11/16/25 =
+* CHANGED: Repository Structure - relocated theme documentation and demo content to project root for WordPress.org compliance
+* CHANGED: Moved demo-content/ directory to /demo-content/moiraine/ at imagewize.com project root
+* CHANGED: Moved docs/ directory to /docs/moiraine/ at imagewize.com project root
+* IMPROVED: Theme directory is now WordPress.org ready without excluded directories while documentation remains accessible for development
 
 = 2.6.3 - 11/16/25 =
 * NEW: Pattern Screenshot Documentation - comprehensive documentation for pattern screenshot workflow at demo-content/BLOCK-SCREENSHOTS.md with complete guide for creating and updating pattern screenshots, tools and scripts reference, step-by-step instructions, troubleshooting guide and technical details

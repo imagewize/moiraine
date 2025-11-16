@@ -20,28 +20,9 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Temporarily hide docs and demo-content folders
-        run: |
-          if [ -d "docs" ]; then
-            mv docs ../docs-temp
-          fi
-          if [ -d "demo-content" ]; then
-            mv demo-content ../demo-content-temp
-          fi
-
       - name: Run Theme Review Tests
         id: theme-test
         uses: WordPress/theme-review-action@trunk
         with:
           accessible-ready: true
           ui-debug: true
-
-      - name: Restore docs and demo-content folders
-        if: always()
-        run: |
-          if [ -d "../docs-temp" ]; then
-            mv ../docs-temp docs
-          fi
-          if [ -d "../demo-content-temp" ]; then
-            mv ../demo-content-temp demo-content
-          fi
