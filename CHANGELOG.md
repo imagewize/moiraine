@@ -5,6 +5,27 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.6.3] - 2025-11-16
+
+### Added
+- **Pattern Screenshot Documentation**: Comprehensive documentation for pattern screenshot workflow at `demo-content/BLOCK-SCREENSHOTS.md`
+  - Complete guide for creating and updating pattern screenshots
+  - Tools and scripts reference (screenshot-pattern.js, convert-to-webp.js)
+  - Step-by-step instructions for updating screenshots
+  - Troubleshooting guide and technical details
+  - Pattern screenshot specifications (1400px width, variable height, WebP format)
+
+### Changed
+- **Pattern Screenshots Update**: Refreshed all 15 pattern screenshots with variable heights to show complete pattern content
+  - Updated dimensions to use variable heights (maintaining 1400px width)
+  - Pattern screenshots now show complete content without cropping
+  - File sizes optimized with 85% WebP compression
+  - Screenshots now support Carousel block's `adaptiveHeight` feature
+  - Dimensions range from 1400×879px (smallest) to 1400×1541px (largest)
+
+### Removed
+- **WordPress Export File**: Removed outdated `moiraine.WordPress.2025-11-03.xml` (4MB) as content is now managed via database backups and pattern files
+
 ## [2.6.2] - 2025-11-15
 
 ### Fixed
