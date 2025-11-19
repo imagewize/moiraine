@@ -5,6 +5,19 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.6.5] - 2025-11-19
+
+### Changed
+- **WordPress.org Preparation**: Updated theme headers for WordPress.org submission compliance
+  - Theme URI: Updated to `https://imagewize.com/resources/moiraine-theme/` (theme landing page)
+  - Author URI: Updated to `https://github.com/jfrumau` (author profile)
+  - Both URIs now use full HTTPS URLs as required by WordPress.org
+
+### Fixed
+- **WordPress Coding Standards**: Fixed 3 code alignment warnings in `inc/block-extensions.php`
+  - Theme now passes WordPress Coding Standards with 0 errors and 0 warnings
+  - Ready for WordPress.org theme review submission
+
 ## [2.6.4] - 2025-11-16
 
 ### Changed

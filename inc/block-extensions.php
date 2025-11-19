@@ -164,9 +164,9 @@ function filter_navigation_block_output( $block_content, $block ) {
 		return $block_content;
 	}
 
-	$attributes              = $block['attrs'] ?? array();
-	$has_clickable_parents   = $attributes['hasClickableParents'] ?? false;
-	$has_improved_chevrons   = $attributes['hasImprovedChevrons'] ?? false;
+	$attributes            = $block['attrs'] ?? array();
+	$has_clickable_parents = $attributes['hasClickableParents'] ?? false;
+	$has_improved_chevrons = $attributes['hasImprovedChevrons'] ?? false;
 
 	// Add CSS classes to the nav element.
 	if ( $has_clickable_parents ) {
