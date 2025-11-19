@@ -5,6 +5,18 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.6.6] - 2025-11-19
+
+### Changed
+- **Development Tools Organization**: Moved `theme-utils.mjs` pattern processing script to project root
+  - Script relocated to `scripts/themes/moiraine/utils.mjs` (project-level organization)
+  - Comprehensive documentation added at `docs/moiraine/THEME-UTILS.md`
+  - Quick reference guide at `scripts/themes/moiraine/README.md`
+  - Script now accepts `--theme-path` parameter for flexibility
+  - Default text domain changed from `ollie` to `moiraine`
+  - Cleaner theme directory structure without development tooling files
+  - Run from project root: `node scripts/themes/moiraine/utils.mjs escape-patterns`
+
 ## [2.6.5] - 2025-11-19
 
 ### Changed
