@@ -1,0 +1,200 @@
+/**
+ * Classic Editor Compatibility Styles
+ *
+ * This file contains CSS for backward compatibility with classic WordPress editor
+ * content and Theme Unit Test data. These styles support legacy markup patterns
+ * that predate the block editor.
+ *
+ * @package Moiraine
+ * @since 2.7.0
+ */
+
+/* Image Alignment
+   WordPress core only provides .is-layout-flow > .alignleft which requires a container.
+   Classic editor content uses img.alignleft directly without containers.
+---------------------------------------------------------------------------- */
+img.alignleft {
+	float: left;
+	margin-inline-end: 2em;
+	margin-bottom: var(--wp--preset--spacing--small);
+}
+
+img.alignright {
+	float: right;
+	margin-inline-start: 2em;
+	margin-bottom: var(--wp--preset--spacing--small);
+}
+
+img.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: var(--wp--preset--spacing--small);
+}
+
+.wp-caption.alignleft {
+	float: left;
+	margin-inline-end: 2em;
+	margin-bottom: var(--wp--preset--spacing--small);
+}
+
+.wp-caption.alignright {
+	float: right;
+	margin-inline-start: 2em;
+	margin-bottom: var(--wp--preset--spacing--small);
+}
+
+.wp-caption.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	margin-bottom: var(--wp--preset--spacing--small);
+}
+
+/* Gallery Shortcode
+   Classic [gallery] shortcode creates grid layouts using columns parameter.
+   Default is 3 columns. Supports 1-9 columns as specified by shortcode attribute.
+---------------------------------------------------------------------------- */
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 calc(var(--wp--preset--spacing--small) * -0.5);
+	list-style: none;
+}
+
+.gallery-item {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding: calc(var(--wp--preset--spacing--small) * 0.5);
+}
+
+/* Default: 3 columns */
+.gallery-columns-3 .gallery-item {
+	width: calc(100% / 3);
+}
+
+/* Column variations */
+.gallery-columns-1 .gallery-item {
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	width: 50%;
+}
+
+.gallery-columns-4 .gallery-item {
+	width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	width: calc(100% / 6);
+}
+
+.gallery-columns-7 .gallery-item {
+	width: calc(100% / 7);
+}
+
+.gallery-columns-8 .gallery-item {
+	width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	width: calc(100% / 9);
+}
+
+.gallery-icon {
+	margin-bottom: var(--wp--preset--spacing--small);
+}
+
+.gallery-icon img {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	height: auto;
+}
+
+.gallery-caption {
+	font-size: var(--wp--preset--font-size--x-small);
+	color: var(--wp--preset--color--secondary);
+	text-align: center;
+	margin: 0;
+}
+
+/* Gallery responsive: stack on mobile */
+@media (max-width: 600px) {
+	.gallery-columns-3 .gallery-item,
+	.gallery-columns-4 .gallery-item,
+	.gallery-columns-5 .gallery-item,
+	.gallery-columns-6 .gallery-item,
+	.gallery-columns-7 .gallery-item,
+	.gallery-columns-8 .gallery-item,
+	.gallery-columns-9 .gallery-item {
+		width: 50%;
+	}
+}
+
+/* Inline Code
+   Prevents horizontal overflow on long code snippets.
+---------------------------------------------------------------------------- */
+*:not(.wp-block-code) > code {
+	background-color: var(--wp--preset--color--tertiary);
+	font-weight: var(--wp--custom--font-weight--medium);;
+	padding: 3px 5px;
+	position: relative;
+	border-radius: 3px;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+
+/* Blockquotes
+   WordPress core only provides block-specific styles (core/quote).
+   Classic editor content uses plain blockquote elements.
+---------------------------------------------------------------------------- */
+blockquote:not([class*="wp-block"]) {
+	border-left: 5px solid var(--wp--preset--color--primary);
+	padding-left: var(--wp--preset--spacing--medium);
+	padding-right: var(--wp--preset--spacing--medium);
+	margin-left: 0;
+	margin-right: 0;
+	font-style: italic;
+	color: var(--wp--preset--color--main);
+}
+
+/* Citations
+   Applies to cite elements outside of WordPress blocks.
+---------------------------------------------------------------------------- */
+cite:not([class*="wp-block"] cite) {
+	font-style: italic;
+	font-size: var(--wp--preset--font-size--small);
+	color: var(--wp--preset--color--secondary);
+	display: block;
+	margin-top: var(--wp--preset--spacing--small);
+}
+
+/* Quote Elements
+   Inline quotes using <q> tag - browser adds quotation marks automatically.
+---------------------------------------------------------------------------- */
+q {
+	font-style: italic;
+	quotes: auto;
+}
+
+/* Preformatted Text
+   WordPress core only provides block-specific styles (core/preformatted).
+   Classic editor content uses plain pre elements.
+   Prevents horizontal overflow while preserving whitespace formatting.
+---------------------------------------------------------------------------- */
+pre:not([class*="wp-block"]) {
+	overflow-x: auto;
+	white-space: pre;
+	max-width: 100%;
+	padding: var(--wp--preset--spacing--small);
+	background-color: var(--wp--preset--color--tertiary);
+	border-radius: 5px;
+}
