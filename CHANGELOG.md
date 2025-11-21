@@ -5,6 +5,15 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.7.2] - 2025-11-21
+
+### Fixed
+- **Distribution Ignore File Format**: Fixed `.distignore` format for `zip -x@` command compatibility
+  - Added `/*` suffix to directory entries (`.git/*`, `.github/*`, `node_modules/*`, `vendor/*`, `.claude/*`, `.playwright/*`)
+  - The `zip -x@.distignore` command requires wildcards to exclude directory contents recursively
+  - Added `packages/*` to exclusions
+  - GitHub Actions release workflow now correctly excludes development directories from theme zip
+
 ## [2.7.1] - 2025-11-21
 
 ### Changed

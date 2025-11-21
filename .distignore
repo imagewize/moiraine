@@ -1,8 +1,9 @@
-# Directories
-.git
-.github
-node_modules
-vendor
+# Directories (need /* suffix for zip -x@ to exclude recursively)
+.git/*
+.github/*
+node_modules/*
+vendor/*
+packages/*
 patterns/images/backup-*
 
 # Development files
@@ -20,5 +21,5 @@ CLAUDE.md
 *.sh
 
 # Claude/Testing
-.claude
-.playwright
+.claude/*
+.playwright/*
