@@ -5,6 +5,11 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.7.3] - 2025-11-21
+
+### Fixed
+- **Author URI**: Corrected Author URI from `https://github.com/jfrumau` to `https://github.com/jasperf` in style.css theme header
+
 ## [2.7.2] - 2025-11-21
 
 ### Fixed
