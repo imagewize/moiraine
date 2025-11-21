@@ -5,6 +5,15 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.7.1] - 2025-11-21
+
+### Changed
+- **Distribution Ignore File**: Cleaned up `.distignore` to remove references to non-existent directories and files
+  - Removed `docs`, `demo-content`, `inc/settings/src`, and `theme-utils.mjs` (no longer exist in theme)
+  - Updated `.playwright-mcp` to `.playwright` (correct directory name)
+  - Added `.claude` directory to exclusions
+  - Renamed section from "Playwright/Testing" to "Claude/Testing"
+
 ## [2.7.0] - 2025-11-20
 
 ### Added
