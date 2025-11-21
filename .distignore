@@ -3,9 +3,6 @@
 .github
 node_modules
 vendor
-docs
-demo-content
-inc/settings/src
 patterns/images/backup-*
 
 # Development files
@@ -19,9 +16,9 @@ composer.json
 composer.lock
 package.json
 package-lock.json
-theme-utils.mjs
 CLAUDE.md
 *.sh
 
-# Playwright/Testing
-.playwright-mcp
+# Claude/Testing
+.claude
+.playwright
