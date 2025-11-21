@@ -7,7 +7,7 @@
 
 Moiraine is a modern WordPress block theme designed for the WordPress block editor and site editor. Create beautiful, fully-customizable websites with WordPress's built-in tools — no coding required.
 
-Features **89+ professional patterns**, **custom carousel block**, WooCommerce integration, modern development tooling, and blazing-fast performance with 100% scores across the board.
+Features **89+ professional patterns**, WooCommerce integration, modern development tooling, and blazing-fast performance with 100% scores across the board.
 
 ## Table of Contents
 
@@ -29,13 +29,6 @@ Moiraine is built for modern WordPress features and requires WordPress 6.0 or la
 
 ## Key Features
 
-### 🎠 **Carousel Blocks** (NEW in 2.4.0)
-- **Responsive Carousels**: Create stunning image and content sliders with Slick Carousel integration
-- **Flexible Slide Content**: Use InnerBlocks to add any content to slides (images, text, buttons, etc.)
-- **Customizable Settings**: Control autoplay, navigation arrows, dots, transitions, and more
-- **Performance Optimized**: Conditional asset loading ensures carousel scripts only load when needed
-- **Mobile-First Design**: Touch-friendly navigation and responsive breakpoints
-
 ### 🎨 **89+ Professional Patterns**
 - **Hero Sections**: Eye-catching headers and banners
 - **Feature Presentations**: Showcase your products and services
@@ -53,12 +46,8 @@ Moiraine is built for modern WordPress features and requires WordPress 6.0 or la
 - **Developer-Friendly**: Extensible architecture for adding functionality to core WordPress blocks
 - **Standards Compliant**: Uses WordPress hooks and filters for seamless integration
 
-### 🧩 **Menu Designer Block** (NEW in 2.1.0)
-- Advanced mega menu functionality with template part integration
-- WordPress Interactivity API with modern state management
-- Drag-and-drop navigation creation
-- Responsive design with mobile-first approach
-- Full keyboard navigation and accessibility support
+### 🔌 **Moiraine Blocks Plugin**
+Custom blocks like Carousel and Menu Designer are available in the companion [Moiraine Blocks plugin](https://github.com/imagewize/moiraine-blocks/).
 
 ### 🛒 **WooCommerce Integration**
 - Automatic stylesheet loading when WooCommerce is active
@@ -120,15 +109,6 @@ npm run translate:patterns     # Process patterns for i18n
 composer run lint             # PHP linting
 composer run wpcs:scan        # WordPress coding standards
 composer run wpcs:fix         # Auto-fix WPCS violations
-
-# Block development
-cd blocks/carousel            # Carousel block
-npm start                     # Development with file watching
-npm run build                 # Production build
-
-cd blocks/menu-designer       # Menu Designer block
-npm start                     # Development with file watching
-npm run build                 # Production build
 ```
 
 See `CLAUDE.md` for detailed development documentation.
@@ -139,8 +119,8 @@ See `CLAUDE.md` for detailed development documentation.
 Moiraine is based on the [Ollie theme](https://github.com/OllieWP/ollie) by [Mike McAlister](https://mikemcalister.com). We express our gratitude to Mike for creating such an excellent foundation for WordPress block themes.
 
 ### Additional Credits
-- **Menu Designer Block**: Built upon the foundational work of [Human Made's Mega Menu Block](https://github.com/humanmade/hm-mega-menu-block)
 - Favicon: [Ladybug icon](https://blade-ui-kit.com/blade-icons/mdi-ladybug) from Blade UI Kit
+- Custom blocks available in the [Moiraine Blocks plugin](https://github.com/imagewize/moiraine-blocks/)
 
 ## License
 

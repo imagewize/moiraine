@@ -4,7 +4,7 @@ Tags: blog, portfolio, entertainment, grid-layout, one-column, two-columns, thre
 Requires at least: 5.8
 Tested up to: 6.7
 Requires PHP: 7.3
-Stable tag: 2.6.5
+Stable tag: 2.7.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -13,6 +13,33 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block theme! Moiraine features over 50 beautiful pattern designs, 7 full-page pattern layouts, and a fully-customizable design system with Global Styles. Moiraine integrates seamlessly with all of the powerful new WordPress editor features, giving you the most lightweight and powerful website builder on the planet — no expensive page builder plugin required! ✶ Full demo: https://demo.imagewize.com ✶
 
 == Changelog ==
+
+= 2.7.0 - 11/20/25 =
+* NEW: Classic Editor Compatibility Styles - comprehensive CSS support for classic editor and Theme Unit Test content in style.css
+* NEW: Image Alignment - support for img.alignleft, img.alignright, img.aligncenter (direct image alignment without container wrappers)
+* NEW: Image Captions - support for .wp-caption.alignleft, .wp-caption.alignright, .wp-caption.aligncenter (captioned images with proper float layouts)
+* NEW: Blockquotes - classic blockquote element styling with left border, italic text, and theme colors
+* NEW: Citations - styling for cite elements outside WordPress blocks with secondary color and proper spacing
+* NEW: Inline Quotes - support for q tag with automatic quotation marks via CSS
+* NEW: Preformatted Text - classic pre element styling with overflow handling and theme background colors
+* NEW: Inline Code Overflow - enhanced overflow handling for code elements with word-wrap and overflow-wrap support
+* NEW: Page Template Comments - added complete comments section to template-page-centered.php pattern with author avatars, dates, content, reply/edit links, pagination, and comment form
+* IMPROVED: Float-based layouts with logical property support (margin-inline-end, margin-inline-start) for better RTL language support
+* IMPROVED: Consistent spacing using theme preset variables throughout all classic editor styles
+* IMPROVED: CSS Organization - restructured style.css with comprehensive table of contents (7 main sections: CSS Reset, Form Styling, Helper Styles, Classic Editor Compatibility, Block Adjustments, Mobile Responsive, Accessibility Fixes)
+* IMPROVED: Documentation - enhanced inline CSS comments explaining WordPress core limitations and classic editor requirements
+* FIXED: Classic editor content and Theme Unit Test data now displays correctly with proper image alignment, blockquotes, code blocks, and citations
+* NOTE: WordPress core only provides .is-layout-flow > .alignleft which requires a container wrapper, this update adds direct support for classic editor markup without containers
+
+= 2.6.6 - 11/19/25 =
+* CHANGED: Development Tools Organization - moved theme-utils.mjs pattern processing script to project root for better organization
+* CHANGED: Script relocated to scripts/themes/moiraine/utils.mjs (project-level organization)
+* CHANGED: Created comprehensive documentation at docs/moiraine/THEME-UTILS.md
+* CHANGED: Added quick reference guide at scripts/themes/moiraine/README.md
+* CHANGED: Script now accepts --theme-path parameter for flexibility
+* CHANGED: Default text domain changed from ollie to moiraine
+* CHANGED: Cleaner theme directory structure without development tooling files
+* IMPROVED: Run from project root: node scripts/themes/moiraine/utils.mjs escape-patterns
 
 = 2.6.5 - 11/19/25 =
 * CHANGED: WordPress.org Preparation - Updated theme headers for WordPress.org submission compliance with full HTTPS URLs

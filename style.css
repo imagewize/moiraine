@@ -7,7 +7,7 @@ Description: Launch a blazing-fast, pixel-perfect website with the Moiraine Word
 Tags: blog, portfolio, entertainment, grid-layout, one-column, two-columns, three-columns, four-columns, block-patterns, block-styles, custom-logo, custom-menu, editor-style, featured-images, full-site-editing, full-width-template, rtl-language-support, style-variations, template-editing, theme-options, translation-ready, wide-blocks
 Tested up to: 6.7
 Requires PHP: 7.3
-Version: 2.6.6
+Version: 2.7.0
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: moiraine
@@ -16,7 +16,23 @@ Moiraine WordPress Theme, (C) 2025 Jasper Frumau based on Ollie by Mike McAliste
 Moiraine is distributed under the terms of the GNU GPL.
 */
 
-/* CSS Reset
+/* Table of Contents
+---------------------------------------------------------------------------- */
+/*
+1. Classic Editor Compatibility (imported from classic-styles.css)
+2. CSS Reset
+3. Standardize Form Styling
+4. Helper Styles
+5. Block-Specific Adjustments
+6. Mobile Responsive
+7. Accessibility Fixes
+*/
+
+/* 1. Classic Editor Compatibility
+---------------------------------------------------------------------------- */
+@import url('classic-styles.css');
+
+/* 2. CSS Reset
 ---------------------------------------------------------------------------- */
 
 *,
@@ -62,8 +78,8 @@ figure {
 	height: auto;
 }
 
-/* Standardize form styling
---------------------------------------------- */
+/* 3. Standardize Form Styling
+---------------------------------------------------------------------------- */
 
 input,
 button,
@@ -116,21 +132,15 @@ label {
 	opacity: 0.75;
 }
 
-/* Helper styles
+/* 4. Helper Styles
 ---------------------------------------------------------------------------- */
 
 a.more-link {
 	display: block;
 }
 
-/* Inline code */
-*:not(.wp-block-code) > code {
-	background-color: var(--wp--preset--color--tertiary);
-	font-weight: var(--wp--custom--font-weight--medium);;
-	padding: 3px 5px;
-	position: relative;
-	border-radius: 3px;
-}
+/* 5. Block-Specific Adjustments
+---------------------------------------------------------------------------- */
 
 /* Adjust terms at bottom of posts */
 .single .wp-block-group .wp-block-post-terms,
@@ -160,6 +170,9 @@ a.more-link {
 .row-logos > figure {
 	flex-shrink: 1 !important;
 }
+
+/* 6. Mobile Responsive
+---------------------------------------------------------------------------- */
 
 @media (max-width: 781px) {
 	.moiraine-hide-on-mobile {
@@ -198,7 +211,7 @@ a.more-link {
 	}
 }
 
-/* Accessibility Fixes
+/* 7. Accessibility Fixes
 ---------------------------------------------------------------------------- */
 
 /* Fix navigation list structure - ensure only li elements are direct children */

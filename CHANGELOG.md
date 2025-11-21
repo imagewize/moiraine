@@ -5,6 +5,46 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.7.0] - 2025-11-20
+
+### Added
+- **Classic Editor Compatibility Styles**: Comprehensive CSS support for classic editor and Theme Unit Test content in `classic-styles.css`
+  - **Image Alignment**: Support for `img.alignleft`, `img.alignright`, `img.aligncenter` (direct image alignment without container wrappers)
+  - **Image Captions**: Support for `.wp-caption.alignleft`, `.wp-caption.alignright`, `.wp-caption.aligncenter` (captioned images)
+  - **Gallery Shortcode**: Complete CSS support for classic `[gallery]` shortcode with grid layouts for 1-9 column variations (default 3 columns), responsive design stacking to 2 columns on mobile
+  - **Blockquotes**: Classic `<blockquote>` element styling with left border and italic text
+  - **Citations**: Styling for `<cite>` elements outside WordPress blocks
+  - **Inline Quotes**: Support for `<q>` tag with automatic quotation marks
+  - **Preformatted Text**: Classic `<pre>` element styling with overflow handling
+  - **Inline Code**: Enhanced overflow handling for `<code>` elements with word-wrap support
+  - Proper float-based layouts with logical property support (`margin-inline-end`, `margin-inline-start`) for RTL languages
+  - Consistent spacing using theme preset variables throughout
+  - WordPress core only provides `.is-layout-flow > .alignleft` which requires a container wrapper
+  - Classic editor content and Theme Unit Test data uses direct element classes without containers
+  - Ensures backward compatibility with imported content and Classic Editor posts
+- **Page Template Enhancement**: Added complete comments section to `template-page-centered.php` pattern
+  - Full comments display with author avatars, dates, and content
+  - Comment reply and edit links with proper permissions
+  - Comments pagination for large comment threads
+  - Post comments form for new comment submission
+  - Tertiary background styling for visual separation
+  - Responsive layout with proper spacing and typography
+
+### Changed
+- **CSS Organization**: Moved all classic editor compatibility styles to dedicated `classic-styles.css` file
+  - New file: `classic-styles.css` containing all backward compatibility CSS (Image Alignment, Gallery Shortcode, Inline Code, Blockquotes, Citations, Quote Elements, Preformatted Text)
+  - Imported into `style.css` via `@import url('classic-styles.css')`
+  - Cleaner separation between modern block theme styles and legacy compatibility
+  - Updated `style.css` table of contents:
+    - Section 1: Classic Editor Compatibility (imported)
+    - Section 2: CSS Reset
+    - Section 3: Standardize Form Styling
+    - Section 4: Helper Styles
+    - Section 5: Block-Specific Adjustments
+    - Section 6: Mobile Responsive
+    - Section 7: Accessibility Fixes
+- **Documentation**: Enhanced inline CSS comments in `classic-styles.css` explaining WordPress core limitations and classic editor requirements
+
 ## [2.6.6] - 2025-11-19
 
 ### Changed
