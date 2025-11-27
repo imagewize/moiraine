@@ -16,7 +16,7 @@
 <div class="wp-block-group alignwide has-main-accent-color has-text-color has-link-color"><!-- wp:site-title {"level":0,"isLink":false,"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"textColor":"base"} /-->
 
 <!-- wp:paragraph {"fontSize":"small"} -->
-<p class="has-small-font-size"><?php esc_html_e( '© 2025 · Powered by WordPress and', 'moiraine' ); ?><a href="https://imagewize.com/moiraine"><?php esc_html_e( 'Moiraine', 'moiraine' ); ?></a></p>
+<p class="has-small-font-size"><?php esc_html_e( '© 2025 · Powered by WordPress and', 'moiraine' ); ?> <a href="https://imagewize.com/resources/moiraine-theme/"><?php esc_html_e( 'Moiraine', 'moiraine' ); ?></a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></footer>
 <!-- /wp:group -->

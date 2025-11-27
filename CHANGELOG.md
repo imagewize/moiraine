@@ -5,6 +5,39 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.7.4] - 2025-11-27
+
+### Fixed - WordPress.org Theme Review Compliance
+
+**Unique Namespace Prefixes:**
+- **What changed:** All public functions now use `moiraine_` prefix (even within namespaces)
+- **Functions updated:** `setup()` → `moiraine_setup()`, `enqueue_style_sheet()` → `moiraine_enqueue_style_sheet()`, `register_block_styles()` → `moiraine_register_block_styles()`, `enqueue_custom_block_styles()` → `moiraine_enqueue_custom_block_styles()`, `enqueue_woocommerce_styles()` → `moiraine_enqueue_woocommerce_styles()`, `enqueue_navigation_frontend_script()` → `moiraine_enqueue_navigation_frontend_script()`, `pattern_categories()` → `moiraine_pattern_categories()`, `is_paginated()` → `moiraine_is_paginated()`, `template_part_areas()` → `moiraine_template_part_areas()`
+- **Block extension functions:** All 6 functions in `inc/block-extensions.php` now prefixed: `moiraine_enqueue_block_extensions()`, `moiraine_filter_post_excerpt_block_output()`, `moiraine_excerpt_link_styles()`, `moiraine_filter_navigation_block_output()`, `moiraine_add_css_class_to_nav()`, `moiraine_filter_navigation_submenu_output()`
+- **Enqueue handles:** Changed `sanitize_title(__NAMESPACE__)` to `moiraine-style` for consistent naming
+- **Why:** WordPress.org requires unique prefixes for all public namespace items to prevent conflicts
+
+**Footer Credit Links:**
+- **What changed:** Updated all 6 footer patterns to link to Theme URI: `https://imagewize.com/resources/moiraine-theme/`
+- **Files updated:** `footer.php`, `footer-centered.php`, `footer-centered-light.php`, `footer-light.php`, `footer-minimal.php`, `footer-minimal-light.php`
+- **Why:** WordPress.org requires credit links to match Theme URI or Author URI from style.css
+
+**Screenshot Compliance:**
+- **What changed:** Replaced screenshot with clean 1200x900px (4:3 ratio) homepage design
+- **File size:** Increased from 159KB to 310KB for better quality while showing actual theme design
+- **Why:** Screenshots must not include promotional text or feature callouts
+
+**Image Credits Documentation:**
+- **What changed:** Updated readme.txt Credits section with complete image attribution
+- **Workspace images:** All 3 images (computer-hands.webp, desktop.webp, guy-laptop.webp) now documented from StockSnap.io with CC0 Public Domain license
+- **Avatar images:** All 6 images (avatar-1 through avatar-7) now documented from Pexels with GPL-compatible Pexels License
+- **Attribution format:** Each image includes Source, Title, Photographer, License, and URL
+- **Why:** WordPress.org requires accurate source URLs matching bundled images with proper licensing
+
+### Changed
+
+- Block pattern categories continue to use `moiraine/` namespace prefix (already compliant)
+- All changes maintain backward compatibility while meeting WordPress.org Theme Review requirements
+
 ## [2.7.3] - 2025-11-21
 
 ### Fixed

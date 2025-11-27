@@ -13,7 +13,7 @@ namespace Moiraine;
 /**
  * Set up theme defaults and register various WordPress features.
  */
-function setup() {
+function moiraine_setup() {
 
 	// Enqueue editor styles and fonts.
 	add_editor_style( 'style.css' );
@@ -21,22 +21,22 @@ function setup() {
 	// Remove core block patterns.
 	remove_theme_support( 'core-block-patterns' );
 }
-add_action( 'after_setup_theme', __NAMESPACE__ . '\setup' );
+add_action( 'after_setup_theme', __NAMESPACE__ . '\moiraine_setup' );
 
 
 /**
  * Enqueue styles.
  */
-function enqueue_style_sheet() {
-	wp_enqueue_style( sanitize_title( __NAMESPACE__ ), get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get( 'Version' ) );
+function moiraine_enqueue_style_sheet() {
+	wp_enqueue_style( 'moiraine-style', get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get( 'Version' ) );
 }
-add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_style_sheet' );
+add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\moiraine_enqueue_style_sheet' );
 
 
 /**
  * Add block style variations.
  */
-function register_block_styles() {
+function moiraine_register_block_styles() {
 
 	$block_styles = array(
 		'core/list'         => array(
@@ -95,13 +95,13 @@ function register_block_styles() {
 		}
 	}
 }
-add_action( 'init', __NAMESPACE__ . '\register_block_styles' );
+add_action( 'init', __NAMESPACE__ . '\moiraine_register_block_styles' );
 
 
 /**
  * Load custom block styles only when the block is used.
  */
-function enqueue_custom_block_styles() {
+function moiraine_enqueue_custom_block_styles() {
 
 	// Scan our styles folder to locate block styles.
 	$files = glob( get_template_directory() . '/assets/styles/*.css' );
@@ -122,13 +122,13 @@ function enqueue_custom_block_styles() {
 		);
 	}
 }
-add_action( 'init', __NAMESPACE__ . '\enqueue_custom_block_styles' );
+add_action( 'init', __NAMESPACE__ . '\moiraine_enqueue_custom_block_styles' );
 
 
 /**
  * Enqueue WooCommerce specific stylesheet
  */
-function enqueue_woocommerce_styles() {
+function moiraine_enqueue_woocommerce_styles() {
 
 	// Only enqueue if WooCommerce is active.
 	if ( class_exists( 'WooCommerce' ) ) {
@@ -140,12 +140,12 @@ function enqueue_woocommerce_styles() {
 		);
 	}
 }
-add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_woocommerce_styles' );
+add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\moiraine_enqueue_woocommerce_styles' );
 
 /**
  * Enqueue navigation frontend script for clickable parent functionality.
  */
-function enqueue_navigation_frontend_script() {
+function moiraine_enqueue_navigation_frontend_script() {
 	$js_file_path = get_theme_file_path( '/assets/js/navigation-frontend.js' );
 	$js_file_url  = get_theme_file_uri( '/assets/js/navigation-frontend.js' );
 
@@ -161,13 +161,13 @@ function enqueue_navigation_frontend_script() {
 		true // Load in footer.
 	);
 }
-add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_navigation_frontend_script' );
+add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\moiraine_enqueue_navigation_frontend_script' );
 
 
 /**
  * Register pattern categories.
  */
-function pattern_categories() {
+function moiraine_pattern_categories() {
 
 	$block_pattern_categories = array(
 		'moiraine/card'           => array(
@@ -203,19 +203,19 @@ function pattern_categories() {
 		register_block_pattern_category( $name, $properties );
 	}
 }
-add_action( 'init', __NAMESPACE__ . '\pattern_categories', 9 );
+add_action( 'init', __NAMESPACE__ . '\moiraine_pattern_categories', 9 );
 
 
 /**
  * Remove last separator on blog/archive if no pagination exists.
  */
-function is_paginated() {
+function moiraine_is_paginated() {
 	global $wp_query;
 	if ( $wp_query->max_num_pages < 2 ) {
 		echo '<style>.blog .wp-block-post-template .wp-block-post:last-child .entry-content + .wp-block-separator, .archive .wp-block-post-template .wp-block-post:last-child .entry-content + .wp-block-separator, .blog .wp-block-post-template .wp-block-post:last-child .entry-content + .wp-block-separator, .search .wp-block-post-template .wp-block-post:last-child .wp-block-post-excerpt + .wp-block-separator { display: none; }</style>';
 	}
 }
-add_action( 'wp_head', __NAMESPACE__ . '\is_paginated' );
+add_action( 'wp_head', __NAMESPACE__ . '\moiraine_is_paginated' );
 
 
 /**
@@ -224,7 +224,7 @@ add_action( 'wp_head', __NAMESPACE__ . '\is_paginated' );
  * @param array $areas Array of template part areas.
  * @return array
  */
-function template_part_areas( array $areas ) {
+function moiraine_template_part_areas( array $areas ) {
 	$areas[] = array(
 		'area'        => 'sidebar',
 		'area_tag'    => 'section',
@@ -243,7 +243,7 @@ function template_part_areas( array $areas ) {
 
 	return $areas;
 }
-add_filter( 'default_wp_template_part_areas', __NAMESPACE__ . '\template_part_areas' );
+add_filter( 'default_wp_template_part_areas', __NAMESPACE__ . '\moiraine_template_part_areas' );
 
 /**
  * Include block extensions for enhanced functionality.

@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Enqueue block extension assets.
  */
-function enqueue_block_extensions() {
+function moiraine_enqueue_block_extensions() {
 	// Make sure the directory exists.
 	$js_path = get_theme_file_path( '/assets/js/block-extensions' );
 	if ( ! file_exists( $js_path ) ) {
@@ -86,7 +86,7 @@ function enqueue_block_extensions() {
 		true
 	);
 }
-add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\enqueue_block_extensions' );
+add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\moiraine_enqueue_block_extensions' );
 
 /**
  * Filter the post excerpt block output to add link functionality.
@@ -95,7 +95,7 @@ add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\enqueue_block_exten
  * @param array  $block         The block array.
  * @return string Modified block content.
  */
-function filter_post_excerpt_block_output( $block_content, $block ) {
+function moiraine_filter_post_excerpt_block_output( $block_content, $block ) {
 	if ( ! is_array( $block ) || 'core/post-excerpt' !== $block['blockName'] ) {
 		return $block_content;
 	}
@@ -127,12 +127,12 @@ function filter_post_excerpt_block_output( $block_content, $block ) {
 
 	return $block_content;
 }
-add_filter( 'render_block', __NAMESPACE__ . '\filter_post_excerpt_block_output', 10, 2 );
+add_filter( 'render_block', __NAMESPACE__ . '\moiraine_filter_post_excerpt_block_output', 10, 2 );
 
 /**
  * Add custom styles for excerpt links.
  */
-function excerpt_link_styles() {
+function moiraine_excerpt_link_styles() {
 	?>
 	<style>
 		.excerpt-link.no-underline-link {
@@ -149,8 +149,8 @@ function excerpt_link_styles() {
 	</style>
 	<?php
 }
-add_action( 'wp_head', __NAMESPACE__ . '\excerpt_link_styles' );
-add_action( 'admin_head', __NAMESPACE__ . '\excerpt_link_styles' );
+add_action( 'wp_head', __NAMESPACE__ . '\moiraine_excerpt_link_styles' );
+add_action( 'admin_head', __NAMESPACE__ . '\moiraine_excerpt_link_styles' );
 
 /**
  * Filter the navigation block output to add extension classes and attributes.
@@ -159,7 +159,7 @@ add_action( 'admin_head', __NAMESPACE__ . '\excerpt_link_styles' );
  * @param array  $block         The block array.
  * @return string Modified block content.
  */
-function filter_navigation_block_output( $block_content, $block ) {
+function moiraine_filter_navigation_block_output( $block_content, $block ) {
 	if ( ! is_array( $block ) || 'core/navigation' !== $block['blockName'] ) {
 		return $block_content;
 	}
@@ -170,16 +170,16 @@ function filter_navigation_block_output( $block_content, $block ) {
 
 	// Add CSS classes to the nav element.
 	if ( $has_clickable_parents ) {
-		$block_content = add_css_class_to_nav( $block_content, 'has-clickable-parents' );
+		$block_content = moiraine_add_css_class_to_nav( $block_content, 'has-clickable-parents' );
 	}
 
 	if ( $has_improved_chevrons ) {
-		$block_content = add_css_class_to_nav( $block_content, 'has-improved-chevrons' );
+		$block_content = moiraine_add_css_class_to_nav( $block_content, 'has-improved-chevrons' );
 	}
 
 	return $block_content;
 }
-add_filter( 'render_block', __NAMESPACE__ . '\filter_navigation_block_output', 10, 2 );
+add_filter( 'render_block', __NAMESPACE__ . '\moiraine_filter_navigation_block_output', 10, 2 );
 
 /**
  * Helper function to add CSS class to navigation block.
@@ -188,7 +188,7 @@ add_filter( 'render_block', __NAMESPACE__ . '\filter_navigation_block_output', 1
  * @param string $class_name    The class name to add.
  * @return string Modified block content.
  */
-function add_css_class_to_nav( $block_content, $class_name ) {
+function moiraine_add_css_class_to_nav( $block_content, $class_name ) {
 	$block_content = preg_replace(
 		'/<nav\s+class="([^"]*)"/',
 		'<nav class="$1 ' . esc_attr( $class_name ) . '"',
@@ -205,7 +205,7 @@ function add_css_class_to_nav( $block_content, $class_name ) {
  * @param array  $block         The block array.
  * @return string Modified block content.
  */
-function filter_navigation_submenu_output( $block_content, $block ) {
+function moiraine_filter_navigation_submenu_output( $block_content, $block ) {
 	if ( ! is_array( $block ) || 'core/navigation-submenu' !== $block['blockName'] ) {
 		return $block_content;
 	}
@@ -227,4 +227,4 @@ function filter_navigation_submenu_output( $block_content, $block ) {
 
 	return $block_content;
 }
-add_filter( 'render_block', __NAMESPACE__ . '\filter_navigation_submenu_output', 10, 2 );
+add_filter( 'render_block', __NAMESPACE__ . '\moiraine_filter_navigation_submenu_output', 10, 2 );
