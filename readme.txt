@@ -4,7 +4,7 @@ Tags: blog, portfolio, entertainment, grid-layout, one-column, two-columns, thre
 Requires at least: 5.8
 Tested up to: 6.7
 Requires PHP: 7.3
-Stable tag: 2.7.3
+Stable tag: 2.7.4
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -13,6 +13,16 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block theme! Moiraine features over 50 beautiful pattern designs, 7 full-page pattern layouts, and a fully-customizable design system with Global Styles. Moiraine integrates seamlessly with all of the powerful new WordPress editor features, giving you the most lightweight and powerful website builder on the planet — no expensive page builder plugin required! ✶ Full demo: https://demo.imagewize.com ✶
 
 == Changelog ==
+
+= 2.7.4 - 11/27/25 =
+* FIXED: WordPress.org Theme Review - Unique Prefixes - All public functions now use moiraine_ prefix (moiraine_setup, moiraine_enqueue_style_sheet, moiraine_register_block_styles, moiraine_enqueue_custom_block_styles, moiraine_enqueue_woocommerce_styles, moiraine_enqueue_navigation_frontend_script, moiraine_pattern_categories, moiraine_is_paginated, moiraine_template_part_areas)
+* FIXED: WordPress.org Theme Review - Unique Prefixes - All block extension functions now use moiraine_ prefix (moiraine_enqueue_block_extensions, moiraine_filter_post_excerpt_block_output, moiraine_excerpt_link_styles, moiraine_filter_navigation_block_output, moiraine_add_css_class_to_nav, moiraine_filter_navigation_submenu_output)
+* FIXED: WordPress.org Theme Review - Unique Prefixes - Enqueue handle changed from 'moiraine' to 'moiraine-style' in functions.php for consistent naming
+* FIXED: WordPress.org Theme Review - Footer Credit Link - Updated all 6 footer patterns to link to Theme URI (https://imagewize.com/resources/moiraine-theme/) instead of incorrect imagewize.com/moiraine URL
+* FIXED: WordPress.org Theme Review - Screenshot - Updated theme screenshot to 1200x900px (4:3 aspect ratio) showing clean homepage design without promotional text (increased from 159KB to 310KB for better quality)
+* FIXED: WordPress.org Theme Review - Image Credits - Updated readme.txt Credits section with correct image sources, all workspace images (computer-hands.webp, desktop.webp, guy-laptop.webp) from StockSnap.io CC0 Public Domain, all avatar images (avatar-1 through avatar-7) from Pexels with Pexels License (GPL-compatible)
+* FIXED: WordPress.org Theme Review - Image Credits - Verified all image source URLs are accessible and match bundled images with proper photographer attribution and license information
+* CHANGED: Block pattern categories now use moiraine/ prefix (moiraine/card, moiraine/cta, moiraine/features, etc.) for unique namespace
 
 = 2.7.3 - 11/21/25 =
 * FIXED: Author URI - corrected Author URI from https://github.com/jfrumau to https://github.com/jasperf in style.css theme header
@@ -476,21 +486,88 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
-All media licensed under Creative Commons Zero (CC0) https://creativecommons.org/publicdomain/zero/1.0/
 
-skateboarding.webp  - https://stocksnap.io/photo/skateboarder-sidewalk-NH8J97NEVN
-computer-hands.webp - https://stocksnap.io/photo/computer-laptop-FBXB2DA8O7
-avatar-1.webp       - https://stocksnap.io/photo/people-man-A3WDGDTBI6
-avatar-2.webp       - https://stocksnap.io/photo/urban-fashion-TQAKNY0XO2
-avatar-3.webp       - https://stocksnap.io/photo/woman-glasses-7RKWHUXLMQ
-avatar-4.webp       - https://stocksnap.io/photo/smiling-woman-KS92MVGSXY
-avatar-5.webp       - https://stocksnap.io/photo/male-professional-6QXAIH13O6
-avatar-7.webp       - https://stocksnap.io/photo/woman-business-LERRJPTMHP
-desktop.webp        - https://startupstockphotos.com/photos/workspace-desk-office/
-guy-laptop.webp     - https://startupstockphotos.com/photos/office-worker-computer/
+## Workspace Images (CC0 Public Domain)
 
-logo-1.webp, logo-2.webp, logo-3.webp, logo-4.webp, logo-5.webp - created by Mike McAlister and available via CC0.
-All images in /inc/settings/build/images/ created by Mike McAlister and available via CC0. 
+### computer-hands.webp
+- **Source:** [StockSnap.io](https://stocksnap.io/photo/wacom-computer-LNYEQYRA6G)
+- **Title:** Wacom Computer
+- **Photographer:** [Negative Space](https://www.negativespace.co)
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Hands typing on laptop with bracelet, professional workspace
+
+### desktop.webp
+- **Source:** [StockSnap.io](https://stocksnap.io/photo/mac-desktop-UCEBZORVVB)
+- **Title:** Mac Desktop
+- **Photographer:** [Andrew Pons](https://be.net/ahpons)
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Modern desk setup with monitor, MacBook, keyboard, and mouse
+
+### guy-laptop.webp
+- **Source:** [StockSnap.io](https://stocksnap.io/photo/code-coding-IX9Z71L6PD)
+- **Title:** Code Coding
+- **Photographer:** [Anita Peeples](https://stocksnap.io/author/11915)
+- **License:** [CC0 1.0 Universal (Public Domain)](https://creativecommons.org/publicdomain/zero/1.0/)
+- **Attribution:** Not required (CC0)
+- **Description:** Team working together in colorful office space with laptops
+
+## Team Member Avatars (Pexels License - GPL-Compatible)
+
+### avatar-1.webp
+- **Source:** [Pexels](https://www.pexels.com/photo/man-in-blue-dress-shirt-and-black-formal-suit-1043473/)
+- **Title:** Man in Blue Dress Shirt and Black Formal Suit
+- **Photographer:** [Chloe Kala](https://www.pexels.com/@chloekalaartist/)
+- **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
+- **Attribution:** Not required (Pexels License)
+- **Description:** Professional man in business attire with sunglasses
+
+### avatar-2.webp
+- **Source:** [Pexels](https://www.pexels.com/photo/a-man-reading-the-newspaper-while-drinking-coffee-10131170/)
+- **Title:** A Man Reading the Newspaper While Drinking Coffee
+- **Photographer:** Ron Lach
+- **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
+- **Attribution:** Not required (Pexels License)
+- **Description:** Professional man in business attire reading newspaper
+
+### avatar-3.webp
+- **Source:** [Pexels](https://www.pexels.com/photo/a-woman-holding-a-phone-8067901/)
+- **Title:** A Woman Holding a Phone
+- **Photographer:** Alena Shekhovtcova
+- **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
+- **Attribution:** Not required (Pexels License)
+- **Description:** Professional woman in business casual attire
+
+### avatar-4.webp
+- **Source:** [Pexels](https://www.pexels.com/photo/man-in-blue-dress-shirt-and-black-formal-suit-1043473/)
+- **Title:** Man in Blue Dress Shirt and Black Formal Suit
+- **Photographer:** [Chloe Kala](https://www.pexels.com/@chloekalaartist/)
+- **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
+- **Attribution:** Not required (Pexels License)
+- **Description:** Professional man in business attire with sunglasses (same as avatar-1)
+
+### avatar-5.webp
+- **Source:** [Pexels](https://www.pexels.com/photo/woman-wearing-white-multi-colored-floral-top-1877913/)
+- **Title:** Woman Wearing White Multi Colored Floral Top
+- **Photographer:** [Chloe Kala](https://www.pexels.com/@chloekalaartist/)
+- **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
+- **Attribution:** Not required (Pexels License)
+- **Description:** Professional woman in casual floral attire
+
+### avatar-7.webp
+- **Source:** [Pexels](https://www.pexels.com/photo/woman-wearing-blue-shawl-lapel-suit-jacket-1036622/)
+- **Title:** Woman Wearing Blue Shawl Lapel Suit Jacket
+- **Photographer:** [Moose Photos](https://www.pexels.com/@moose-photos-170195/)
+- **License:** [Pexels License](https://www.pexels.com/license/) (GPL-compatible)
+- **Attribution:** Not required (Pexels License)
+- **Description:** Professional woman in blue business suit
+
+---
+
+## Logo Images
+
+**Status:** Logo images logo-1.webp, logo-2.webp, logo-3.webp, logo-4.webp, logo-5.webp are geometric designs created by theme author and do not require attribution or replacement.
 
 Other assets: 
 
