@@ -25,12 +25,11 @@ Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block t
 * COMPLIANCE: All 10 WordPress.org required checks now pass (100/100 score)
 
 = 2.7.5 - 12/03/25 =
-
-* CHANGED: WordPress Compatibility: Updated "Tested up to" from 6.7 to 6.9 in style.css
+* CHANGED: WordPress Compatibility - Updated "Tested up to" from 6.7 to 6.9 in style.css (WordPress.org requires testing with latest stable version)
 * CHANGED: Demo site upgraded to WordPress 6.9
 * CHANGED: Theme verified compatible with WordPress 6.9
-* FIXED: Added `href="#"` attributes to all buttons in header patterns for keyboard accessibility
-* CHANGED: `header-light-action-button.php`, `header-light-with-buttons.php`, `header-light-with-banner.php`, `header-dark-with-banner.php`, `header-dark-with-buttons.php`
+* FIXED: Header Button Accessibility - Added `href="#"` attributes to all buttons in header patterns for keyboard navigation (WCAG 2.1 AA compliance - buttons without href cannot be reached via Tab key)
+* CHANGED: Updated patterns: `header-light-action-button.php`, `header-light-with-buttons.php`, `header-light-with-banner.php`, `header-dark-with-banner.php`, `header-dark-with-buttons.php`
 
 = 2.7.4 - 11/27/25 =
 * FIXED: WordPress.org Theme Review - Unique Prefixes - All public functions now use moiraine_ prefix (moiraine_setup, moiraine_enqueue_style_sheet, moiraine_register_block_styles, moiraine_enqueue_custom_block_styles, moiraine_enqueue_woocommerce_styles, moiraine_enqueue_navigation_frontend_script, moiraine_pattern_categories, moiraine_is_paginated, moiraine_template_part_areas)
