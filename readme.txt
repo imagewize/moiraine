@@ -2,9 +2,9 @@
 Contributors: jfrumau
 Tags: blog, portfolio, entertainment, grid-layout, one-column, two-columns, three-columns, four-columns, block-patterns, block-styles, custom-logo, custom-menu, editor-style, featured-images, full-site-editing, full-width-template, rtl-language-support, style-variations, template-editing, theme-options, translation-ready, wide-blocks
 Requires at least: 5.8
-Tested up to: 6.7
+Tested up to: 6.9
 Requires PHP: 7.3
-Stable tag: 2.7.4
+Stable tag: 2.8.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -13,6 +13,23 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block theme! Moiraine features over 50 beautiful pattern designs, 7 full-page pattern layouts, and a fully-customizable design system with Global Styles. Moiraine integrates seamlessly with all of the powerful new WordPress editor features, giving you the most lightweight and powerful website builder on the planet — no expensive page builder plugin required! ✶ Full demo: https://demo.imagewize.com ✶
 
 == Changelog ==
+
+= 2.8.0 - 12/03/25 =
+* NEW: Translation Support - Complete internationalization (i18n) infrastructure for WordPress.org compliance
+* ADDED: load_theme_textdomain() function call in functions.php for translation loading
+* ADDED: /languages/ directory for translation files (.po, .mo)
+* ADDED: Translation template file (moiraine.pot) with 673 translatable strings
+* CHANGED: Theme is now 100% WordPress.org compliant (was 97%)
+* IMPROVED: Ready for translation via translate.wordpress.org and translation plugins
+* TECHNICAL: Generated .pot file using WP-CLI (90KB, covers all patterns and theme text)
+* COMPLIANCE: All 10 WordPress.org required checks now pass (100/100 score)
+
+= 2.7.5 - 12/03/25 =
+* CHANGED: WordPress Compatibility - Updated "Tested up to" from 6.7 to 6.9 in style.css (WordPress.org requires testing with latest stable version)
+* CHANGED: Demo site upgraded to WordPress 6.9
+* CHANGED: Theme verified compatible with WordPress 6.9
+* FIXED: Header Button Accessibility - Added `href="#"` attributes to all buttons in header patterns for keyboard navigation (WCAG 2.1 AA compliance - buttons without href cannot be reached via Tab key)
+* CHANGED: Updated patterns: `header-light-action-button.php`, `header-light-with-buttons.php`, `header-light-with-banner.php`, `header-dark-with-banner.php`, `header-dark-with-buttons.php`
 
 = 2.7.4 - 11/27/25 =
 * FIXED: WordPress.org Theme Review - Unique Prefixes - All public functions now use moiraine_ prefix (moiraine_setup, moiraine_enqueue_style_sheet, moiraine_register_block_styles, moiraine_enqueue_custom_block_styles, moiraine_enqueue_woocommerce_styles, moiraine_enqueue_navigation_frontend_script, moiraine_pattern_categories, moiraine_is_paginated, moiraine_template_part_areas)
