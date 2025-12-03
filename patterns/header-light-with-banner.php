@@ -20,7 +20,7 @@
 
 <!-- wp:buttons -->
 <div class="wp-block-buttons"><!-- wp:button {"className":"is-style-button-light","fontSize":"x-small"} -->
-<div class="wp-block-button has-custom-font-size is-style-button-light has-x-small-font-size"><a class="wp-block-button__link wp-element-button"><?php esc_html_e( 'Download Now', 'moiraine' ); ?></a></div>
+<div class="wp-block-button has-custom-font-size is-style-button-light has-x-small-font-size"><a class="wp-block-button__link wp-element-button" href="#"><?php esc_html_e( 'Download Now', 'moiraine' ); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div>

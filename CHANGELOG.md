@@ -5,6 +5,25 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.7.5] - 2025-12-03
+
+### Changed
+- **WordPress Compatibility**: Updated "Tested up to" from 6.7 to 6.9 in style.css
+  - Demo site upgraded to WordPress 6.9
+  - Theme verified compatible with WordPress 6.9
+
+### Fixed - WordPress.org Theme Review Compliance
+
+**Tested Up To Version:**
+- **What changed:** Updated "Tested up to" value from 6.7 to 6.9 in style.css
+- **Why:** WordPress.org requires themes to be tested with the latest stable WordPress version (WordPress 6.9 released December 2025)
+
+**Header Button Accessibility:**
+- **What changed:** Added `href="#"` attributes to all buttons in header patterns for keyboard accessibility
+- **Files updated:** `header-light-action-button.php`, `header-light-with-buttons.php`, `header-light-with-banner.php`, `header-dark-with-banner.php`, `header-dark-with-buttons.php`
+- **Why:** All interactive elements must be keyboard accessible and properly focusable per WordPress accessibility requirements
+- **Technical details:** Buttons without href attributes are not keyboard navigable (cannot be reached via Tab key) and fail WCAG 2.1 AA compliance
+
 ## [2.7.4] - 2025-11-27
 
 ### Fixed - WordPress.org Theme Review Compliance
