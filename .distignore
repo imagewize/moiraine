@@ -4,6 +4,7 @@
 node_modules/*
 vendor/*
 packages/*
+archive/*
 patterns/images/backup-*
 
 # Development files

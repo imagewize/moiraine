@@ -4,7 +4,7 @@ Tags: blog, portfolio, entertainment, grid-layout, one-column, two-columns, thre
 Requires at least: 5.8
 Tested up to: 6.9
 Requires PHP: 7.3
-Stable tag: 2.8.0
+Stable tag: 2.9.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -13,6 +13,18 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block theme! Moiraine features over 50 beautiful pattern designs, 7 full-page pattern layouts, and a fully-customizable design system with Global Styles. Moiraine integrates seamlessly with all of the powerful new WordPress editor features, giving you the most lightweight and powerful website builder on the planet — no expensive page builder plugin required! ✶ Full demo: https://demo.imagewize.com ✶
 
 == Changelog ==
+
+= 2.9.0 - 12/09/25 =
+* CHANGED: Pattern Library Cleanup - Moved 89 unused patterns to archive/ directory at theme root level for better theme differentiation
+* CHANGED: Pattern Count - Reduced from 108 to 19 active patterns (82% reduction) - keeping only patterns actively used on demo site
+* IMPROVED: Theme Identity - Moving away from Ollie patterns to create custom Moiraine-specific patterns for unique design identity
+* TECHNICAL: Archive location at theme root prevents WordPress from loading archived patterns
+* TECHNICAL: Added archive/* to .distignore to prevent inclusion in theme distribution builds
+* VERIFIED: Multisite compatibility - all subsites (main, SPA, Auctor) work correctly with archived patterns
+* ACTIVE PATTERNS: 19 patterns (17 from Ollie, 2 unique Moiraine: contact-side-by-side, services-feature-cards)
+* ARCHIVED: 89 patterns (75 from Ollie, 14 unique Moiraine) kept for reference only
+* DOCUMENTATION: Comprehensive cleanup documentation at docs/moiraine/PATTERN-CLEANUP-DEC2025.md
+* FUTURE: Archived patterns kept for reference as we develop custom pattern library to replace Ollie patterns
 
 = 2.8.0 - 12/03/25 =
 * NEW: Translation Support - Complete internationalization (i18n) infrastructure for WordPress.org compliance

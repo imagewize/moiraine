@@ -5,6 +5,46 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.9.0] - 2025-12-09
+
+### Changed - Pattern Library Cleanup
+
+**Pattern Archival for Theme Differentiation:**
+- **What changed:** Moved 89 unused patterns to `archive/` directory at theme root level
+- **Patterns remaining:** Reduced from 108 to 19 active patterns (82% reduction)
+- **Why:** Moving away from Ollie patterns to create custom Moiraine-specific patterns for better theme differentiation and unique design identity
+- **Impact:** Cleaner, more focused pattern library while maintaining all functionality
+
+**Active Patterns (19):**
+- Hero patterns: hero-text-image-and-logos, hero-call-to-action-buttons-light, hero-dark, hero-light
+- Features: feature-boxes-with-button, numbers
+- Testimonials: team-members, testimonial-highlight, testimonials-and-logos, testimonials-with-big-text, single-testimonial
+- Call-to-actions: text-call-to-action, text-call-to-action-buttons
+- Content: blog-post-columns, card-details, contact-side-by-side, faq, pricing-table, services-feature-cards
+
+**Archived Patterns (89):**
+- Headers (7 patterns)
+- Footers (6 patterns)
+- Menus (12 patterns)
+- Templates (17 patterns)
+- Cards (13 patterns)
+- Various other patterns (34 patterns)
+
+**Technical Implementation:**
+- Archive location: `demo/web/app/themes/moiraine/archive/` (theme root level)
+- Build exclusion: Added `archive/*` to `.distignore` to prevent inclusion in theme distribution
+- Multisite compatibility: Verified all subsites (main, SPA, Auctor) work correctly with archived patterns
+- Pattern loading: Archive directory at theme root prevents WordPress from loading archived patterns
+- Documentation: Comprehensive cleanup documentation at `docs/moiraine/PATTERN-CLEANUP-DEC2025.md`
+
+**Future Direction:**
+- Archived patterns kept for reference only as we develop custom Moiraine patterns
+- Goal: Establish distinct design identity separate from Ollie theme influence
+- Approach: Create new custom patterns rather than restoring archived Ollie patterns
+
+### Fixed
+- **Pattern Loading Conflicts:** Moved archive from `patterns/archive/` to theme root `archive/` to prevent WordPress from attempting to load archived patterns
+
 ## [2.8.0] - 2025-12-03
 
 ### Added - Translation Support (WordPress.org Requirement)
