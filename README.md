@@ -7,7 +7,7 @@
 
 Moiraine is a modern WordPress block theme designed for the WordPress block editor and site editor. Create beautiful, fully-customizable websites with WordPress's built-in tools — no coding required.
 
-Features **21 professional patterns** (including 4 unique Moiraine patterns), WooCommerce integration, modern development tooling, and blazing-fast performance with 100% scores across the board.
+Features **29 professional patterns** (Moiraine-first heroes, CTAs, testimonials, and blog layouts), WooCommerce integration, modern development tooling, and blazing-fast performance with 100% scores across the board.
 
 ## Table of Contents
 
@@ -29,22 +29,19 @@ Moiraine is built for modern WordPress features and requires WordPress 6.0 or la
 
 ## Key Features
 
-### 🎨 **21 Professional Patterns**
-Moiraine includes 21 carefully curated patterns, with 4 unique Moiraine-specific patterns and 17 from the Ollie theme foundation:
+### 🎨 **29 Professional Patterns**
+Moiraine includes 29 focused patterns across hero, CTA/contact, testimonial, and content layouts:
 
-**Moiraine Unique Patterns (4):**
-- `blog-post-columns-portrait` - Three-column blog grid with portrait-oriented images (2:3 aspect ratio)
-- `post-featured-two-column` - Featured post with portrait image and large excerpt in horizontal layout
-- `contact-side-by-side` - Contact form with side-by-side layout
-- `services-feature-cards` - Service showcase with responsive card grid
+- **Hero (6)**: `hero-text-image-and-logos`, `hero-call-to-action-buttons-light`, `hero-dark`, `hero-light`, `hero-two-tone`, `hero-with-cta`
+- **Features & Content (10)**: `feature-boxes-with-button`, `feature-grid`, `numbers`, `card-details`, `faq`, `pricing-table`, `services-feature-cards`, `blog-post-columns`, `blog-post-columns-portrait`, `post-featured-two-column`
+- **Call-to-Actions & Contact (5)**: `text-call-to-action`, `text-call-to-action-buttons`, `cta-newsletter`, `contact-side-by-side`, `contact-info`
+- **Testimonials & Teams (8)**: `client-reviews-orange`, `testimonial-card`, `testimonial-highlight`, `testimonials-and-logos`, `testimonials-with-big-text`, `single-testimonial`, `team-members`, `team-grid`
+- All patterns use Moiraine-specific copy and styling; portrait blog layouts leverage the new portrait image sizes
+- Several of these patterns were originally authored for our standalone plugin Callandor and brought into Moiraine: https://github.com/imagewize/callandor
 
-**From Ollie Foundation (17 - with customized content):**
-- **Hero Sections**: `hero-text-image-and-logos`, `hero-call-to-action-buttons-light`, `hero-dark`, `hero-light`
-- **Features**: `feature-boxes-with-button`, `numbers`
-- **Testimonials**: `team-members`, `testimonial-highlight`, `testimonials-and-logos`, `testimonials-with-big-text`, `single-testimonial`
-- **Call-to-Actions**: `text-call-to-action`, `text-call-to-action-buttons`
-- **Content**: `blog-post-columns`, `card-details`, `faq`, `pricing-table`
-- **Note**: All Ollie-based patterns now feature unique Moiraine-specific text content, not just rebranding
+**Pattern origins:**
+- **Moiraine originals (17):** `hero-two-tone`, `hero-with-cta`, `cta-newsletter`, `contact-info`, `feature-grid`, `team-grid`, `testimonial-card`, `client-reviews-orange`, `blog-post-columns-portrait`, `post-featured-two-column`, `contact-side-by-side`, `services-feature-cards`, plus custom messaging/variants across `hero-text-image-and-logos`, `hero-call-to-action-buttons-light`, `hero-dark`, `hero-light`, `feature-boxes-with-button`
+- **From Ollie foundation (12, fully reworked copy/styles):** `blog-post-columns`, `card-details`, `faq`, `numbers`, `pricing-table`, `text-call-to-action`, `text-call-to-action-buttons`, `testimonials-with-big-text`, `testimonials-and-logos`, `testimonial-highlight`, `single-testimonial`, `team-members`
 
 **Archived Patterns (89):**
 - 89 patterns from Ollie moved to `archive/` directory (GitHub only, not in WordPress.org distribution)
@@ -66,7 +63,7 @@ Custom blocks like Carousel and Menu Designer are available in the companion [Mo
 - E-commerce optimized patterns and styles
 
 ### 🎯 **Typography & Design**
-- 7 Google Fonts with responsive scaling
+- Expanded typography set (Mona Sans, Bodoni Moda, new Bitter serif) with responsive scaling
 - Multiple typography presets and style variations
 - Global styles system via theme.json
 - Full Site Editing compatibility

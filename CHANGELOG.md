@@ -7,11 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [3.0.0] - 2025-12-09
 
-### Added - Portrait Image Support & Typography Enhancements
+### Added - Portrait Image Support, New Patterns & Typography Enhancements
 
 **New Patterns:**
 - **post-featured-two-column** - Displays a single featured post with portrait image (2:3 aspect ratio) and title on left, large excerpt on right
 - **blog-post-columns-portrait** - Three-column blog post grid with portrait-oriented featured images, perfect for blog archives and portfolio displays
+- **hero-with-cta** - Centered business hero with primary CTA button and supporting description
+- **hero-two-tone** - Split two-tone hero with dual CTA buttons and optional feature image
+- **cta-newsletter** - Newsletter/lead capture CTA with headline, description, and full-width submit button
+- **contact-info** - Modern contact info row with office hours, phone/email card, and address/location card
+- **feature-grid** - Three-column feature/service grid with icon circles and supporting text
+- **team-grid** - Three-column team grid with avatars, names, and job titles
+- **testimonial-card** - Single testimonial card with quote and client attribution
+- **client-reviews-orange** - Triple testimonial row on bold orange background with circular avatars
 
 **Custom Image Sizes:**
 - `moiraine-portrait-small` (380×570) - 2:3 aspect ratio for portrait blog/portfolio grids
@@ -23,17 +31,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Partial underline effect** - Elegant 1/3 width centered underline for post titles (`.has-partial-underline`)
 - **Large excerpt links** - Enhanced typography for post excerpt links (40px font size)
 - **Larger hamburger menu** - Increased mobile menu icon size (32px) with thicker stroke for better visibility
+- **New serif option** - Added Bitter variable font (regular + italic) to the typography palette for richer headline/body pairings
 
 **Pattern Library:**
-- Total active patterns: 21 (up from 19)
+- Total active patterns: 29 (up from 21)
 - Added portrait-oriented layouts from Versifier child theme
-- Enhanced blog and portfolio display options
+- Expanded hero, CTA, and testimonial options with new Moiraine-specific layouts
 
 ### Changed - Pattern Library Cleanup & Major Version Bump
 
 **Pattern Archival for Theme Differentiation:**
 - **What changed:** Moved 89 unused patterns to `archive/` directory at theme root level
-- **Patterns remaining:** Reduced from 108 to 21 active patterns (80% reduction)
+- **Patterns remaining:** Reduced from 108 to 29 active patterns (73% reduction) while keeping archive for reference
 - **Why:** Moving away from Ollie patterns to create custom Moiraine-specific patterns for better theme differentiation and unique design identity
 - **Impact:** Cleaner, more focused pattern library while maintaining all functionality
 
@@ -44,12 +53,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Why:** Establish distinct Moiraine identity with unique value proposition rather than generic Ollie content
 - **Impact:** Patterns now communicate Moiraine's unique benefits: powerful flexibility with elegant design, professional WordPress sites in minutes, no coding required
 
-**Active Patterns (21):**
-- Hero patterns: hero-text-image-and-logos, hero-call-to-action-buttons-light, hero-dark, hero-light
-- Features: feature-boxes-with-button, numbers
-- Testimonials: team-members, testimonial-highlight, testimonials-and-logos, testimonials-with-big-text, single-testimonial
-- Call-to-actions: text-call-to-action, text-call-to-action-buttons
-- Content: blog-post-columns, blog-post-columns-portrait, post-featured-two-column, card-details, contact-side-by-side, faq, pricing-table, services-feature-cards
+**Active Patterns (29):**
+- Hero patterns: hero-text-image-and-logos, hero-call-to-action-buttons-light, hero-dark, hero-light, hero-two-tone, hero-with-cta
+- Features & content: feature-boxes-with-button, feature-grid, numbers, card-details, faq, pricing-table, services-feature-cards, blog-post-columns, blog-post-columns-portrait, post-featured-two-column
+- Call-to-actions & contact: text-call-to-action, text-call-to-action-buttons, cta-newsletter, contact-side-by-side, contact-info
+- Testimonials & teams: testimonials-and-logos, testimonials-with-big-text, testimonial-highlight, testimonial-card, client-reviews-orange, single-testimonial, team-members, team-grid
 
 **Archived Patterns (89):**
 - Headers (7 patterns)
@@ -62,15 +70,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 **Technical Implementation:**
 - Archive location: `archive/` directory at theme root (GitHub repository only)
 - Build exclusion: `archive/*` excluded via `.distignore` - **not included in WordPress.org distribution**
-- WordPress.org users: Only 21 active patterns included in theme package
+- WordPress.org users: 29 active patterns included in theme package
 - GitHub repository: Full archive available for reference and development
 - Multisite compatibility: Verified all subsites (main, SPA, Auctor) work correctly with active patterns
 - Pattern loading: Archive directory at theme root prevents WordPress from loading archived patterns during development
 - Documentation: Comprehensive cleanup documentation at `docs/moiraine/PATTERN-CLEANUP-DEC2025.md`
 
 **Distribution Details:**
-- **WordPress.org theme package:** 21 active patterns only (clean, focused distribution)
-- **GitHub repository:** 21 active patterns + 89 archived patterns (full history and reference)
+- **WordPress.org theme package:** 29 active patterns only (clean, focused distribution)
+- **GitHub repository:** 29 active patterns + 89 archived patterns (full history and reference)
 - **Archive purpose:** Development reference only, not for production use
 
 **Future Direction:**

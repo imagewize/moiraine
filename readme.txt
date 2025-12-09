@@ -10,7 +10,7 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block theme! Moiraine features 21 beautiful pattern designs, 7 style variations, and a fully-customizable design system with Global Styles. Moiraine integrates seamlessly with all of the powerful new WordPress editor features, giving you the most lightweight and powerful website builder on the planet — no expensive page builder plugin required! ✶ Full demo: https://demo.imagewize.com ✶
+Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block theme! Moiraine features 29 beautiful pattern designs, 7 style variations, and a fully-customizable design system with Global Styles. Moiraine integrates seamlessly with all of the powerful new WordPress editor features, giving you the most lightweight and powerful website builder on the planet — no expensive page builder plugin required! ✶ Full demo: https://demo.imagewize.com ✶
 
 == Changelog ==
 
@@ -18,16 +18,18 @@ Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block t
 * NEW: Portrait Image Support - Added custom image sizes for portrait-oriented blog and portfolio layouts
 * NEW: post-featured-two-column pattern - Single featured post with 2:3 portrait image and large excerpt
 * NEW: blog-post-columns-portrait pattern - Three-column blog grid with portrait featured images
+* NEW: CTA, Hero, and Testimonial Patterns - Added hero-with-cta, hero-two-tone, cta-newsletter, contact-info, feature-grid, team-grid, testimonial-card, client-reviews-orange
 * NEW: Custom Image Sizes - moiraine-portrait-small (380×570), moiraine-portrait-medium (380×507), moiraine-portrait-large (380×475), moiraine-single-hero (700×400)
 * NEW: Partial Underline Effect - Elegant 1/3 width centered underline for post titles (.has-partial-underline CSS class)
 * NEW: Large Excerpt Links - Enhanced typography for post excerpt links (40px font size)
 * NEW: Larger Hamburger Menu - Increased mobile menu icon size (32px) with thicker stroke (.moiraine-hamburger-large CSS class)
+* NEW: Bitter Font Support - Added Bitter variable serif (regular + italic) to the typography set
 * CHANGED: MAJOR VERSION - Pattern library restructured with 89 patterns archived (80% reduction)
-* CHANGED: Pattern Count - Reduced from 108 to 21 active patterns for better theme focus
+* CHANGED: Pattern Count - Reduced from 108 to 29 active patterns for better theme focus (89 archived, 29 active)
 * CHANGED: Theme Identity - Moving away from Ollie patterns to create custom Moiraine-specific patterns
 * CHANGED: Pattern Content - All 17 Ollie-based patterns now feature unique Moiraine-specific text content (not just rebranding)
 * TECHNICAL: Archive location at theme root (GitHub repository only - not included in WordPress.org distribution)
-* TECHNICAL: Added archive/* to .distignore - WordPress.org theme package contains only 21 active patterns
+* TECHNICAL: Added archive/* to .distignore - WordPress.org theme package contains only 29 active patterns
 * TECHNICAL: Archived patterns available in GitHub repository for development reference only
 * TECHNICAL: Pattern text customization - Updated 9 patterns with unique Moiraine messaging emphasizing modern WordPress, Site Editor, and no-code approach
 * VERIFIED: Multisite compatibility - all subsites work correctly with new patterns
