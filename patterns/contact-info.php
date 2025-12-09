@@ -21,7 +21,7 @@
 	<!-- /wp:paragraph -->
 
 	<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|x-large"}},"layout":{"type":"grid","columnCount":3,"minimumColumnWidth":"280px"}} -->
-	<div class="wp-block-group alignwide" style="gap:var(--wp--preset--spacing--x-large)">
+	<div class="wp-block-group alignwide">
 		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|xx-large","right":"var:preset|spacing|x-large","bottom":"var:preset|spacing|xx-large","left":"var:preset|spacing|x-large"}},"border":{"width":"1px","radius":"8px"}},"borderColor":"border-light","backgroundColor":"tertiary","layout":{"type":"constrained"}} -->
 		<div class="wp-block-group has-border-color has-border-light-border-color has-tertiary-background-color has-background" style="border-width:1px;border-radius:8px;padding-top:var(--wp--preset--spacing--xx-large);padding-right:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--xx-large);padding-left:var(--wp--preset--spacing--x-large)">
 			<!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|medium"}}},"textColor":"primary","fontSize":"large"} -->
@@ -65,7 +65,11 @@
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|medium"}}},"textColor":"main","fontSize":"base"} -->
-			<p class="has-main-color has-text-color has-base-font-size" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--medium)"><?php esc_html_e( '123 Business Street<br>Suite 100<br>City, State 12345', 'moiraine' ); ?></p>
+			<p class="has-main-color has-text-color has-base-font-size" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--medium)">
+				<?php esc_html_e( '123 Business Street', 'moiraine' ); ?><br>
+				<?php esc_html_e( 'Suite 100', 'moiraine' ); ?><br>
+				<?php esc_html_e( 'City, State 12345', 'moiraine' ); ?>
+			</p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0"}}},"textColor":"main","fontSize":"base"} -->
@@ -79,7 +83,7 @@
 	<!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|xx-large"}}},"layout":{"type":"flex","justifyContent":"center"}} -->
 	<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--xx-large)">
 		<!-- wp:button {"backgroundColor":"primary","textColor":"base","style":{"border":{"radius":"8px"}},"fontSize":"base","fontFamily":"open-sans"} -->
-		<div class="wp-block-button has-custom-font-size has-open-sans-font-family has-base-font-size"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background wp-element-button" style="border-radius:8px"><?php esc_html_e( 'Schedule a Consultation', 'moiraine' ); ?></a></div>
+		<div class="wp-block-button"><a class="wp-block-button__link has-base-color has-primary-background-color has-text-color has-background has-open-sans-font-family has-base-font-size has-custom-font-size wp-element-button" style="border-radius:8px"><?php esc_html_e( 'Schedule a Consultation', 'moiraine' ); ?></a></div>
 		<!-- /wp:button -->
 		</div>
 		<!-- /wp:buttons -->
