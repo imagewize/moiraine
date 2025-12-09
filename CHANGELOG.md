@@ -20,6 +20,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **team-grid** - Three-column team grid with avatars, names, and job titles
 - **testimonial-card** - Single testimonial card with quote and client attribution
 - **client-reviews-orange** - Triple testimonial row on bold orange background with circular avatars
+- **stats-showcase** - Two-column section combining promotional content with modern statistics display (4 stat cards in 2x2 grid)
+- **stats-list** - Two-column section with promotional content and feature list (3 feature items with icons)
 
 **Custom Image Sizes:**
 - `moiraine-portrait-small` (380×570) - 2:3 aspect ratio for portrait blog/portfolio grids
@@ -34,9 +36,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **New serif option** - Added Bitter variable font (regular + italic) to the typography palette for richer headline/body pairings
 
 **Pattern Library:**
-- Total active patterns: 36 (includes 3 restored header/footer patterns, 4 templates)
+- Total active patterns: 38 (includes 3 restored header/footer patterns, 4 templates)
 - Added portrait-oriented layouts from Versifier child theme
-- Expanded hero, CTA, and testimonial options with new Moiraine-specific layouts
+- Expanded hero, CTA, testimonial, and statistics options with new Moiraine-specific layouts
 - Restored essential header/footer patterns for theme functionality
 
 ### Changed - Pattern Library Cleanup & Major Version Bump
@@ -55,11 +57,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Why:** Establish distinct Moiraine identity with unique value proposition rather than generic Ollie content
 - **Impact:** Patterns now communicate Moiraine's unique benefits: powerful flexibility with elegant design, professional WordPress sites in minutes, no coding required
 
-**Active Patterns (36):**
+**Active Patterns (38):**
 - Headers & footers (3): header-light-action-button, header-light-with-hamburger-menu, footer-light
 - Hero patterns (6): hero-text-image-and-logos, hero-call-to-action-buttons-light, hero-dark, hero-light, hero-two-tone, hero-with-cta
 - Features & content (10): feature-boxes-with-button, feature-grid, numbers, card-details, faq, pricing-table, services-feature-cards, blog-post-columns, blog-post-columns-portrait, post-featured-two-column
 - Call-to-actions & contact (5): text-call-to-action, text-call-to-action-buttons, cta-newsletter, contact-side-by-side, contact-info
+- Statistics & showcases (2): stats-showcase, stats-list
 - Testimonials & teams (8): testimonials-and-logos, testimonials-with-big-text, testimonial-highlight, testimonial-card, client-reviews-orange, single-testimonial, team-members, team-grid
 - Templates (4): template-index-grid, template-page-centered, template-post-centered, post-loop-grid-default
 
@@ -77,8 +80,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Documentation: Comprehensive cleanup documentation at `docs/moiraine/PATTERN-CLEANUP-DEC2025.md`
 
 **Distribution Details:**
-- **WordPress.org theme package:** 36 active patterns (includes 3 restored headers/footers, 4 templates)
-- **GitHub repository:** 36 active patterns (removed patterns no longer in repository)
+- **WordPress.org theme package:** 38 active patterns (includes 3 restored headers/footers, 4 templates, 2 new statistics patterns)
+- **GitHub repository:** 38 active patterns (removed patterns no longer in repository)
 - **Restored patterns:** header-light-action-button, header-light-with-hamburger-menu, footer-light restored from archive for theme functionality
 - **Pattern history:** Original Ollie patterns available in Ollie theme repository for reference
 

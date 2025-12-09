@@ -10,7 +10,7 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block theme! Moiraine features 36 beautiful pattern designs, 7 style variations, and a fully-customizable design system with Global Styles. Moiraine integrates seamlessly with all of the powerful new WordPress editor features, giving you the most lightweight and powerful website builder on the planet — no expensive page builder plugin required! ✶ Full demo: https://demo.imagewize.com ✶
+Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block theme! Moiraine features 38 beautiful pattern designs, 7 style variations, and a fully-customizable design system with Global Styles. Moiraine integrates seamlessly with all of the powerful new WordPress editor features, giving you the most lightweight and powerful website builder on the planet — no expensive page builder plugin required! ✶ Full demo: https://demo.imagewize.com ✶
 
 == Changelog ==
 
@@ -19,21 +19,22 @@ Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block t
 * NEW: post-featured-two-column pattern - Single featured post with 2:3 portrait image and large excerpt
 * NEW: blog-post-columns-portrait pattern - Three-column blog grid with portrait featured images
 * NEW: CTA, Hero, and Testimonial Patterns - Added hero-with-cta, hero-two-tone, cta-newsletter, contact-info, feature-grid, team-grid, testimonial-card, client-reviews-orange
+* NEW: Statistics Patterns - Added stats-showcase (4 stat cards in 2x2 grid) and stats-list (3 feature items with icons) for modern data presentation
 * NEW: Custom Image Sizes - moiraine-portrait-small (380×570), moiraine-portrait-medium (380×507), moiraine-portrait-large (380×475), moiraine-single-hero (700×400)
 * NEW: Partial Underline Effect - Elegant 1/3 width centered underline for post titles (.has-partial-underline CSS class)
 * NEW: Large Excerpt Links - Enhanced typography for post excerpt links (40px font size)
 * NEW: Larger Hamburger Menu - Increased mobile menu icon size (32px) with thicker stroke (.moiraine-hamburger-large CSS class)
 * NEW: Bitter Font Support - Added Bitter variable serif (regular + italic) to the typography set
 * CHANGED: MAJOR VERSION - Pattern library restructured with 82 patterns removed (67% reduction)
-* CHANGED: Pattern Count - Reduced from 108 to 36 active patterns (includes 3 restored headers/footers, 4 templates)
+* CHANGED: Pattern Count - Reduced from 108 to 38 active patterns (includes 3 restored headers/footers, 4 templates, 2 statistics patterns)
 * CHANGED: Theme Identity - Removed Ollie patterns to create custom Moiraine-specific patterns
 * CHANGED: Pattern Content - All 17 Ollie-based patterns now feature unique Moiraine-specific text content (not just rebranding)
 * RESTORED: 3 Header/Footer Patterns - header-light-action-button, header-light-with-hamburger-menu, footer-light restored for theme and child theme functionality
 * REMOVED: 82 Ollie Patterns - Removed from both GitHub repository and WordPress.org distribution (kept 3 essential headers/footers)
 * TECHNICAL: Pattern text customization - Updated 9 patterns with unique Moiraine messaging emphasizing modern WordPress, Site Editor, and no-code approach
-* TECHNICAL: WordPress.org theme package contains 36 active patterns (includes restored headers/footers)
-* TECHNICAL: GitHub repository contains 36 active patterns (removed patterns no longer in repository)
-* VERIFIED: Multisite compatibility - all subsites work correctly with 36 active patterns
+* TECHNICAL: WordPress.org theme package contains 38 active patterns (includes restored headers/footers, 2 statistics patterns)
+* TECHNICAL: GitHub repository contains 38 active patterns (removed patterns no longer in repository)
+* VERIFIED: Multisite compatibility - all subsites work correctly with 38 active patterns
 * BREAKING: New portrait image sizes require thumbnail regeneration (wp media regenerate)
 * BREAKING: Custom CSS classes may affect child themes using similar naming
 * DOCUMENTATION: Comprehensive cleanup documentation at docs/moiraine/PATTERN-CLEANUP-DEC2025.md
