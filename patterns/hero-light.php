@@ -19,8 +19,8 @@
 <p class="has-text-align-center has-primary-color has-text-color has-small-font-size" style="font-style:normal;font-weight:500"><?php esc_html_e( 'WordPress Reimagined', 'moiraine' ); ?></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:heading {"textAlign":"center","level":1,"className":"has-secondary-font-family","style":{"typography":{"fontSize":"4rem"}}} -->
-<h1 class="wp-block-heading has-text-align-center has-secondary-font-family" style="font-size:4rem"><?php esc_html_e( 'Build your site with clicks, not code.', 'moiraine' ); ?></h1>
+<!-- wp:heading {"textAlign":"center","level":1,"className":"has-secondary-font-family","fontSize":"xx-large"} -->
+<h1 class="wp-block-heading has-text-align-center has-secondary-font-family has-xx-large-font-size"><?php esc_html_e( 'Build your site with clicks, not code.', 'moiraine' ); ?></h1>
 <!-- /wp:heading --></div>
 <!-- /wp:group -->
 

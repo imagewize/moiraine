@@ -16,8 +16,8 @@
 <div class="wp-block-group alignwide"><!-- wp:group {"metadata":{"name":"Consulting Column"},"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:group {"metadata":{"name":"Consulting Card"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|large","right":"var:preset|spacing|large"},"blockGap":"var:preset|spacing|medium"},"border":{"radius":"12px"},"dimensions":{"minHeight":"300px"}},"backgroundColor":"primary","textColor":"base","layout":{"type":"constrained","justifyContent":"left"}} -->
 <div class="wp-block-group has-base-color has-primary-background-color has-text-color has-background" style="border-radius:12px;min-height:300px;padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large)"><!-- wp:group {"metadata":{"name":"Card Header"},"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"flex","justifyContent":"space-between","verticalAlignment":"top"}} -->
-<div class="wp-block-group"><!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"1.5rem","fontWeight":"600"}},"textColor":"base"} -->
-<h3 class="wp-block-heading has-base-color has-text-color" style="font-size:1.5rem;font-weight:600"><?php esc_html_e( 'Consulting', 'moiraine' ); ?></h3>
+<div class="wp-block-group"><!-- wp:heading {"level":3,"style":{"typography":{"fontWeight":"600"}},"textColor":"base","fontSize":"medium"} -->
+<h3 class="wp-block-heading has-base-color has-text-color has-medium-font-size" style="font-weight:600"><?php esc_html_e( 'Consulting', 'moiraine' ); ?></h3>
 <!-- /wp:heading -->
 
 <!-- wp:image {"width":"40px","height":"40px","sizeSlug":"full","linkDestination":"none"} -->
@@ -56,8 +56,8 @@
 <!-- wp:group {"metadata":{"name":"Development Column"},"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:group {"metadata":{"name":"Development Card"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|large","right":"var:preset|spacing|large"},"blockGap":"var:preset|spacing|medium"},"border":{"radius":"12px"},"dimensions":{"minHeight":"300px"}},"backgroundColor":"primary","textColor":"base","layout":{"type":"constrained","justifyContent":"left"}} -->
 <div class="wp-block-group has-base-color has-primary-background-color has-text-color has-background" style="border-radius:12px;min-height:300px;padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large)"><!-- wp:group {"metadata":{"name":"Card Header"},"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"flex","justifyContent":"space-between","verticalAlignment":"top"}} -->
-<div class="wp-block-group"><!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"1.5rem","fontWeight":"600"}},"textColor":"base"} -->
-<h3 class="wp-block-heading has-base-color has-text-color" style="font-size:1.5rem;font-weight:600"><?php esc_html_e( 'Development', 'moiraine' ); ?></h3>
+<div class="wp-block-group"><!-- wp:heading {"level":3,"style":{"typography":{"fontWeight":"600"}},"textColor":"base","fontSize":"medium"} -->
+<h3 class="wp-block-heading has-base-color has-text-color has-medium-font-size" style="font-weight:600"><?php esc_html_e( 'Development', 'moiraine' ); ?></h3>
 <!-- /wp:heading -->
 
 <!-- wp:image {"width":"40px","height":"40px","sizeSlug":"full","linkDestination":"none"} -->
@@ -96,8 +96,8 @@
 <!-- wp:group {"metadata":{"name":"Support Column"},"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:group {"metadata":{"name":"Support Card"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|large","right":"var:preset|spacing|large"},"blockGap":"var:preset|spacing|medium"},"border":{"radius":"12px"},"dimensions":{"minHeight":"300px"}},"backgroundColor":"primary","textColor":"base","layout":{"type":"constrained","justifyContent":"left"}} -->
 <div class="wp-block-group has-base-color has-primary-background-color has-text-color has-background" style="border-radius:12px;min-height:300px;padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large)"><!-- wp:group {"metadata":{"name":"Card Header"},"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"flex","justifyContent":"space-between","verticalAlignment":"top"}} -->
-<div class="wp-block-group"><!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"1.5rem","fontWeight":"600"}},"textColor":"base"} -->
-<h3 class="wp-block-heading has-base-color has-text-color" style="font-size:1.5rem;font-weight:600"><?php esc_html_e( 'Support', 'moiraine' ); ?></h3>
+<div class="wp-block-group"><!-- wp:heading {"level":3,"style":{"typography":{"fontWeight":"600"}},"textColor":"base","fontSize":"medium"} -->
+<h3 class="wp-block-heading has-base-color has-text-color has-medium-font-size" style="font-weight:600"><?php esc_html_e( 'Support', 'moiraine' ); ?></h3>
 <!-- /wp:heading -->
 
 <!-- wp:image {"width":"40px","height":"40px","sizeSlug":"full","linkDestination":"none"} -->
