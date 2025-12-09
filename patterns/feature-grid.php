@@ -20,45 +20,45 @@
 		<p class="has-text-align-center has-base-font-size" style="margin-bottom:var(--wp--preset--spacing--xx-large)"><?php esc_html_e( 'We deliver results that matter to your bottom line', 'moiraine' ); ?></p>
 		<!-- /wp:paragraph -->
 
-		<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|x-large","left":"var:preset|spacing|x-large"}}}} -->
-		<div class="wp-block-columns alignwide">
-		<!-- wp:column {"style":{"spacing":{"padding":{"top":"var:preset|spacing|x-large","right":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large","left":"var:preset|spacing|x-large"}}},"backgroundColor":"base"} -->
-		<div class="wp-block-column has-base-background-color has-background" style="padding-top:var(--wp--preset--spacing--x-large);padding-right:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large);padding-left:var(--wp--preset--spacing--x-large)">
-			<!-- wp:heading {"level":3,"textColor":"primary","fontSize":"large"} -->
-			<h3 class="wp-block-heading has-primary-color has-text-color has-large-font-size"><?php esc_html_e( 'Proven Results', 'moiraine' ); ?></h3>
+		<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|x-large"}},"layout":{"type":"grid","columnCount":3,"minimumColumnWidth":"280px"}} -->
+		<div class="wp-block-group alignwide" style="gap:var(--wp--preset--spacing--x-large)">
+		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|x-large","right":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large","left":"var:preset|spacing|x-large"}}},"backgroundColor":"base","layout":{"type":"constrained"}} -->
+		<div class="wp-block-group has-base-background-color has-background" style="padding-top:var(--wp--preset--spacing--x-large);padding-right:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large);padding-left:var(--wp--preset--spacing--x-large)">
+			<!-- wp:heading {"level":3,"textColor":"primary","fontSize":"large","style":{"spacing":{"margin":{"top":"0"}}}} -->
+			<h3 class="wp-block-heading has-primary-color has-text-color has-large-font-size" style="margin-top:0"><?php esc_html_e( 'Proven Results', 'moiraine' ); ?></h3>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph -->
 			<p><?php esc_html_e( 'Track record of delivering measurable ROI and business growth for our clients across diverse industries.', 'moiraine' ); ?></p>
 			<!-- /wp:paragraph -->
 		</div>
-		<!-- /wp:column -->
+		<!-- /wp:group -->
 
-		<!-- wp:column {"style":{"spacing":{"padding":{"top":"var:preset|spacing|x-large","right":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large","left":"var:preset|spacing|x-large"}}},"backgroundColor":"base"} -->
-		<div class="wp-block-column has-base-background-color has-background" style="padding-top:var(--wp--preset--spacing--x-large);padding-right:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large);padding-left:var(--wp--preset--spacing--x-large)">
-			<!-- wp:heading {"level":3,"textColor":"primary","fontSize":"large"} -->
-			<h3 class="wp-block-heading has-primary-color has-text-color has-large-font-size"><?php esc_html_e( 'Expert Team', 'moiraine' ); ?></h3>
+		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|x-large","right":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large","left":"var:preset|spacing|x-large"}}},"backgroundColor":"base","layout":{"type":"constrained"}} -->
+		<div class="wp-block-group has-base-background-color has-background" style="padding-top:var(--wp--preset--spacing--x-large);padding-right:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large);padding-left:var(--wp--preset--spacing--x-large)">
+			<!-- wp:heading {"level":3,"textColor":"primary","fontSize":"large","style":{"spacing":{"margin":{"top":"0"}}}} -->
+			<h3 class="wp-block-heading has-primary-color has-text-color has-large-font-size" style="margin-top:0"><?php esc_html_e( 'Expert Team', 'moiraine' ); ?></h3>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph -->
 			<p><?php esc_html_e( 'Dedicated professionals with deep industry expertise committed to understanding and achieving your business goals.', 'moiraine' ); ?></p>
 			<!-- /wp:paragraph -->
 		</div>
-		<!-- /wp:column -->
+		<!-- /wp:group -->
 
-		<!-- wp:column {"style":{"spacing":{"padding":{"top":"var:preset|spacing|x-large","right":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large","left":"var:preset|spacing|x-large"}}},"backgroundColor":"base"} -->
-		<div class="wp-block-column has-base-background-color has-background" style="padding-top:var(--wp--preset--spacing--x-large);padding-right:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large);padding-left:var(--wp--preset--spacing--x-large)">
-			<!-- wp:heading {"level":3,"textColor":"primary","fontSize":"large"} -->
-			<h3 class="wp-block-heading has-primary-color has-text-color has-large-font-size"><?php esc_html_e( 'Ongoing Support', 'moiraine' ); ?></h3>
+		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|x-large","right":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large","left":"var:preset|spacing|x-large"}}},"backgroundColor":"base","layout":{"type":"constrained"}} -->
+		<div class="wp-block-group has-base-background-color has-background" style="padding-top:var(--wp--preset--spacing--x-large);padding-right:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large);padding-left:var(--wp--preset--spacing--x-large)">
+			<!-- wp:heading {"level":3,"textColor":"primary","fontSize":"large","style":{"spacing":{"margin":{"top":"0"}}}} -->
+			<h3 class="wp-block-heading has-primary-color has-text-color has-large-font-size" style="margin-top:0"><?php esc_html_e( 'Ongoing Support', 'moiraine' ); ?></h3>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph -->
 			<p><?php esc_html_e( 'Continuous optimization and support to ensure your investment delivers sustained value and competitive advantage.', 'moiraine' ); ?></p>
 			<!-- /wp:paragraph -->
 		</div>
-		<!-- /wp:column -->
+		<!-- /wp:group -->
 		</div>
-		<!-- /wp:columns -->
+		<!-- /wp:group -->
 	</div>
 	<!-- /wp:group -->
 </div>
