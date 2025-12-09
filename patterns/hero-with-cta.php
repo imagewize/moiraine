@@ -8,6 +8,7 @@
  */
 
 return array(
+	'slug'          => 'moiraine/hero-with-cta',
 	'title'         => __( 'Hero Section with Call to Action', 'moiraine' ),
 	'description'   => __( 'Business-focused hero section with headline, description, and prominent call-to-action button', 'moiraine' ),
 	'categories'    => array( 'moiraine/hero', 'moiraine/call-to-action' ),
@@ -17,12 +18,12 @@ return array(
 <div class="wp-block-group alignfull has-base-background-color has-background" style="padding-top:var(--wp--preset--spacing--xxx-large);padding-bottom:var(--wp--preset--spacing--xxx-large)">
 	<!-- wp:group {"layout":{"type":"constrained"}} -->
 	<div class="wp-block-group">
-		<!-- wp:heading {"textAlign":"center","level":1,"textColor":"main","fontSize":"5xl","fontFamily":"open-sans"} -->
-		<h1 class="wp-block-heading has-text-align-center has-main-color has-text-color has-open-sans-font-family has-5-xl-font-size">' . __( 'Launch your idea with confidence', 'moiraine' ) . '</h1>
+		<!-- wp:heading {"textAlign":"center","level":1,"textColor":"main","fontSize":"x-large","fontFamily":"open-sans"} -->
+		<h1 class="wp-block-heading has-text-align-center has-main-color has-text-color has-open-sans-font-family has-x-large-font-size">' . __( 'Launch your idea with confidence', 'moiraine' ) . '</h1>
 		<!-- /wp:heading -->
 
-		<!-- wp:paragraph {"align":"center","textColor":"main-accent","fontSize":"lg","fontFamily":"open-sans"} -->
-		<p class="has-text-align-center has-main-accent-color has-text-color has-open-sans-font-family has-lg-font-size">' . __( 'Build your product, attract users, and grow faster with our powerful tools designed for startups.', 'moiraine' ) . '</p>
+		<!-- wp:paragraph {"align":"center","textColor":"main-accent","fontSize":"base","fontFamily":"open-sans"} -->
+		<p class="has-text-align-center has-main-accent-color has-text-color has-open-sans-font-family has-base-font-size">' . __( 'Build your product, attract users, and grow faster with our powerful tools designed for startups.', 'moiraine' ) . '</p>
 		<!-- /wp:paragraph -->
 
 		<!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|x-large"}}},"layout":{"type":"flex","justifyContent":"center"}} -->
