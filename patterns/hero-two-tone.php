@@ -17,11 +17,11 @@
 		<!-- wp:column {"verticalAlignment":"center","width":"50%"} -->
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%">
 			<!-- wp:heading {"level":1,"textColor":"main","style":{"typography":{"fontSize":"xx-large","lineHeight":"1.1"},"spacing":{"margin":{"bottom":"var:preset|spacing|x-large"}},"elements":{"link":{"color":{"text":"var:preset|color|main"}}}},"fontFamily":"open-sans"} -->
-			<h1 class="wp-block-heading has-main-color has-text-color has-link-color has-open-sans-font-family" style="margin-bottom:var(--wp--preset--spacing--x-large);;line-height:1.1"><?php esc_html_e( 'Hero ', 'moiraine' ); ?><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-primary-color"><?php esc_html_e( 'Section', 'moiraine' ); ?></mark> <?php esc_html_e( '2.0', 'moiraine' ); ?></h1>
+			<h1 class="wp-block-heading has-main-color has-text-color has-link-color has-open-sans-font-family" style="margin-bottom:var(--wp--preset--spacing--x-large);font-size:xx-large;line-height:1.1"><?php esc_html_e( 'Hero ', 'moiraine' ); ?><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-primary-color"><?php esc_html_e( 'Section', 'moiraine' ); ?></mark> <?php esc_html_e( '2.0', 'moiraine' ); ?></h1>
 			<!-- /wp:heading -->
 
-			<!-- wp:paragraph {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|xx-large"}},"typography":{"fontSize":"1.125rem","lineHeight":"1.6"}},"textColor":"main-accent","fontFamily":"open-sans"} -->
-			<p class="has-main-accent-color has-text-color has-open-sans-font-family" style="margin-bottom:var(--wp--preset--spacing--xx-large);;line-height:1.6"><?php esc_html_e( 'Transform your business with proven strategies that deliver measurable results. Our solutions are designed for ambitious companies ready to scale.', 'moiraine' ); ?></p>
+			<!-- wp:paragraph {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|xx-large"}},"typography":{"lineHeight":"1.6"}},"textColor":"main-accent","fontSize":"medium","fontFamily":"open-sans"} -->
+			<p class="has-main-accent-color has-text-color has-open-sans-font-family has-medium-font-size" style="margin-bottom:var(--wp--preset--spacing--xx-large);line-height:1.6"><?php esc_html_e( 'Transform your business with proven strategies that deliver measurable results. Our solutions are designed for ambitious companies ready to scale.', 'moiraine' ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:buttons {"style":{"spacing":{"blockGap":"var:preset|spacing|x-large"}}} -->
