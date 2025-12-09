@@ -5,22 +5,51 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.9.0] - 2025-12-09
+## [3.0.0] - 2025-12-09
 
-### Changed - Pattern Library Cleanup
+### Added - Portrait Image Support & Typography Enhancements
+
+**New Patterns:**
+- **post-featured-two-column** - Displays a single featured post with portrait image (2:3 aspect ratio) and title on left, large excerpt on right
+- **blog-post-columns-portrait** - Three-column blog post grid with portrait-oriented featured images, perfect for blog archives and portfolio displays
+
+**Custom Image Sizes:**
+- `moiraine-portrait-small` (380×570) - 2:3 aspect ratio for portrait blog/portfolio grids
+- `moiraine-portrait-medium` (380×507) - 3:4 aspect ratio for medium portrait layouts
+- `moiraine-portrait-large` (380×475) - 4:5 aspect ratio for larger portrait displays
+- `moiraine-single-hero` (700×400) - 16:9-ish landscape for single post/page hero images
+
+**CSS Typography & UI Enhancements:**
+- **Partial underline effect** - Elegant 1/3 width centered underline for post titles (`.has-partial-underline`)
+- **Large excerpt links** - Enhanced typography for post excerpt links (40px font size)
+- **Larger hamburger menu** - Increased mobile menu icon size (32px) with thicker stroke for better visibility
+
+**Pattern Library:**
+- Total active patterns: 21 (up from 19)
+- Added portrait-oriented layouts from Versifier child theme
+- Enhanced blog and portfolio display options
+
+### Changed - Pattern Library Cleanup & Major Version Bump
 
 **Pattern Archival for Theme Differentiation:**
 - **What changed:** Moved 89 unused patterns to `archive/` directory at theme root level
-- **Patterns remaining:** Reduced from 108 to 19 active patterns (82% reduction)
+- **Patterns remaining:** Reduced from 108 to 21 active patterns (80% reduction)
 - **Why:** Moving away from Ollie patterns to create custom Moiraine-specific patterns for better theme differentiation and unique design identity
 - **Impact:** Cleaner, more focused pattern library while maintaining all functionality
 
-**Active Patterns (19):**
+**Pattern Content Customization:**
+- **What changed:** All 17 Ollie-based patterns now feature unique Moiraine-specific text content (not just "Ollie" → "Moiraine" rebranding)
+- **Patterns updated:** 9 patterns received new unique content (card-details, feature-boxes-with-button, hero-call-to-action-buttons-light, hero-dark, hero-light, numbers, pricing-table, text-call-to-action-buttons, text-call-to-action)
+- **Content strategy:** New messaging emphasizes modern WordPress block themes, Site Editor integration, professional patterns, and no-code approach
+- **Why:** Establish distinct Moiraine identity with unique value proposition rather than generic Ollie content
+- **Impact:** Patterns now communicate Moiraine's unique benefits: powerful flexibility with elegant design, professional WordPress sites in minutes, no coding required
+
+**Active Patterns (21):**
 - Hero patterns: hero-text-image-and-logos, hero-call-to-action-buttons-light, hero-dark, hero-light
 - Features: feature-boxes-with-button, numbers
 - Testimonials: team-members, testimonial-highlight, testimonials-and-logos, testimonials-with-big-text, single-testimonial
 - Call-to-actions: text-call-to-action, text-call-to-action-buttons
-- Content: blog-post-columns, card-details, contact-side-by-side, faq, pricing-table, services-feature-cards
+- Content: blog-post-columns, blog-post-columns-portrait, post-featured-two-column, card-details, contact-side-by-side, faq, pricing-table, services-feature-cards
 
 **Archived Patterns (89):**
 - Headers (7 patterns)
@@ -31,16 +60,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Various other patterns (34 patterns)
 
 **Technical Implementation:**
-- Archive location: `demo/web/app/themes/moiraine/archive/` (theme root level)
-- Build exclusion: Added `archive/*` to `.distignore` to prevent inclusion in theme distribution
-- Multisite compatibility: Verified all subsites (main, SPA, Auctor) work correctly with archived patterns
-- Pattern loading: Archive directory at theme root prevents WordPress from loading archived patterns
+- Archive location: `archive/` directory at theme root (GitHub repository only)
+- Build exclusion: `archive/*` excluded via `.distignore` - **not included in WordPress.org distribution**
+- WordPress.org users: Only 21 active patterns included in theme package
+- GitHub repository: Full archive available for reference and development
+- Multisite compatibility: Verified all subsites (main, SPA, Auctor) work correctly with active patterns
+- Pattern loading: Archive directory at theme root prevents WordPress from loading archived patterns during development
 - Documentation: Comprehensive cleanup documentation at `docs/moiraine/PATTERN-CLEANUP-DEC2025.md`
 
+**Distribution Details:**
+- **WordPress.org theme package:** 21 active patterns only (clean, focused distribution)
+- **GitHub repository:** 21 active patterns + 89 archived patterns (full history and reference)
+- **Archive purpose:** Development reference only, not for production use
+
 **Future Direction:**
-- Archived patterns kept for reference only as we develop custom Moiraine patterns
+- Archived patterns kept in GitHub for reference as we develop custom Moiraine patterns
 - Goal: Establish distinct design identity separate from Ollie theme influence
 - Approach: Create new custom patterns rather than restoring archived Ollie patterns
+
+**Breaking Changes:**
+- Pattern library restructured with 89 patterns archived
+- New portrait image sizes require regeneration of thumbnails for existing images
+- Custom CSS classes added that may affect child themes using similar naming
+
+**Migration Notes:**
+- Run thumbnail regeneration after update: WP-CLI `wp media regenerate` or use Regenerate Thumbnails plugin
+- Portrait patterns use `moiraine-portrait-small` image size - ensure images are regenerated
+- Custom CSS classes (`.has-partial-underline`, `.moiraine-hamburger-large`) now available for use in patterns
 
 ### Fixed
 - **Pattern Loading Conflicts:** Moved archive from `patterns/archive/` to theme root `archive/` to prevent WordPress from attempting to load archived patterns

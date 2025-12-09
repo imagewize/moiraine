@@ -19,7 +19,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center"><?php esc_html_e( 'Build your blazing fast website with the power of the WordPress Site Editor and beautiful, pre-made designs from Moiraine. No coding skills required.', 'moiraine' ); ?></p>
+<p class="has-text-align-center"><?php esc_html_e( 'Create beautiful websites with Moiraine\'s professional patterns and the WordPress Site Editor. Powerful flexibility meets elegant simplicity.', 'moiraine' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 

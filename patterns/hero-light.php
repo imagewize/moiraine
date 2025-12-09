@@ -25,16 +25,16 @@
 <!-- /wp:group -->
 
 <!-- wp:paragraph {"align":"center","textColor":"secondary"} -->
-<p class="has-text-align-center has-secondary-color has-text-color"><?php esc_html_e( 'Easily create beautiful, fully-customizable websites with the new WordPress Site Editor and the Moiraine block theme. No coding skills required.', 'moiraine' ); ?></p>
+<p class="has-text-align-center has-secondary-color has-text-color"><?php esc_html_e( 'Moiraine combines powerful flexibility with elegant design. Create professional WordPress sites using the Site Editor—no coding experience needed.', 'moiraine' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons"><!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button"><?php esc_html_e( 'Download Moiraine', 'moiraine' ); ?></a></div>
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button"><?php esc_html_e( 'Get Started Free', 'moiraine' ); ?></a></div>
 <!-- /wp:button -->
 
 <!-- wp:button {"className":"is-style-secondary-button"} -->
-<div class="wp-block-button is-style-secondary-button"><a class="wp-block-button__link wp-element-button"><?php esc_html_e( 'Moiraine Features', 'moiraine' ); ?></a></div>
+<div class="wp-block-button is-style-secondary-button"><a class="wp-block-button__link wp-element-button"><?php esc_html_e( 'Explore Features', 'moiraine' ); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group -->

@@ -4,27 +4,37 @@ Tags: blog, portfolio, entertainment, grid-layout, one-column, two-columns, thre
 Requires at least: 5.8
 Tested up to: 6.9
 Requires PHP: 7.3
-Stable tag: 2.9.0
+Stable tag: 3.0.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block theme! Moiraine features over 50 beautiful pattern designs, 7 full-page pattern layouts, and a fully-customizable design system with Global Styles. Moiraine integrates seamlessly with all of the powerful new WordPress editor features, giving you the most lightweight and powerful website builder on the planet — no expensive page builder plugin required! ✶ Full demo: https://demo.imagewize.com ✶
+Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block theme! Moiraine features 21 beautiful pattern designs, 7 style variations, and a fully-customizable design system with Global Styles. Moiraine integrates seamlessly with all of the powerful new WordPress editor features, giving you the most lightweight and powerful website builder on the planet — no expensive page builder plugin required! ✶ Full demo: https://demo.imagewize.com ✶
 
 == Changelog ==
 
-= 2.9.0 - 12/09/25 =
-* CHANGED: Pattern Library Cleanup - Moved 89 unused patterns to archive/ directory at theme root level for better theme differentiation
-* CHANGED: Pattern Count - Reduced from 108 to 19 active patterns (82% reduction) - keeping only patterns actively used on demo site
-* IMPROVED: Theme Identity - Moving away from Ollie patterns to create custom Moiraine-specific patterns for unique design identity
-* TECHNICAL: Archive location at theme root prevents WordPress from loading archived patterns
-* TECHNICAL: Added archive/* to .distignore to prevent inclusion in theme distribution builds
-* VERIFIED: Multisite compatibility - all subsites (main, SPA, Auctor) work correctly with archived patterns
-* ACTIVE PATTERNS: 19 patterns (17 from Ollie, 2 unique Moiraine: contact-side-by-side, services-feature-cards)
-* ARCHIVED: 89 patterns (75 from Ollie, 14 unique Moiraine) kept for reference only
+= 3.0.0 - 12/09/25 =
+* NEW: Portrait Image Support - Added custom image sizes for portrait-oriented blog and portfolio layouts
+* NEW: post-featured-two-column pattern - Single featured post with 2:3 portrait image and large excerpt
+* NEW: blog-post-columns-portrait pattern - Three-column blog grid with portrait featured images
+* NEW: Custom Image Sizes - moiraine-portrait-small (380×570), moiraine-portrait-medium (380×507), moiraine-portrait-large (380×475), moiraine-single-hero (700×400)
+* NEW: Partial Underline Effect - Elegant 1/3 width centered underline for post titles (.has-partial-underline CSS class)
+* NEW: Large Excerpt Links - Enhanced typography for post excerpt links (40px font size)
+* NEW: Larger Hamburger Menu - Increased mobile menu icon size (32px) with thicker stroke (.moiraine-hamburger-large CSS class)
+* CHANGED: MAJOR VERSION - Pattern library restructured with 89 patterns archived (80% reduction)
+* CHANGED: Pattern Count - Reduced from 108 to 21 active patterns for better theme focus
+* CHANGED: Theme Identity - Moving away from Ollie patterns to create custom Moiraine-specific patterns
+* CHANGED: Pattern Content - All 17 Ollie-based patterns now feature unique Moiraine-specific text content (not just rebranding)
+* TECHNICAL: Archive location at theme root (GitHub repository only - not included in WordPress.org distribution)
+* TECHNICAL: Added archive/* to .distignore - WordPress.org theme package contains only 21 active patterns
+* TECHNICAL: Archived patterns available in GitHub repository for development reference only
+* TECHNICAL: Pattern text customization - Updated 9 patterns with unique Moiraine messaging emphasizing modern WordPress, Site Editor, and no-code approach
+* VERIFIED: Multisite compatibility - all subsites work correctly with new patterns
+* BREAKING: New portrait image sizes require thumbnail regeneration (wp media regenerate)
+* BREAKING: Custom CSS classes may affect child themes using similar naming
 * DOCUMENTATION: Comprehensive cleanup documentation at docs/moiraine/PATTERN-CLEANUP-DEC2025.md
-* FUTURE: Archived patterns kept for reference as we develop custom pattern library to replace Ollie patterns
+* MIGRATION: Run thumbnail regeneration after update for portrait image support
 
 = 2.8.0 - 12/03/25 =
 * NEW: Translation Support - Complete internationalization (i18n) infrastructure for WordPress.org compliance

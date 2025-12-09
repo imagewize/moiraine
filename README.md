@@ -7,7 +7,7 @@
 
 Moiraine is a modern WordPress block theme designed for the WordPress block editor and site editor. Create beautiful, fully-customizable websites with WordPress's built-in tools — no coding required.
 
-Features **89+ professional patterns**, WooCommerce integration, modern development tooling, and blazing-fast performance with 100% scores across the board.
+Features **21 professional patterns** (including 4 unique Moiraine patterns), WooCommerce integration, modern development tooling, and blazing-fast performance with 100% scores across the board.
 
 ## Table of Contents
 
@@ -29,16 +29,27 @@ Moiraine is built for modern WordPress features and requires WordPress 6.0 or la
 
 ## Key Features
 
-### 🎨 **89+ Professional Patterns**
-- **Hero Sections**: Eye-catching headers and banners
-- **Feature Presentations**: Showcase your products and services
-- **Call-to-Action Sections**: Drive conversions with beautiful CTAs
-- **Card Layouts**: Flexible content presentation
-- **Pricing Tables**: Professional pricing displays
-- **Testimonials**: Build trust with customer feedback
-- **Blog Post Layouts**: Beautiful post and archive designs including horizontal two-column featured posts
-- **Menu Patterns**: 14 specialized navigation designs (cards, mobile, panels)
-- **Template Patterns**: 14 complete page layout templates
+### 🎨 **21 Professional Patterns**
+Moiraine includes 21 carefully curated patterns, with 4 unique Moiraine-specific patterns and 17 from the Ollie theme foundation:
+
+**Moiraine Unique Patterns (4):**
+- `blog-post-columns-portrait` - Three-column blog grid with portrait-oriented images (2:3 aspect ratio)
+- `post-featured-two-column` - Featured post with portrait image and large excerpt in horizontal layout
+- `contact-side-by-side` - Contact form with side-by-side layout
+- `services-feature-cards` - Service showcase with responsive card grid
+
+**From Ollie Foundation (17 - with customized content):**
+- **Hero Sections**: `hero-text-image-and-logos`, `hero-call-to-action-buttons-light`, `hero-dark`, `hero-light`
+- **Features**: `feature-boxes-with-button`, `numbers`
+- **Testimonials**: `team-members`, `testimonial-highlight`, `testimonials-and-logos`, `testimonials-with-big-text`, `single-testimonial`
+- **Call-to-Actions**: `text-call-to-action`, `text-call-to-action-buttons`
+- **Content**: `blog-post-columns`, `card-details`, `faq`, `pricing-table`
+- **Note**: All Ollie-based patterns now feature unique Moiraine-specific text content, not just rebranding
+
+**Archived Patterns (89):**
+- 89 patterns from Ollie moved to `archive/` directory (GitHub only, not in WordPress.org distribution)
+- Archived for reference as Moiraine develops its own unique design identity
+- See [CHANGELOG.md](CHANGELOG.md#300---2025-12-09) for complete archive details
 
 ### 🧩 **Block Extensions System** (NEW in 2.3.0)
 - **Post Excerpt Linking**: Extend core post-excerpt blocks with customizable link functionality

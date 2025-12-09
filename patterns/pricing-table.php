@@ -18,11 +18,11 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"textAlign":"center","className":"wp-block-heading"} -->
-<h2 class="wp-block-heading has-text-align-center"><?php esc_html_e( 'Small prices, huge value', 'moiraine' ); ?></h2>
+<h2 class="wp-block-heading has-text-align-center"><?php esc_html_e( 'Transparent pricing, maximum value', 'moiraine' ); ?></h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center"><?php esc_html_e( 'Easily create beautiful and responsive pricing tables with Moiraine patterns. Connect your eCommerce solution and start making bank.', 'moiraine' ); ?></p>
+<p class="has-text-align-center"><?php esc_html_e( 'Showcase your products or services with elegant pricing tables. Fully responsive designs that adapt perfectly to any screen size.', 'moiraine' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -44,7 +44,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"textColor":"secondary","fontSize":"x-small"} -->
-<p class="has-secondary-color has-text-color has-x-small-font-size"><?php esc_html_e( 'Great for beginners who want to give your product a trial run and see if it fits their workflow.', 'moiraine' ); ?></p>
+<p class="has-secondary-color has-text-color has-x-small-font-size"><?php esc_html_e( 'Perfect for individuals and small projects looking to get started with essential features.', 'moiraine' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 

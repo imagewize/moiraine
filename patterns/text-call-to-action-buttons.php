@@ -19,13 +19,13 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"textAlign":"center"} -->
-<h2 class="wp-block-heading has-text-align-center"><?php esc_html_e( 'No code? No problem. Design websites faster with patterns.', 'moiraine' ); ?></h2>
+<h2 class="wp-block-heading has-text-align-center"><?php esc_html_e( 'Design stunning websites without writing a single line of code', 'moiraine' ); ?></h2>
 <!-- /wp:heading --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"metadata":{"name":"Text and Buttons"},"style":{"spacing":{}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"align":"center","textColor":"secondary"} -->
-<p class="has-text-align-center has-secondary-color has-text-color"><?php esc_html_e( 'The future of WordPress site building is here. Are you ready?', 'moiraine' ); ?></p>
+<p class="has-text-align-center has-secondary-color has-text-color"><?php esc_html_e( 'Moiraine brings modern WordPress block editing to life with professional patterns and intuitive customization.', 'moiraine' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"flex","justifyContent":"center"}} -->
@@ -34,7 +34,7 @@
 <!-- /wp:button -->
 
 <!-- wp:button {"className":"is-style-button-light"} -->
-<div class="wp-block-button is-style-button-light"><a class="wp-block-button__link wp-element-button"><?php esc_html_e( 'See Our Features', 'moiraine' ); ?></a></div>
+<div class="wp-block-button is-style-button-light"><a class="wp-block-button__link wp-element-button"><?php esc_html_e( 'Explore Patterns', 'moiraine' ); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div>
