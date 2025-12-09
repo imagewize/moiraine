@@ -43,10 +43,11 @@ Moiraine includes 29 focused patterns across hero, CTA/contact, testimonial, and
 - **Moiraine originals (17):** `hero-two-tone`, `hero-with-cta`, `cta-newsletter`, `contact-info`, `feature-grid`, `team-grid`, `testimonial-card`, `client-reviews-orange`, `blog-post-columns-portrait`, `post-featured-two-column`, `contact-side-by-side`, `services-feature-cards`, plus custom messaging/variants across `hero-text-image-and-logos`, `hero-call-to-action-buttons-light`, `hero-dark`, `hero-light`, `feature-boxes-with-button`
 - **From Ollie foundation (12, fully reworked copy/styles):** `blog-post-columns`, `card-details`, `faq`, `numbers`, `pricing-table`, `text-call-to-action`, `text-call-to-action-buttons`, `testimonials-with-big-text`, `testimonials-and-logos`, `testimonial-highlight`, `single-testimonial`, `team-members`
 
-**Archived Patterns (89):**
-- 89 patterns from Ollie moved to `archive/` directory (GitHub only, not in WordPress.org distribution)
-- Archived for reference as Moiraine develops its own unique design identity
-- See [CHANGELOG.md](CHANGELOG.md#300---2025-12-09) for complete archive details
+**Removed Patterns:**
+- 89 Ollie patterns completely removed from the theme (not archived, removed entirely)
+- Removed from both GitHub repository and WordPress.org distribution
+- Original Ollie patterns available in the Ollie theme repository for reference
+- See [CHANGELOG.md](CHANGELOG.md#300---2025-12-09) for complete details
 
 ### 🧩 **Block Extensions System** (NEW in 2.3.0)
 - **Post Excerpt Linking**: Extend core post-excerpt blocks with customizable link functionality

@@ -24,15 +24,15 @@ Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block t
 * NEW: Large Excerpt Links - Enhanced typography for post excerpt links (40px font size)
 * NEW: Larger Hamburger Menu - Increased mobile menu icon size (32px) with thicker stroke (.moiraine-hamburger-large CSS class)
 * NEW: Bitter Font Support - Added Bitter variable serif (regular + italic) to the typography set
-* CHANGED: MAJOR VERSION - Pattern library restructured with 89 patterns archived (80% reduction)
-* CHANGED: Pattern Count - Reduced from 108 to 29 active patterns for better theme focus (89 archived, 29 active)
-* CHANGED: Theme Identity - Moving away from Ollie patterns to create custom Moiraine-specific patterns
+* CHANGED: MAJOR VERSION - Pattern library restructured with 89 patterns removed (80% reduction)
+* CHANGED: Pattern Count - Reduced from 108 to 29 active patterns for better theme focus
+* CHANGED: Theme Identity - Removed Ollie patterns to create custom Moiraine-specific patterns
 * CHANGED: Pattern Content - All 17 Ollie-based patterns now feature unique Moiraine-specific text content (not just rebranding)
-* TECHNICAL: Archive location at theme root (GitHub repository only - not included in WordPress.org distribution)
-* TECHNICAL: Added archive/* to .distignore - WordPress.org theme package contains only 29 active patterns
-* TECHNICAL: Archived patterns available in GitHub repository for development reference only
+* REMOVED: 89 Ollie Patterns - Completely removed from both GitHub repository and WordPress.org distribution
 * TECHNICAL: Pattern text customization - Updated 9 patterns with unique Moiraine messaging emphasizing modern WordPress, Site Editor, and no-code approach
-* VERIFIED: Multisite compatibility - all subsites work correctly with new patterns
+* TECHNICAL: WordPress.org theme package contains only 29 active patterns (no archived patterns)
+* TECHNICAL: GitHub repository contains only 29 active patterns (removed patterns no longer in repository)
+* VERIFIED: Multisite compatibility - all subsites work correctly with remaining 29 patterns
 * BREAKING: New portrait image sizes require thumbnail regeneration (wp media regenerate)
 * BREAKING: Custom CSS classes may affect child themes using similar naming
 * DOCUMENTATION: Comprehensive cleanup documentation at docs/moiraine/PATTERN-CLEANUP-DEC2025.md

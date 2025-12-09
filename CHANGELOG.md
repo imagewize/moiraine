@@ -40,9 +40,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed - Pattern Library Cleanup & Major Version Bump
 
-**Pattern Archival for Theme Differentiation:**
-- **What changed:** Moved 89 unused patterns to `archive/` directory at theme root level
-- **Patterns remaining:** Reduced from 108 to 29 active patterns (73% reduction) while keeping archive for reference
+**Pattern Removal for Theme Differentiation:**
+- **What changed:** Removed 89 unused Ollie patterns from the theme entirely
+- **Patterns remaining:** Reduced from 108 to 29 active patterns (73% reduction)
 - **Why:** Moving away from Ollie patterns to create custom Moiraine-specific patterns for better theme differentiation and unique design identity
 - **Impact:** Cleaner, more focused pattern library while maintaining all functionality
 
@@ -59,7 +59,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Call-to-actions & contact: text-call-to-action, text-call-to-action-buttons, cta-newsletter, contact-side-by-side, contact-info
 - Testimonials & teams: testimonials-and-logos, testimonials-with-big-text, testimonial-highlight, testimonial-card, client-reviews-orange, single-testimonial, team-members, team-grid
 
-**Archived Patterns (89):**
+**Removed Patterns (89):**
 - Headers (7 patterns)
 - Footers (6 patterns)
 - Menus (12 patterns)
@@ -68,26 +68,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Various other patterns (34 patterns)
 
 **Technical Implementation:**
-- Archive location: `archive/` directory at theme root (GitHub repository only)
-- Build exclusion: `archive/*` excluded via `.distignore` - **not included in WordPress.org distribution**
-- WordPress.org users: 29 active patterns included in theme package
-- GitHub repository: Full archive available for reference and development
-- Multisite compatibility: Verified all subsites (main, SPA, Auctor) work correctly with active patterns
-- Pattern loading: Archive directory at theme root prevents WordPress from loading archived patterns during development
+- Patterns completely removed from both GitHub repository and WordPress.org distribution
+- Multisite compatibility: Verified all subsites (main, SPA, Auctor) work correctly with remaining 29 active patterns
 - Documentation: Comprehensive cleanup documentation at `docs/moiraine/PATTERN-CLEANUP-DEC2025.md`
 
 **Distribution Details:**
 - **WordPress.org theme package:** 29 active patterns only (clean, focused distribution)
-- **GitHub repository:** 29 active patterns + 89 archived patterns (full history and reference)
-- **Archive purpose:** Development reference only, not for production use
+- **GitHub repository:** 29 active patterns only (removed patterns no longer in repository)
+- **Pattern history:** Original Ollie patterns available in Ollie theme repository for reference
 
 **Future Direction:**
-- Archived patterns kept in GitHub for reference as we develop custom Moiraine patterns
+- Focus on developing unique Moiraine-specific patterns
 - Goal: Establish distinct design identity separate from Ollie theme influence
-- Approach: Create new custom patterns rather than restoring archived Ollie patterns
+- Approach: Create new custom patterns tailored to Moiraine's design philosophy
 
 **Breaking Changes:**
-- Pattern library restructured with 89 patterns archived
+- Pattern library restructured with 89 patterns removed
 - New portrait image sizes require regeneration of thumbnails for existing images
 - Custom CSS classes added that may affect child themes using similar naming
 
@@ -96,8 +92,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Portrait patterns use `moiraine-portrait-small` image size - ensure images are regenerated
 - Custom CSS classes (`.has-partial-underline`, `.moiraine-hamburger-large`) now available for use in patterns
 
-### Fixed
-- **Pattern Loading Conflicts:** Moved archive from `patterns/archive/` to theme root `archive/` to prevent WordPress from attempting to load archived patterns
+### Removed
+- **89 Ollie Patterns:** Completely removed unused Ollie patterns from theme to establish unique Moiraine identity (patterns originally moved to archive, then removed entirely from repository)
 
 ## [2.8.0] - 2025-12-03
 
