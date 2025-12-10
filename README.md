@@ -7,7 +7,7 @@
 
 Moiraine is a modern WordPress block theme designed for the WordPress block editor and site editor. Create beautiful, fully-customizable websites with WordPress's built-in tools — no coding required.
 
-Features **89+ professional patterns**, WooCommerce integration, modern development tooling, and blazing-fast performance with 100% scores across the board.
+Features **38 professional patterns** (Moiraine-first heroes, CTAs, testimonials, statistics, blog layouts, plus essential headers/footers), WooCommerce integration, modern development tooling, and blazing-fast performance with 100% scores across the board.
 
 ## Table of Contents
 
@@ -29,16 +29,29 @@ Moiraine is built for modern WordPress features and requires WordPress 6.0 or la
 
 ## Key Features
 
-### 🎨 **89+ Professional Patterns**
-- **Hero Sections**: Eye-catching headers and banners
-- **Feature Presentations**: Showcase your products and services
-- **Call-to-Action Sections**: Drive conversions with beautiful CTAs
-- **Card Layouts**: Flexible content presentation
-- **Pricing Tables**: Professional pricing displays
-- **Testimonials**: Build trust with customer feedback
-- **Blog Post Layouts**: Beautiful post and archive designs including horizontal two-column featured posts
-- **Menu Patterns**: 14 specialized navigation designs (cards, mobile, panels)
-- **Template Patterns**: 14 complete page layout templates
+### 🎨 **38 Professional Patterns**
+Moiraine includes 38 focused patterns across headers/footers, hero, CTA/contact, testimonial, statistics, content layouts, and templates:
+
+- **Headers & Footers (3)**: `header-light-action-button`, `header-light-with-hamburger-menu`, `footer-light`
+- **Hero (6)**: `hero-text-image-and-logos`, `hero-call-to-action-buttons-light`, `hero-dark`, `hero-light`, `hero-two-tone`, `hero-with-cta`
+- **Features & Content (10)**: `feature-boxes-with-button`, `feature-grid`, `numbers`, `card-details`, `faq`, `pricing-table`, `services-feature-cards`, `blog-post-columns`, `blog-post-columns-portrait`, `post-featured-two-column`
+- **Call-to-Actions & Contact (5)**: `text-call-to-action`, `text-call-to-action-buttons`, `cta-newsletter`, `contact-side-by-side`, `contact-info`
+- **Statistics & Showcases (2)**: `stats-showcase`, `stats-list`
+- **Testimonials & Teams (8)**: `client-reviews-orange`, `testimonial-card`, `testimonial-highlight`, `testimonials-and-logos`, `testimonials-with-big-text`, `single-testimonial`, `team-members`, `team-grid`
+- **Templates (4)**: `template-index-grid`, `template-page-centered`, `template-post-centered`, `post-loop-grid-default`
+- All patterns use Moiraine-specific copy and styling; portrait blog layouts leverage the new portrait image sizes
+- Several of these patterns were originally authored for our standalone plugin Callandor and brought into Moiraine: https://github.com/imagewize/callandor
+
+**Pattern origins:**
+- **Moiraine originals (19):** `hero-two-tone`, `hero-with-cta`, `cta-newsletter`, `contact-info`, `feature-grid`, `team-grid`, `testimonial-card`, `client-reviews-orange`, `blog-post-columns-portrait`, `post-featured-two-column`, `contact-side-by-side`, `services-feature-cards`, `stats-showcase`, `stats-list`, plus custom messaging/variants across `hero-text-image-and-logos`, `hero-call-to-action-buttons-light`, `hero-dark`, `hero-light`, `feature-boxes-with-button`
+- **From Ollie foundation (15, fully reworked copy/styles):** `blog-post-columns`, `card-details`, `faq`, `numbers`, `pricing-table`, `text-call-to-action`, `text-call-to-action-buttons`, `testimonials-with-big-text`, `testimonials-and-logos`, `testimonial-highlight`, `single-testimonial`, `team-members`
+- **Restored Ollie patterns (4):** `header-light-action-button`, `header-light-with-hamburger-menu`, `footer-light` (essential for theme functionality), plus 4 template patterns
+
+**Removed Patterns:**
+- 82 Ollie patterns removed from the theme (kept 3 essential headers/footers)
+- Removed from both GitHub repository and WordPress.org distribution
+- Original Ollie patterns available in the Ollie theme repository for reference
+- See [CHANGELOG.md](CHANGELOG.md#300---2025-12-09) for complete details
 
 ### 🧩 **Block Extensions System** (NEW in 2.3.0)
 - **Post Excerpt Linking**: Extend core post-excerpt blocks with customizable link functionality
@@ -55,7 +68,7 @@ Custom blocks like Carousel and Menu Designer are available in the companion [Mo
 - E-commerce optimized patterns and styles
 
 ### 🎯 **Typography & Design**
-- 7 Google Fonts with responsive scaling
+- Expanded typography set (Mona Sans, Bodoni Moda, new Bitter serif) with responsive scaling
 - Multiple typography presets and style variations
 - Global styles system via theme.json
 - Full Site Editing compatibility

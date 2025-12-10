@@ -387,6 +387,34 @@
 					]
 				},
 				{
+					"fontFamily": "Bitter, serif",
+					"name": "Bitter",
+					"slug": "bitter",
+					"fontFace": [
+						{
+							"fontDisplay": "swap",
+							"fontFamily": "Bitter",
+							"fontStyle": "normal",
+							"fontWeight": "100 900",
+							"src": ["file:./assets/fonts/bitter/Bitter-VariableFont_wght.woff2"]
+						}
+					]
+				},
+				{
+					"fontFamily": "Bitter, serif",
+					"name": "Bitter Italic",
+					"slug": "bitter-italic",
+					"fontFace": [
+						{
+							"fontDisplay": "swap",
+							"fontFamily": "Bitter",
+							"fontStyle": "italic",
+							"fontWeight": "100 900",
+							"src": ["file:./assets/fonts/bitter/Bitter-Italic-VariableFont_wght.woff2"]
+						}
+					]
+				},
+				{
 					"fontFamily": "monospace",
 					"name": "Monospace",
 					"slug": "monospace"

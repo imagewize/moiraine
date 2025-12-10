@@ -5,6 +5,107 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.0.0] - 2025-12-09
+
+### Added - Portrait Image Support, New Patterns & Typography Enhancements
+
+**New Patterns:**
+- **post-featured-two-column** - Displays a single featured post with portrait image (2:3 aspect ratio) and title on left, large excerpt on right
+- **blog-post-columns-portrait** - Three-column blog post grid with portrait-oriented featured images, perfect for blog archives and portfolio displays
+- **hero-with-cta** - Centered business hero with primary CTA button and supporting description
+- **hero-two-tone** - Split two-tone hero with dual CTA buttons and optional feature image
+- **cta-newsletter** - Newsletter/lead capture CTA with headline, description, and full-width submit button
+- **contact-info** - Modern contact info row with office hours, phone/email card, and address/location card
+- **feature-grid** - Three-column feature/service grid with icon circles and supporting text
+- **team-grid** - Three-column team grid with avatars, names, and job titles
+- **testimonial-card** - Single testimonial card with quote and client attribution
+- **client-reviews-orange** - Triple testimonial row on bold orange background with circular avatars
+- **stats-showcase** - Two-column section combining promotional content with modern statistics display (4 stat cards in 2x2 grid)
+- **stats-list** - Two-column section with promotional content and feature list (3 feature items with icons)
+
+**Custom Image Sizes:**
+- `moiraine-portrait-small` (380×570) - 2:3 aspect ratio for portrait blog/portfolio grids
+- `moiraine-portrait-medium` (380×507) - 3:4 aspect ratio for medium portrait layouts
+- `moiraine-portrait-large` (380×475) - 4:5 aspect ratio for larger portrait displays
+- `moiraine-single-hero` (700×400) - 16:9-ish landscape for single post/page hero images
+
+**CSS Typography & UI Enhancements:**
+- **Partial underline effect** - Elegant 1/3 width centered underline for post titles (`.has-partial-underline`)
+- **Large excerpt links** - Enhanced typography for post excerpt links (40px font size)
+- **Larger hamburger menu** - Increased mobile menu icon size (32px) with thicker stroke for better visibility
+- **New serif option** - Added Bitter variable font (regular + italic) to the typography palette for richer headline/body pairings
+
+**Pattern Library:**
+- Total active patterns: 38 (includes 3 restored header/footer patterns, 4 templates)
+- Added portrait-oriented layouts from Versifier child theme
+- Expanded hero, CTA, testimonial, and statistics options with new Moiraine-specific layouts
+- Restored essential header/footer patterns for theme functionality
+
+### Changed - Pattern Library Cleanup & Major Version Bump
+
+**Pattern Removal for Theme Differentiation:**
+- **What changed:** Removed 82 unused Ollie patterns from the theme entirely
+- **Patterns remaining:** Reduced from 108 to 36 active patterns (67% reduction)
+- **Restored:** 3 essential header/footer patterns (header-light-action-button, header-light-with-hamburger-menu, footer-light) needed for theme and child theme functionality
+- **Why:** Moving away from Ollie patterns to create custom Moiraine-specific patterns for better theme differentiation and unique design identity
+- **Impact:** Cleaner, more focused pattern library while maintaining all functionality
+
+**Pattern Content Customization:**
+- **What changed:** All 17 Ollie-based patterns now feature unique Moiraine-specific text content (not just "Ollie" → "Moiraine" rebranding)
+- **Patterns updated:** 9 patterns received new unique content (card-details, feature-boxes-with-button, hero-call-to-action-buttons-light, hero-dark, hero-light, numbers, pricing-table, text-call-to-action-buttons, text-call-to-action)
+- **Content strategy:** New messaging emphasizes modern WordPress block themes, Site Editor integration, professional patterns, and no-code approach
+- **Why:** Establish distinct Moiraine identity with unique value proposition rather than generic Ollie content
+- **Impact:** Patterns now communicate Moiraine's unique benefits: powerful flexibility with elegant design, professional WordPress sites in minutes, no coding required
+
+**Active Patterns (38):**
+- Headers & footers (3): header-light-action-button, header-light-with-hamburger-menu, footer-light
+- Hero patterns (6): hero-text-image-and-logos, hero-call-to-action-buttons-light, hero-dark, hero-light, hero-two-tone, hero-with-cta
+- Features & content (10): feature-boxes-with-button, feature-grid, numbers, card-details, faq, pricing-table, services-feature-cards, blog-post-columns, blog-post-columns-portrait, post-featured-two-column
+- Call-to-actions & contact (5): text-call-to-action, text-call-to-action-buttons, cta-newsletter, contact-side-by-side, contact-info
+- Statistics & showcases (2): stats-showcase, stats-list
+- Testimonials & teams (8): testimonials-and-logos, testimonials-with-big-text, testimonial-highlight, testimonial-card, client-reviews-orange, single-testimonial, team-members, team-grid
+- Templates (4): template-index-grid, template-page-centered, template-post-centered, post-loop-grid-default
+
+**Removed Patterns (82):**
+- Headers (5 of 8 patterns - kept 3 essential headers)
+- Footers (5 of 6 patterns - kept 1 essential footer)
+- Menus (12 patterns)
+- Templates (13 of 17 patterns - kept 4 essential templates)
+- Cards (13 patterns)
+- Various other patterns (34 patterns)
+
+**Technical Implementation:**
+- Patterns completely removed from both GitHub repository and WordPress.org distribution
+- Multisite compatibility: Verified all subsites (main, SPA, Auctor) work correctly with remaining 29 active patterns
+- Documentation: Comprehensive cleanup documentation at `docs/moiraine/PATTERN-CLEANUP-DEC2025.md`
+
+**Distribution Details:**
+- **WordPress.org theme package:** 38 active patterns (includes 3 restored headers/footers, 4 templates, 2 new statistics patterns)
+- **GitHub repository:** 38 active patterns (removed patterns no longer in repository)
+- **Restored patterns:** header-light-action-button, header-light-with-hamburger-menu, footer-light restored from archive for theme functionality
+- **Pattern history:** Original Ollie patterns available in Ollie theme repository for reference
+
+**Future Direction:**
+- Focus on developing unique Moiraine-specific patterns
+- Goal: Establish distinct design identity separate from Ollie theme influence
+- Approach: Create new custom patterns tailored to Moiraine's design philosophy
+
+**Breaking Changes:**
+- Pattern library restructured with 89 patterns removed
+- New portrait image sizes require regeneration of thumbnails for existing images
+- Custom CSS classes added that may affect child themes using similar naming
+
+**Migration Notes:**
+- Run thumbnail regeneration after update: WP-CLI `wp media regenerate` or use Regenerate Thumbnails plugin
+- Portrait patterns use `moiraine-portrait-small` image size - ensure images are regenerated
+- Custom CSS classes (`.has-partial-underline`, `.moiraine-hamburger-large`) now available for use in patterns
+
+### Removed
+- **82 Ollie Patterns:** Completely removed unused Ollie patterns from theme to establish unique Moiraine identity (patterns originally moved to archive, then removed entirely from repository)
+
+### Restored (Post-Release)
+- **3 Header/Footer Patterns:** Restored header-light-action-button, header-light-with-hamburger-menu, and footer-light from archive for essential theme and child theme (Versifier) functionality
+
 ## [2.8.0] - 2025-12-03
 
 ### Added - Translation Support (WordPress.org Requirement)

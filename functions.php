@@ -249,6 +249,23 @@ function moiraine_template_part_areas( array $areas ) {
 add_filter( 'default_wp_template_part_areas', __NAMESPACE__ . '\moiraine_template_part_areas' );
 
 /**
+ * Add custom image sizes for portrait-oriented layouts.
+ */
+function moiraine_custom_image_sizes() {
+	// Portrait image sizes for grid/archive layouts.
+	// Aspect ratios: 0.67 (2:3), 0.75 (3:4), 0.80 (4:5).
+	add_image_size( 'moiraine-portrait-small', 380, 570, true );  // ~0.67 aspect ratio.
+	add_image_size( 'moiraine-portrait-medium', 380, 507, true ); // ~0.75 aspect ratio.
+	add_image_size( 'moiraine-portrait-large', 380, 475, true );  // ~0.80 aspect ratio.
+
+	// Landscape hero image for single post/page templates with sidebar.
+	// Optimized for 66.66% content column width (~700px).
+	add_image_size( 'moiraine-single-hero', 700, 400, true );     // 1.75 aspect ratio (16:9-ish).
+}
+add_action( 'after_setup_theme', __NAMESPACE__ . '\moiraine_custom_image_sizes' );
+
+
+/**
  * Include block extensions for enhanced functionality.
  */
 require_once get_theme_file_path( 'inc/block-extensions.php' );

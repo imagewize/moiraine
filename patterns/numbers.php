@@ -24,7 +24,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"align":"center","textColor":"primary-accent","fontSize":"small"} -->
-<p class="has-text-align-center has-primary-accent-color has-text-color has-small-font-size"><?php esc_html_e( 'Blazing-fast performance out of the box. No caching plugins needed.', 'moiraine' ); ?></p>
+<p class="has-text-align-center has-primary-accent-color has-text-color has-small-font-size"><?php esc_html_e( 'Optimized for speed with minimal footprint. Scores 100% on performance tests.', 'moiraine' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
@@ -38,7 +38,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"align":"center","textColor":"primary-accent","fontSize":"small"} -->
-<p class="has-text-align-center has-primary-accent-color has-text-color has-small-font-size"><?php esc_html_e( 'Built with SEO best practices in mind to help you rank in search engines.', 'moiraine' ); ?></p>
+<p class="has-text-align-center has-primary-accent-color has-text-color has-small-font-size"><?php esc_html_e( 'Semantic HTML structure and clean code foundation for better search rankings.', 'moiraine' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
@@ -52,7 +52,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"align":"center","textColor":"primary-accent","fontSize":"small"} -->
-<p class="has-text-align-center has-primary-accent-color has-text-color has-small-font-size"><?php esc_html_e( 'Accessibility compliant to ensure equal access to content and functionality.', 'moiraine' ); ?></p>
+<p class="has-text-align-center has-primary-accent-color has-text-color has-small-font-size"><?php esc_html_e( 'WCAG 2.1 AA compliant design ensures your site is accessible to everyone.', 'moiraine' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>

@@ -3,11 +3,11 @@ Theme Name: Moiraine
 Theme URI: https://imagewize.com/resources/moiraine-theme/
 Author: Jasper Frumau
 Author URI: https://github.com/jasperf
-Description: Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block theme! Moiraine features over 50 beautiful pattern designs, 7 full-page pattern layouts, and a fully-customizable design system with Global Styles. Moiraine integrates seamlessly with all of the powerful new WordPress editor features, giving you the most lightweight and powerful website builder on the planet — no expensive page builder plugin required! ✶ Full demo: https://demo.imagewize.com ✶
+Description: Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block theme! Moiraine features 21 beautiful pattern designs, 7 style variations, and a fully-customizable design system with Global Styles. Moiraine integrates seamlessly with all of the powerful new WordPress editor features, giving you the most lightweight and powerful website builder on the planet — no expensive page builder plugin required! ✶ Full demo: https://demo.imagewize.com ✶
 Tags: blog, portfolio, entertainment, grid-layout, one-column, two-columns, three-columns, four-columns, block-patterns, block-styles, custom-logo, custom-menu, editor-style, featured-images, full-site-editing, full-width-template, rtl-language-support, style-variations, template-editing, theme-options, translation-ready, wide-blocks
 Tested up to: 6.9
 Requires PHP: 7.3
-Version: 2.8.0
+Version: 3.0.0
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: moiraine
@@ -30,7 +30,196 @@ Moiraine is distributed under the terms of the GNU GPL.
 
 /* 1. Classic Editor Compatibility
 ---------------------------------------------------------------------------- */
-@import url('classic-styles.css');
+
+/* Image Alignment
+   WordPress core only provides .is-layout-flow > .alignleft which requires a container.
+   Classic editor content uses img.alignleft directly without containers.
+---------------------------------------------------------------------------- */
+img.alignleft {
+	float: left;
+	margin-inline-end: 2em;
+	margin-bottom: var(--wp--preset--spacing--small);
+}
+
+img.alignright {
+	float: right;
+	margin-inline-start: 2em;
+	margin-bottom: var(--wp--preset--spacing--small);
+}
+
+img.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: var(--wp--preset--spacing--small);
+}
+
+.wp-caption.alignleft {
+	float: left;
+	margin-inline-end: 2em;
+	margin-bottom: var(--wp--preset--spacing--small);
+}
+
+.wp-caption.alignright {
+	float: right;
+	margin-inline-start: 2em;
+	margin-bottom: var(--wp--preset--spacing--small);
+}
+
+.wp-caption.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	margin-bottom: var(--wp--preset--spacing--small);
+}
+
+/* Gallery Shortcode
+   Classic [gallery] shortcode creates grid layouts using columns parameter.
+   Default is 3 columns. Supports 1-9 columns as specified by shortcode attribute.
+---------------------------------------------------------------------------- */
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 calc(var(--wp--preset--spacing--small) * -0.5);
+	list-style: none;
+}
+
+.gallery-item {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding: calc(var(--wp--preset--spacing--small) * 0.5);
+}
+
+/* Default: 3 columns */
+.gallery-columns-3 .gallery-item {
+	width: calc(100% / 3);
+}
+
+/* Column variations */
+.gallery-columns-1 .gallery-item {
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	width: 50%;
+}
+
+.gallery-columns-4 .gallery-item {
+	width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	width: calc(100% / 6);
+}
+
+.gallery-columns-7 .gallery-item {
+	width: calc(100% / 7);
+}
+
+.gallery-columns-8 .gallery-item {
+	width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	width: calc(100% / 9);
+}
+
+.gallery-icon {
+	margin-bottom: var(--wp--preset--spacing--small);
+}
+
+.gallery-icon img {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	height: auto;
+}
+
+.gallery-caption {
+	font-size: var(--wp--preset--font-size--x-small);
+	color: var(--wp--preset--color--secondary);
+	text-align: center;
+	margin: 0;
+}
+
+/* Gallery responsive: stack on mobile */
+@media (max-width: 600px) {
+	.gallery-columns-3 .gallery-item,
+	.gallery-columns-4 .gallery-item,
+	.gallery-columns-5 .gallery-item,
+	.gallery-columns-6 .gallery-item,
+	.gallery-columns-7 .gallery-item,
+	.gallery-columns-8 .gallery-item,
+	.gallery-columns-9 .gallery-item {
+		width: 50%;
+	}
+}
+
+/* Inline Code
+   Prevents horizontal overflow on long code snippets.
+---------------------------------------------------------------------------- */
+*:not(.wp-block-code) > code {
+	background-color: var(--wp--preset--color--tertiary);
+	font-weight: var(--wp--custom--font-weight--medium);;
+	padding: 3px 5px;
+	position: relative;
+	border-radius: 3px;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+
+/* Blockquotes
+   WordPress core only provides block-specific styles (core/quote).
+   Classic editor content uses plain blockquote elements.
+---------------------------------------------------------------------------- */
+blockquote:not([class*="wp-block"]) {
+	border-left: 5px solid var(--wp--preset--color--primary);
+	padding-left: var(--wp--preset--spacing--medium);
+	padding-right: var(--wp--preset--spacing--medium);
+	margin-left: 0;
+	margin-right: 0;
+	font-style: italic;
+	color: var(--wp--preset--color--main);
+}
+
+/* Citations
+   Applies to cite elements outside of WordPress blocks.
+---------------------------------------------------------------------------- */
+cite:not([class*="wp-block"] cite) {
+	font-style: italic;
+	font-size: var(--wp--preset--font-size--small);
+	color: var(--wp--preset--color--secondary);
+	display: block;
+	margin-top: var(--wp--preset--spacing--small);
+}
+
+/* Quote Elements
+   Inline quotes using <q> tag - browser adds quotation marks automatically.
+---------------------------------------------------------------------------- */
+q {
+	font-style: italic;
+	quotes: auto;
+}
+
+/* Preformatted Text
+   WordPress core only provides block-specific styles (core/preformatted).
+   Classic editor content uses plain pre elements.
+   Prevents horizontal overflow while preserving whitespace formatting.
+---------------------------------------------------------------------------- */
+pre:not([class*="wp-block"]) {
+	overflow-x: auto;
+	white-space: pre;
+	max-width: 100%;
+	padding: var(--wp--preset--spacing--small);
+	background-color: var(--wp--preset--color--tertiary);
+	border-radius: 5px;
+}
 
 /* 2. CSS Reset
 ---------------------------------------------------------------------------- */
@@ -211,7 +400,67 @@ a.more-link {
 	}
 }
 
-/* 7. Accessibility Fixes
+/* 7. Portrait Image & Typography Styles
+---------------------------------------------------------------------------- */
+
+/* Hamburger menu icon - increased size and thickness */
+.moiraine-hamburger-large .wp-block-navigation__responsive-container-open svg,
+.moiraine-hamburger-large button[aria-label*="Open menu"] svg {
+	width: 32px !important;
+	height: 32px !important;
+}
+
+.moiraine-hamburger-large .wp-block-navigation__responsive-container-open svg line,
+.moiraine-hamburger-large button[aria-label*="Open menu"] svg line {
+	stroke-width: 2.5 !important;
+}
+
+/* Post excerpt link styling - proper typography (color customizable in editor) */
+.wp-block-post-excerpt__excerpt .excerpt-link {
+	font-family: "Open Sans", sans-serif;
+	font-size: 40px;
+	font-weight: 400;
+	line-height: 56px;
+	text-decoration: none;
+}
+
+/* Partial underline for post titles - approximately 1/3 width using border-image */
+.has-partial-underline a {
+	display: inline-block;
+	border-bottom: 2px solid currentColor !important;
+	border-image: linear-gradient(to right, currentColor 33%, transparent 33%) 1;
+	padding-bottom: 0.25rem;
+	text-decoration: none !important;
+}
+
+/* Centered partial underline - 1/3 width centered below title */
+.has-partial-underline-center.has-partial-underline-third a {
+	border-image: linear-gradient(to right, transparent 33.33%, currentColor 33.33%, currentColor 66.66%, transparent 66.66%) 1 !important;
+}
+
+/* For WordPress post titles - apply border to heading when link is inside */
+.wp-block-post-title.has-partial-underline-center.has-partial-underline-third {
+	position: relative;
+	padding-bottom: 0.5rem;
+}
+
+.wp-block-post-title.has-partial-underline-center.has-partial-underline-third::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 33.33%;
+	right: 33.33%;
+	height: 2px;
+	background-color: currentColor;
+}
+
+.wp-block-post-title.has-partial-underline-center.has-partial-underline-third a {
+	border-bottom: none !important;
+	border-image: none !important;
+	text-decoration: none !important;
+}
+
+/* 8. Accessibility Fixes
 ---------------------------------------------------------------------------- */
 
 /* Fix navigation list structure - ensure only li elements are direct children */

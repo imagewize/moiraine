@@ -18,11 +18,11 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"textAlign":"center"} -->
-<h2 class="wp-block-heading has-text-align-center"><?php esc_html_e( 'Get a 40 hour head start', 'moiraine' ); ?></h2>
+<h2 class="wp-block-heading has-text-align-center"><?php esc_html_e( 'Modern WordPress made simple', 'moiraine' ); ?></h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center"><?php esc_html_e( 'Building with blocks and patterns is super easy and fun! You can design beautiful landing pages with just a few clicks.', 'moiraine' ); ?></p>
+<p class="has-text-align-center"><?php esc_html_e( 'Experience the power of WordPress block themes with Moiraine. Create professional websites faster than ever with our curated patterns and responsive design system.', 'moiraine' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
