@@ -5,6 +5,38 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.0.1] - 2025-12-11
+
+### Added - Layout Template Patterns Restored
+
+**Template Patterns Restored from Archive:**
+- **template-index-list.php** - List-style blog index layout
+- **template-page-404.php** - Custom 404 error page template
+- **template-page-archive.php** - Archive page template
+- **template-page-full.php** - Full-width page template (no sidebars)
+- **template-page-left-sidebar.php** - Page template with left sidebar
+- **template-page-right-sidebar.php** - Page template with right sidebar
+- **template-page-search.php** - Search results page template
+- **template-page-wide.php** - Wide page template
+- **template-post-left-sidebar.php** - Single post template with left sidebar
+- **template-post-right-sidebar.php** - Single post template with right sidebar
+- **template-post-wide.php** - Wide single post template
+
+**Custom Mobile Menu Pattern:**
+- **menu-panel-1-mobile.php** - Maintained custom mobile-optimized menu panel (does not exist in Ollie)
+
+**Why Restored:**
+- Essential WordPress template patterns required for proper theme functionality
+- Provides variety of layout options for pages and posts
+- Sidebar templates needed for Elayne child theme layouts
+- All template patterns sourced from Ollie theme with Moiraine branding
+
+**Pattern Count Update:**
+- Total active patterns: 49 (was 38 in v3.0.0)
+- Added 11 essential template patterns back
+- Removed 4 menu patterns copied from Ollie (menu-card-1, menu-mobile-1, menu-panel-1, menu-panel-2)
+- Kept 1 custom menu pattern (menu-panel-1-mobile)
+
 ## [3.0.0] - 2025-12-09
 
 ### Added - Portrait Image Support, New Patterns & Typography Enhancements
