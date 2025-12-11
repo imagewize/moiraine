@@ -5,7 +5,7 @@
 </div>
 
 
-Moiraine is a WordPress block theme child theme of [Ollie](https://github.com/OllieWP/ollie) designed for the WordPress block editor and site editor. Create beautiful, fully-customizable websites with WordPress's built-in tools — no coding required.
+Moiraine is a WordPress block theme built on the foundation of [Ollie](https://github.com/OllieWP/ollie), designed for the WordPress block editor and site editor. While Moiraine uses Ollie's core architecture (~65-70% of base code including pattern layouts, templates, and block styles), it extends the foundation with significant customizations: 16 original patterns, custom block extensions, WooCommerce integration, enhanced navigation, 22 block-specific stylesheets, and production-grade development tooling. Create beautiful, fully-customizable websites with WordPress's built-in tools — no coding required.
 
 Features **49 professional patterns** (Moiraine-first heroes, CTAs, testimonials, statistics, blog layouts, essential headers/footers, and comprehensive template layouts), WooCommerce integration, modern development tooling, and blazing-fast performance with 100% scores across the board.
 
@@ -22,8 +22,7 @@ Features **49 professional patterns** (Moiraine-first heroes, CTAs, testimonials
 
 | Links  | Description |
 | ------------- | ------------- |
-| [Download Moiraine Theme Zip](https://github.com/OllieWP/ollie/releases/latest/download/ollie.zip)  | Download the latest Moiraine theme zip to install on your WordPress site.  |
-| [Download Moiraine Child Theme Zip](https://github.com/imagewize/moiraine-child)  | Download the Moiraine child theme zip for customizations  |
+| [Download Moiraine Theme](https://github.com/imagewize/moiraine)  | Download the Moiraine theme to install on your WordPress site.  |
 
 Moiraine is built for modern WordPress features and requires WordPress 6.0 or later. To get started, download the theme and install it into your WordPress website by going to `Appearance → Themes → Add New`.
 
@@ -131,7 +130,15 @@ See `CLAUDE.md` for detailed development documentation.
 ## Credits
 
 ### Theme Foundation
-Moiraine is based on the [Ollie theme](https://github.com/OllieWP/ollie) by [Mike McAlister](https://mikemcalister.com). We express our gratitude to Mike for creating such an excellent foundation for WordPress block themes.
+Moiraine is built on the [Ollie theme](https://github.com/OllieWP/ollie) by [Mike McAlister](https://mikemcalister.com). Approximately 65-70% of Moiraine's core architecture comes from Ollie, including:
+- Pattern layouts and template structures (34 of 50 patterns are customized Ollie patterns)
+- Block style variations (13 style variations)
+- Pattern categories and helper functions
+- Base `functions.php` structure and theme setup
+
+All shared code has been adapted with Moiraine's namespace, custom content, and styling. Moiraine extends this foundation with 16 original patterns, custom block extensions (230+ lines of PHP), 22 block-specific stylesheets, enhanced navigation and WooCommerce integration, and production-grade development tooling.
+
+We express our gratitude to Mike for creating such an excellent foundation for WordPress block themes.
 
 ### Additional Credits
 - Favicon: [Ladybug icon](https://blade-ui-kit.com/blade-icons/mdi-ladybug) from Blade UI Kit

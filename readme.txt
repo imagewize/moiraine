@@ -4,7 +4,7 @@ Tags: blog, portfolio, entertainment, grid-layout, one-column, two-columns, thre
 Requires at least: 5.8
 Tested up to: 6.9
 Requires PHP: 7.3
-Stable tag: 3.0.1
+Stable tag: 3.0.2
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -13,6 +13,13 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block theme! Moiraine features 49 beautiful pattern designs, 7 style variations, and a fully-customizable design system with Global Styles. Moiraine integrates seamlessly with all of the powerful new WordPress editor features, giving you the most lightweight and powerful website builder on the planet — no expensive page builder plugin required! ✶ Full demo: https://demo.imagewize.com ✶
 
 == Changelog ==
+
+= 3.0.2 - 12/11/25 =
+* CHANGED: Documentation Clarity - Updated README to accurately describe Moiraine as "built on the foundation of Ollie" rather than a "child theme"
+* CHANGED: Dependency Transparency - Added explicit statement that ~65-70% of Moiraine's base code comes from Ollie (pattern layouts, templates, block styles)
+* CHANGED: Credits Section Expanded - Detailed breakdown showing what comes from Ollie (34 customized patterns, 13 block styles, helper functions) vs. Moiraine additions (16 original patterns, 230+ lines custom PHP, 22 stylesheets)
+* CHANGED: Getting Started Simplified - Removed confusing "child theme" download link, streamlined to single Moiraine repository link
+* IMPROVED: Transparency - Better reflects actual technical relationship: Moiraine is a substantial fork/evolution of Ollie with significant original work (30-35% new code)
 
 = 3.0.1 - 12/11/25 =
 * ADDED: 11 Essential Template Patterns - Restored layout templates for pages and posts (template-index-list, template-page-404, template-page-archive, template-page-full, template-page-left-sidebar, template-page-right-sidebar, template-page-search, template-page-wide, template-post-left-sidebar, template-post-right-sidebar, template-post-wide)
