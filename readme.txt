@@ -4,15 +4,24 @@ Tags: blog, portfolio, entertainment, grid-layout, one-column, two-columns, thre
 Requires at least: 5.8
 Tested up to: 6.9
 Requires PHP: 7.3
-Stable tag: 3.0.0
+Stable tag: 3.0.1
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block theme! Moiraine features 38 beautiful pattern designs, 7 style variations, and a fully-customizable design system with Global Styles. Moiraine integrates seamlessly with all of the powerful new WordPress editor features, giving you the most lightweight and powerful website builder on the planet — no expensive page builder plugin required! ✶ Full demo: https://demo.imagewize.com ✶
+Launch a blazing-fast, pixel-perfect website with the Moiraine WordPress block theme! Moiraine features 49 beautiful pattern designs, 7 style variations, and a fully-customizable design system with Global Styles. Moiraine integrates seamlessly with all of the powerful new WordPress editor features, giving you the most lightweight and powerful website builder on the planet — no expensive page builder plugin required! ✶ Full demo: https://demo.imagewize.com ✶
 
 == Changelog ==
+
+= 3.0.1 - 12/11/25 =
+* ADDED: 11 Essential Template Patterns - Restored layout templates for pages and posts (template-index-list, template-page-404, template-page-archive, template-page-full, template-page-left-sidebar, template-page-right-sidebar, template-page-search, template-page-wide, template-post-left-sidebar, template-post-right-sidebar, template-post-wide)
+* ADDED: Custom Mobile Menu - Maintained menu-panel-1-mobile pattern (custom mobile-optimized menu that doesn't exist in Ollie)
+* REMOVED: 4 Ollie Menu Patterns - Removed menu-card-1, menu-mobile-1, menu-panel-1, menu-panel-2 (direct Ollie copies)
+* CHANGED: Pattern Count - Increased from 38 to 49 active patterns with essential template layouts restored
+* IMPROVED: Layout Options - Sidebar templates restored for better page/post layout flexibility
+* IMPROVED: Child Theme Support - Template patterns needed for Elayne child theme layouts
+* TECHNICAL: All template patterns sourced from Ollie theme with Moiraine branding
 
 = 3.0.0 - 12/09/25 =
 * NEW: Portrait Image Support - Added custom image sizes for portrait-oriented blog and portfolio layouts
