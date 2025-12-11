@@ -5,6 +5,23 @@ All notable changes to the Moiraine WordPress theme will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.0.2] - 2025-12-11
+
+### Changed - Documentation Clarity
+
+**README Updates:**
+- **Clarified theme relationship**: Updated README to accurately describe Moiraine as "built on the foundation of Ollie" rather than a "child theme"
+- **Dependency transparency**: Added explicit statement that ~65-70% of Moiraine's base code comes from Ollie (pattern layouts, templates, block styles)
+- **Original contributions highlighted**: Documented Moiraine's extensions including 16 original patterns, custom block extensions (230+ lines PHP), 22 block-specific stylesheets, enhanced navigation, WooCommerce integration, and production tooling
+- **Credits section expanded**: Detailed breakdown in Credits section showing what comes from Ollie vs. what Moiraine adds
+- **Getting Started simplified**: Removed confusing "child theme" download link, streamlined to single Moiraine repository link
+
+**Why Changed:**
+- Moiraine is a substantial fork/evolution of Ollie, not a traditional WordPress child theme
+- All 34 shared patterns are customized versions with Moiraine namespace, content, and styling
+- Transparency about code origins while highlighting significant original work (30-35% new code)
+- Better reflects the actual technical relationship between the themes
+
 ## [3.0.1] - 2025-12-11
 
 ### Added - Layout Template Patterns Restored
